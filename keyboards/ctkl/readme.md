@@ -4,7 +4,7 @@
 
 A universal TKL PCB designed and distributed by Reddit user u/niceandcreamy. Alernatively known as the Creamy AB.TK PCB. From what I have gathered, this was a custom pcb designed for use in TKLs such as the TX-84/87 and similar Korean custom boards circa 2018.
 
-Please note this is a pesornal version of the firmware for this, as I don't know how many people have or use this PCB. I am using this PCB in a winkeyless board, so I have not done the pin wiring for the GUI keys, menu key, or split backspace. I have also not done pin wiring for the extra row of keys below the command cluster. Please reach out via Discord (Yeggs#0490) if you have this PCB and would like me to continue porting completely into QMK with the full pin wiring. This was compiled using kbfirmware.com.
+Please note this is a pesornal version of the firmware for this, as I don't know how many people have or use this PCB. I am using this PCB in a winkeyless board, so I have not done the pin wiring for the GUI keys, menu key, or split backspace. I have also not done pin wiring for the extra row of keys below the command cluster. Please reach out via Discord (Yeggs#0490) if you have this PCB and would like me to continue porting completely into QMK with the full pin wiring. This was based on source code compiled using kbfirmware.com.
 
 * Keyboard Maintainer: [dot-hex](https://github.com/dot-hex)
 * Hardware Supported: Creamy TKL 

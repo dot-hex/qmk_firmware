@@ -31,7 +31,7 @@ void led_init_ports(void) {
 bool led_update_kb(led_t led_state) {
     if(led_update_user(led_state)) {
         writePin(A4, !led_state.caps_lock);
-        writePin(A8, !led_state.scroll_lock);
+        writePin(A8, !IS_LAYER_ON(3));
     }
 
     return true;

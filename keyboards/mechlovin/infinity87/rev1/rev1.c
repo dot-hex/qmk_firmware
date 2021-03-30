@@ -14,16 +14,25 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#include "rev1.h"
 
-#include "config_common.h"
+void matrix_init_kb(void) {
+    matrix_init_user();
+    led_init_ports();
+}
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID   0x4D4C // ML
+void led_init_ports(void) {
+    setPinOutput(A3);
+    writePinLow(A3);
+    setPinOutput(A4);
+    writePinLow(A4);
+}
 
-#define MANUFACTURER  Mechlovin.Studio
+bool led_update_kb(led_t led_state) {
+    if(led_update_user(led_state)) {
+        writePin(A4, !led_state.caps_lock);
+        writePin(A8, !led_state.scroll_lock);
+    }
 
-/* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 17
- 
+    return true;
+}

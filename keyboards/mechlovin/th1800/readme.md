@@ -2,7 +2,11 @@
 
 ![th1800](https://i.imgur.com/7LZUCgBl.png)
 
+<<<<<<< HEAD
 The project use atmega32a, through hole component, 1800 compact layout
+=======
+The project use atmega32a, through hole component, 1800 compact layout, open source.
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 * Keyboard Maintainer: [Team Mechlovin](https://github.com/mechlovin)
 * Hardware Supported: th1800 PCB, ATmega32A
@@ -17,3 +21,10 @@ Flashing example for this keyboard:
     make mechlovin/th1800:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+<<<<<<< HEAD
+=======
+
+**Reset Key:** To put the Th1800 into bootloader, push reset swith on the top of the PCB.
+
+IF87_rev2 used USBasploader from [Erovia tutorial](https://erovia.github.io/posts/thk/#bootloader), thank you [Erovia](https://github.com/Erovia).
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

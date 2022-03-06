@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # MCU name
 MCU = atmega32u4
@@ -75,3 +76,27 @@ AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 HD44780_ENABLE = no 		# Enable support for HD44780 based LCDs (+400)
 OLED_DRIVER_ENABLE = yes    # Enable OLED feature
+=======
+# MCU name
+MCU = atmega32u4
+
+# Bootloader selection
+BOOTLOADER = caterina
+
+# Build Options
+#   change yes to no to disable
+#
+AUDIO_ENABLE = no           # Audio output
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
+COMMAND_ENABLE = no         # Commands for debug and configuration
+CONSOLE_ENABLE = no         # Console for debug
+DEBOUNCE_TYPE = sym_eager_pk
+EXTRAKEY_ENABLE = no        # Audio control and System control
+LTO_ENABLE = yes            # Link time optimise, reduce firmware size
+MOUSEKEY_ENABLE = no        # Mouse keys
+NKRO_ENABLE = yes           # Enable N-Key Rollover
+OLED_DRIVER = SSD1306
+OLED_ENABLE = yes
+RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

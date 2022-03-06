@@ -20,12 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
+<<<<<<< HEAD
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Mattia Dal Ben
 #define PRODUCT         Yampad
 #define DESCRIPTION     q.m.k. keyboard firmware for Yampad
+=======
+#define VENDOR_ID       0x5950 // YP
+#define PRODUCT_ID      0x8369
+#define DEVICE_VER      0x0001
+#define MANUFACTURER    Mattia Dal Ben
+#define PRODUCT         Yampad
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -53,7 +61,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_ANIMATIONS
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+<<<<<<< HEAD
 #define DEBOUNCING_DELAY 5
+=======
+#define DEBOUNCE 2
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
@@ -61,7 +73,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 //#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
+<<<<<<< HEAD
 #define LOCKING_RESYNC_ENABLE
+=======
+//#define LOCKING_RESYNC_ENABLE
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 /*
  * Feature disable options
@@ -78,8 +94,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 /* Bootmagic Lite key configuration */
 // #define BOOTMAGIC_LITE_ROW 0

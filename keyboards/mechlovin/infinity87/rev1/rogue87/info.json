@@ -2,10 +2,15 @@
     "keyboard_name": "Rogue87",
     "url": "",
     "maintainer": "Mechlovin' Studio",
+<<<<<<< HEAD
     "width": 18.25,
     "height": 6.25,
     "layouts": {
         "LAYOUT": {
+=======
+    "layouts": {
+        "LAYOUT_all": {
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
             "layout": [
                 {"label":"K00", "x":0, "y":0},
                 {"label":"K01", "x":2, "y":0},

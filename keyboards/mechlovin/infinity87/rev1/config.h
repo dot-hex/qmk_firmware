@@ -25,4 +25,10 @@
 #define BACKLIGHT_PWM_CHANNEL 3
 
 
+<<<<<<< HEAD
+=======
+#define LED_CAPS_LOCK_PIN A4
+#define LED_SCROLL_LOCK_PIN A8
+
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 #define DIODE_DIRECTION COL2ROW

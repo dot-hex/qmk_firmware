@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2020 Team Mechlovin
+=======
+/* Copyright 2021 Mechlovin' Studio
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,3 +21,14 @@
 #pragma once
 
 #include "quantum.h"
+<<<<<<< HEAD
+=======
+
+#ifdef KEYBOARD_mechlovin_infinity87_rev1_rogue87
+    #include "rogue87.h"
+#elif KEYBOARD_mechlovin_infinity87_rev1_rouge87
+    #include "rouge87.h"
+#elif KEYBOARD_mechlovin_infinity87_rev1_standard
+    #include "infinity87.h"
+#endif
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

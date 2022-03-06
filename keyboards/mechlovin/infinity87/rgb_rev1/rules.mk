@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 MCU = STM32F303
 BOARD = QMK_PROTON_C
 
+=======
+# MCU name
+MCU = STM32F303
+BOARD = QMK_PROTON_C
+
+# Bootloader selection
+BOOTLOADER = stm32-dfu
+
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 RGB_MATRIX_ENABLE = yes        # Use RGB matrix
 RGB_MATRIX_DRIVER = IS31FL3741

@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "rev2.h"
 
 void matrix_init_kb(void) {
@@ -54,3 +55,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 	}
     return state;
 }
+=======
+#include "rev2.h"
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

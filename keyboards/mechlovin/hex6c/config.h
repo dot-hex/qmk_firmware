@@ -50,6 +50,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_NUM_LOCK_PIN A3
 #define LED_CAPS_LOCK_PIN A4
 #define LED_SCROLL_LOCK_PIN A8
+<<<<<<< HEAD
+=======
+#define LED_PIN_ON_STATE 0 
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 
 #define BACKLIGHT_PIN B0
 #define BACKLIGHT_BREATHING

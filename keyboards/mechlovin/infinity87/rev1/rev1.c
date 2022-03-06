@@ -15,6 +15,7 @@
  */
 
 #include "rev1.h"
+<<<<<<< HEAD
 
 void matrix_init_kb(void) {
     matrix_init_user();
@@ -36,3 +37,5 @@ bool led_update_kb(led_t led_state) {
 
     return true;
 }
+=======
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

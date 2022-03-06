@@ -12,3 +12,8 @@ Make example for this keyboard (after setting up your build environment):
     make mechlovin/infinity87:default
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+<<<<<<< HEAD
+=======
+
+**Reset Key:** To put the IF87_rev1, rouge87, rogue87 into bootloader, hold esc key while plugging in (bootmagic) or push reset swith on the bottom of the PCB.
+>>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f

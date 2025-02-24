@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 BOARD = QMK_PROTON_C
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no            # Audio output
 
 LAYOUTS = 60_ansi 60_iso
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = mechlovin/hannah60rgb/rev1

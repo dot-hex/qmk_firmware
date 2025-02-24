@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,9 +20,11 @@ AUDIO_ENABLE = no           # Audio output
 LTO_ENABLE = yes            # Smaller (and slightly faster) firmware
 
 
+=======
+>>>>>>> upstream/master
 # custom matrix setup
 CUSTOM_MATRIX = lite
 
 VPATH += drivers/gpio
 SRC += mcp23018.c matrix.c
-QUANTUM_LIB_SRC += i2c_master.c
+I2C_DRIVER_REQUIRED = yes

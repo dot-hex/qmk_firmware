@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,6 +19,8 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = 66_ansi 66_iso
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 RGBLIGHT_SUPPORTED = no
 AUDIO_SUPPORTED = no

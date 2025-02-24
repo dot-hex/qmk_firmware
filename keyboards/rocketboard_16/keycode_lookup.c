@@ -15,10 +15,20 @@
  */
 
 #include "keycode_lookup.h"
+<<<<<<< HEAD
 #include "print.h"
 #include "via.h"
 
 #define num_keycodes (sizeof(lookup_table)/sizeof(lookup_table[0]))
+=======
+#include "quantum_keycodes.h"
+#include "keymap_us.h"
+#include "print.h"
+#include "via.h"
+#include "util.h"
+
+#define num_keycodes ARRAY_SIZE(lookup_table)
+>>>>>>> upstream/master
 static char UNKNOWN_KEYCODE[] = "UNKNOWN";
 
 int cmp(const void *v1, const void *v2)
@@ -55,7 +65,11 @@ char* translate_keycode_to_string(uint16_t code)
     return (return_p);
 }
 
+<<<<<<< HEAD
 lookup_table_t lookup_table[334] =
+=======
+lookup_table_t lookup_table[333] =
+>>>>>>> upstream/master
 {
  {"KC_NO", KC_NO},
  {"KC_TRNS", KC_TRNS},
@@ -109,7 +123,10 @@ lookup_table_t lookup_table[334] =
  {"KC_SCLN", KC_SCLN},
  {"KC_QUOT", KC_QUOT},
  {"KC_GRV", KC_GRV},
+<<<<<<< HEAD
  {"KC_ZKHK", KC_ZKHK},
+=======
+>>>>>>> upstream/master
  {"KC_COMM", KC_COMM},
  {"KC_DOT", KC_DOT},
  {"KC_SLSH", KC_SLSH},
@@ -127,7 +144,11 @@ lookup_table_t lookup_table[334] =
  {"KC_F11", KC_F11},
  {"KC_F12", KC_F12},
  {"KC_PSCR", KC_PSCR},
+<<<<<<< HEAD
  {"KC_SLCK", KC_SLCK},
+=======
+ {"KC_SCRL", KC_SCRL},
+>>>>>>> upstream/master
  {"KC_PAUS", KC_PAUS},
  {"KC_INS", KC_INS},
  {"KC_HOME", KC_HOME},
@@ -139,7 +160,11 @@ lookup_table_t lookup_table[334] =
  {"KC_LEFT", KC_LEFT},
  {"KC_DOWN", KC_DOWN},
  {"KC_UP", KC_UP},
+<<<<<<< HEAD
  {"KC_NLCK", KC_NLCK},
+=======
+ {"KC_NUM", KC_NUM},
+>>>>>>> upstream/master
  {"KC_PSLS", KC_PSLS},
  {"KC_PAST", KC_PAST},
  {"KC_PMNS", KC_PMNS},
@@ -158,7 +183,11 @@ lookup_table_t lookup_table[334] =
  {"KC_PDOT", KC_PDOT},
  {"KC_NUBS", KC_NUBS},
  {"KC_APP", KC_APP},
+<<<<<<< HEAD
  {"KC_POWER", KC_POWER},
+=======
+ {"KC_KB_POWER", KC_KB_POWER},
+>>>>>>> upstream/master
  {"KC_PEQL", KC_PEQL},
  {"KC_F13", KC_F13},
  {"KC_F14", KC_F14},
@@ -188,15 +217,24 @@ lookup_table_t lookup_table[334] =
  {"KC_LSCR", KC_LSCR},
  {"KC_PCMM", KC_PCMM},
  {"KC_KP_EQUAL_AS400", KC_KP_EQUAL_AS400},
+<<<<<<< HEAD
  {"KC_RO", KC_RO},
  {"KC_KANA", KC_KANA},
  {"KC_JYEN", KC_JYEN},
  {"KC_HENK", KC_HENK},
  {"KC_MHEN", KC_MHEN},
+=======
+ {"KC_INT1", KC_INT1},
+ {"KC_INT2", KC_INT2},
+ {"KC_INT3", KC_INT3},
+ {"KC_INT4", KC_INT4},
+ {"KC_INT5", KC_INT5},
+>>>>>>> upstream/master
  {"KC_INT6", KC_INT6},
  {"KC_INT7", KC_INT7},
  {"KC_INT8", KC_INT8},
  {"KC_INT9", KC_INT9},
+<<<<<<< HEAD
  {"KC_HAEN", KC_HAEN},
  {"KC_HANJ", KC_HANJ},
  {"KC_LANG3", KC_LANG3},
@@ -208,6 +246,19 @@ lookup_table_t lookup_table[334] =
  {"KC_LANG9", KC_LANG9},
  {"KC_ERAS", KC_ERAS},
  {"KC_SYSREQ", KC_SYSREQ},
+=======
+ {"KC_LNG1", KC_LNG1},
+ {"KC_LNG2", KC_LNG2},
+ {"KC_LNG3", KC_LNG3},
+ {"KC_LNG4", KC_LNG4},
+ {"KC_LNG5", KC_LNG5},
+ {"KC_LNG6", KC_LNG6},
+ {"KC_LNG7", KC_LNG7},
+ {"KC_LNG8", KC_LNG8},
+ {"KC_LNG9", KC_LNG9},
+ {"KC_ERAS", KC_ERAS},
+ {"KC_SYRQ", KC_SYRQ},
+>>>>>>> upstream/master
  {"KC_CANCEL", KC_CANCEL},
  {"KC_CLR", KC_CLR},
  {"KC_CLEAR", KC_CLEAR},
@@ -288,6 +339,7 @@ lookup_table_t lookup_table[334] =
  {"KC_LT", KC_LT},
  {"KC_GT", KC_GT},
  {"KC_QUES", KC_QUES},
+<<<<<<< HEAD
  {"RESET", RESET},
  {"DEBUG", DEBUG},
  {"MAGIC_TOGGLE_NKRO", MAGIC_TOGGLE_NKRO},
@@ -323,6 +375,43 @@ lookup_table_t lookup_table[334] =
  {"RGB_VAD", RGB_VAD},
  {"RGB_SPI", RGB_SPI},
  {"RGB_SPD", RGB_SPD},
+=======
+ {"QK_BOOT", QK_BOOT},
+ {"DB_TOGG", DB_TOGG},
+ {"NK_TOGG", NK_TOGG},
+ {"QK_GESC", QK_GESC},
+ {"AU_ON", AU_ON},
+ {"AU_OFF", AU_OFF},
+ {"AU_TOGG", AU_TOGG},
+ {"CK_TOGG", CK_TOGG},
+ {"CK_ON", CK_ON},
+ {"CK_OFF", CK_OFF},
+ {"CK_UP", CK_UP},
+ {"CK_DOWN", CK_DOWN},
+ {"CK_RST", CK_RST},
+ {"MU_ON", MU_ON},
+ {"MU_OFF", MU_OFF},
+ {"MU_TOGG", MU_TOGG},
+ {"MU_NEXT", MU_NEXT},
+ {"BL_ON", BL_ON},
+ {"BL_OFF", BL_OFF},
+ {"BL_DOWN", BL_DOWN},
+ {"BL_UP", BL_UP},
+ {"BL_TOGG", BL_TOGG},
+ {"BL_STEP", BL_STEP},
+ {"BL_BRTG", BL_BRTG},
+ {"UG_TOGG", UG_TOGG},
+ {"UG_NEXT", UG_NEXT},
+ {"UG_PREV", UG_PREV},
+ {"UG_HUEU", UG_HUEU},
+ {"UG_HUED", UG_HUED},
+ {"UG_SATU", UG_SATU},
+ {"UG_SATD", UG_SATD},
+ {"UG_VALU", UG_VALU},
+ {"UG_VALD", UG_VALD},
+ {"UG_SPDU", UG_SPDU},
+ {"UG_SPDD", UG_SPDD},
+>>>>>>> upstream/master
  {"RGB_M_P", RGB_M_P},
  {"RGB_M_B", RGB_M_B},
  {"RGB_M_R", RGB_M_R},
@@ -331,6 +420,7 @@ lookup_table_t lookup_table[334] =
  {"RGB_M_K", RGB_M_K},
  {"RGB_M_X", RGB_M_X},
  {"RGB_M_G", RGB_M_G},
+<<<<<<< HEAD
  {"KC_LSPO", KC_LSPO},
  {"KC_RSPC", KC_RSPC},
  {"KC_SFTENT", KC_SFTENT},
@@ -372,4 +462,47 @@ lookup_table_t lookup_table[334] =
  {"USER13", USER13},
  {"USER14", USER14},
  {"USER15", USER15}
+=======
+ {"SC_LSPO", SC_LSPO},
+ {"SC_RSPC", SC_RSPC},
+ {"SC_SENT", SC_SENT},
+ {"SC_LCPO", SC_LCPO},
+ {"SC_RCPC", SC_RCPC},
+ {"SC_LAPO", SC_LAPO},
+ {"SC_RAPC", SC_RAPC},
+ {"TL_LOWR", TL_LOWR},
+ {"TL_UPPR", TL_UPPR},
+ {"QK_MACRO_0", QK_MACRO_0},
+ {"QK_MACRO_1", QK_MACRO_1},
+ {"QK_MACRO_2", QK_MACRO_2},
+ {"QK_MACRO_3", QK_MACRO_3},
+ {"QK_MACRO_4", QK_MACRO_4},
+ {"QK_MACRO_5", QK_MACRO_5},
+ {"QK_MACRO_6", QK_MACRO_6},
+ {"QK_MACRO_7", QK_MACRO_7},
+ {"QK_MACRO_8", QK_MACRO_8},
+ {"QK_MACRO_9", QK_MACRO_9},
+ {"QK_MACRO_10", QK_MACRO_10},
+ {"QK_MACRO_11", QK_MACRO_11},
+ {"QK_MACRO_12", QK_MACRO_12},
+ {"QK_MACRO_13", QK_MACRO_13},
+ {"QK_MACRO_14", QK_MACRO_14},
+ {"QK_MACRO_15", QK_MACRO_15},
+ {"QK_KB_0", QK_KB_0},
+ {"QK_KB_1", QK_KB_1},
+ {"QK_KB_2", QK_KB_2},
+ {"QK_KB_3", QK_KB_3},
+ {"QK_KB_4", QK_KB_4},
+ {"QK_KB_5", QK_KB_5},
+ {"QK_KB_6", QK_KB_6},
+ {"QK_KB_7", QK_KB_7},
+ {"QK_KB_8", QK_KB_8},
+ {"QK_KB_9", QK_KB_9},
+ {"QK_KB_10", QK_KB_10},
+ {"QK_KB_11", QK_KB_11},
+ {"QK_KB_12", QK_KB_12},
+ {"QK_KB_13", QK_KB_13},
+ {"QK_KB_14", QK_KB_14},
+ {"QK_KB_15", QK_KB_15}
+>>>>>>> upstream/master
 };

@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER sekigon-gonnoc
 #define PRODUCT      GRS-70EC
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 10
@@ -34,6 +37,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define HIGH_THRESHOLD 300
 #define LOW_THRESHOLD 200
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:keyboards/input_club/infinity60/config.h
+=======
+>>>>>>> upstream/master
 /*
  * Keyboard Matrix Assignments
  *
@@ -46,11 +54,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
 #define MATRIX_COL_CHANNELS { 2, 1, 0, 3, 5, 7, 6, 4 }
+<<<<<<< HEAD
 #define UNUSED_PINS
+=======
+>>>>>>> upstream/master
 #define DISCHARGE_PIN B1
 #define ANALOG_PORT F6
 #define MUX_SEL_PINS { D1, D0, D4 }
 
+<<<<<<< HEAD
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
@@ -129,6 +141,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master:keyboards/sekigon/grs_70ec/config.h
+/* COL2ROW, ROW2COL */
+#define DIODE_DIRECTION COL2ROW
+
+#define EE_HANDS
+
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -144,6 +164,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -152,3 +173,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+=======
+>>>>>>> upstream/master

@@ -17,14 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0xDA19
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    worthlessowl
-#define PRODUCT         Owlet60
 
 /* key matrix size */
 #define MATRIX_ROWS 9
@@ -49,6 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 /*
+<<<<<<< HEAD
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
 //#define SOFT_SERIAL_PIN D0 // or D1, D2, D3, E6
@@ -123,6 +116,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define FORCE_NKRO
 
 /*
+=======
+>>>>>>> upstream/master
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
@@ -137,9 +132,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
 /* Bootmagic Lite key configuration */
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
+=======
+>>>>>>> upstream/master

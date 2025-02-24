@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 #define VENDOR_ID       0x445A
 #define PRODUCT_ID      0X1015
@@ -51,3 +52,7 @@
 #define RGBLIGHT_LIMIT_VAL 130 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
 #endif
 #define DEBOUNCE 5
+=======
+
+#define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_EFFECT_RAINBOW_MOOD + 6) 
+>>>>>>> upstream/master

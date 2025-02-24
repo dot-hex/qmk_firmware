@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F072
 
@@ -26,3 +27,7 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = alice alice_split_bs
+=======
+# Wildcard to allow APM32 MCU
+DFU_SUFFIX_ARGS = -v FFFF -p FFFF
+>>>>>>> upstream/master

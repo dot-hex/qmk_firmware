@@ -32,6 +32,7 @@ TEST_P(OneShotParametrizedTestFixture, OSMAsRegularModifierWithAdditionalKeypres
     set_keymap({osm_key, regular_key});
 
     /* Press OSM */
+<<<<<<< HEAD
     EXPECT_CALL(driver, send_keyboard_mock(_)).Times(0);
     osm_key.press();
     run_one_scan_loop();
@@ -55,6 +56,31 @@ TEST_P(OneShotParametrizedTestFixture, OSMAsRegularModifierWithAdditionalKeypres
     osm_key.release();
     run_one_scan_loop();
     testing::Mock::VerifyAndClearExpectations(&driver);
+=======
+    EXPECT_NO_REPORT(driver);
+    osm_key.press();
+    run_one_scan_loop();
+    VERIFY_AND_CLEAR(driver);
+
+    /* Press regular key */
+    EXPECT_NO_REPORT(driver);
+    regular_key.press();
+    run_one_scan_loop();
+    VERIFY_AND_CLEAR(driver);
+
+    /* Release regular key */
+    EXPECT_REPORT(driver, (osm_key.report_code)).Times(2);
+    EXPECT_REPORT(driver, (regular_key.report_code, osm_key.report_code)).Times(1);
+    regular_key.release();
+    run_one_scan_loop();
+    VERIFY_AND_CLEAR(driver);
+
+    /* Release OSM */
+    EXPECT_EMPTY_REPORT(driver).Times(1);
+    osm_key.release();
+    run_one_scan_loop();
+    VERIFY_AND_CLEAR(driver);
+>>>>>>> upstream/master
 }
 
 // clang-format off
@@ -73,4 +99,8 @@ INSTANTIATE_TEST_CASE_P(
         std::make_pair(KeymapKey{0, 0, 0, OSM(MOD_RALT), KC_RALT}, KeymapKey{0, 1, 1, KC_A}),
         std::make_pair(KeymapKey{0, 0, 0, OSM(MOD_RGUI), KC_RGUI}, KeymapKey{0, 1, 1, KC_A})
         ));
+<<<<<<< HEAD
 // clang-format on
+=======
+// clang-format on
+>>>>>>> upstream/master

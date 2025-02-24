@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "battleship_gamepad.h"
 #include "joystick.h"
 #include "analog.h"
@@ -27,4 +28,13 @@ joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
 /* joystick button code (thumbstick pressed) */
 void keyboard_pre_init_kb(void) {
 	setPinInputHigh(F6);
+=======
+#include "quantum.h"
+
+/* joystick button code (thumbstick pressed) */
+void keyboard_pre_init_kb(void) {
+	gpio_set_pin_input_high(F6);
+
+	keyboard_pre_init_user();
+>>>>>>> upstream/master
 }

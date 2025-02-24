@@ -17,13 +17,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
+=======
+>>>>>>> upstream/master
 
 /* audio support */
 #define AUDIO_PIN_ALT B7
 #define AUDIO_PIN C4
 #define AUDIO_CLICKY
 
+<<<<<<< HEAD
 /*
  * Encoder Assignments
  */
@@ -37,6 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 // Configure our MAX7219's
 //#define MAX7219_LOAD B0
 //#define MAX7219_CONTROLLERS 4

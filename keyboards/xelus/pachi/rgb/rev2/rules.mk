@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32L422
 
@@ -25,4 +26,9 @@ COMMON_VPATH += $(DRIVER_PATH)/issi
 SRC += drivers/led/issi/is31fl3741.c
 
 LTO_ENABLE = yes
+=======
+COMMON_VPATH += $(DRIVER_PATH)/issi
+SRC += drivers/led/issi/is31fl3741.c
+
+>>>>>>> upstream/master
 OPT = 2

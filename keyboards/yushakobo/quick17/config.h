@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -129,10 +130,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MATRIX_HAS_GHOST
 
 
+=======
+#define RGBLIGHT_LAYERS
+#define RGBLIGHT_MAX_LAYERS 8
+
+>>>>>>> upstream/master
 /* disable action features */
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -141,3 +148,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+=======
+>>>>>>> upstream/master

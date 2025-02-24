@@ -1,12 +1,12 @@
-#pragma once
+// Copyright 2023 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
 
-/* USB Device descriptor parameter */
-#define PRODUCT_ID 0x6060
-#define DEVICE_VER 0x0003
+#pragma once
 
 /* key matrix size */
 #define MATRIX_ROWS 16
 #define MATRIX_COLS 8
+<<<<<<< HEAD
 
 /*
  * Keyboard Matrix Assignments
@@ -31,3 +31,5 @@
 #define LED_SCROLL_LOCK_PIN C6
 #define LED_COMPOSE_PIN D7
 #define LED_PIN_ON_STATE 0
+=======
+>>>>>>> upstream/master

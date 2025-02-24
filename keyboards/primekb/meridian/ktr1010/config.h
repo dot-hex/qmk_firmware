@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x5052
 #define PRODUCT_ID      0x004D
@@ -34,6 +35,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGB_DI_PIN B15
 #define RGBLED_NUM 3
+=======
+>>>>>>> upstream/master
 // Special timing definitions for KTR101
 #define WS2812_TIMING 1325
 #define WS2812_T0H 350
@@ -41,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define WS2812_T0L 975
 #define WS2812_T1L 350
 #define WS2812_RES_US 100
+<<<<<<< HEAD
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE    5
@@ -49,3 +53,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+>>>>>>> upstream/master

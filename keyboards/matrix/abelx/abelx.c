@@ -41,6 +41,7 @@ uint8_t read_pin(uint16_t pin)
     return (data & (1<<GET_PIN(pin))) ? 1 : 0;
 }
 
+<<<<<<< HEAD
 void matrix_init_kb(void) {
 #ifdef RGBLIGHT_ENABLE
     aw9523b_init(AW9523B_ADDR);
@@ -57,6 +58,11 @@ void housekeeping_task_kb(void) {
 
 #ifdef RGBLIGHT_ENABLE
 #include "rgblight.h"
+=======
+#ifdef RGBLIGHT_ENABLE
+#include "rgblight.h"
+#include "ws2812.h"
+>>>>>>> upstream/master
 #include "i2c_master.h"
 
 const aw9523b_led g_aw9523b_leds[AW9523B_RGB_NUM] = {
@@ -66,6 +72,7 @@ const aw9523b_led g_aw9523b_leds[AW9523B_RGB_NUM] = {
     {AW9523B_P07_PWM, AW9523B_P06_PWM, AW9523B_P05_PWM},
 };
 
+<<<<<<< HEAD
 void rgblight_call_driver(LED_TYPE *start_led, uint8_t num_leds)
 {
     uint8_t num = num_leds < AW9523B_RGB_NUM ? num_leds : AW9523B_RGB_NUM;
@@ -77,6 +84,39 @@ void rgblight_call_driver(LED_TYPE *start_led, uint8_t num_leds)
     }
 }
 
+=======
+void init_custom(void) {
+    aw9523b_init(AW9523B_ADDR);
+    ws2812_init();
+}
+
+void set_color_custom(int index, uint8_t red, uint8_t green, uint8_t blue) {
+    if (index < AW9523B_RGB_NUM) {
+        aw9523b_set_color(index, red, green, blue);
+    } else {
+        ws2812_set_color(index - AW9523B_RGB_NUM, red, green, blue);
+    }
+}
+
+void set_color_all_custom(uint8_t red, uint8_t green, uint8_t blue) {
+    for (int i = 0; i < RGBLIGHT_LED_COUNT; i++) {
+        set_color_custom(i, red, green, blue);
+    }
+}
+
+void flush_custom(void) {
+    aw9523b_update_pwm_buffers(AW9523B_ADDR);
+    ws2812_flush();
+}
+
+const rgblight_driver_t rgblight_driver = {
+    .init          = init_custom,
+    .set_color     = set_color_custom,
+    .set_color_all = set_color_all_custom,
+    .flush         = flush_custom,
+};
+
+>>>>>>> upstream/master
 #endif
 
 static uint16_t caps_lock_pin = DEF_PIN(TCA6424_PORT2, 3);
@@ -92,6 +132,7 @@ bool led_update_kb(led_t led_state) {
 }
 
 #define REBOOT_MAGIC 0x41544B42
+<<<<<<< HEAD
 void shutdown_user(void)
 {
     // set the magic number for resetting to the bootloader
@@ -100,5 +141,10 @@ void shutdown_user(void)
 
 void bootloader_jump(void) {
     shutdown_user();
+=======
+
+void bootloader_jump(void) {
+    *(uint32_t *)(&(RTCD1.rtc->BKP0R)) = REBOOT_MAGIC;
+>>>>>>> upstream/master
     NVIC_SystemReset();
 }

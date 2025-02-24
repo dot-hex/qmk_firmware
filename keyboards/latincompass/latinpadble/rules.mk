@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -25,3 +26,7 @@ BLUETOOTH_DRIVER = BluefruitLE
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
+=======
+# Processor frequency
+F_CPU = 8000000
+>>>>>>> upstream/master

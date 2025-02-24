@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -32,5 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DIRECT_PINS {{NO_PIN}}
 
+=======
+>>>>>>> upstream/master
 #define ADNS9800_CS_PIN F7
 #define POINTING_DEVICE_INVERT_X

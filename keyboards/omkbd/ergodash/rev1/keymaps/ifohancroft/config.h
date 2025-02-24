@@ -1,4 +1,8 @@
+<<<<<<< HEAD:keyboards/omkbd/ergodash/rev1/keymaps/ifohancroft/config.h
 /* Copyright 2021 IFo Hancroft
+=======
+/* Copyright 2021 Equalz
+>>>>>>> upstream/master:keyboards/ilumkb/simpler61/config.h
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +20,10 @@
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/omkbd/ergodash/rev1/keymaps/ifohancroft/config.h
 // place overrides here
 #define USB_POLLING_INTERVAL_MS 1
 #define FORCE_NKRO
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+>>>>>>> upstream/master:keyboards/ilumkb/simpler61/config.h

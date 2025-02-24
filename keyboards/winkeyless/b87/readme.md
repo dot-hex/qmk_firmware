@@ -6,13 +6,21 @@ QMK Firmware is not the official firmware for the B.mini.
 
 * Keyboard Maintainer: QMK Community
 * Hardware Supported: B87 PCB
+<<<<<<< HEAD
 * Hardware Availability: <https://winkeyless.kr/product/b-87-pcb-x2/>
+=======
+* Hardware Availability: [Winkeyless.kr (no longer available)](https://winkeyless.kr/product/b-87-pcb-x2/)
+>>>>>>> upstream/master
 
 Make example for this keyboard (after setting up your build environment):
 
     make winkeyless/b87:default
 
+<<<<<<< HEAD
 Flashing example for this keyboard ([after setting up the bootloadHID flashing environment](https://docs.qmk.fm/#/flashing_bootloadhid))
+=======
+Flashing example for this keyboard:
+>>>>>>> upstream/master
 
     make winkeyless/b87:default:flash
 

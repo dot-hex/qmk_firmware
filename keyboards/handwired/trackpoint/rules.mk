@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,3 +19,6 @@ AUDIO_ENABLE = no           # Audio output
 
 PS2_MOUSE_ENABLE = yes
 PS2_USE_USART = yes
+=======
+PS2_DRIVER = usart
+>>>>>>> upstream/master

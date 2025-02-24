@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u2
 
@@ -17,7 +18,7 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 SLEEP_LED_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 SRC += matrix.c
-
-LAYOUTS = tkl_ansi tkl_iso

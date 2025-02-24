@@ -3,6 +3,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED 
 #define PRODUCT_ID   0xB077
@@ -44,6 +45,13 @@
 #endif
 
 #ifdef PS2_USE_INT
+=======
+#ifdef OLED_ENABLE
+#define OLED_DISPLAY_128X32
+#endif
+
+#ifdef PS2_DRIVER_INTERRUPT
+>>>>>>> upstream/master
 #define PS2_CLOCK_PIN   E6
 #define PS2_DATA_PIN    D7
 

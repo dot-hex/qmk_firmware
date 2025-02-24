@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter
@@ -70,8 +71,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGBLED_NUM 7
 
+=======
+>>>>>>> upstream/master
 #ifndef IOS_DEVICE_ENABLE
-  #if RGBLED_NUM <= 7
+  #if RGBLIGHT_LED_COUNT <= 7
     #define RGBLIGHT_LIMIT_VAL 255
     #define RGBLIGHT_VAL_STEP 17
   #endif
@@ -79,9 +82,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define RGBLIGHT_LIMIT_VAL 90
   #define RGBLIGHT_VAL_STEP 4
 #endif
-
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 17
 
 #if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
   #define USB_MAX_POWER_CONSUMPTION 500
@@ -106,5 +106,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

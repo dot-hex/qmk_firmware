@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 adpenrose
+=======
+/* Copyright 2022 adpenrose
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "kintsugi.h"
 
 /* Encoder */
@@ -54,6 +59,17 @@ bool oled_task_kb(void) {
         return false; 
     }
     /* Kintsugi logo render: */
+=======
+#include "quantum.h"
+
+#ifdef OLED_ENABLE
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;
+}
+
+static void render_logo(void) {
+/* Kintsugi logo render: */
+>>>>>>> upstream/master
     static const char PROGMEM logo_1[] = {
         0x83, 0x84, 0x85, 0x86, 0x87, 0xA3, 0xA4, 0xA5, 0xA6, 0xA7, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0x00
     };
@@ -63,12 +79,31 @@ bool oled_task_kb(void) {
     static const char PROGMEM logo_3[] = {
         0x8D, 0x8E, 0x8F, 0x90, 0x91, 0xAD, 0xAE, 0xAF, 0xB0, 0xB1, 0xCD, 0xCE, 0xCF, 0xD0, 0xD1, 0x00
     };
+<<<<<<< HEAD
     oled_set_cursor(1,3);
     oled_write_P(logo_1, false);
     oled_set_cursor(1,7);
     oled_write_P(logo_2, false);
     oled_set_cursor(1,11);
     oled_write_P(logo_3, false);
+=======
+    oled_set_cursor(0,3);
+    oled_write_P(logo_1, false);
+    oled_set_cursor(0,7);
+    oled_write_P(logo_2, false);
+    oled_set_cursor(0,11);
+    oled_write_P(logo_3, false);
+}
+
+bool oled_task_kb(void) {
+    if (!oled_task_user()) { 
+        return false; 
+    }
+    else {
+        render_logo();
+    }
+    
+>>>>>>> upstream/master
     return true;
 }
 #endif

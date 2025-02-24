@@ -16,6 +16,10 @@
 
 #pragma once
 
+<<<<<<< HEAD
+=======
+#include <stdint.h>
+>>>>>>> upstream/master
 #include <stdbool.h>
 #include "action.h"
 

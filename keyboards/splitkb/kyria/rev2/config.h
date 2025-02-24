@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0x8D1D
 #define PRODUCT_ID   0x9D9D
@@ -105,3 +106,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 170
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
 #endif
+=======
+// Side detection
+// col 4 row 3 on right-hand-side
+#define MATRIX_MASKED // actual mask is defined by `matrix_mask` in `rev2.c`
+
+#define OLED_DISPLAY_128X64
+#define SPLIT_OLED_ENABLE
+>>>>>>> upstream/master

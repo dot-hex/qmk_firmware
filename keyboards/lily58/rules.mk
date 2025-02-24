@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,4 +21,6 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306    # OLED display
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = lily58/rev1

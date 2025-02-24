@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F072
 
@@ -19,3 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 # Enter lower-power sleep mode when on the ChibiOS idle thread
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
+=======
+DEFAULT_FOLDER = primekb/meridian/ktr1010
+>>>>>>> upstream/master

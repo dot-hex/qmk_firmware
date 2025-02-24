@@ -1,4 +1,4 @@
-/* Copyright 2021 Atsushi Nagase
+/* Copyright 2021 Chris Broekema (broekema@gmail.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,33 +13,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 #include QMK_KEYBOARD_H
 
-enum meishi2_moc_layers {
-    _DEFAULT,
-    _RAISE
+enum layer_names {
+  NORMAL_LAYER = 0
 };
-
-#define PRO_MICRO_LED_TX D5
-#define RAISE MO(_RAISE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_DEFAULT] = LAYOUT( /* Base */
-    RAISE, KC_B, KC_N, KC_SPC
-  ),
-  [_RAISE] = LAYOUT( /* Raise */
-    _______, KC_LEFT, KC_RGHT, LSFT(KC_S)
-  )
+    [NORMAL_LAYER] = LAYOUT(
+        C(S(KC_F1)), C(S(KC_F2)),  C(S(KC_F3)),  C(S(KC_F4)),
+        C(S(KC_F5)), C(S(KC_F6)),  C(S(KC_F7)),  C(S(KC_F8)),
+        C(S(KC_F9)), C(S(KC_F10)), C(S(KC_F11)), C(S(KC_F12))
+    ),
 };
 
-void matrix_init_user(void) {
-  setPinOutput(PRO_MICRO_LED_TX);
-  writePinHigh(PRO_MICRO_LED_TX);
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (keycode == RAISE) {
-    writePin(PRO_MICRO_LED_TX, !record->event.pressed);
-  }
-  return true;
-}
+joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+    [0] = JOYSTICK_AXIS_IN(F4, 0, 512, 1023),
+    [1] = JOYSTICK_AXIS_IN(F5, 0, 512, 1023),
+    [2] = JOYSTICK_AXIS_IN(F6, 0, 512, 1023),
+    [3] = JOYSTICK_AXIS_IN(F7, 0, 512, 1023)
+};

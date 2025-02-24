@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -23,12 +24,17 @@
 #define DEVICE_VER 0x0001
 #define MANUFACTURER Dygma
 #define PRODUCT Raise
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 // rows are doubled for split
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 8
+<<<<<<< HEAD
 /* The scanners already debounce for us */
 #define DEBOUNCE 0
 
 #define DRIVER_LED_TOTAL 132
+=======
+>>>>>>> upstream/master

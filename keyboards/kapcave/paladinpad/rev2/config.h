@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define DEVICE_VER      0x0002
@@ -45,3 +46,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_VAL_STEP 12
 #endif
 
+=======
+#define AUDIO_PIN C6
+>>>>>>> upstream/master

@@ -1,4 +1,4 @@
-/* Copyright 2017 Benjamin Kesselring
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,8 +16,9 @@
 
 #pragma once
 
+#define HAL_USE_I2C TRUE
 
-// place overrides here
+#define HAL_USE_SPI TRUE
 
+#include_next <halconf.h>
 
-#define TAPPING_TOGGLE 5

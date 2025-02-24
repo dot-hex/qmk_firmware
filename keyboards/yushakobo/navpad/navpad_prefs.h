@@ -16,10 +16,17 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "quantum.h"
 
 enum custom_keycodes { 
   TAP_00 = SAFE_RANGE
+=======
+#include "keycodes.h"
+
+enum custom_keycodes { 
+  TAP_00 = QK_KB_0
+>>>>>>> upstream/master
 };
 
 enum layer_name {

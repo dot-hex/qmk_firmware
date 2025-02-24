@@ -18,6 +18,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define VENDOR_ID 0xA8F8
 #define PRODUCT_ID 0x1833
 #define DEVICE_VER 0x0001
@@ -82,3 +83,7 @@
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
 #    define RGB_MATRIX_KEYPRESSES
 #endif
+=======
+/* Trackball angle adjustment. */
+#define ROTATIONAL_TRANSFORM_ANGLE -25
+>>>>>>> upstream/master

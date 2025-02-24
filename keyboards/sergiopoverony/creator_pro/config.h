@@ -15,6 +15,7 @@
  */
 
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* vid pid  */
@@ -34,11 +35,14 @@
 	  B2, B3, B1, F7  } \
 }
 
+=======
+>>>>>>> upstream/master
 
 /*led layout indication pins*/
 #define RED_LED D0
 #define BLUE_LED B5
 #define GREEN_LED B6
+<<<<<<< HEAD
 
 /* encoder pins*/
 #define ENCODERS_PAD_A { D2 }
@@ -47,3 +51,5 @@
 
 #define UNUSED_PINS
 
+=======
+>>>>>>> upstream/master

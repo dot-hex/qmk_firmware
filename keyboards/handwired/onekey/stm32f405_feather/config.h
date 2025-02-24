@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/handwired/onekey/stm32f405_feather/config.h
 #include "config_common.h"
 
 #define PRODUCT Onekey Adafruit Feather STM32F405
@@ -23,3 +24,8 @@
 #define MATRIX_COL_PINS { C2 }
 #define MATRIX_ROW_PINS { C3 }
 #define UNUSED_PINS
+=======
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 15
+>>>>>>> upstream/master:keyboards/xiudi/xd84/config.h

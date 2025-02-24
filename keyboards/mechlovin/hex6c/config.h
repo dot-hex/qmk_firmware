@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -66,3 +67,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAP_CODE_DELAY 10
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
+=======
+#define BACKLIGHT_PWM_DRIVER PWMD3
+>>>>>>> upstream/master

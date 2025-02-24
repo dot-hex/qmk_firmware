@@ -8,6 +8,7 @@ description = ""
 authors = []
 
 [tool.poetry.dependencies]
+<<<<<<< HEAD
 python = "^3.8"
 appdirs = "*"
 argcomplete = "*"
@@ -19,6 +20,21 @@ milc = ">=1.4.2"
 Pygments = "*"
 pyusb = "*"
 qmk-dotty-dict = "*"
+=======
+python = "^3.11"
+appdirs = "*"
+argcomplete = "*"
+colorama = "*"
+dotty-dict = "*"
+hid = "*"
+hjson = "*"
+jsonschema = ">=4"
+milc = ">=1.4.2"
+Pygments = "*"
+pyserial = "*"
+pyusb = "*"
+pillow = "*"
+>>>>>>> upstream/master
 
 # This dependency is not mentioned in requirements.txt (QMK CLI is not a
 # library package that is required by the Python code in qmk_firmware), but is
@@ -29,6 +45,10 @@ qmk = "*"
 nose2 = "*"
 flake8 = "*"
 pep8-naming = "*"
+<<<<<<< HEAD
+=======
+pyflakes = "*"
+>>>>>>> upstream/master
 yapf = "*"
 
 [build-system]

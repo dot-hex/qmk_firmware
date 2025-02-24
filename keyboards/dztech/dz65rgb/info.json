@@ -1,7 +1,9 @@
 {
-    "keyboard_name": "dz65rgb",
+    "keyboard_name": "DZ65RGB",
+    "manufacturer": "DZTECH",
     "url": "",
     "maintainer": "dztech",
+<<<<<<< HEAD
     "layouts": {
         "LAYOUT_65_ansi": {
             "layout": [
@@ -80,4 +82,10 @@
             ]
         }
     }
+=======
+    "usb": {
+        "vid": "0x445A"
+    },
+    "community_layouts": ["65_ansi"]
+>>>>>>> upstream/master
 }

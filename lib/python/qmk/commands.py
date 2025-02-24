@@ -4,20 +4,28 @@ import os
 import sys
 import shutil
 from pathlib import Path
+<<<<<<< HEAD
 from subprocess import DEVNULL
 from time import strftime
+=======
+>>>>>>> upstream/master
 
 from milc import cli
 import jsonschema
 
+<<<<<<< HEAD
 import qmk.keymap
 from qmk.constants import QMK_FIRMWARE, KEYBOARD_OUTPUT_PREFIX
 from qmk.json_schema import json_load, validate
+=======
+from qmk.constants import QMK_USERSPACE, HAS_QMK_USERSPACE
+from qmk.json_schema import json_load, validate
+from qmk.keyboard import keyboard_alias_definitions
+from qmk.util import maybe_exit
+>>>>>>> upstream/master
 
-time_fmt = '%Y-%m-%d-%H:%M:%S'
 
-
-def _find_make():
+def find_make():
     """Returns the correct make command for this environment.
     """
     make_cmd = os.environ.get('MAKE')
@@ -28,6 +36,7 @@ def _find_make():
     return make_cmd
 
 
+<<<<<<< HEAD
 def create_make_target(target, dry_run=False, parallel=1, **env_vars):
     """Create a make command
 
@@ -86,18 +95,43 @@ def create_make_command(keyboard, keymap, target=None, dry_run=False, parallel=1
         A command that can be run to make the specified keyboard and keymap
     """
     make_args = [keyboard, keymap]
+=======
+def get_make_parallel_args(parallel=1):
+    """Returns the arguments for running the specified number of parallel jobs.
+    """
+    parallel_args = []
+>>>>>>> upstream/master
 
-    if target:
-        make_args.append(target)
+    if int(parallel) <= 0:
+        # 0 or -1 means -j without argument (unlimited jobs)
+        parallel_args.append('--jobs')
+    elif int(parallel) > 1:
+        parallel_args.append('--jobs=' + str(parallel))
 
+<<<<<<< HEAD
     return create_make_target(':'.join(make_args), dry_run=dry_run, parallel=parallel, **env_vars)
 
 
 def get_git_version(current_time, repo_dir='.', check_dir='.'):
     """Returns the current git version for a repo, or the current time.
-    """
-    git_describe_cmd = ['git', 'describe', '--abbrev=6', '--dirty', '--always', '--tags']
+=======
+    if int(parallel) != 1:
+        # If more than 1 job is used, synchronize parallel output by target
+        parallel_args.append('--output-sync=target')
 
+    return parallel_args
+
+
+def parse_configurator_json(configurator_file):
+    """Open and parse a configurator json export
+>>>>>>> upstream/master
+    """
+    user_keymap = json_load(configurator_file)
+    # Validate against the jsonschema
+    try:
+        validate(user_keymap, 'qmk.keymap.v1')
+
+<<<<<<< HEAD
     if repo_dir != '.':
         repo_dir = Path('lib') / repo_dir
 
@@ -106,10 +140,16 @@ def get_git_version(current_time, repo_dir='.', check_dir='.'):
 
     if Path(check_dir).exists():
         git_describe = cli.run(git_describe_cmd, stdin=DEVNULL, cwd=repo_dir)
+=======
+    except jsonschema.ValidationError as e:
+        cli.log.error(f'Invalid JSON keymap: {configurator_file} : {e.message}')
+        maybe_exit(1)
+>>>>>>> upstream/master
 
-        if git_describe.returncode == 0:
-            return git_describe.stdout.strip()
+    keyboard = user_keymap.get('keyboard', None)
+    aliases = keyboard_alias_definitions()
 
+<<<<<<< HEAD
         else:
             cli.log.warn(f'"{" ".join(git_describe_cmd)}" returned error code {git_describe.returncode}')
             print(git_describe.stderr)
@@ -171,18 +211,40 @@ def compile_configurator_json(user_keymap, bootloader=None, parallel=1, **env_va
     """Convert a configurator export JSON file into a C file and then compile it.
 
     Args:
+=======
+    while keyboard in aliases:
+        last_keyboard = keyboard
+        keyboard = aliases[keyboard].get('target', keyboard)
+        if keyboard == last_keyboard:
+            break
 
-        user_keymap
-            A deserialized keymap export
+    user_keymap['keyboard'] = keyboard
+    return user_keymap
 
-        bootloader
-            A bootloader to flash
 
-        parallel
-            The number of make jobs to run in parallel
+def parse_env_vars(args):
+    """Common processing for cli.args.env
+    """
+    envs = {}
+    for env in args:
+        if '=' in env:
+            key, value = env.split('=', 1)
+            envs[key] = value
+        else:
+            cli.log.warning('Invalid environment variable: %s', env)
+    return envs
+>>>>>>> upstream/master
 
-    Returns:
 
+def build_environment(args):
+    envs = parse_env_vars(args)
+
+    if HAS_QMK_USERSPACE:
+        envs['QMK_USERSPACE'] = Path(QMK_USERSPACE).resolve()
+
+    return envs
+
+<<<<<<< HEAD
         A command to run to compile and flash the C file.
     """
     # In case the user passes a keymap.json from a keymap directory directly to the CLI.
@@ -247,11 +309,14 @@ def compile_configurator_json(user_keymap, bootloader=None, parallel=1, **env_va
     ])
 
     return make_command
+=======
+>>>>>>> upstream/master
 
-
-def parse_configurator_json(configurator_file):
-    """Open and parse a configurator json export
+def in_virtualenv():
+    """Check if running inside a virtualenv.
+    Based on https://stackoverflow.com/a/1883251
     """
+<<<<<<< HEAD
     user_keymap = json_load(configurator_file)
     # Validate against the jsonschema
     try:
@@ -263,11 +328,13 @@ def parse_configurator_json(configurator_file):
 
     orig_keyboard = user_keymap['keyboard']
     aliases = json_load(Path('data/mappings/keyboard_aliases.json'))
+=======
+    active_prefix = getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
+    return active_prefix != sys.prefix
+>>>>>>> upstream/master
 
-    if orig_keyboard in aliases:
-        if 'target' in aliases[orig_keyboard]:
-            user_keymap['keyboard'] = aliases[orig_keyboard]['target']
 
+<<<<<<< HEAD
         if 'layouts' in aliases[orig_keyboard] and user_keymap['layout'] in aliases[orig_keyboard]['layouts']:
             user_keymap['layout'] = aliases[orig_keyboard]['layouts'][user_keymap['layout']]
 
@@ -357,3 +424,28 @@ def in_virtualenv():
     """
     active_prefix = getattr(sys, "base_prefix", None) or getattr(sys, "real_prefix", None) or sys.prefix
     return active_prefix != sys.prefix
+=======
+def dump_lines(output_file, lines, quiet=True):
+    """Handle dumping to stdout or file
+    Creates parent folders if required
+    """
+    generated = '\n'.join(lines) + '\n'
+    if output_file and output_file.name != '-':
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        if output_file.exists():
+            with open(output_file, 'r', encoding='utf-8', newline='\n') as f:
+                existing = f.read()
+            if existing == generated:
+                if not quiet:
+                    cli.log.info(f'No changes to {output_file.name}.')
+                return
+            output_file.replace(output_file.parent / (output_file.name + '.bak'))
+        with open(output_file, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(generated)
+        # output_file.write_text(generated, encoding='utf-8', newline='\n') # `newline` needs Python 3.10
+
+        if not quiet:
+            cli.log.info(f'Wrote {output_file.name} to {output_file}.')
+    else:
+        print(generated)
+>>>>>>> upstream/master

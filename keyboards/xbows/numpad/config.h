@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID    0xFEED
@@ -71,3 +72,6 @@
 #    define DRIVER_COUNT 1
 #    define DRIVER_LED_TOTAL 22
 #endif
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_VCC
+>>>>>>> upstream/master

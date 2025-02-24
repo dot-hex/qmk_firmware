@@ -11,8 +11,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+<<<<<<< HEAD
 #include "rev5.h"
 
+=======
+#include "quantum.h"
+
+<<<<<<<< HEAD:keyboards/keebio/iris/rev5/rev5.c
+#ifdef ENCODER_ENABLE
+>>>>>>> upstream/master
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
@@ -29,4 +36,21 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     }
     return false;
+<<<<<<< HEAD
 }
+=======
+========
+#include "evolv.h"
+
+#ifndef MEDIA_KEY_DELAY
+#     define MEDIA_KEY_DELAY 100
+#endif
+
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) return false;
+    tap_code_delay(clockwise ? KC_VOLU : KC_VOLD, MEDIA_KEY_DELAY);
+    return true;
+>>>>>>>> upstream/master:keyboards/evolv/evolv.c
+}
+#endif
+>>>>>>> upstream/master

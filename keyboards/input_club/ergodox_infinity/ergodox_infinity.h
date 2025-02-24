@@ -80,6 +80,7 @@ inline void ergodox_led_all_set(uint8_t n) {
 }
 
 void ergodox_infinity_lcd_color(uint16_t r, uint16_t g, uint16_t b);
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -151,3 +152,5 @@ void ergodox_infinity_lcd_color(uint16_t r, uint16_t g, uint16_t b);
     { B70, B71, B72, B73, B74 }, \
     { B80, B81, B82, B83, B84 } \
 }
+=======
+>>>>>>> upstream/master

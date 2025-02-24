@@ -18,10 +18,17 @@
 // Defines names for use in layer keycodes and the keymap
 
 enum layer_names {
+<<<<<<< HEAD
   _BASE,
   _FN1,
 	_FN2,
 	_FN3
+=======
+    _BASE,
+    _FN1,
+    _FN2,
+    _FN3
+>>>>>>> upstream/master
 };
 
 
@@ -29,7 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
                   KC_F1,   KC_F2,   KC_F3,   KC_F4,
+<<<<<<< HEAD
 				          KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
+=======
+                  KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS,
+>>>>>>> upstream/master
                   KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
         KC_MUTE,  KC_P4,   KC_P5,   KC_P6,   _______,
         MO(_FN1), KC_P1,   KC_P2,   KC_P3,   KC_PENT,
@@ -41,15 +52,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_FN1] = LAYOUT(
                  _______,  _______, _______, _______,
                  _______,  _______, _______, _______,
+<<<<<<< HEAD
                  RGB_HUD,  RGB_SPI, RGB_HUI, _______,
         _______, RGB_RMOD, RGB_TOG, RGB_MOD, _______,
         _______, RGB_VAD,  RGB_SPD, RGB_VAI, _______,
         _______, RGB_SAD,  _______, RGB_SAI, _______,
+=======
+                 UG_HUED,  UG_SPDU, UG_HUEU, _______,
+        _______, UG_PREV,  UG_TOGG, UG_NEXT, _______,
+        _______, UG_VALD,  UG_SPDD, UG_VALU, _______,
+        _______, UG_SATD,  _______, UG_SATU, _______,
+>>>>>>> upstream/master
 
                  _______, _______, _______
 
     ),
+<<<<<<< HEAD
 	  [_FN2] = LAYOUT(
+=======
+    [_FN2] = LAYOUT(
+>>>>>>> upstream/master
                   _______, _______, _______, _______,
                   _______, _______, _______, _______,
                   _______, _______, _______, _______,
@@ -60,7 +82,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   _______, _______, _______
 
     ),
+<<<<<<< HEAD
 	  [_FN3] = LAYOUT(
+=======
+    [_FN3] = LAYOUT(
+>>>>>>> upstream/master
                   _______, _______, _______, _______,
                   _______, _______, _______, _______,
                   _______, _______, _______, _______,
@@ -73,6 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+<<<<<<< HEAD
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
     switch (index) {
@@ -145,4 +172,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     oled_write_ln_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
     return false;
 	}
+=======
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_BRID, KC_BRIU) },
+    [_FN1]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN2]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN3]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+};
+>>>>>>> upstream/master
 #endif

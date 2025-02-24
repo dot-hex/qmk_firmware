@@ -1,4 +1,4 @@
-/* Copyright 2019 Koichi Katano
+/* Copyright 2021 takashicompany
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,12 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "yurei.h"
+#include "quantum.h"
 
-bool led_update_kb(led_t led_state) {
-    if (led_update_user(led_state)) {
-        writePin(B6, led_state.caps_lock);
-        writePin(B7, led_state.scroll_lock);
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) { return false; }
+    if (!clockwise) {
+        tap_code(KC_MS_WH_UP);
+    } else {
+        tap_code(KC_MS_WH_DOWN);
     }
+
     return true;
 }

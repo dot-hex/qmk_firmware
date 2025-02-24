@@ -1,5 +1,5 @@
 /*
-Copyright 2015 Jun Wako <wakojun@gmail.com>
+Copyright 2020 sekigon-gonnoc
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,30 +17,38 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x1C11
-#define PRODUCT_ID      0xB04D
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Input Club
-#define PRODUCT         Infinity 60% (QMK)
 
 /* key matrix size */
-#define MATRIX_ROWS 7
-#define MATRIX_COLS 9
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 8
 
+/* EC switch threshold with hysteresis */
+#define HIGH_THRESHOLD 300
+#define LOW_THRESHOLD 200
+
+<<<<<<< HEAD:keyboards/input_club/infinity60/config.h
+=======
+/*
+ * Keyboard Matrix Assignments
+ *
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
+ */
+#define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
+#define MATRIX_COL_CHANNELS { 2, 1, 0, 3, 5, 7, 6, 4 }
+#define DISCHARGE_PIN B1
+#define ANALOG_PORT F6
+#define MUX_SEL_PINS { D1, D0, D4 }
+
+>>>>>>> upstream/master:keyboards/sekigon/grs_70ec/config.h
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
-
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-//#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-//#define LOCKING_RESYNC_ENABLE
+#define EE_HANDS
 
 /*
  * Feature disable options
@@ -57,5 +65,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

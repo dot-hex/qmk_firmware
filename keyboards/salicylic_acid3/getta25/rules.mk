@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,4 +19,6 @@ AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 OLED_ENABLE = no
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = salicylic_acid3/getta25/rev1

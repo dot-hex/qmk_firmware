@@ -14,7 +14,11 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 */ 
 	  
+<<<<<<< HEAD
 #include "undead60m.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 bool encoder_update_kb(uint8_t index, bool clockwise) {
   if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {

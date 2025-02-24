@@ -15,11 +15,25 @@
 */
 
 /*
+<<<<<<< HEAD
+<<<<<<< HEAD:platforms/chibios/boards/STM32_F103_STM32DUINO/ld/stm32duino_bootloader_common.ld
+=======
+>>>>>>> upstream/master
  * STM32Duino bootloader common memory setup.
  */
 MEMORY
 {
     flash0  : org = 0x08002000, len = f103_flash_size - 0x2000
+<<<<<<< HEAD
+=======
+ * STM32F103xB memory setup for use with the matrix 12og mass-storage device bootloader.
+ */
+MEMORY
+{
+    flash0  : org = 0x08018000, len = 128k - 0x18000
+>>>>>>> upstream/master:keyboards/matrix/m12og/rev1/ld/m12og_v1.ld
+=======
+>>>>>>> upstream/master
     flash1  : org = 0x00000000, len = 0
     flash2  : org = 0x00000000, len = 0
     flash3  : org = 0x00000000, len = 0
@@ -27,7 +41,11 @@ MEMORY
     flash5  : org = 0x00000000, len = 0
     flash6  : org = 0x00000000, len = 0
     flash7  : org = 0x00000000, len = 0
+<<<<<<< HEAD
     ram0    : org = 0x20000000, len = 20k
+=======
+    ram0    : org = 0x20000000, len = f103_ram_size
+>>>>>>> upstream/master
     ram1    : org = 0x00000000, len = 0
     ram2    : org = 0x00000000, len = 0
     ram3    : org = 0x00000000, len = 0

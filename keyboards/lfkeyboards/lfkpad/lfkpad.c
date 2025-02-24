@@ -1,20 +1,22 @@
-#include "lfkpad.h"
-
 #include "quantum.h"
-
-#include <avr/timer_avr.h>
 #include <avr/wdt.h>
+<<<<<<< HEAD
 #include "issi.h"
 #include "TWIlib.h"
 #include "lighting.h"
+=======
+>>>>>>> upstream/master
 
 void matrix_init_kb(void) {
     matrix_init_user();
 
+<<<<<<< HEAD
 #ifdef ISSI_ENABLE
     issi_init();
 #endif
 
+=======
+>>>>>>> upstream/master
 #ifdef WATCHDOG_ENABLE
     // This is done after turning the layer LED red, if we're caught in a loop
     // we should get a flashing red light
@@ -22,6 +24,7 @@ void matrix_init_kb(void) {
 #endif
 }
 
+<<<<<<< HEAD
 void matrix_scan_kb(void) {
 #ifdef WATCHDOG_ENABLE
     wdt_reset();
@@ -72,3 +75,10 @@ const uint8_t rgb_sequence[] = {
     13,         24,
           20
 };
+=======
+void housekeeping_task_kb(void) {
+#ifdef WATCHDOG_ENABLE
+    wdt_reset();
+#endif
+}
+>>>>>>> upstream/master

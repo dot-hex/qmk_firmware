@@ -1,7 +1,8 @@
 # Python requirements
-appdirs
+# platformdirs
 argcomplete
 colorama
+<<<<<<< HEAD
 hid
 hjson
 jsonschema>=3
@@ -9,3 +10,14 @@ milc>=1.4.2
 pygments
 pyusb
 qmk-dotty-dict
+=======
+dotty-dict
+hid
+hjson
+jsonschema>=4
+milc>=1.4.2
+pygments
+pyserial
+pyusb
+pillow
+>>>>>>> upstream/master

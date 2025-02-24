@@ -15,11 +15,10 @@
  */
 #pragma once
 
-#define ___ KC_NO
-
 #include "quantum.h"
 #include "common/remote_kb.h"
 #include "common/bitc_led.h"
+<<<<<<< HEAD
 
 #define LAYOUT_all( \
           K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, K0C, K0D, K0E, K0F, K0G, \
@@ -62,3 +61,5 @@
    {K31, K32, K33, K34, K35, K36, K37, K38, K39, K3A, K3B, K3C, K3D, ___, K3F, K3G}, \
    {K41, K42, K43, K44, ___, ___, K47, ___, ___, K4A, K4B, K4C, K4D, ___, K4F, K4G}, \
 }
+=======
+>>>>>>> upstream/master

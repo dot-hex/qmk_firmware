@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -16,8 +17,14 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 # project specific files
 SRC += matrix.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += uart.c
+=======
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

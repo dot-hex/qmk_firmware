@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,3 +23,9 @@ POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = custom
 SRC += adns.c
 QUANTUM_LIB_SRC += spi_master.c
+=======
+# Add trackball support
+POINTING_DEVICE_DRIVER = custom
+SRC += adns.c
+SPI_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

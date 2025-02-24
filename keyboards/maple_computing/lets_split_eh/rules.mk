@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,3 +23,7 @@ SPLIT_KEYBOARD = yes
 LAYOUTS = ortho_4x12
 
 DEFAULT_FOLDER = maple_computing/lets_split_eh/eh
+=======
+# Disable unsupported hardware
+AUDIO_SUPPORTED = no
+>>>>>>> upstream/master

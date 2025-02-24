@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -59,11 +60,19 @@
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 #define MATRIX_HAS_GHOST
+=======
+#define DEF_SERIAL_NUMBER "purdea.ro:overnumpad_controller"
+
+#ifndef SERIAL_NUMBER
+#define SERIAL_NUMBER DEF_SERIAL_NUMBER
+#endif
+>>>>>>> upstream/master
 
 #define STM32_HSECLK 16000000
 
 #define SOLENOID_PIN B5
 #define HAPTIC_ENABLE_PIN C13
+<<<<<<< HEAD
 #define SOLENOID_DEFAULT_DWELL 4
 #define SOLENOID_MIN_DWELL 4
 #define HAPTIC_OFF_IN_LOW_POWER 1
@@ -73,3 +82,9 @@
 #define LED_CAPS_LOCK_PIN C11
 #define LED_SCROLL_LOCK_PIN C10
 #define LED_ON_STATE 1
+=======
+#define SOLENOID_DEFAULT_DWELL 20
+#define SOLENOID_MIN_DWELL 4
+#define HAPTIC_OFF_IN_LOW_POWER 1
+#define NO_HAPTIC_MOD
+>>>>>>> upstream/master

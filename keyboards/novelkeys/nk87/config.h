@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/novelkeys/nk87/config.h
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -85,6 +86,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
+=======
+>>>>>>> upstream/master:keyboards/nk87/config.h
 /* Backlight options */
 
 #define RGB_BACKLIGHT_ENABLED 1
@@ -118,8 +121,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_BACKLIGHT_COLOR_1 { .h = 0, .s = 255 }
 #define RGB_BACKLIGHT_COLOR_2 { .h = 127, .s = 255 }
 
-#define DRIVER_COUNT 2
-#define DRIVER_LED_TOTAL 128
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_I2C_ADDRESS_2 IS31FL3733_I2C_ADDRESS_GND_SDA
+#define IS31FL3733_LED_COUNT 128
 
 // These define which keys in the matrix are alphas/mods
 // Used for backlight effects so colors are different for
@@ -141,6 +145,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Backlight config starts after VIA's EEPROM usage,
 // dynamic keymaps start after this.
 #define VIA_EEPROM_CUSTOM_CONFIG_SIZE 32
-
-// VIA lighting is handled by the keyboard-level code
-#define VIA_CUSTOM_LIGHTING_ENABLE

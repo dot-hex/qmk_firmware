@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID 0xFEED
@@ -33,8 +34,6 @@
 
 #define DIODE_DIRECTION COL2ROW
 
+=======
+>>>>>>> upstream/master
 #define MOUSEKEY_INTERVAL 32
-
-#define TAPPING_TERM 175
-
-#define OLED_DISPLAY_128X64

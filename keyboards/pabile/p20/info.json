@@ -1,7 +1,8 @@
 {
-    "keyboard_name": "P20",
+    "manufacturer": "Pabile",
     "url": "",
     "maintainer": "pabile",
+<<<<<<< HEAD
     "layouts": {
         "LAYOUT_ortho_5x4": {
             "layout": [
@@ -57,4 +58,11 @@
             ]
         }
     }
+=======
+    "usb": {
+        "vid": "0x6666",
+        "pid": "0x6667"
+    },
+    "community_layouts": ["ortho_5x4", "numpad_5x4"]
+>>>>>>> upstream/master
 }

@@ -14,6 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+=======
+#include "rn42.h"
+
+>>>>>>> upstream/master
 #include "report.h"
 #include "uart.h"
 
@@ -69,15 +74,28 @@ void rn42_send_keyboard(report_keyboard_t *report) {
     uart_write(0xFD);
     uart_write(0x09);
     uart_write(0x01);
+<<<<<<< HEAD
     uart_write(report->mods);
     uart_write(0x00);
     for (uint8_t i = 0; i < KEYBOARD_REPORT_KEYS; i++) {
         uart_write(report->keys[i]);
     }
+=======
+
+    uart_write(report->mods);
+    uart_write(0x00);
+    uart_write(report->keys[0]);
+    uart_write(report->keys[1]);
+    uart_write(report->keys[2]);
+    uart_write(report->keys[3]);
+    uart_write(report->keys[4]);
+    uart_write(report->keys[5]);
+>>>>>>> upstream/master
 }
 
 void rn42_send_mouse(report_mouse_t *report) {
     uart_write(0xFD);
+<<<<<<< HEAD
     uart_write(0x00);
     uart_write(0x03);
     uart_write(report->buttons);
@@ -98,4 +116,24 @@ void rn42_send_consumer(uint16_t data) {
     uart_write(0x03);
     uart_write(bitmap & 0xFF);
     uart_write((bitmap >> 8) & 0xFF);
+=======
+    uart_write(0x05);
+    uart_write(0x02);
+
+    uart_write(report->buttons);
+    uart_write(report->x);
+    uart_write(report->y);
+    uart_write(report->v);
+}
+
+void rn42_send_consumer(uint16_t usage) {
+    uint16_t bitmap = rn42_consumer_usage_to_bitmap(usage);
+
+    uart_write(0xFD);
+    uart_write(0x03);
+    uart_write(0x03);
+
+    uart_write(bitmap & 0xFF);
+    uart_write(bitmap >> 8);
+>>>>>>> upstream/master
 }

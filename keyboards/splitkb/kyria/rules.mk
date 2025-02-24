@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,6 @@ SPLIT_KEYBOARD = yes       # Split common
 LTO_ENABLE = yes
 
 DEFAULT_FOLDER = splitkb/kyria/rev2
+=======
+DEFAULT_FOLDER = splitkb/kyria/rev3
+>>>>>>> upstream/master

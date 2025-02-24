@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #undef VENDOR_ID
 #define VENDOR_ID 0x1209
@@ -90,6 +91,8 @@
 // as per https://www.pjrc.com/store/teensy41.html
 #define USB_MAX_POWER_CONSUMPTION 100
 
+=======
+>>>>>>> upstream/master
 /* We use the i.MX RT1060 high-speed GPIOs (GPIO6-9) which are connected to the
  * AHB bus (AHB_CLK_ROOT), which runs at the same speed as the ARM Core Clock,
  * i.e. 600 MHz. See MIMXRT1062, page 949, 12.1 Chip-specific GPIO information.
@@ -97,9 +100,12 @@
 
 // in clock cycles
 #define GPIO_INPUT_PIN_DELAY 0
+<<<<<<< HEAD
 
 #define LED_PIN_ON_STATE 0
 #define LED_NUM_LOCK_PIN LINE_PIN26
 #define LED_CAPS_LOCK_PIN LINE_PIN12
 #define LED_SCROLL_LOCK_PIN LINE_PIN25
 #define LED_COMPOSE_PIN LINE_PIN24
+=======
+>>>>>>> upstream/master

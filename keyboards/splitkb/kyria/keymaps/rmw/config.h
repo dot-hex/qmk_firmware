@@ -1,4 +1,4 @@
-/* Copyright 2019 Thomas Baart <thomas@splitkb.com>
+/* Copyright 2021 bdtc123
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,24 +13,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 #pragma once
 
+<<<<<<< HEAD:keyboards/splitkb/kyria/keymaps/rmw/config.h
 #define MACOSX
 
 #ifdef OLED_ENABLE
   #define OLED_DISPLAY_128X64
 #endif
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_LED_COUNT 61
+>>>>>>> upstream/master:keyboards/kprepublic/bm60hsrgb_poker/rev2/config.h
 
+// Underglow LEDs are WS2812, but someone might want to use RGBLIGHT for them;
+// don't use those LEDs in RGB Matrix in that case.
 #ifdef RGBLIGHT_ENABLE
-  #define RGBLIGHT_ANIMATIONS
-  #define RGBLIGHT_HUE_STEP 8
-  #define RGBLIGHT_SAT_STEP 8
-  #define RGBLIGHT_VAL_STEP 8
+#    define WS2812_LED_COUNT 0
+#else
+#    define WS2812_LED_COUNT 6
 #endif
 
-// If you are using an Elite C rev3 on the follower side, uncomment the lines below:
-// #define SPLIT_USB_DETECT
-// #define NO_USB_STARTUP_CHECK
-
-
+#define RGB_MATRIX_LED_COUNT (IS31FL3733_LED_COUNT + WS2812_LED_COUNT)

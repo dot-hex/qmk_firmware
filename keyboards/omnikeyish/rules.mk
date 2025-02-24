@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = at90usb1286
 
@@ -17,5 +18,7 @@ BACKLIGHT_ENABLE = no  	# Enable keyboard backlight functionality
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 
+=======
+>>>>>>> upstream/master
 # Project specific files
 SRC += dynamic_macro.c

@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x00DE
 #define PRODUCT_ID      0x6566 // 65A + 1 since the pre-alpha version was 6565
@@ -43,16 +44,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 #define EEPROM_I2C_24LC256
 //#define I2C1_CLOCK_SPEED 400000
 //#define I2C1_DUTY_CYCLE FAST_DUTY_CYCLE_2
 
 #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
 
+<<<<<<< HEAD
 #define STM32_HSECLK 8000000
 
 #define OPENDRAIN_INDICATORS
 #define LED_CAPS_LOCK_PIN A6
+=======
+#define OPENDRAIN_INDICATORS
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -69,5 +76,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

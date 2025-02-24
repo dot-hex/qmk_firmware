@@ -17,7 +17,18 @@
 
 #pragma once
 
-#include "quantum.h"
+#include <stdbool.h>
+#include <stdint.h>
+
+#ifndef WPM_ESTIMATED_WORD_SIZE
+#    define WPM_ESTIMATED_WORD_SIZE 5
+#endif
+#ifndef WPM_SAMPLE_SECONDS
+#    define WPM_SAMPLE_SECONDS 5
+#endif
+#ifndef WPM_SAMPLE_PERIODS
+#    define WPM_SAMPLE_PERIODS 25
+#endif
 
 #ifndef WPM_ESTIMATED_WORD_SIZE
 #    define WPM_ESTIMATED_WORD_SIZE 5

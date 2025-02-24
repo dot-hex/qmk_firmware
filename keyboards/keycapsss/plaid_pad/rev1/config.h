@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT Plaid-Pad Rev1
 #define DEVICE_VER 0x0001
 
@@ -24,5 +25,7 @@
 #define ENCODERS_PAD_A { D1, B2 }
 #define ENCODERS_PAD_B { D0, B1 }
 
+=======
+>>>>>>> upstream/master
 #define LED_RED C5      // LED1
 #define LED_GREEN C4    // LED2

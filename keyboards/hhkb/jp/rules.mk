@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -24,6 +25,12 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 #
 # make hhkb-keymap-clean
 # make hhkb-keymap-dfu HHKB_RN42_ENABLE=yes
+=======
+# Build Options
+#   change yes to no to disable
+#
+CUSTOM_MATRIX = yes    # Custom matrix file for the HHKB
+>>>>>>> upstream/master
 
 # project specific files
 SRC = matrix.c

@@ -1,7 +1,8 @@
 {
-    "keyboard_name": "Sinc",
+    "manufacturer": "Keebio",
     "url": "https://keeb.io",
     "maintainer": "nooges",
+<<<<<<< HEAD
     "layouts": {
         "LAYOUT_75": {
             "layout": [
@@ -992,5 +993,23 @@
                 {"label":"Right", "x":18.25, "y":5.25}
             ]
         }
+=======
+    "usb": {
+        "vid": "0xCB10"
+    },
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": false,
+        "nkro": false
+    },
+    "split": {
+        "enabled": true
+    },
+    "build": {
+        "lto": true
+>>>>>>> upstream/master
     }
 }

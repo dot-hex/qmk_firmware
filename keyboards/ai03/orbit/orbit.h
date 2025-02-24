@@ -17,6 +17,7 @@
 #pragma once
 
 #include "quantum.h"
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -46,6 +47,8 @@
     { R30, R31, R32, R33, R34, R35, R36 }, \
     { R40, R41, R42, R43, R44, R45, XXX } \
 }
+=======
+>>>>>>> upstream/master
 
 void led_toggle(uint8_t id, bool on);
 void set_all_leds(bool leds[6]);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*
+=======
+/**
+>>>>>>> upstream/master
  * Copyright 2021 Quentin LEBASTARD <qlebastard@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,8 +19,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "tbkmini.h"
 
+=======
+#include "quantum.h"
+
+// clang-format off
+>>>>>>> upstream/master
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {
     // left
@@ -57,3 +67,7 @@ led_config_t g_led_config = { {
     2, 2, 2
 } };
 #endif
+<<<<<<< HEAD
+=======
+// clang-format on
+>>>>>>> upstream/master

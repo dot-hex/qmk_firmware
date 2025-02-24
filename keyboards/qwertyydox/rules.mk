@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -13,4 +14,6 @@ RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = qwertyydox/rev1

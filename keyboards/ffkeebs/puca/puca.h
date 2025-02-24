@@ -18,13 +18,19 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 /* Keycodes defined here can be used by any keymap. If you wish to
  * define additional keycodes for your personal keymap only, assign
  * your first custom keycode to `= NEW_SAFE_RANGE`.
+=======
+<<<<<<<< HEAD:keyboards/ffkeebs/puca/puca.h
+/* Keycodes defined here can be used by any keymap.
+>>>>>>> upstream/master
  *
  * See `process_record_kb()` in `puca.c`.
  */
 enum keyboard_keycodes {
+<<<<<<< HEAD
     MC_00 = SAFE_RANGE,
     NEW_SAFE_RANGE,
 };
@@ -99,3 +105,19 @@ enum keyboard_keycodes {
     { K40, K41, K42, K43, XXX }, \
     { K50, K51, K52, K53, XXX }, \
 }
+=======
+    MC_00 = QK_KB_0,
+};
+========
+#define LAYOUT( \
+    M00, M01, M02, \
+    M10, M11, M12,  \
+    M20, M21, M22  \
+) \
+{ \
+    { M00, M01, M02 }, \
+    { M10, M11, M12 }, \
+    { M20, M21, M22 }  \
+}
+>>>>>>>> upstream/master:keyboards/afternoonlabs/gust/rev1/rev1.h
+>>>>>>> upstream/master

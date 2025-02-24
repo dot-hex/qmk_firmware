@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# Copyright 2021 Stefan Kerkmann
+=======
 # Copyright 2017 Fred Sundvik
+>>>>>>> upstream/master
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,4 +19,8 @@
 
 # --------------------------------------------------------------------------------
 # Keep this file, even if it is empty, as a marker that this folder contains tests
+<<<<<<< HEAD
 # --------------------------------------------------------------------------------
+=======
+# --------------------------------------------------------------------------------
+>>>>>>> upstream/master

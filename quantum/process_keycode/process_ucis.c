@@ -15,7 +15,10 @@
  */
 
 #include "process_ucis.h"
+#include "ucis.h"
+#include "keycodes.h"
 
+<<<<<<< HEAD
 qk_ucis_state_t qk_ucis_state;
 
 void qk_ucis_start(void) {
@@ -113,17 +116,29 @@ bool process_ucis(uint16_t keycode, keyrecord_t *record) {
                     register_ucis(ucis_symbol_table[i].code_points);
                     break;
                 }
-            }
-            if (symbol_found) {
-                qk_ucis_success(i);
-            } else {
-                qk_ucis_symbol_fallback();
-            }
-
-            qk_ucis_state.in_progress = false;
+=======
+bool process_ucis(uint16_t keycode, keyrecord_t *record) {
+    if (ucis_active() && record->event.pressed) {
+        bool special = keycode == KC_SPACE || keycode == KC_ENTER || keycode == KC_ESCAPE || keycode == KC_BACKSPACE;
+        if (ucis_count() >= UCIS_MAX_INPUT_LENGTH && !special) {
             return false;
+        }
 
-        default:
-            return true;
+        if (!ucis_add(keycode)) {
+            switch (keycode) {
+                case KC_BACKSPACE:
+                    return ucis_remove_last();
+                case KC_ESCAPE:
+                    ucis_cancel();
+                    return false;
+                case KC_SPACE:
+                case KC_ENTER:
+                    ucis_finish();
+                    return false;
+>>>>>>> upstream/master
+            }
+        }
     }
+
+    return true;
 }

@@ -14,6 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+<<<<<<< HEAD
 #include "bumblebee.h"
 
 // Encoder
@@ -33,6 +34,16 @@ void keyboard_post_init_user(void) {
     rgblight_setrgb_at(0, 0, 0, 0); // [..., 0] = top LED
     rgblight_setrgb_at(0, 0, 0, 1); // [..., 1] = middle LED
     rgblight_setrgb_at(0, 0, 0, 2); // [..., 2] = bottom LED
+=======
+#include "quantum.h"
+
+// Initialize all RGB indicators to 'off'
+void keyboard_post_init_kb(void) {
+    rgblight_setrgb_at(0, 0, 0, 0); // [..., 0] = top LED
+    rgblight_setrgb_at(0, 0, 0, 1); // [..., 1] = middle LED
+    rgblight_setrgb_at(0, 0, 0, 2); // [..., 2] = bottom LED
+    keyboard_post_init_user();
+>>>>>>> upstream/master
 }
 
 // RGB Layer Indicators
@@ -53,4 +64,8 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
         rgblight_setrgb_at(0, 0, 0, 2);
     }
     return layer_state_set_user(state);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master

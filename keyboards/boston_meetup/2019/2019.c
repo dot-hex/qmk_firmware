@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "2019.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 #include "rgb_matrix.h"

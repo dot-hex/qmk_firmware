@@ -17,6 +17,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,12 +26,15 @@
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    "bpiphany"
 #define PRODUCT         "HIDLiberation"
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 18
 #define MATRIX_COLS 8
 
 // HID Liberation Device uses custom matrix code to accomodate a 74HC238 3 to 8 decoder on pins B1, B2 and B3.
+<<<<<<< HEAD
 //#define DIODE_DIRECTION
 
 #define LED_CAPS_LOCK_PIN B5
@@ -72,6 +76,8 @@
  *
  */
 //#define FORCE_NKRO
+=======
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -88,5 +94,8 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

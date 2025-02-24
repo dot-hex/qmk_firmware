@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -12,4 +13,6 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = ortho_5x15
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = 40percentclub/i75/promicro

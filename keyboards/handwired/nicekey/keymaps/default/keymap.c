@@ -116,7 +116,11 @@ PGM_P const sentences[] PROGMEM = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
+<<<<<<< HEAD
         int sentences_size = sizeof(sentences) / sizeof(sentences[0]);
+=======
+        int sentences_size = ARRAY_SIZE(sentences);
+>>>>>>> upstream/master
         int i = rand() % sentences_size;
 
         switch (keycode) {

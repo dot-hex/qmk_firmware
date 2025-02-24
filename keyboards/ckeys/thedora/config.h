@@ -16,52 +16,11 @@
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0xFEED
-#define PRODUCT_ID 0x6060
-#define DEVICE_VER 0x0001
-#define MANUFACTURER ckeys
-#define PRODUCT thedora
-
-#define ENCODERS_PAD_A { B13 }
-#define ENCODERS_PAD_B { B15 }
-#define ENCODER_RESOLUTION 4
-
-/* key matrix size */
-#define MATRIX_ROWS 4
-#define MATRIX_COLS 6
-
-#define MATRIX_ROW_PINS { A2, A1, A0, B8 }
-#define MATRIX_COL_PINS { B5, B4, B3, B2, B1, B0 }
-
-// #define UNUSED_PINS { B14 }
-
-/* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
-
-//#define BACKLIGHT_PIN B7
-// #define BACKLIGHT_BREATHING
-//#define BACKLIGHT_LEVELS 3
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
-
-/* define if matrix has ghost (lacks anti-ghosting diodes) */
-//#define MATRIX_HAS_GHOST
-
-/* number of backlight levels */
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
 #define AUDIO_CLICKY
 
 #define DAC_SAMPLE_MAX 65535U
 
+<<<<<<< HEAD
 /*
  * Force NKRO
  *
@@ -83,6 +42,8 @@
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 // Audio Click
 
 // Music Mode Polyphony
@@ -115,5 +76,3 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

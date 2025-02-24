@@ -47,13 +47,21 @@ void tca6424_init(void)
 
 static void write_port(uint8_t p, uint8_t d)
 {
+<<<<<<< HEAD
     i2c_writeReg(TCA6424_ADDR, p, &d, 1, TIMEOUT);
+=======
+    i2c_write_register(TCA6424_ADDR, p, &d, 1, TIMEOUT);
+>>>>>>> upstream/master
 }
 
 static uint8_t read_port(uint8_t port)
 {
     uint8_t data = 0;
+<<<<<<< HEAD
     i2c_readReg(TCA6424_ADDR, port, &data, 1, TIMEOUT);
+=======
+    i2c_read_register(TCA6424_ADDR, port, &data, 1, TIMEOUT);
+>>>>>>> upstream/master
     return data;
 }
 

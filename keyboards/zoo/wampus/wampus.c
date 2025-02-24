@@ -14,7 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "wampus.h"
+=======
+#include "quantum.h"
+
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 
 void board_init(void) {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "quantum.h"
+<<<<<<< HEAD
 #include "matrix.h"
 #include <avr/sfr_defs.h>
 #include <stdint.h>
@@ -65,3 +66,7 @@ void reset_keyboard_kb(void);
     { k30, ___, k32, k33, k34, k35, k36, k37, k38, k39, k3A, k3B, k3C, k3D, k3E, k3F }, \
     { k40, k41, k42, ___, ___, ___, k46, ___, ___, ___, k4A, k4B, k4C, k4D, ___, ___ } \
 }
+=======
+
+void reset_keyboard_kb(void);
+>>>>>>> upstream/master

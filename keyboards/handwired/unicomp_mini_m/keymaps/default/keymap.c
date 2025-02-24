@@ -28,7 +28,11 @@ enum custom_keycodes {
 };
 
 // Mod key detection
+<<<<<<< HEAD
 #define MODS_SHIFT_MASK (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
+=======
+#define MODS_SHIFT_MASK (MOD_BIT(KC_LSFT)|MOD_BIT(KC_RSFT))
+>>>>>>> upstream/master
 #define MODS_ALT_MASK (MOD_BIT(KC_LALT)|MOD_BIT(KC_RALT))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -55,12 +59,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case NUMSLCK: {
             if (record->event.pressed) {
                 if (keyboard_report->mods & MODS_SHIFT_MASK) {
+<<<<<<< HEAD
                     tap_code(KC_NLCK);
                 } else {
                     register_code(KC_SLCK);
                 }
             } else {
                 unregister_code(KC_SLCK);
+=======
+                    tap_code(KC_NUM);
+                } else {
+                    register_code(KC_SCRL);
+                }
+            } else {
+                unregister_code(KC_SCRL);
+>>>>>>> upstream/master
             }
             break;
         }
@@ -79,7 +92,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case PSCSYSR: {
             if (record->event.pressed) {
                 if (keyboard_report->mods & MODS_ALT_MASK) {
+<<<<<<< HEAD
                     tap_code(KC_SYSREQ);
+=======
+                    tap_code(KC_SYSTEM_REQUEST);
+>>>>>>> upstream/master
                 } else {
                     register_code(KC_PAUS);
                 }

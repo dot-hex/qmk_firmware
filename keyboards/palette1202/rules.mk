@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,5 +21,7 @@ ENCODER_ENABLE     = yes    # Enable support for rotary encoders
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306    # Enable support for OLED display
 
+=======
+>>>>>>> upstream/master
 # Additional code
 SRC += lib/oled_helper.c  # Adding OLED

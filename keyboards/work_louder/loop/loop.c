@@ -14,9 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "loop.h"
 
 #if !defined(VIA_ENABLE) && defined(ENCODER_ENABLE)
+=======
+#include "quantum.h"
+
+#if defined(ENCODER_ENABLE)
+>>>>>>> upstream/master
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {

@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x4444
 #define PRODUCT_ID      0x0007
@@ -52,6 +53,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+#define BACKLIGHT_PWM_DRIVER    PWMD2
+#define BACKLIGHT_PWM_CHANNEL   4
+
+/* Underglow */
+#define WS2812_SPI_DRIVER SPID1
+#define WS2812_SPI_MOSI_PAL_MODE 0
+#define WS2812_SPI_SCK_PIN A5
+#define WS2812_SPI_SCK_PAL_MODE 0
+>>>>>>> upstream/master
 
 /* Indicator leds */
 #define LOCK_LIGHTS     TRUE
@@ -64,9 +75,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LAYER_3         A8
 #define LAYER_4         A9
 #define LAYER_5         B9
+<<<<<<< HEAD
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE    5
 
 /* Added extra layer for use of layer leds */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
+=======
+>>>>>>> upstream/master

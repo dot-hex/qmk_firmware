@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
@@ -21,3 +19,5 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 BLUETOOTH_ENABLE = yes
 BLUETOOTH_DRIVER = BluefruitLE
+=======
+>>>>>>> upstream/master

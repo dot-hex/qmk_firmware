@@ -14,9 +14,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD:keyboards/xelus/la_plus/keymaps/via/config.h
 #pragma once
 
 // Enable RGB Matrix
 #define VIA_QMK_RGBLIGHT_ENABLE
 
 #define QMK_KEYS_PER_SCAN 4
+=======
+#include "quantum.h"
+
+void matrix_io_delay(void) {
+    __asm__ volatile("nop\nnop\nnop\n");
+}
+>>>>>>> upstream/master:keyboards/aeboards/constellation/rev2/rev2.c

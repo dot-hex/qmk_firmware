@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 HorrorTroll <https://github.com/HorrorTroll>
+=======
+/* Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +20,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -60,6 +65,21 @@
     uint16_t flash_size = *(uint16_t*)FLASHSIZE_BASE;   \
     (flash_size <= 512) ? flash_size : 512;             \
 })
+=======
+// SPI configuration
+#define SPI_DRIVER SPID1
+#define SPI_SCK_PIN A5
+#define SPI_MOSI_PIN A7
+#define SPI_MISO_PIN A6
+
+// Flash configuration
+#define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN A2
+#define EXTERNAL_FLASH_SPI_CLOCK_DIVISOR 16
+#define EXTERNAL_FLASH_PAGE_SIZE 256
+#define EXTERNAL_FLASH_SECTOR_SIZE 4096
+#define EXTERNAL_FLASH_BLOCK_SIZE 4096
+#define EXTERNAL_FLASH_SIZE (256 * 1024) // 2M-bit flash size
+>>>>>>> upstream/master
 
 #ifdef OLED_ENABLE
     /* Mapping I2C2 for OLED */
@@ -70,6 +90,7 @@
     /* Use the custom font */
     #define OLED_FONT_H "lib/glcdfont.c"
 #endif
+<<<<<<< HEAD
 
 #ifdef RGB_MATRIX_ENABLE
     #define DRIVER_LED_TOTAL 24
@@ -99,3 +120,5 @@
     #define ENABLE_RGB_MATRIX_HUE_WAVE
     #define ENABLE_RGB_MATRIX_PIXEL_RAIN
 #endif
+=======
+>>>>>>> upstream/master

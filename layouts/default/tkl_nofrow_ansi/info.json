@@ -1,7 +1,15 @@
 {
     "keyboard_name": "Tenkeyless No F-Row ANSI Layout",
     "url": "",
+<<<<<<< HEAD
     "maintainer": "qmk",
+=======
+<<<<<<< HEAD:keyboards/spaceholdings/nebula68/info.json
+    "maintainer": "yiancar",
+=======
+    "maintainer": "qmk",
+>>>>>>> upstream/master:layouts/default/tkl_nofrow_ansi/info.json
+>>>>>>> upstream/master
     "layouts": {
         "LAYOUT_tkl_nofrow_ansi": {
             "layout": [

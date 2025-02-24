@@ -1,9 +1,7 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = qmk-dfu
 
@@ -30,3 +28,7 @@ AUDIO_ENABLE = no           # Audio output
 LTO_ENABLE = yes            # Reduce firmware size
 
 VIA_ENABLE = yes            # VIA support should be enabled here due to the main() loop will be compiled first.
+=======
+UART_DRIVER_REQUIRED = yes
+SRC += bluetooth_custom.c
+>>>>>>> upstream/master

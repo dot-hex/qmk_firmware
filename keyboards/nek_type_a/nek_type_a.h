@@ -21,9 +21,7 @@
 #include <stdbool.h>
 #include <util/delay.h>
 
-#define I2C_ADDR        0b0100000
-#define I2C_ADDR_WRITE  ( (I2C_ADDR<<1) | I2C_WRITE )
-#define I2C_ADDR_READ   ( (I2C_ADDR<<1) | I2C_READ  )
+#define I2C_ADDR        (0b0100000<<1)
 #define IODIRA          0x00            // i/o direction register
 #define IODIRB          0x01
 #define GPPUA           0x0C            // GPIO pull-up resistor register
@@ -38,6 +36,7 @@ extern uint8_t expander_input_pin_mask;
 extern bool i2c_initialized;
 
 void init_expander(void);
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -56,3 +55,5 @@ void init_expander(void);
     { L51, L52, L53, L54, L55, L56, XXX, R51, R52, R53, R54, R55, XXX, XXX, R58, XXX, R5A, XXX }, \
     { L61, L62, L63, XXX, L65, XXX, XXX, R61, XXX, R63, XXX, R65, R66, XXX, R68, R69, R6A, R6B } \
 }
+=======
+>>>>>>> upstream/master

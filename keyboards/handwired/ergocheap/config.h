@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEDE //0xFEED
 #define PRODUCT_ID      0x6942 //0x6465
@@ -47,6 +48,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE   5
 #define TAPPING_TERM 500
+=======
+#define PERMISSIVE_HOLD
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -63,5 +67,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

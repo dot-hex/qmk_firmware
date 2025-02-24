@@ -16,6 +16,11 @@
 
 #include QMK_KEYBOARD_H
 
+<<<<<<< HEAD
+=======
+#include <stdio.h>
+
+>>>>>>> upstream/master
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
   _QWERTY = 0,
@@ -85,6 +90,7 @@ static void render_logo(void) {
 
 static void render_rgbled_status(bool full) {
 #ifdef RGBLIGHT_ENABLE
+<<<<<<< HEAD
   char buf[30];
   if (RGBLIGHT_MODES > 1 && rgblight_is_enabled()) {
       if (full) {
@@ -98,6 +104,26 @@ static void render_rgbled_status(bool full) {
       }
       oled_write(buf, false);
   }
+=======
+    if (RGBLIGHT_MODES > 1 && rgblight_is_enabled()) {
+        if (full) {
+            // " LED %d:%d,%d,%d"
+            oled_write_P(PSTR(" LED"), false);
+            oled_write(get_u8_str(rgblight_get_mode(), ' '), false);
+            oled_write_char(':', false);
+            oled_write(get_u8_str(rgblight_get_hue() / RGBLIGHT_HUE_STEP, ' '), false);
+            oled_write_char(',', false);
+            oled_write(get_u8_str(rgblight_get_sat() / RGBLIGHT_SAT_STEP, ' '), false);
+            oled_write_char(',', false);
+            oled_write(get_u8_str(rgblight_get_val() / RGBLIGHT_VAL_STEP, ' '), false);
+        } else {
+            // "[%2d]"
+            oled_write_char('[', false);
+            oled_write(get_u8_str(rgblight_get_mode(), ' '), false);
+            oled_write_char(']', false);
+        }
+    }
+>>>>>>> upstream/master
 #endif
 }
 

@@ -23,6 +23,7 @@ extern bool i2c_initialized;
 
 void init_dactyl(void);
 void init_expander(void);
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -52,3 +53,5 @@ void init_expander(void);
     { k40, k41, k42, k43, k44, XXX, XXX, k47, k48, k49, k4A, k4B }, \
     { k50, k51, k52, k53, k54, k55, k56, k57, k58, k59, k5A, k5B } \
 }
+=======
+>>>>>>> upstream/master

@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define MATRIX_ROW_PINS { A10, B13, B12, B11, C14, C15 }
 #define MATRIX_COL_PINS { C13, B9, B4, B7, B8, B5, B6, A9, A5, A6, A7, B1, B2, B10, B3, B14, B15 }
 
@@ -32,3 +33,6 @@
 
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 #define DIODE_DIRECTION COL2ROW
+=======
+#define BACKLIGHT_PWM_DRIVER PWMD3
+>>>>>>> upstream/master

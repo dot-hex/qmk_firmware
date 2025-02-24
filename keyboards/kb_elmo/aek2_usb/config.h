@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -54,4 +55,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* reduce EEPROM usage */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
+=======
+>>>>>>> upstream/master
 #define LAYER_STATE_8BIT

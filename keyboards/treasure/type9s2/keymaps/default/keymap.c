@@ -38,6 +38,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = LAYOUT_ortho_3x3(
         _______, _______, _______,
         _______, _______, _______,
+<<<<<<< HEAD
         RESET,   _______, _______
+=======
+        QK_BOOT, _______, _______
+>>>>>>> upstream/master
     )
 };

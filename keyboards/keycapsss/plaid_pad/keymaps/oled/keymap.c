@@ -72,7 +72,11 @@ const uint16_t PROGMEM zeroDot_combo[] = {KC_P0, KC_PDOT, COMBO_END};
 const uint16_t PROGMEM leftDown_combo[] = {KC_LEFT, KC_DOWN, COMBO_END};
 const uint16_t PROGMEM prevPlay_combo[] = {KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, COMBO_END};
 
+<<<<<<< HEAD
 combo_t key_combos[COMBO_COUNT] = {
+=======
+combo_t key_combos[] = {
+>>>>>>> upstream/master
   [COMBO1] = COMBO_ACTION(zeroDot_combo),
   [COMBO2] = COMBO_ACTION(leftDown_combo),
   [COMBO3] = COMBO_ACTION(prevPlay_combo),
@@ -125,8 +129,12 @@ bool oled_task_user(void) {
 
 #endif
 
+<<<<<<< HEAD
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
+=======
+#ifdef ENCODER_MAP_ENABLE
+>>>>>>> upstream/master
 /*
     ,-----------------------,
     |  E1 |  E2 |  E3 |  E4 |
@@ -138,6 +146,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     |     |     |     |  E1 |
     `-----------------------'
  */
+<<<<<<< HEAD
 
   // First encoder (E1)
   if (index == 0) {
@@ -227,4 +236,18 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
   }
     return true;
 }
+=======
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+#ifdef KEYBOARD_keycapsss_plaid_pad_rev1
+  [_NUMPAD]     = { ENCODER_CCW_CW(KC_F18,       KC_F17),    ENCODER_CCW_CW(KC_F20,  KC_F19)  },
+  [_NAVIGATION] = { ENCODER_CCW_CW(C(S(KC_TAB)), C(KC_TAB)), ENCODER_CCW_CW(KC_PGUP, KC_PGDN) },
+  [_MEDIA]      = { ENCODER_CCW_CW(KC_F18,       KC_F17),    ENCODER_CCW_CW(KC_F20,  KC_F19)  }
+#else
+  [_NUMPAD]     = { ENCODER_CCW_CW(KC_F18,       KC_F17),    ENCODER_CCW_CW(KC_F20,  KC_F19),  ENCODER_CCW_CW(KC_F22,  KC_F21),  ENCODER_CCW_CW(KC_F24,  KC_F23)  },
+  [_NAVIGATION] = { ENCODER_CCW_CW(C(S(KC_TAB)), C(KC_TAB)), ENCODER_CCW_CW(KC_PGUP, KC_PGDN), ENCODER_CCW_CW(KC_WH_U, KC_WH_D), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+  [_MEDIA]      = { ENCODER_CCW_CW(KC_F18,       KC_F17),    ENCODER_CCW_CW(KC_F20,  KC_F19),  ENCODER_CCW_CW(KC_BRID, KC_BRIU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
+#endif
+};
+
+>>>>>>> upstream/master
 #endif

@@ -3,6 +3,7 @@
 #include "quantum.h"
 
 void battery_poll(uint8_t level);
+<<<<<<< HEAD
 void led_set_kb(uint8_t usb_led);
 void led_set_user(uint8_t usb_led);
 
@@ -25,3 +26,5 @@ void led_set_user(uint8_t usb_led);
     { k70, k71, k72, k73, k74, k75 }, \
     { tp1, tp2, tp3, XXX, XXX, XXX } \
 }
+=======
+>>>>>>> upstream/master

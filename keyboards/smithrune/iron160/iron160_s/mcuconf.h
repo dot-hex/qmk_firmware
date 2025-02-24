@@ -1,0 +1,33 @@
+/*
+<<<<<<< HEAD:keyboards/handwired/misterdeck/keymaps/nobuttons/config.h
+Copyright 2021 Chris Broekema (broekema@gmail.com)
+=======
+Copyright 2022 Gondolindrim
+>>>>>>> upstream/master:keyboards/smithrune/iron160/iron160_s/mcuconf.h
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+<<<<<<< HEAD:keyboards/handwired/misterdeck/keymaps/nobuttons/config.h
+#pragma once
+
+#define JOYSTICK_AXES_COUNT 4
+#define JOYSTICK_BUTTON_COUNT 0
+=======
+#include_next <mcuconf.h>
+
+#undef STM32_PWM_USE_TIM3
+#define STM32_PWM_USE_TIM3 TRUE
+>>>>>>> upstream/master:keyboards/smithrune/iron160/iron160_s/mcuconf.h

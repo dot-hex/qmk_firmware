@@ -20,6 +20,7 @@
 
 void led_on(void);
 void led_off(void);
+<<<<<<< HEAD
 
 /* This is a shortcut to help you visually see your layout.
  *
@@ -47,3 +48,5 @@ void led_off(void);
     { R30, R31, R32, R33, R34, R35, R36, R37 }, \
     { R40, R41, R42, R43, KC_NO, R45, R46, R47 } \
 }
+=======
+>>>>>>> upstream/master

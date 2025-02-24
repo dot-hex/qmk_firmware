@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F103
 
@@ -21,5 +22,11 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # HAS TO BE ON! Otherwise the custom matrix doesn't work
 AUDIO_ENABLE = no           # Audio output
 
+=======
+# custom bootloader
+MCU_LDSCRIPT = m12og_v1
+BOARD = m12og_v1
+
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 SRC += matrix.c

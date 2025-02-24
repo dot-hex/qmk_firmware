@@ -18,9 +18,12 @@
 
 /* PWM for AUDIO and RGB LED */
 #define HAL_USE_PWM TRUE
+<<<<<<< HEAD
 /* GPT and PAL for Audio */
 #define HAL_USE_GPT TRUE
 #define HAL_USE_PAL TRUE
+=======
+>>>>>>> upstream/master
 /* I2C for OLED display */
 #define HAL_USE_I2C TRUE
 

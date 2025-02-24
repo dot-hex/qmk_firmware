@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega328p
 
@@ -20,6 +21,8 @@ AUDIO_ENABLE = no           # Audio output
 LAYOUTS = ortho_4x12 planck_mit
 LAYOUTS_HAS_RGB = no
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 RGBLIGHT_SUPPORTED = no
 AUDIO_SUPPORTED = no

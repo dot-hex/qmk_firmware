@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "pisces.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 const matrix_row_t matrix_mask[MATRIX_ROWS] = {
 //  87654321

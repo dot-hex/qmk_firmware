@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 LTO_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = buzzard/rev1

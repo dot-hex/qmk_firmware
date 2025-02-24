@@ -29,6 +29,7 @@ Occasionally, new revisions of the PCB will be released. Every board comes with 
 
 Match the firmware that you flash onto the board with the designator on the board.
 
+<<<<<<< HEAD
 # Customizing your Ploopy Mini Trackball
 
 While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change, such as adding DPI control, or using the ball to scroll while holding a button. To allow for this sort of control, there is a callback for both the scroll wheel and the mouse sensor.
@@ -75,6 +76,8 @@ Nothing needs to be enabled to use this functionality.  Just add the `DRAG_SCROL
 * `#define PLOOPY_DRAGSCROLL_MOMENTARY` - Makes the key into a momentary key, rather than a toggle.
 * `#define PLOOPY_DRAGSCROLL_DPI 375` - When the fixed DPI option is enabled, this sets the DPI to be used for Drag Scroll.
 * `#define PLOOPY_DRAGSCROLL_INVERT` - This reverses the direction that the scroll is performed. 
+=======
+>>>>>>> upstream/master
 ## Fuse settings
 
 When flashing the bootloader, use the following fuse settings:
@@ -84,3 +87,10 @@ When flashing the bootloader, use the following fuse settings:
 | Low      | `0x5E`      |
 | High     | `0x99`      |
 | Extended | `0xC3`      |
+<<<<<<< HEAD
+=======
+
+# Customizing your Ploopy Mini Trackball
+
+You can find customziation options [here](../readme.md).
+>>>>>>> upstream/master

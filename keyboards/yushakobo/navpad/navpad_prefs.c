@@ -14,7 +14,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include QMK_KEYBOARD_H
+=======
+#include "navpad_prefs.h"
+#include "quantum.h"
+#include "action.h"
+#include "action_layer.h"
+#include "rgblight.h"
+#include "led.h"
+>>>>>>> upstream/master
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     if (!process_record_user(keycode, record)) { return false; }
@@ -32,10 +41,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+<<<<<<< HEAD
 bool led_update_kb(led_t led_state) {
     return led_update_user(led_state);
 }
 
+=======
+>>>>>>> upstream/master
 #ifdef ENCODER_ENABLE
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }

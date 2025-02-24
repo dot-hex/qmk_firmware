@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -29,12 +30,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_A {D2}
 #define ENCODERS_PAD_B {D3}
 
+=======
+>>>>>>> upstream/master
 /* key matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 18
 
 #define MATRIX_ROW_PINS { D4, C6, D7, B3, B4, B5 }
 #define MATRIX_COL_PINS { E6, F0, F1, F4, F5, F6, F7, B6, D6 }
+<<<<<<< HEAD
 #define UNUSED_PINS
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -69,6 +73,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 //#define FORCE_NKRO
+=======
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -86,6 +92,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+<<<<<<< HEAD
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
@@ -94,6 +101,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
 
+=======
+>>>>>>> upstream/master
 /* OLED */
 #define OLED_DISPLAY_128X64
 #define OLED_FONT_H "keyboards/rate/pistachio_pro/lib/glcdfont.c"

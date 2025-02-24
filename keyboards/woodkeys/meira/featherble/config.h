@@ -17,8 +17,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
+=======
+<<<<<<<< HEAD:keyboards/woodkeys/meira/featherble/config.h
+========
+#include "config_common.h"
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0x5048 //PH
+#define PRODUCT_ID      0x0001
+#define DEVICE_VER      0x0001
+#define MANUFACTURER    PH
+#define PRODUCT         Redragon Vara
+
+/* key matrix size */
+#define MATRIX_ROWS 12
+#define MATRIX_COLS 11
+>>>>>>>> upstream/master:keyboards/handwired/boss566y/redragon_vara/config.h
+
+>>>>>>> upstream/master
 /*
  * Keyboard Matrix Assignments
  *
@@ -33,6 +52,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Column pins to demux in LSB order
 #define MATRIX_COL_PINS { C7, B7, B6, C6, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
 #define MATRIX_COL_PINS_SCANNED { C7, B7, B6, C6 }
+<<<<<<< HEAD
 #define LED_EN_PIN D2
 #define UNUSED_PINS
 
@@ -78,11 +98,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+
+#define AUDIO_PIN B5
+#define AUDIO_VOICES
+
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:keyboards/woodkeys/meira/featherble/config.h
+>>>>>>> upstream/master
 /* disable debug print */
 //#define NO_DEBUG
 
@@ -93,5 +123,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+========
+#define DIODE_DIRECTION COL2ROW
+>>>>>>>> upstream/master:keyboards/handwired/boss566y/redragon_vara/config.h
+>>>>>>> upstream/master

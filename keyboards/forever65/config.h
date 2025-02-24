@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
@@ -48,6 +49,8 @@
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -64,8 +67,11 @@
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+<<<<<<< HEAD
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
+=======
+>>>>>>> upstream/master
 #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE

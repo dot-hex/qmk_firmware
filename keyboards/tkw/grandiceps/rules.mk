@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F411
 
@@ -25,3 +26,6 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 WS2812_DRIVER = pwm
 OPT_DEFS += -DSTM32_DMA_REQUIRED=TRUE
+=======
+DEFAULT_FOLDER = tkw/grandiceps/rev1
+>>>>>>> upstream/master

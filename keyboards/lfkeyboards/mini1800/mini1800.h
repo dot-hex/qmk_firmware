@@ -1,6 +1,7 @@
 #pragma once
 
 #include "quantum.h"
+<<<<<<< HEAD
 #include "matrix.h"
 #include <avr/sfr_defs.h>
 
@@ -18,6 +19,8 @@ typedef struct Layer_Info {
 
 extern const uint32_t layer_count;
 extern const Layer_Info layer_info[];
+=======
+>>>>>>> upstream/master
 
 #define CLICK_HZ 500
 #define CLICK_MS 2
@@ -25,6 +28,7 @@ extern const Layer_Info layer_info[];
 
 void reset_keyboard_kb(void);
 void click(uint16_t freq, uint16_t duration);
+<<<<<<< HEAD
 
 #define ___ KC_NO
 
@@ -43,3 +47,5 @@ void click(uint16_t freq, uint16_t duration);
     { k40, k41, k42, ___, ___, k45, ___, ___, ___, ___, k4A, k4B, k4C, ___, k4E, k4F, k4G, k4H, k4I } \
 }
 #endif // !LAYOUT #endif
+=======
+>>>>>>> upstream/master

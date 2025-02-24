@@ -14,7 +14,11 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
 
+<<<<<<< HEAD
 #include "ristretto.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 enum layers {
 	_BASE,
@@ -23,6 +27,7 @@ enum layers {
 	_ADJUST
 };
 
+<<<<<<< HEAD
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
 	if(index == 0) {
@@ -35,6 +40,8 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 	return true;
 }
 
+=======
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
     return OLED_ROTATION_270;

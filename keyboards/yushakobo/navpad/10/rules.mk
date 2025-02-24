@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,4 +21,6 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes
 
 SRC += navpad_prefs.c
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = yushakobo/navpad/10/rev1

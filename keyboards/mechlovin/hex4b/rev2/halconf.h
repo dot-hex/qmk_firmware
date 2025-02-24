@@ -17,6 +17,18 @@
 #pragma once
 
 #define HAL_USE_PWM TRUE
+<<<<<<< HEAD
 
 #include_next <halconf.h>
 
+=======
+<<<<<<< HEAD:keyboards/rmi_kb/squishytkl/halconf.h
+
+#include_next <halconf.h>
+
+=======
+
+#include_next <halconf.h>
+>>>>>>> upstream/master:keyboards/mechlovin/hex4b/rev2/halconf.h
+
+>>>>>>> upstream/master

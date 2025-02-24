@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
+<<<<<<< HEAD
 
 #include "config_common.h"
 
@@ -34,10 +35,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define MATRIX_COL_PINS {E6, E0, A3, A4, A5, A6, A7, C7, C5, C4, C3, C2, C1, C0, D6, A2, A1, A0, F3}
     #define UNUSED_PINS {}
     #define RGBLED_NUM 26     // Number of LEDs
+=======
+>>>>>>> upstream/master
 
 #define AUDIO_VOICES
 #define AUDIO_PIN C6
 
+<<<<<<< HEAD
 #define BACKLIGHT_LEVELS 10
 #define BACKLIGHT_PWM_MAP {2, 4, 8, 16, 40, 55, 70, 128, 200, 255}
 
@@ -83,6 +87,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -98,5 +104,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

@@ -7,7 +7,11 @@ from milc import cli
 from qmk.path import normpath
 
 py_file_suffixes = ('py',)
+<<<<<<< HEAD
 py_dirs = ['lib/python']
+=======
+py_dirs = ['lib/python', 'util/ci']
+>>>>>>> upstream/master
 
 
 def yapf_run(files):

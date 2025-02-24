@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -62,3 +63,13 @@
 /* Bootmagic Lite key configuration */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 1
+=======
+<<<<<<<< HEAD:keyboards/kabedon/kabedon98e/config.h
+#define WS2812_PWM_DRIVER PWMD3
+#define WS2812_PWM_CHANNEL 1
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM3
+#define WS2812_PWM_DMA_CHANNEL 3
+========
+#include "qc60.h"
+>>>>>>>> upstream/master:keyboards/handwired/qc60/proto/proto.c
+>>>>>>> upstream/master

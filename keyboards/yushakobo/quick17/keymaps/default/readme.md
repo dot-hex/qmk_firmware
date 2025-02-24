@@ -40,7 +40,11 @@
     |-------+-------+--------+-------+---------+--------|
     | Caps  | Numlk | (NONE) |RGB_MOD| Media < | Vol-   |
     |-------+-------+--------+-------+---------+--------|
+<<<<<<< HEAD
     | Win   | mac   | EEP_RST| RESET | CONTROL | Mute   |
+=======
+    | Win   | mac   | EE_CLR | QK_BOOT | CONTROL | Mute   |
+>>>>>>> upstream/master
     `---------------------------------------------------'
 ```
 ### difference between mac-Mode and Win-Mode

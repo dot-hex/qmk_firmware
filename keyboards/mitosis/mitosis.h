@@ -2,12 +2,16 @@
 
 #include "quantum.h"
 
-#define red_led_off   PORTF |= (1<<5)
-#define red_led_on    PORTF &= ~(1<<5)
-#define blu_led_off   PORTF |= (1<<4)
-#define blu_led_on    PORTF &= ~(1<<4)
-#define grn_led_off   PORTD |= (1<<1)
-#define grn_led_on    PORTD &= ~(1<<1)
+#define MITOSIS_RED_LED_PIN F5
+#define MITOSIS_GREEN_LED_PIN D1
+#define MITOSIS_BLUE_LED_PIN F4
+
+#define red_led_off   gpio_write_pin_high(MITOSIS_RED_LED_PIN)
+#define red_led_on    gpio_write_pin_low(MITOSIS_RED_LED_PIN)
+#define blu_led_off   gpio_write_pin_high(MITOSIS_BLUE_LED_PIN)
+#define blu_led_on    gpio_write_pin_low(MITOSIS_BLUE_LED_PIN)
+#define grn_led_off   gpio_write_pin_high(MITOSIS_GREEN_LED_PIN)
+#define grn_led_on    gpio_write_pin_low(MITOSIS_GREEN_LED_PIN)
 
 #define set_led_off     red_led_off; grn_led_off; blu_led_off
 #define set_led_red     red_led_on;  grn_led_off; blu_led_off
@@ -17,6 +21,7 @@
 #define set_led_magenta red_led_on;  grn_led_off; blu_led_on
 #define set_led_cyan    red_led_off; grn_led_on;  blu_led_on
 #define set_led_white   red_led_on;  grn_led_on;  blu_led_on
+<<<<<<< HEAD
 
 /*
 #define LED_B 5
@@ -60,3 +65,5 @@
     { XXX, k31, k32, k33, k34, k35, k36, k37, k38, XXX }, \
     { XXX, k41, k42, k43, k44, k45, k46, k47, k48, XXX } \
 }
+=======
+>>>>>>> upstream/master

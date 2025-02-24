@@ -1,4 +1,6 @@
-/* This program is free software: you can redistribute it and/or modify
+/* Copyright 2018-2021 James Laird-Wah, Islam Sharabash
+ *
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
@@ -14,6 +16,6 @@
 
 #pragma once
 
-#define TAPPING_TOGGLE 2
-#define PERMISSIVE_HOLD
-#define TAPPING_TERM 150
+#include "quantum.h"
+
+#include "leds.h"

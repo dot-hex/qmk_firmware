@@ -10,11 +10,19 @@ A 65% hotswap in switch RGB keyboard from KPRepublic.
 
 Make example for this keyboard (after setting up your build environment):
 
+<<<<<<< HEAD:keyboards/kprepublic/bm68hsrgb/rev1/readme.md
     make kprepublic/bm68hsrgb:default
 
 Flashing example for this keyboard:
 
     make kprepublic/bm68hsrgb:default:flash
+=======
+    make kprepublic/bm68hsrgb/rev1:default
+
+Flashing example for this keyboard:
+
+    make kprepublic/bm68hsrgb/rev1:default:flash
+>>>>>>> upstream/master:keyboards/bm68rgb/readme.md
 
 To reset the board into bootloader mode, do one of the following:
 

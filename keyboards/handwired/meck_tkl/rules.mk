@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -10,6 +11,8 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
+=======
+>>>>>>> upstream/master
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no
 

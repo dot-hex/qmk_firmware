@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Cole Markham
+Copyright 2016 Daniel Svensson <dsvensson@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,15 +14,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 #pragma once
 
 #include "quantum.h"
-#define ___ KC_NO
 
-#define LAYOUT( \
-	     K01, K02, \
-	K10, K11, K12  \
-) { \
-	{ ___, K01, K02 }, \
-	{ K10, K11, K12 }  \
-}
+#define fn_led_on() gpio_write_pin_low(D0)
+#define fn_led_off() gpio_write_pin_high(D0)

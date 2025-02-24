@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -127,6 +128,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -142,6 +145,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 #define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -153,3 +157,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define ENCODERS_PAD_A { D0, D2 }
 #define ENCODERS_PAD_B { D1, D3 }
+=======
+>>>>>>> upstream/master

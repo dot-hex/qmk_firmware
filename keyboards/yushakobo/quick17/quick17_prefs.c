@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include QMK_KEYBOARD_H
+=======
+#include "quick17_prefs.h"
+>>>>>>> upstream/master
 
 bool _INPUT_JP;
 

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+
+>>>>>>> upstream/master
 /* Copyright 2019
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,9 +22,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "yampad.h"
 <<<<<<< HEAD
 =======
+=======
+#include "quantum.h"
+#include <stdio.h>
+>>>>>>> upstream/master
 
 #if defined(OLED_ENABLE)
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
@@ -71,4 +80,7 @@ bool oled_task_kb(void) {
   return false;
 }
 #endif
+<<<<<<< HEAD
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+>>>>>>> upstream/master

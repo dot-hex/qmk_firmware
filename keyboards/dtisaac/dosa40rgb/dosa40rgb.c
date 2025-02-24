@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "dosa40rgb.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {

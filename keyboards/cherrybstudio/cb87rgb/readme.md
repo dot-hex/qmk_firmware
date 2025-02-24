@@ -4,7 +4,11 @@
 
 A RGB TKL PCB including hotswap and solderable variant for CherryB Studio NEO87 and many compatible TKLs
 
+<<<<<<< HEAD
 * Keyboard Maintainer: duongaanh
+=======
+* Keyboard Maintainer: [lunaticwhat](https://github.com/lunaticwhat)
+>>>>>>> upstream/master
 * Hardware Supported: cb87rgb, atmega32u4
 * Hardware Availability: [CherryB Studio](https://discord.gg/3gsCa8K)
 

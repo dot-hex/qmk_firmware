@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -46,6 +47,8 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 // I2C setup
 #define I2C1_SCL_PIN        B8
 #define I2C1_SDA_PIN        B9
@@ -60,6 +63,7 @@
 // I2C EEPROM
 #define EEPROM_I2C_24LC64
 
+<<<<<<< HEAD
 // More EEPROM for layers
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 8191
 
@@ -69,18 +73,27 @@
 #define DRIVER_LED_TOTAL 28
 #define NOP_FUDGE 0.4
 
+=======
+>>>>>>> upstream/master
 // RGB PWM
 #define WS2812_PWM_DRIVER PWMD1
 #define WS2812_PWM_CHANNEL 2
 #define WS2812_PWM_PAL_MODE 1
+<<<<<<< HEAD
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM6
 #define WS2812_DMA_CHANNEL 7
 #define WS2812_DMAMUX_ID STM32_DMAMUX1_TIM1_UP
+=======
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM6
+#define WS2812_PWM_DMA_CHANNEL 7
+#define WS2812_PWM_DMAMUX_ID STM32_DMAMUX1_TIM1_UP
+>>>>>>> upstream/master
 
 // RGB Pullup
 #define WS2812_EXTERNAL_PULLUP
 
 // RGB Matrix settings
+<<<<<<< HEAD
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
@@ -135,3 +148,6 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+=======
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CUSTOM_test_mode
+>>>>>>> upstream/master

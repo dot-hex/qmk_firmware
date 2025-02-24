@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -29,4 +30,6 @@
 #define MATRIX_COLS 19
 #define MATRIX_ROWS 8
 #define DEBOUNCE 5
+=======
+>>>>>>> upstream/master
 #define MATRIX_HAS_GHOST

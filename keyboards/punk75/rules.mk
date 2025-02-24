@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32a
-
 # Processor frequency
 F_CPU = 16000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = usbasploader
@@ -22,3 +20,5 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes        # Enable rotary encoders support
 
 LAYOUTS = ortho_5x15
+=======
+>>>>>>> upstream/master

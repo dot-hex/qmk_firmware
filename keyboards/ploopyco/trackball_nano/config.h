@@ -19,6 +19,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -34,15 +35,18 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 0
 
+=======
+>>>>>>> upstream/master
 /* disable action features */
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
 
+<<<<<<< HEAD
 #define USB_MAX_POWER_CONSUMPTION 100
 
+=======
+>>>>>>> upstream/master
 #define ADNS5050_SCLK_PIN         B7
 #define ADNS5050_SDIO_PIN         C6
 #define ADNS5050_CS_PIN           B4

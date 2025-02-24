@@ -5,16 +5,28 @@
 One Handed Macro Mechanical Keyboard, 23 Key with optional RGB backlighting.
 
 - Keyboard Maintainer: [ianmclinden](https://github.com/ianmclinden)
+<<<<<<< HEAD
 - Hardware Supported: AMAG23 (ATmega32A)
 - Hardware Availability:
     - [Newegg](https://www.newegg.com/p/32K-00H1-00001)
     - [Amazon](https://www.amazon.com/Koolertron-Mechanical-Keyboard-One-Handed-Programmable/dp/B07RM1TBR8)
+=======
+- Hardware Supported: AMAG23 (AE-AMAG23-BKC) (ATmega32A)
+- Hardware Availability:
+    - [Newegg](https://www.newegg.com/p/32K-00H1-00001)
+    - [Amazon](https://www.amazon.com/Koolertron-Mechanical-Keyboard-One-Handed-Programmable/dp/B07RM1TBR8)
+    - [Koolertron](http://www.koolertron.com/koolertron-one-handed-macro-mechanical-keyboard-with-23-fully-programmable-keys-portable-mini-one-handed-mechanical-gaming-keypad-black-blue-switches-rgb-led.html)
+>>>>>>> upstream/master
 
 Make example for this keyboard (after setting up your build environment):
 
     make amag23:default
 
+<<<<<<< HEAD
 Flashing example for this keyboard ([after setting up the bootloadHID flashing environment](https://docs.qmk.fm/#/flashing_bootloadhid))
+=======
+Flashing example for this keyboard:
+>>>>>>> upstream/master
 
     make amag23:default:flash
 

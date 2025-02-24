@@ -14,8 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
-#include "config_common.h"
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x4B42
 #define PRODUCT_ID      0x0008
@@ -98,3 +98,6 @@
 #define DRIVER_INDICATOR_LED_TOTAL 0
 #endif
 #define DYNAMIC_KEYMAP_LAYER_COUNT 2
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+>>>>>>> upstream/master

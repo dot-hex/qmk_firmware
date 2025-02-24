@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 
@@ -22,14 +23,22 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 NO_USB_STARTUP_CHECK = no   # Disable initialization only when usb is plugged in
+=======
+# Do not put the microcontroller into power saving mode
+# when we get USB suspend event. We want it to keep updating
+# backlight effects.
+NO_SUSPEND_POWER_DOWN = yes
+>>>>>>> upstream/master
 
 CIE1931_CURVE = yes
-
-LAYOUTS = 65_ansi
+I2C_DRIVER_REQUIRED = yes
 
 # project specific files
 SRC +=  keyboards/wilba_tech/wt_main.c \
         keyboards/wilba_tech/wt_rgb_backlight.c \
         drivers/led/issi/is31fl3733.c \
         quantum/color.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+>>>>>>> upstream/master

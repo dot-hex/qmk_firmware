@@ -17,6 +17,10 @@
 #pragma once
 
 #include <stdint.h>
+<<<<<<< HEAD
+=======
+#include "pointing_device.h"
+>>>>>>> upstream/master
 
 #ifndef ADNS9800_CPI
 #    define ADNS9800_CPI 1600
@@ -43,7 +47,15 @@
 #endif
 
 #ifndef ADNS9800_CS_PIN
+<<<<<<< HEAD
 #    error "No chip select pin defined -- missing ADNS9800_CS_PIN"
+=======
+#    ifdef POINTING_DEVICE_CS_PIN
+#        define ADNS9800_CS_PIN POINTING_DEVICE_CS_PIN
+#    else
+#        error "No chip select pin defined -- missing POINTING_DEVICE_CS_PIN or ADNS9800_CS_PIN"
+#    endif
+>>>>>>> upstream/master
 #endif
 
 typedef struct {
@@ -56,6 +68,11 @@ typedef struct {
     int16_t y;
 } report_adns9800_t;
 
+<<<<<<< HEAD
+=======
+const pointing_device_driver_t adns9800_pointing_device_driver;
+
+>>>>>>> upstream/master
 void              adns9800_init(void);
 config_adns9800_t adns9800_get_config(void);
 void              adns9800_set_config(config_adns9800_t);
@@ -63,3 +80,7 @@ uint16_t          adns9800_get_cpi(void);
 void              adns9800_set_cpi(uint16_t cpi);
 /* Reads and clears the current delta values on the ADNS sensor */
 report_adns9800_t adns9800_get_report(void);
+<<<<<<< HEAD
+=======
+report_mouse_t    adns9800_get_report_driver(report_mouse_t mouse_report);
+>>>>>>> upstream/master

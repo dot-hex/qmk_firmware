@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 BOARD = QMK_PROTON_C
@@ -18,4 +19,6 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = alice alice_split_bs
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = mechlovin/adelais/standard_led/arm/rev2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u2
 
@@ -20,3 +21,7 @@ CUSTOM_MATRIX = lite
 SRC += 20130602/matrix.c
 
 LAYOUTS = tkl_ansi
+=======
+CUSTOM_MATRIX = lite
+SRC += 20130602/matrix.c
+>>>>>>> upstream/master

@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "kmini.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 void led_init_ports(void) {
     DDRB |= (1<<1); // OUT

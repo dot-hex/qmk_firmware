@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = at90usb1286
 
@@ -25,3 +26,7 @@ POINTING_DEVICE_DRIVER = pmw3360
 MOUSE_SHARED_EP = yes
 
 SPLIT_KEYBOARD = yes
+=======
+POINTING_DEVICE_DRIVER = pmw3360
+MOUSE_SHARED_EP = yes
+>>>>>>> upstream/master

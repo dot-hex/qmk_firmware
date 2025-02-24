@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,4 +22,10 @@ RGBLIGHT_ENABLE         = no
 
 # project specific files
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+CUSTOM_MATRIX           = yes
+
+# project specific files
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 SRC += matrix.c

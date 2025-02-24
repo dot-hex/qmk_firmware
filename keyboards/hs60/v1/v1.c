@@ -13,6 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "v1.h"
 
 // Please ignore this is for upcoming features
@@ -304,7 +305,12 @@ led_config_t g_led_config = { {
     4, 4, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
     1, 1
 } };
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
+#ifndef DEBOUNCE
+#    define DEBOUNCE 5
 #endif
 
 void bootmagic_lite(void)
@@ -359,7 +365,7 @@ void matrix_init_kb(void) {
 		// Clear the LED colors stored in EEPROM
 		for ( int row=0; row < MATRIX_ROWS; row++ )
 		{
-			HSV hsv;
+			hsv_t hsv;
 			for ( int column=0; column < MATRIX_COLS; column++ )
 			{
 				hsv.h = rand() & 0xFF;
@@ -377,6 +383,7 @@ void matrix_init_kb(void) {
 
 	matrix_init_user();
 }
+<<<<<<< HEAD
 
 void suspend_power_down_kb(void)
 {
@@ -387,3 +394,5 @@ void suspend_wakeup_init_kb(void)
 {
     rgb_matrix_set_suspend_state(false);
 }
+=======
+>>>>>>> upstream/master

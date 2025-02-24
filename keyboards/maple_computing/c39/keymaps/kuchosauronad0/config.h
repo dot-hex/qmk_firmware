@@ -1,10 +1,5 @@
-
 /*
-This is the c configuration file for the keymap
-
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
-Copyright 2017 Art Ortenburger
+Copyright 2021 Koobaczech
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,13 +17,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* key combination for magic key command */
-#undef IS_COMMAND
-#define IS_COMMAND() ( \
-    get_mods() == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_LALT)) \
-)
+/* Audio Function */
+#define AUDIO_CLICKY
+#define AUDIO_PIN C6
 
-#ifdef RGBLIGHT_ENABLE
-#  define RGB_DI_PIN D0
-#  define RGBLED_NUM 4
-#endif // !RGBLIGHT_ENABLE
+/* Haptic feedback */
+#define DRV2605L_FB_ERM_LRA 0
+#define DRV2605L_FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
+#define DRV2605L_FB_LOOPGAIN 3 // For  Low:0, Medium:1, High:2, Very High:3
+/* Motor settings */
+#define DRV2605L_RATED_VOLTAGE 3
+#define DRV2605L_V_PEAK 5

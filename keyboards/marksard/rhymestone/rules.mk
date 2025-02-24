@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,6 @@ SPLIT_KEYBOARD = yes
 RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = WS2812
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = marksard/rhymestone/rev1
-
-LAYOUTS = ortho_4x10

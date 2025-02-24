@@ -59,6 +59,18 @@ done
 shift $((OPTIND-1))
 keyboard_target=$1
 
+<<<<<<< HEAD
+=======
+# Helper for resetting submodule existence
+fixup_submodules() {
+    [ -e lib/ugfx ] && rm -rf lib/ugfx
+    [ -e lib/pico-sdk ] && rm -rf lib/pico-sdk
+    [ -e lib/chibios-contrib/ext/mcux-sdk ] && rm -rf lib/chibios-contrib/ext/mcux-sdk
+    [ -e lib/lvgl ] && rm -rf lib/lvgl
+    make git-submodule
+}
+
+>>>>>>> upstream/master
 last_size=0
 last_line=""
 function build_executor() {
@@ -68,6 +80,10 @@ function build_executor() {
         make distclean >/dev/null 2>&1
 
         git checkout -f $revision >/dev/null 2>&1 || { echo "Failed to check out revision ${revision}" >&2 ; exit 1 ; }
+<<<<<<< HEAD
+=======
+        fixup_submodules >/dev/null 2>&1
+>>>>>>> upstream/master
         make -j${job_count} $keyboard_target >/dev/null 2>&1 || true
         file_size=$(arm-none-eabi-size .build/*.elf 2>/dev/null | awk '/elf/ {print $1}' 2>/dev/null || true)
 
@@ -76,7 +92,11 @@ function build_executor() {
 
         if [[ -n "$last_line" ]] ; then
             size_delta=$(( $last_size - $file_size ))
+<<<<<<< HEAD
             if { [[ -n "${skip_zero:-}" ]] && [[ $size_delta -ne 0 ]] ; } || [[ $file_size -eq 0 ]] ; then
+=======
+            if { [[ -n "${skip_zero:-}" ]] && [[ $size_delta -ne 0 ]] ; } || [[ -z "${skip_zero:-}" ]] || [[ $file_size -eq 0 ]] ; then
+>>>>>>> upstream/master
                 printf "Size: %8d, delta: %+6d -- %s\n" "$last_size" "$size_delta" "$last_line"
             fi
         fi

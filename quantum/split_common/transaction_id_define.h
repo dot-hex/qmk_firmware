@@ -31,6 +31,10 @@ enum serial_transaction_id {
 #ifdef ENCODER_ENABLE
     GET_ENCODERS_CHECKSUM,
     GET_ENCODERS_DATA,
+<<<<<<< HEAD
+=======
+    CMD_ENCODER_DRAIN,
+>>>>>>> upstream/master
 #endif // ENCODER_ENABLE
 
 #ifndef DISABLE_SYNC_TIMER
@@ -84,6 +88,21 @@ enum serial_transaction_id {
     PUT_POINTING_CPI,
 #endif // defined(POINTING_DEVICE_ENABLE) && defined(SPLIT_POINTING_ENABLE)
 
+<<<<<<< HEAD
+=======
+#if defined(SPLIT_WATCHDOG_ENABLE)
+    PUT_WATCHDOG,
+#endif // defined(SPLIT_WATCHDOG_ENABLE)
+
+#if defined(HAPTIC_ENABLE) && defined(SPLIT_HAPTIC_ENABLE)
+    PUT_HAPTIC,
+#endif // defined(HAPTIC_ENABLE) && defined(SPLIT_HAPTIC_ENABLE)
+
+#if defined(SPLIT_ACTIVITY_ENABLE)
+    PUT_ACTIVITY,
+#endif // SPLIT_ACTIVITY_ENABLE
+
+>>>>>>> upstream/master
 #if defined(SPLIT_TRANSACTION_IDS_KB) || defined(SPLIT_TRANSACTION_IDS_USER)
     PUT_RPC_INFO,
     PUT_RPC_REQ_DATA,
@@ -101,6 +120,13 @@ enum serial_transaction_id {
     SPLIT_TRANSACTION_IDS_USER,
 #endif // SPLIT_TRANSACTION_IDS_USER
 
+<<<<<<< HEAD
+=======
+#if defined(OS_DETECTION_ENABLE) && defined(SPLIT_DETECTED_OS_ENABLE)
+    PUT_DETECTED_OS,
+#endif // defined(OS_DETECTION_ENABLE) && defined(SPLIT_DETECTED_OS_ENABLE)
+
+>>>>>>> upstream/master
     NUM_TOTAL_TRANSACTIONS
 };
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,6 +20,8 @@ RGBLIGHT_ENABLE = yes
 
 LAYOUTS = ortho_4x12 planck_mit
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no

@@ -17,4 +17,7 @@
 #pragma once
 
 #define TAPPING_TERM    175 // milliseconds
+<<<<<<< HEAD
 #define IGNORE_MOD_TAP_INTERRUPT
+=======
+>>>>>>> upstream/master

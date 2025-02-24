@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,4 +21,6 @@ AUDIO_ENABLE = no           # Audio output
 
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = lazydesigners/dimple/staggered/rev1

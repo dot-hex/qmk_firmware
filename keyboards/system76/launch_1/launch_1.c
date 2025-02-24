@@ -15,7 +15,11 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "launch_1.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #include "usb_mux.h"
 
@@ -32,6 +36,7 @@
 // 60 LI1 LH1 LG1 LF1 LE1 LD1 LC1 LB1 LA1 LA0
 // 70 LB0 LC0 LD0 LE0 LF0 LG0 LH0 LI0 LJ0 LK0
 // 80 LL0 LM0 LN0 LO0
+<<<<<<< HEAD
 led_config_t g_led_config = { LAYOUT(
     // Key matrix to LED index
     /*  A   B   C   D   E   F   G   H   I   J   K   L   M   N   O */
@@ -42,6 +47,24 @@ led_config_t g_led_config = { LAYOUT(
 /* 4 */ 12, 11, 10,  9,  8,  7,  6,  5,  4,  3,  2,  1,      0,
 /* 5 */ 13, 14, 15, 16, 17,     18,      19, 20, 21,    22, 23, 24
 ), {
+=======
+led_config_t g_led_config = { {
+    // Key matrix to LED index
+/*    A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   */
+/* 0  69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, */
+/* 1  68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, */
+/* 2  39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, */
+/* 3  38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26,     25, */
+/* 4  12, 11, 10,  9,  8,  7,  6,  5,  4,  3,  2,  1,      0,     */
+/* 5  13, 14, 15, 16, 17,     18,      19, 20, 21,    22, 23, 24  */
+    { 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82 },
+    { 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55 },
+    { 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 },
+    { 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 83 },
+    { 12, 11, 10,  9,  8,  7,  6,  5,  4,  3,  2,  1,  0, 54 },
+    { 13, 14, 15, 16, 17, 25, 18, 19, 20, 21, 22, 23, 24, 53 },
+}, {
+>>>>>>> upstream/master
     // LED index to physical position (see leds.sh in `launch' repo)
 /* 00 */ {209, 51}, {190, 51}, {171, 51}, {156, 51}, {140, 51}, {125, 51}, {110, 51}, {95, 51}, {80, 51}, {65, 51},
 /* 10 */ {49, 51}, {34, 51}, {11, 51}, {8, 64}, {27, 64}, {42, 64}, {57, 64}, {80, 64}, {110, 64}, {133, 64},
@@ -133,12 +156,21 @@ void matrix_init_kb(void) {
     }
 
     system76_ec_rgb_layer(layer_state);
+<<<<<<< HEAD
 }
 
 void matrix_scan_kb(void) {
     usb_mux_event();
 
     matrix_scan_user();
+=======
+
+    matrix_init_user();
+}
+
+void housekeeping_task_kb(void) {
+    usb_mux_event();
+>>>>>>> upstream/master
 }
 
 #define LEVEL(value) (uint8_t)(((uint16_t)value) * ((uint16_t)RGB_MATRIX_MAXIMUM_BRIGHTNESS) / ((uint16_t)255))
@@ -176,7 +208,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     }
 
     switch (keycode) {
+<<<<<<< HEAD
         case RESET:
+=======
+        case QK_BOOT:
+>>>>>>> upstream/master
             if (record->event.pressed) {
                 system76_ec_unlock();
             }
@@ -185,7 +221,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 #else
             return true;
 #endif
+<<<<<<< HEAD
         case RGB_VAD:
+=======
+        case QK_RGB_MATRIX_VALUE_DOWN:
+>>>>>>> upstream/master
             if (record->event.pressed) {
                 uint8_t level = rgb_matrix_config.hsv.v;
                 for (int i = sizeof(levels) - 1; i >= 0; i--) {
@@ -197,7 +237,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 set_value_all_layers(level);
             }
             return false;
+<<<<<<< HEAD
         case RGB_VAI:
+=======
+        case QK_RGB_MATRIX_VALUE_UP:
+>>>>>>> upstream/master
             if (record->event.pressed) {
                 uint8_t level = rgb_matrix_config.hsv.v;
                 for (int i = 0; i < sizeof(levels); i++) {
@@ -209,7 +253,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 set_value_all_layers(level);
             }
             return false;
+<<<<<<< HEAD
         case RGB_TOG:
+=======
+        case QK_RGB_MATRIX_TOGGLE:
+>>>>>>> upstream/master
             if (record->event.pressed) {
                 uint8_t level = 0;
                 if (rgb_matrix_config.hsv.v == 0) {
@@ -232,9 +280,18 @@ layer_state_t layer_state_set_kb(layer_state_t layer_state) {
 }
 
 #ifdef CONSOLE_ENABLE
+<<<<<<< HEAD
 void keyboard_post_init_user(void) {
     debug_enable   = true;
     debug_matrix   = false;
     debug_keyboard = false;
+=======
+void keyboard_post_init_kb(void) {
+    debug_enable   = true;
+    debug_matrix   = false;
+    debug_keyboard = false;
+
+    keyboard_post_init_user();
+>>>>>>> upstream/master
 }
 #endif  // CONSOLE_ENABLE

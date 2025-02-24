@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x4B42
@@ -76,3 +77,7 @@
 #define DRIVER_1_LED_TOTAL 36
 #define DRIVER_2_LED_TOTAL 31
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_SDA
+>>>>>>> upstream/master

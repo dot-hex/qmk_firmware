@@ -1,8 +1,11 @@
 // Copyright (c) 2018 Cirque Corp. Restrictions apply. See: www.cirque.com/sw-license
 #include "cirque_pinnacle.h"
 #include "i2c_master.h"
+<<<<<<< HEAD
 #include "print.h"
 #include "debug.h"
+=======
+>>>>>>> upstream/master
 #include "stdio.h"
 
 // Masks for Cirque Register Access Protocol (RAP)
@@ -16,6 +19,7 @@ extern bool touchpad_init;
 void RAP_ReadBytes(uint8_t address, uint8_t* data, uint8_t count) {
     uint8_t cmdByte = READ_MASK | address; // Form the READ command byte
     if (touchpad_init) {
+<<<<<<< HEAD
         i2c_writeReg(CIRQUE_PINNACLE_ADDR << 1, cmdByte, NULL, 0, CIRQUE_PINNACLE_TIMEOUT);
         if (i2c_readReg(CIRQUE_PINNACLE_ADDR << 1, cmdByte, data, count, CIRQUE_PINNACLE_TIMEOUT) != I2C_STATUS_SUCCESS) {
 #ifdef CONSOLE_ENABLE
@@ -24,6 +28,13 @@ void RAP_ReadBytes(uint8_t address, uint8_t* data, uint8_t count) {
             touchpad_init = false;
         }
         i2c_stop();
+=======
+        i2c_write_register(CIRQUE_PINNACLE_ADDR << 1, cmdByte, NULL, 0, CIRQUE_PINNACLE_TIMEOUT);
+        if (i2c_read_register(CIRQUE_PINNACLE_ADDR << 1, cmdByte, data, count, CIRQUE_PINNACLE_TIMEOUT) != I2C_STATUS_SUCCESS) {
+            pd_dprintf("error cirque_pinnacle i2c_read_register\n");
+            touchpad_init = false;
+        }
+>>>>>>> upstream/master
     }
 }
 
@@ -32,6 +43,7 @@ void RAP_Write(uint8_t address, uint8_t data) {
     uint8_t cmdByte = WRITE_MASK | address; // Form the WRITE command byte
 
     if (touchpad_init) {
+<<<<<<< HEAD
         if (i2c_writeReg(CIRQUE_PINNACLE_ADDR << 1, cmdByte, &data, sizeof(data), CIRQUE_PINNACLE_TIMEOUT) != I2C_STATUS_SUCCESS) {
 #ifdef CONSOLE_ENABLE
             dprintf("error right touchpad\n");
@@ -39,5 +51,11 @@ void RAP_Write(uint8_t address, uint8_t data) {
             touchpad_init = false;
         }
         i2c_stop();
+=======
+        if (i2c_write_register(CIRQUE_PINNACLE_ADDR << 1, cmdByte, &data, sizeof(data), CIRQUE_PINNACLE_TIMEOUT) != I2C_STATUS_SUCCESS) {
+            pd_dprintf("error cirque_pinnacle i2c_write_register\n");
+            touchpad_init = false;
+        }
+>>>>>>> upstream/master
     }
 }

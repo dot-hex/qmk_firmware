@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,10 +22,13 @@ CUSTOM_MATRIX = lite
 # project specific files
 SRC += matrix.c
 QUANTUM_LIB_SRC += uart.c
+=======
+CUSTOM_MATRIX = lite
+SRC += matrix.c
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 
 # Disable unsupported hardware
 RGBLIGHT_SUPPORTED = no
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no
-
-LAYOUTS = ortho_4x12

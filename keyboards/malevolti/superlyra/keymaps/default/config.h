@@ -22,5 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
+<<<<<<< HEAD
 #define TAPPING_FORCE_HOLD
+=======
+#define QUICK_TAP_TERM 0
+>>>>>>> upstream/master
 #define TAPPING_TERM 100

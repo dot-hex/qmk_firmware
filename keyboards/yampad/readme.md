@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 YAMPAD
 ===
 =======
+=======
+>>>>>>> upstream/master
 # Yampad
 
 ![yampad](https://github.com/mattdibi/yampad/blob/master/img/yampad.jpg)
@@ -21,4 +24,7 @@ Flashing example for this keyboard:
     make yampad:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+<<<<<<< HEAD
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+>>>>>>> upstream/master

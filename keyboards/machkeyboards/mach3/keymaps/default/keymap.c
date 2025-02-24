@@ -17,8 +17,14 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_3x3(
+<<<<<<< HEAD
     BL_INC,    BL_DEC,    BL_BRTG,
     BL_INC,    BL_DEC,    BL_BRTG,
     BL_INC,    BL_DEC,    BL_BRTG
+=======
+    BL_UP,     BL_DOWN,   BL_BRTG,
+    BL_UP,     BL_DOWN,   BL_BRTG,
+    BL_UP,     BL_DOWN,   BL_BRTG
+>>>>>>> upstream/master
   )
 };

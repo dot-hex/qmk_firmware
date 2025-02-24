@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x445A
 #define PRODUCT_ID      0x1121
@@ -93,3 +94,6 @@
 #    define DRIVER_COUNT 1
 #    define DRIVER_LED_TOTAL 63
 #endif
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+>>>>>>> upstream/master

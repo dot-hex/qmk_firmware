@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 MCU = STM32F303
 BOARD = QMK_PROTON_C
 
@@ -17,3 +18,6 @@ BACKLIGHT_ENABLE  = yes     # Enable keyboard backlight functionality
 
 DEFAULT_FOLDER = mechlovin/infinity87/rev1/standard
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+DEFAULT_FOLDER = mechlovin/infinity87/rev1/standard
+>>>>>>> upstream/master

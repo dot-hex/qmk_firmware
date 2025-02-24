@@ -17,6 +17,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #include "config_common.h"
 #define VENDOR_ID       0x7C88 // "hw" = haierwangwei
@@ -128,5 +129,8 @@
 //#define RGBLIGHT_VAL_STEP 5
 //#define RGBLIGHT_SLEEP
 //#endif
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+>>>>>>> upstream/master
 
 #define B7_AUDIO

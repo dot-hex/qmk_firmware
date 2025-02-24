@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #undef PRODUCT
 #define PRODUCT         QMK BLE Adapter
 
@@ -9,5 +10,6 @@
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master
 #define NO_ACTION_ONESHOT
-

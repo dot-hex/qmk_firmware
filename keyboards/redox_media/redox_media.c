@@ -15,12 +15,25 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 #include "redox_media.h"
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) {
         return false;
     }
+=======
+#include "quantum.h"
+
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+<<<<<<<< HEAD:keyboards/redox_media/redox_media.c
+    if (!encoder_update_user(index, clockwise)) {
+        return false;
+    }
+========
+    if (!encoder_update_user(index, clockwise)) return false;
+>>>>>>>> upstream/master:keyboards/ck60i/ck60i.c
+>>>>>>> upstream/master
     if (index == 0) { /* First encoder */
         if (clockwise) {
             tap_code(KC_VOLD);

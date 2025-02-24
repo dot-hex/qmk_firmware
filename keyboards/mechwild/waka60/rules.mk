@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -15,3 +16,6 @@ ENCODER_ENABLE = yes        # Encoder Enabled
 EEPROM_DRIVER = i2c 
 
 DEFAULT_FOLDER = mechwild/waka60/f401
+=======
+DEFAULT_FOLDER = mechwild/waka60/f401/base
+>>>>>>> upstream/master

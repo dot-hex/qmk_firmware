@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define LAYOUT_ortho_4x12( \
     K000, K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, K011, \
     K100, K101, K102, K103, K104, K105, K106, K107, K108, K109, K110, K111, \
@@ -34,17 +35,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static inline void led_lwr(const bool on) {
 #ifdef LED_NUM_LOCK_PIN
     writePin(LED_NUM_LOCK_PIN, on);
+=======
+static inline void led_lwr(const bool on) {
+#ifdef LED_NUM_LOCK_PIN
+    gpio_write_pin(LED_NUM_LOCK_PIN, on);
+>>>>>>> upstream/master
 #endif
 }
 
 static inline void led_rse(const bool on) {
 #ifdef LED_SCROLL_LOCK_PIN
+<<<<<<< HEAD
     writePin(LED_SCROLL_LOCK_PIN, on);
+=======
+    gpio_write_pin(LED_SCROLL_LOCK_PIN, on);
+>>>>>>> upstream/master
 #endif
 }
 static inline void led_caps(const bool on) {
 #ifdef LED_CAPS_LOCK_PIN
+<<<<<<< HEAD
     writePin(LED_CAPS_LOCK_PIN, !on);
+=======
+    gpio_write_pin(LED_CAPS_LOCK_PIN, !on);
+>>>>>>> upstream/master
 #endif
 }
 

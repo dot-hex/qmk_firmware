@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Copyright (C) 2021 Westberry Technology (ChangZhou) Corp., Ltd
 
@@ -17,6 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <string.h>
 
+=======
+// Copyright 2021 Westberry Technology (ChangZhou) Corp., Ltd
+// Copyright 2024 Nick Brassel (@tzarc)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#include <string.h>
+
+#include "flash.h"
+>>>>>>> upstream/master
 #include "util.h"
 #include "wait.h"
 #include "debug.h"
@@ -57,7 +67,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Mode setting comands */
 #define FLASH_CMD_DP 0xB9  /* DP (Deep Power Down) */
+<<<<<<< HEAD
 #define FLASH_CMD_RDP 0xAB /* RDP (Release form Deep Power Down) */
+=======
+#define FLASH_CMD_RDP 0xAB /* RDP (Release from Deep Power Down) */
+>>>>>>> upstream/master
 
 /* Status register */
 #define FLASH_FLAG_WIP 0x01 /* Write in progress bit */
@@ -69,6 +83,7 @@ static bool spi_flash_start(void) {
     return spi_start(EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN, EXTERNAL_FLASH_SPI_LSBFIRST, EXTERNAL_FLASH_SPI_MODE, EXTERNAL_FLASH_SPI_CLOCK_DIVISOR);
 }
 
+<<<<<<< HEAD
 static flash_status_t spi_flash_wait_while_busy(void) {
     uint32_t       deadline = timer_read32() + EXTERNAL_FLASH_SPI_TIMEOUT;
     flash_status_t response = FLASH_STATUS_SUCCESS;
@@ -87,15 +102,53 @@ static flash_status_t spi_flash_wait_while_busy(void) {
 
         spi_stop();
 
+=======
+static flash_status_t spi_flash_wait_while_busy_multiplier(int multiplier) {
+    flash_status_t response = FLASH_STATUS_SUCCESS;
+    uint32_t       deadline = timer_read32() + ((EXTERNAL_FLASH_SPI_TIMEOUT)*multiplier);
+    do {
+>>>>>>> upstream/master
         if (timer_read32() >= deadline) {
             response = FLASH_STATUS_TIMEOUT;
             break;
         }
+<<<<<<< HEAD
     } while (retval & FLASH_FLAG_WIP);
 
     return response;
 }
 
+=======
+
+        response = flash_is_busy();
+    } while (response == FLASH_STATUS_BUSY);
+    return response;
+}
+
+static flash_status_t spi_flash_wait_while_busy(void) {
+    return spi_flash_wait_while_busy_multiplier(1);
+}
+
+flash_status_t flash_is_busy(void) {
+    bool res = spi_flash_start();
+    if (!res) {
+        dprint("Failed to start SPI! [spi flash wait while busy]\n");
+        return FLASH_STATUS_ERROR;
+    }
+
+    spi_write(FLASH_CMD_RDSR);
+    spi_status_t status = spi_read();
+    spi_stop();
+
+    if (status < 0) {
+        return status;
+    }
+
+    uint8_t sr = (uint8_t)status;
+    return (sr & FLASH_FLAG_WIP) ? FLASH_STATUS_BUSY : FLASH_STATUS_SUCCESS;
+}
+
+>>>>>>> upstream/master
 static flash_status_t spi_flash_write_enable(void) {
     bool res = spi_flash_start();
     if (!res) {
@@ -104,7 +157,10 @@ static flash_status_t spi_flash_write_enable(void) {
     }
 
     spi_write(FLASH_CMD_WREN);
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
     spi_stop();
 
     return FLASH_STATUS_SUCCESS;
@@ -118,7 +174,10 @@ static flash_status_t spi_flash_write_disable(void) {
     }
 
     spi_write(FLASH_CMD_WRDI);
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
     spi_stop();
 
     return FLASH_STATUS_SUCCESS;
@@ -166,7 +225,11 @@ void flash_init(void) {
     spi_init();
 }
 
+<<<<<<< HEAD
 flash_status_t flash_erase_chip(void) {
+=======
+flash_status_t flash_begin_erase_chip(void) {
+>>>>>>> upstream/master
     flash_status_t response = FLASH_STATUS_SUCCESS;
 
     /* Wait for the write-in-progress bit to be cleared. */
@@ -191,23 +254,51 @@ flash_status_t flash_erase_chip(void) {
     }
     spi_write(FLASH_CMD_CE);
     spi_stop();
+<<<<<<< HEAD
 
     /* Wait for the write-in-progress bit to be cleared.*/
     response = spi_flash_wait_while_busy();
+=======
+    return FLASH_STATUS_SUCCESS;
+}
+
+flash_status_t flash_wait_erase_chip(void) {
+    flash_status_t response = spi_flash_wait_while_busy_multiplier(250); // Chip erase can take a long time, wait 250x the usual timeout
+>>>>>>> upstream/master
     if (response != FLASH_STATUS_SUCCESS) {
         dprint("Failed to check WIP flag! [spi flash erase chip]\n");
         return response;
     }
+<<<<<<< HEAD
 
     return response;
 }
 
+=======
+    return response;
+}
+
+flash_status_t flash_erase_chip(void) {
+    flash_status_t response = flash_begin_erase_chip();
+    if (response != FLASH_STATUS_SUCCESS) {
+        dprint("Failed to begin erase chip! [spi flash erase chip]\n");
+        return response;
+    }
+
+    return flash_wait_erase_chip();
+}
+
+>>>>>>> upstream/master
 flash_status_t flash_erase_sector(uint32_t addr) {
     flash_status_t response = FLASH_STATUS_SUCCESS;
 
     /* Check that the address exceeds the limit. */
     if ((addr + (EXTERNAL_FLASH_SECTOR_SIZE)) >= (EXTERNAL_FLASH_SIZE) || ((addr % (EXTERNAL_FLASH_SECTOR_SIZE)) != 0)) {
+<<<<<<< HEAD
         dprintf("Flash erase sector address over limit! [addr:0x%x]\n", (uint32_t)addr);
+=======
+        dprintf("Flash erase sector address over limit! [addr:0x%lx]\n", (uint32_t)addr);
+>>>>>>> upstream/master
         return FLASH_STATUS_ERROR;
     }
 
@@ -247,7 +338,11 @@ flash_status_t flash_erase_block(uint32_t addr) {
 
     /* Check that the address exceeds the limit. */
     if ((addr + (EXTERNAL_FLASH_BLOCK_SIZE)) >= (EXTERNAL_FLASH_SIZE) || ((addr % (EXTERNAL_FLASH_BLOCK_SIZE)) != 0)) {
+<<<<<<< HEAD
         dprintf("Flash erase block address over limit! [addr:0x%x]\n", (uint32_t)addr);
+=======
+        dprintf("Flash erase block address over limit! [addr:0x%lx]\n", (uint32_t)addr);
+>>>>>>> upstream/master
         return FLASH_STATUS_ERROR;
     }
 
@@ -282,7 +377,11 @@ flash_status_t flash_erase_block(uint32_t addr) {
     return response;
 }
 
+<<<<<<< HEAD
 flash_status_t flash_read_block(uint32_t addr, void *buf, size_t len) {
+=======
+flash_status_t flash_read_range(uint32_t addr, void *buf, size_t len) {
+>>>>>>> upstream/master
     flash_status_t response = FLASH_STATUS_SUCCESS;
     uint8_t *      read_buf = (uint8_t *)buf;
 
@@ -303,7 +402,11 @@ flash_status_t flash_read_block(uint32_t addr, void *buf, size_t len) {
     }
 
 #if defined(CONSOLE_ENABLE) && defined(DEBUG_FLASH_SPI_OUTPUT)
+<<<<<<< HEAD
     dprintf("[SPI FLASH R] 0x%08lX: ", addr);
+=======
+    dprintf("[SPI FLASH R] 0x%08lx: ", addr);
+>>>>>>> upstream/master
     for (size_t i = 0; i < len; ++i) {
         dprintf(" %02X", (int)(((uint8_t *)read_buf)[i]));
     }
@@ -313,7 +416,11 @@ flash_status_t flash_read_block(uint32_t addr, void *buf, size_t len) {
     return response;
 }
 
+<<<<<<< HEAD
 flash_status_t flash_write_block(uint32_t addr, const void *buf, size_t len) {
+=======
+flash_status_t flash_write_range(uint32_t addr, const void *buf, size_t len) {
+>>>>>>> upstream/master
     flash_status_t response  = FLASH_STATUS_SUCCESS;
     uint8_t *      write_buf = (uint8_t *)buf;
 
@@ -339,7 +446,11 @@ flash_status_t flash_write_block(uint32_t addr, const void *buf, size_t len) {
         }
 
 #if defined(CONSOLE_ENABLE) && defined(DEBUG_FLASH_SPI_OUTPUT)
+<<<<<<< HEAD
         dprintf("[SPI FLASH W] 0x%08lX: ", addr);
+=======
+        dprintf("[SPI FLASH W] 0x%08lx: ", addr);
+>>>>>>> upstream/master
         for (size_t i = 0; i < write_length; i++) {
             dprintf(" %02X", (int)(uint8_t)(write_buf[i]));
         }

@@ -20,11 +20,18 @@
 #define CALC_DIGITS 12
 
 enum rubi_keycodes {
+<<<<<<< HEAD
     ENC_PRESS = SAFE_RANGE,
     CL_PLUS,
     CL_STAR,
     CL_TYPE,
     NEW_SAFE_RANGE
+=======
+    ENC_PRESS = QK_KB_0,
+    CL_PLUS,
+    CL_STAR,
+    CL_TYPE
+>>>>>>> upstream/master
 };
 
 enum oled_modes {
@@ -61,6 +68,7 @@ uint16_t handle_encoder_press(void);
 void calcUpdate(void);
 void calcInput(char input);
 void calcOperands(void);
+<<<<<<< HEAD
 
 /* This is a shortcut to help you visually see your layout.
  *
@@ -100,3 +108,5 @@ void calcOperands(void);
     { k30,   k31, k32, k33   }, \
     { KC_NO, k41, k42, KC_NO }  \
 }
+=======
+>>>>>>> upstream/master

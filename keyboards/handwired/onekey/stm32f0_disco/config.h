@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define PRODUCT Onekey STM32F072 Discovery
@@ -30,5 +31,9 @@
 #define BACKLIGHT_PAL_MODE    0
 
 #define RGB_DI_PIN B15
+=======
+#define BACKLIGHT_PWM_DRIVER  PWMD3
+#define BACKLIGHT_PAL_MODE    0
+>>>>>>> upstream/master
 
 #define ADC_PIN A0

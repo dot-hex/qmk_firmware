@@ -20,7 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "util.h"
 #include "matrix.h"
 #include "debounce.h"
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+#include "atomic_util.h"
+
+>>>>>>> upstream/master
 #ifdef SPLIT_KEYBOARD
 #    include "split_common/split_util.h"
 #    include "split_common/transactions.h"
@@ -45,6 +50,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #else
 #    define SPLIT_MUTABLE_COL const
 #endif
+<<<<<<< HEAD
+=======
+
+#ifndef MATRIX_INPUT_PRESSED_STATE
+#    define MATRIX_INPUT_PRESSED_STATE 0
+#endif
+>>>>>>> upstream/master
 
 #ifdef DIRECT_PINS
 static SPLIT_MUTABLE pin_t direct_pins[ROWS_PER_HAND][MATRIX_COLS] = DIRECT_PINS;
@@ -60,6 +72,19 @@ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
 /* matrix state(1:on, 0:off) */
 extern matrix_row_t raw_matrix[MATRIX_ROWS]; // raw values
 extern matrix_row_t matrix[MATRIX_ROWS];     // debounced values
+<<<<<<< HEAD
+
+#ifdef SPLIT_KEYBOARD
+// row offsets for each hand
+extern uint8_t thisHand, thatHand;
+#endif
+
+// user-defined overridable functions
+__attribute__((weak)) void matrix_init_pins(void);
+__attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row);
+__attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
+=======
+>>>>>>> upstream/master
 
 #ifdef SPLIT_KEYBOARD
 // row offsets for each hand
@@ -71,13 +96,14 @@ __attribute__((weak)) void matrix_init_pins(void);
 __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row);
 __attribute__((weak)) void matrix_read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col, matrix_row_t row_shifter);
 
-static inline void setPinOutput_writeLow(pin_t pin) {
+static inline void gpio_atomic_set_pin_output_low(pin_t pin) {
     ATOMIC_BLOCK_FORCEON {
-        setPinOutput(pin);
-        writePinLow(pin);
+        gpio_set_pin_output(pin);
+        gpio_write_pin_low(pin);
     }
 }
 
+<<<<<<< HEAD
 static inline void setPinOutput_writeHigh(pin_t pin) {
     ATOMIC_BLOCK_FORCEON {
         setPinOutput(pin);
@@ -88,12 +114,28 @@ static inline void setPinOutput_writeHigh(pin_t pin) {
 static inline void setPinInputHigh_atomic(pin_t pin) {
     ATOMIC_BLOCK_FORCEON {
         setPinInputHigh(pin);
+=======
+static inline void gpio_atomic_set_pin_output_high(pin_t pin) {
+    ATOMIC_BLOCK_FORCEON {
+        gpio_set_pin_output(pin);
+        gpio_write_pin_high(pin);
+    }
+}
+
+static inline void gpio_atomic_set_pin_input_high(pin_t pin) {
+    ATOMIC_BLOCK_FORCEON {
+        gpio_set_pin_input_high(pin);
+>>>>>>> upstream/master
     }
 }
 
 static inline uint8_t readMatrixPin(pin_t pin) {
     if (pin != NO_PIN) {
+<<<<<<< HEAD
         return readPin(pin);
+=======
+        return (gpio_read_pin(pin) == MATRIX_INPUT_PRESSED_STATE) ? 0 : 1;
+>>>>>>> upstream/master
     } else {
         return 1;
     }
@@ -108,7 +150,7 @@ __attribute__((weak)) void matrix_init_pins(void) {
         for (int col = 0; col < MATRIX_COLS; col++) {
             pin_t pin = direct_pins[row][col];
             if (pin != NO_PIN) {
-                setPinInputHigh(pin);
+                gpio_set_pin_input_high(pin);
             }
         }
     }
@@ -121,9 +163,13 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
     matrix_row_t row_shifter = MATRIX_ROW_SHIFTER;
     for (uint8_t col_index = 0; col_index < MATRIX_COLS; col_index++, row_shifter <<= 1) {
         pin_t pin = direct_pins[current_row][col_index];
+<<<<<<< HEAD
         if (pin != NO_PIN) {
             current_row_value |= readPin(pin) ? 0 : row_shifter;
         }
+=======
+        current_row_value |= readMatrixPin(pin) ? 0 : row_shifter;
+>>>>>>> upstream/master
     }
 
     // Update the matrix
@@ -137,7 +183,11 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
 static bool select_row(uint8_t row) {
     pin_t pin = row_pins[row];
     if (pin != NO_PIN) {
+<<<<<<< HEAD
         setPinOutput_writeLow(pin);
+=======
+        gpio_atomic_set_pin_output_low(pin);
+>>>>>>> upstream/master
         return true;
     }
     return false;
@@ -147,9 +197,15 @@ static void unselect_row(uint8_t row) {
     pin_t pin = row_pins[row];
     if (pin != NO_PIN) {
 #            ifdef MATRIX_UNSELECT_DRIVE_HIGH
+<<<<<<< HEAD
         setPinOutput_writeHigh(pin);
 #            else
         setPinInputHigh_atomic(pin);
+=======
+        gpio_atomic_set_pin_output_high(pin);
+#            else
+        gpio_atomic_set_pin_input_high(pin);
+>>>>>>> upstream/master
 #            endif
     }
 }
@@ -164,7 +220,11 @@ __attribute__((weak)) void matrix_init_pins(void) {
     unselect_rows();
     for (uint8_t x = 0; x < MATRIX_COLS; x++) {
         if (col_pins[x] != NO_PIN) {
+<<<<<<< HEAD
             setPinInputHigh_atomic(col_pins[x]);
+=======
+            gpio_atomic_set_pin_input_high(col_pins[x]);
+>>>>>>> upstream/master
         }
     }
 }
@@ -200,7 +260,11 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
 static bool select_col(uint8_t col) {
     pin_t pin = col_pins[col];
     if (pin != NO_PIN) {
+<<<<<<< HEAD
         setPinOutput_writeLow(pin);
+=======
+        gpio_atomic_set_pin_output_low(pin);
+>>>>>>> upstream/master
         return true;
     }
     return false;
@@ -210,9 +274,15 @@ static void unselect_col(uint8_t col) {
     pin_t pin = col_pins[col];
     if (pin != NO_PIN) {
 #            ifdef MATRIX_UNSELECT_DRIVE_HIGH
+<<<<<<< HEAD
         setPinOutput_writeHigh(pin);
 #            else
         setPinInputHigh_atomic(pin);
+=======
+        gpio_atomic_set_pin_output_high(pin);
+#            else
+        gpio_atomic_set_pin_input_high(pin);
+>>>>>>> upstream/master
 #            endif
     }
 }
@@ -227,7 +297,11 @@ __attribute__((weak)) void matrix_init_pins(void) {
     unselect_cols();
     for (uint8_t x = 0; x < ROWS_PER_HAND; x++) {
         if (row_pins[x] != NO_PIN) {
+<<<<<<< HEAD
             setPinInputHigh_atomic(row_pins[x]);
+=======
+            gpio_atomic_set_pin_input_high(row_pins[x]);
+>>>>>>> upstream/master
         }
     }
 }
@@ -303,11 +377,24 @@ void matrix_init(void) {
     // initialize matrix state: all keys off
     memset(matrix, 0, sizeof(matrix));
     memset(raw_matrix, 0, sizeof(raw_matrix));
+<<<<<<< HEAD
+
+    debounce_init(ROWS_PER_HAND);
+=======
 
     debounce_init(ROWS_PER_HAND);
 
-    matrix_init_quantum();
+    matrix_init_kb();
 }
+>>>>>>> upstream/master
+
+#ifdef SPLIT_KEYBOARD
+// Fallback implementation for keyboards not using the standard split_util.c
+__attribute__((weak)) bool transport_master_if_connected(matrix_row_t master_matrix[], matrix_row_t slave_matrix[]) {
+    transport_master(master_matrix, slave_matrix);
+    return true; // Treat the transport as always connected
+}
+#endif
 
 #ifdef SPLIT_KEYBOARD
 // Fallback implementation for keyboards not using the standard split_util.c
@@ -337,11 +424,18 @@ uint8_t matrix_scan(void) {
     if (changed) memcpy(raw_matrix, curr_matrix, sizeof(curr_matrix));
 
 #ifdef SPLIT_KEYBOARD
+<<<<<<< HEAD
     debounce(raw_matrix, matrix + thisHand, ROWS_PER_HAND, changed);
     changed = (changed || matrix_post_scan());
 #else
     debounce(raw_matrix, matrix, ROWS_PER_HAND, changed);
     matrix_scan_quantum();
+=======
+    changed = debounce(raw_matrix, matrix + thisHand, ROWS_PER_HAND, changed) | matrix_post_scan();
+#else
+    changed = debounce(raw_matrix, matrix, ROWS_PER_HAND, changed);
+    matrix_scan_kb();
+>>>>>>> upstream/master
 #endif
     return (uint8_t)changed;
 }

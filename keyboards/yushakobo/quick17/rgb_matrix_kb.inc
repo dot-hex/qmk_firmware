@@ -3,6 +3,10 @@ RGB_MATRIX_EFFECT(quick17_rgbm_effect)
 #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
 #include "quick17_prefs.h"
+<<<<<<< HEAD
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #define LED_LAYOUT(\
     L00, L01, L02, L03, L04, L05, \
@@ -27,7 +31,11 @@ enum lighting_types {
     NUM_L
 };
 
+<<<<<<< HEAD
 const uint8_t rgb_keymaps [][DRIVER_LED_TOTAL] = {
+=======
+const uint8_t rgb_keymaps [][RGB_MATRIX_LED_COUNT] = {
+>>>>>>> upstream/master
     [_CONTROL] = LED_LAYOUT(
         _____, INDC2, INDC1, INDC2, INDC3, INDC4,
         _____, INDC1, INDC1, INDC1, INDC3, INDC4,
@@ -51,6 +59,7 @@ const uint8_t rgb_keymaps [][DRIVER_LED_TOTAL] = {
 };
 
 static void led_color_set(uint8_t index, uint8_t color_patterns) {
+<<<<<<< HEAD
     HSV hsv = rgb_matrix_config.hsv; // 'quantum/rgblight_list.h'
     RGB rgb_white = hsv_to_rgb(_HSV(  0,   0, hsv.v)); // HSV_WHITE
     RGB rgb_indc1 = hsv_to_rgb(_HSV(128, 255, hsv.v)); // HSV_TEAL
@@ -62,6 +71,19 @@ static void led_color_set(uint8_t index, uint8_t color_patterns) {
     RGB rgb_indc_ja =  hsv_to_rgb(_HSV(  0, 255, hsv.v)); // HSV_RED
     RGB rgb_indc_en =  hsv_to_rgb(_HSV( 85, 255, hsv.v)); // HSV_GREEN
     RGB rgb_indc_win = hsv_to_rgb(_HSV(170, 255, hsv.v)); // HSV_BLUE
+=======
+    hsv_t hsv = rgb_matrix_config.hsv; // 'quantum/color.h'
+    rgb_t rgb_white = hsv_to_rgb(_HSV(  0,   0, hsv.v)); // HSV_WHITE
+    rgb_t rgb_indc1 = hsv_to_rgb(_HSV(128, 255, hsv.v)); // HSV_TEAL
+    rgb_t rgb_indc2 = hsv_to_rgb(_HSV(191, 255, hsv.v)); // HSV_PURPLE
+    rgb_t rgb_indc3 = hsv_to_rgb(_HSV( 64, 255, hsv.v)); // HSV_CHARTREUSE
+    rgb_t rgb_indc4 = hsv_to_rgb(_HSV(106, 255, hsv.v)); // HSV_SPRINGGREEN
+    rgb_t rgb_indc5 = hsv_to_rgb(_HSV(234, 128, hsv.v)); // HSV_PINK
+    rgb_t rgb_indc6 = hsv_to_rgb(_HSV(213, 255, hsv.v)); // HSV_MAGENTA
+    rgb_t rgb_indc_ja =  hsv_to_rgb(_HSV(  0, 255, hsv.v)); // HSV_RED
+    rgb_t rgb_indc_en =  hsv_to_rgb(_HSV( 85, 255, hsv.v)); // HSV_GREEN
+    rgb_t rgb_indc_win = hsv_to_rgb(_HSV(170, 255, hsv.v)); // HSV_BLUE
+>>>>>>> upstream/master
     switch(color_patterns){
         case BOUT:  rgb_matrix_set_color(index, RGB_BLACK); break;
         case _____: rgb_matrix_set_color(index, _RGB(rgb_white)); break;

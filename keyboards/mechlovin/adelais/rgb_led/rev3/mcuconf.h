@@ -18,6 +18,7 @@
 
 #include_next <mcuconf.h>
 
+<<<<<<< HEAD
 #undef STM32_GPT_USE_TIM15
 #define STM32_GPT_USE_TIM15 FALSE
 
@@ -33,3 +34,10 @@
 #undef STM32_SPI_USE_SPI2
 #define STM32_SPI_USE_SPI2 FALSE
 
+=======
+#undef STM32_SPI_USE_SPI1
+#define STM32_SPI_USE_SPI1 TRUE
+
+#undef STM32_I2C_USE_I2C1
+#define STM32_I2C_USE_I2C1 TRUE
+>>>>>>> upstream/master

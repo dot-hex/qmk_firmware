@@ -34,7 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+<<<<<<< HEAD
 combo_t key_combos[COMBO_COUNT] = {
+=======
+combo_t key_combos[] = {
+>>>>>>> upstream/master
     [LED_ADJUST] = COMBO_ACTION(led_adjust_combo)
 };
 

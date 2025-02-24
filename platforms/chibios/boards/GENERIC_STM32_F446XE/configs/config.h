@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 /* Address for jumping to bootloader on STM32 chips. */
 /* It is chip dependent, the correct number can be looked up by checking against ST's application note AN2606.
  */
@@ -21,3 +22,18 @@
 #ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
 #    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
 #endif
+=======
+#ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
+#    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+#endif
+
+#ifdef WEAR_LEVELING_EMBEDDED_FLASH
+#    ifndef WEAR_LEVELING_EFL_FIRST_SECTOR
+#        ifdef BOOTLOADER_TINYUF2
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 3
+#        else
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 1
+#        endif
+#    endif
+#endif
+>>>>>>> upstream/master

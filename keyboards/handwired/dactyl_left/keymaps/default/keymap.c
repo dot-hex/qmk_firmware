@@ -15,9 +15,6 @@
  */
 #include QMK_KEYBOARD_H
 
-// Defines the keycodes used by our macros in process_record_user
-enum custom_keycodes { QMKBEST = SAFE_RANGE, QMKURL };
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(/* Base */
                  KC_SPC, KC_1, KC_2, KC_3, KC_4, KC_5, 
@@ -27,6 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  KC_SPC, KC_SPC, KC_SPC, KC_SPC, KC_SPC, 
                  KC_SPC, KC_SPC, KC_SPC, KC_SPC, KC_SPC, KC_SPC),
 };
+<<<<<<< HEAD
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -49,3 +47,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+=======
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,8 @@ RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 LAYOUTS = ortho_4x12 planck_mit
 LAYOUTS_HAS_RGB = no
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no

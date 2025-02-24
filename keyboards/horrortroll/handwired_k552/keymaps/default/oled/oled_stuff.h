@@ -15,8 +15,13 @@
  */
 
 // OLED animation
+<<<<<<< HEAD
 #include "lib/bongocat.c"
 #include "lib/galaxy.c"
+=======
+#include "lib/bongocat.h"
+#include "lib/galaxy.h"
+>>>>>>> upstream/master
 #include "lib/wave.c"
 
 #ifdef OLED_ENABLE

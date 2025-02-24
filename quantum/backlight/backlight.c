@@ -15,7 +15,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "quantum.h"
 #include "backlight.h"
 #include "eeprom.h"
 #include "eeconfig.h"
@@ -23,29 +22,60 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 backlight_config_t backlight_config;
 
+<<<<<<< HEAD
+=======
+#ifndef BACKLIGHT_DEFAULT_ON
+#    define BACKLIGHT_DEFAULT_ON true
+#endif
+
+>>>>>>> upstream/master
 #ifndef BACKLIGHT_DEFAULT_LEVEL
 #    define BACKLIGHT_DEFAULT_LEVEL BACKLIGHT_LEVELS
 #endif
 
+<<<<<<< HEAD
+=======
+#ifndef BACKLIGHT_DEFAULT_BREATHING
+#    define BACKLIGHT_DEFAULT_BREATHING false
+#else
+#    undef BACKLIGHT_DEFAULT_BREATHING
+#    define BACKLIGHT_DEFAULT_BREATHING true
+#endif
+
+>>>>>>> upstream/master
 #ifdef BACKLIGHT_BREATHING
 // TODO: migrate to backlight_config_t
 static uint8_t breathing_period = BREATHING_PERIOD;
 #endif
+
+static void backlight_check_config(void) {
+    /* Add some out of bound checks for backlight config */
+
+    if (backlight_config.level > BACKLIGHT_LEVELS) {
+        backlight_config.level = BACKLIGHT_LEVELS;
+    }
+}
 
 /** \brief Backlight initialization
  *
  * FIXME: needs doc
  */
 void backlight_init(void) {
+<<<<<<< HEAD
     /* check signature */
     if (!eeconfig_is_enabled()) {
         eeconfig_init();
         eeconfig_update_backlight_default();
     }
+=======
+>>>>>>> upstream/master
     backlight_config.raw = eeconfig_read_backlight();
-    if (backlight_config.level > BACKLIGHT_LEVELS) {
-        backlight_config.level = BACKLIGHT_LEVELS;
+    if (!backlight_config.valid) {
+        dprintf("backlight_init backlight_config.valid = 0. Write default values to EEPROM.\n");
+        eeconfig_update_backlight_default();
     }
+    backlight_check_config();
+
     backlight_set(backlight_config.enable ? backlight_config.level : 0);
 }
 
@@ -173,6 +203,7 @@ void eeconfig_update_backlight_current(void) {
 }
 
 void eeconfig_update_backlight_default(void) {
+<<<<<<< HEAD
     backlight_config.enable = 1;
 #ifdef BACKLIGHT_DEFAULT_BREATHING
     backlight_config.breathing = 1;
@@ -180,6 +211,12 @@ void eeconfig_update_backlight_default(void) {
     backlight_config.breathing = 0;
 #endif
     backlight_config.level = BACKLIGHT_DEFAULT_LEVEL;
+=======
+    backlight_config.valid     = true;
+    backlight_config.enable    = BACKLIGHT_DEFAULT_ON;
+    backlight_config.breathing = BACKLIGHT_DEFAULT_BREATHING;
+    backlight_config.level     = BACKLIGHT_DEFAULT_LEVEL;
+>>>>>>> upstream/master
     eeconfig_update_backlight(backlight_config.raw);
 }
 

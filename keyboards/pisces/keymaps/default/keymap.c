@@ -15,7 +15,11 @@
  */
 
 #include QMK_KEYBOARD_H
+<<<<<<< HEAD
 #include "keymap_jp.h"
+=======
+#include "keymap_japanese.h"
+>>>>>>> upstream/master
 
 /* keymap layers */
 enum _layers {

@@ -29,6 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_MPRV, YEEHAW, KC_UP, SQUASHKB,
  MO(1), KC_MNXT, KC_LEFT, KC_DOWN, KC_RIGHT,
         KC_MPLY, LCTL(KC_S),
+<<<<<<< HEAD
              RGB_TOG
     ),
 
@@ -39,6 +40,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 KC_TRNS, RGB_SAD, RGB_M_P, RGB_MOD, RGB_SPD,
         KC_TRNS, KC_TRNS,
              RESET
+=======
+             UG_TOGG
+    ),
+
+     [1] = LAYOUT(
+        UG_HUEU,
+        UG_HUED,
+        UG_SATU, UG_VALU, UG_VALD, UG_SPDU,
+KC_TRNS, UG_SATD, RGB_M_P, UG_NEXT, UG_SPDD,
+        KC_TRNS, KC_TRNS,
+             QK_BOOT
+>>>>>>> upstream/master
     ),
 
 };

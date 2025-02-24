@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,7 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight. Do not enable this w
 AUDIO_ENABLE = no           # Audio output
 
 # Project specific files
+=======
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 SRC = matrix.c

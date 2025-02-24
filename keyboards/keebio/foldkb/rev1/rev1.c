@@ -14,7 +14,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 #include "foldkb.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 void eeconfig_init_kb(void) {
 #ifdef BACKLIGHT_ENABLE
@@ -29,6 +33,10 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
         if (clockwise) {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:keyboards/keebio/foldkb/rev1/rev1.c
+>>>>>>> upstream/master
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
@@ -38,6 +46,20 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
             tap_code(KC_PGDN);
         } else {
             tap_code(KC_PGUP);
+<<<<<<< HEAD
+=======
+========
+            tap_code(KC_PGDN);
+        } else {
+            tap_code(KC_PGUP);
+        }
+    } else if (index == 1) {
+        if (clockwise) {
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+>>>>>>>> upstream/master:keyboards/keebio/sinc/rev2/rev2.c
+>>>>>>> upstream/master
         }
     }
     return false;

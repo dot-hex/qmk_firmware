@@ -16,6 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 // clang-format off
 
+<<<<<<< HEAD
+=======
+#include "atomic_util.h"
+#include "gpio.h"
+#include "wait.h"
+
+>>>>>>> upstream/master
 #if defined(MATRIX_EXTENSION_74HC157)
 #    define MATRIX_DEVICES MCU_GPIOa, MCU_GPIOb
 #    define IS_74HC15x(dev) ((dev)==MCU_GPIOa || (dev)==MCU_GPIOb)
@@ -47,9 +54,15 @@ static const pin_t sel_pins[] = { MATRIX_EXT_74HC15x };
 LOCAL_FUNC ALWAYS_INLINE void select74HC15x(uint8_t devid);
 LOCAL_FUNC
 void select74HC15x(uint8_t devid) {
+<<<<<<< HEAD
     writePin(sel_pins[0], devid&1);
 #if defined(MATRIX_EXTENSION_74HC153)
     writePin(sel_pins[1], devid&2);
+=======
+    gpio_write_pin(sel_pins[0], devid&1);
+#if defined(MATRIX_EXTENSION_74HC153)
+    gpio_write_pin(sel_pins[1], devid&2);
+>>>>>>> upstream/master
 #endif
 }
 
@@ -63,7 +76,11 @@ LOCAL_FUNC port_width_t readPortMultiplexer(uint8_t devid, pin_t port) {
 #define readMatrixPort(dev, port) \
     ((dev) == MCU_GPIO)? readPort(port): (IS_74HC15x(dev))? readPortMultiplexer((dev)-MCU_GPIOa, port):0
 
+<<<<<<< HEAD
 #define INIT_74HC15X(x) setPinOutput(x); writePinLow(x);
+=======
+#define INIT_74HC15X(x) gpio_set_pin_output(x); gpio_write_pin_low(x);
+>>>>>>> upstream/master
 LOCAL_FUNC
 void init_74hc15x(void) {
     MAP(INIT_74HC15X, MATRIX_EXT_74HC15x)

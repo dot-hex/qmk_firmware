@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "keyboard": "m3n3van",
+=======
+  "keyboard": "matthewdias/m3n3van",
+>>>>>>> upstream/master
   "keymap": "default",
   "layout": "LAYOUT",
   "layers": [

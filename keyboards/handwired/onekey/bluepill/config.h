@@ -16,8 +16,8 @@
 
 #pragma once
 
-#include "config_common.h"
 
+<<<<<<< HEAD
 #define PRODUCT Onekey Bluepill STM32F103
 
 #define MATRIX_COL_PINS { B0 }
@@ -29,5 +29,9 @@
 #define BACKLIGHT_PWM_CHANNEL 1
 
 #define RGB_DI_PIN A1
+=======
+#define BACKLIGHT_PWM_DRIVER  PWMD2
+#define BACKLIGHT_PWM_CHANNEL 1
+>>>>>>> upstream/master
 
 #define ADC_PIN A0

@@ -18,4 +18,8 @@
 
 #include "test_common.h"
 
+<<<<<<< HEAD
 #define PERMISSIVE_HOLD
+=======
+#define PERMISSIVE_HOLD
+>>>>>>> upstream/master

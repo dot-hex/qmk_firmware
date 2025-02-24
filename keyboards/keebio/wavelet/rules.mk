@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,5 +20,7 @@ RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 
 LAYOUTS = ortho_4x12
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no

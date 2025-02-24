@@ -15,6 +15,7 @@
   */
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #include "config_common.h"
 #define VENDOR_ID       0x6C63 // "lc" = latincompass
@@ -108,3 +109,6 @@
 #    define DRIVER_COUNT 1
 #    define DRIVER_LED_TOTAL 60
 #endif
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+>>>>>>> upstream/master

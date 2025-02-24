@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -68,3 +69,11 @@
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+/* Select hand configuration */
+#define SPLIT_HAND_MATRIX_GRID B0,B7
+#define SPLIT_HAND_MATRIX_GRID_LOW_IS_LEFT
+
+#define MATRIX_MASKED
+#define SPLIT_USB_DETECT
+>>>>>>> upstream/master

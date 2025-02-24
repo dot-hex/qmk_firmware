@@ -47,6 +47,9 @@
 
 #ifdef PROTOCOL_CHIBIOS
 #    include <hal.h>
+#    if STM32_USB_USE_OTG1 == TRUE
+#        define USB_ENDPOINTS_ARE_REORDERABLE
+#    endif
 #endif
 
 /*
@@ -94,7 +97,6 @@ typedef struct {
     USB_Descriptor_Interface_t Console_Interface;
     USB_HID_Descriptor_HID_t   Console_HID;
     USB_Descriptor_Endpoint_t  Console_INEndpoint;
-    USB_Descriptor_Endpoint_t  Console_OUTEndpoint;
 #endif
 
 #ifdef MIDI_ENABLE
@@ -129,7 +131,7 @@ typedef struct {
     USB_Descriptor_Endpoint_t  CDC_DataInEndpoint;
 #endif
 
-#ifdef JOYSTICK_ENABLE
+#if defined(JOYSTICK_ENABLE) && !defined(JOYSTICK_SHARED_EP)
     // Joystick HID Interface
     USB_Descriptor_Interface_t Joystick_Interface;
     USB_HID_Descriptor_HID_t   Joystick_HID;
@@ -184,7 +186,7 @@ enum usb_interfaces {
     CDI_INTERFACE,
 #endif
 
-#if defined(JOYSTICK_ENABLE)
+#if defined(JOYSTICK_ENABLE) && !defined(JOYSTICK_SHARED_EP)
     JOYSTICK_INTERFACE,
 #endif
 
@@ -193,6 +195,8 @@ enum usb_interfaces {
 #endif
     TOTAL_INTERFACES
 };
+
+#define IS_VALID_INTERFACE(i) ((i) >= 0 && (i) < TOTAL_INTERFACES)
 
 #define NEXT_EPNUM __COUNTER__
 
@@ -216,7 +220,7 @@ enum usb_endpoints {
 
 #ifdef RAW_ENABLE
     RAW_IN_EPNUM = NEXT_EPNUM,
-#    if STM32_USB_USE_OTG1
+#    ifdef USB_ENDPOINTS_ARE_REORDERABLE
 #        define RAW_OUT_EPNUM RAW_IN_EPNUM
 #    else
     RAW_OUT_EPNUM         = NEXT_EPNUM,
@@ -229,6 +233,7 @@ enum usb_endpoints {
 
 #ifdef CONSOLE_ENABLE
     CONSOLE_IN_EPNUM = NEXT_EPNUM,
+<<<<<<< HEAD
 
 #    ifdef PROTOCOL_CHIBIOS
 // ChibiOS has enough memory and descriptor to actually enable the endpoint
@@ -242,11 +247,13 @@ enum usb_endpoints {
 #    else
 #        define CONSOLE_OUT_EPNUM CONSOLE_IN_EPNUM
 #    endif
+=======
+>>>>>>> upstream/master
 #endif
 
 #ifdef MIDI_ENABLE
     MIDI_STREAM_IN_EPNUM = NEXT_EPNUM,
-#    if STM32_USB_USE_OTG1
+#    ifdef USB_ENDPOINTS_ARE_REORDERABLE
 #        define MIDI_STREAM_OUT_EPNUM MIDI_STREAM_IN_EPNUM
 #    else
     MIDI_STREAM_OUT_EPNUM = NEXT_EPNUM,
@@ -256,18 +263,26 @@ enum usb_endpoints {
 #ifdef VIRTSER_ENABLE
     CDC_NOTIFICATION_EPNUM = NEXT_EPNUM,
     CDC_IN_EPNUM           = NEXT_EPNUM,
-#    if STM32_USB_USE_OTG1
+#    ifdef USB_ENDPOINTS_ARE_REORDERABLE
 #        define CDC_OUT_EPNUM CDC_IN_EPNUM
 #    else
     CDC_OUT_EPNUM         = NEXT_EPNUM,
 #    endif
 #endif
+
 #ifdef JOYSTICK_ENABLE
+#    if !defined(JOYSTICK_SHARED_EP)
     JOYSTICK_IN_EPNUM = NEXT_EPNUM,
-#    if STM32_USB_USE_OTG1
-    JOYSTICK_OUT_EPNUM = JOYSTICK_IN_EPNUM,
 #    else
-    JOYSTICK_OUT_EPNUM    = NEXT_EPNUM,
+#        define JOYSTICK_IN_EPNUM SHARED_IN_EPNUM
+#    endif
+#endif
+
+#ifdef DIGITIZER_ENABLE
+#    if !defined(DIGITIZER_SHARED_EP)
+    DIGITIZER_IN_EPNUM = NEXT_EPNUM,
+#    else
+#        define DIGITIZER_IN_EPNUM SHARED_IN_EPNUM
 #    endif
 #endif
 
@@ -293,15 +308,13 @@ enum usb_endpoints {
 #    define MAX_ENDPOINTS USB_MAX_ENDPOINTS
 #endif
 
-// TODO - ARM_ATSAM
-
 #if (NEXT_EPNUM - 1) > MAX_ENDPOINTS
 #    error There are not enough available endpoints to support all functions. Please disable one or more of the following: Mouse Keys, Extra Keys, Console, NKRO, MIDI, Serial, Steno
 #endif
 
 #define KEYBOARD_EPSIZE 8
 #define SHARED_EPSIZE 32
-#define MOUSE_EPSIZE 8
+#define MOUSE_EPSIZE 16
 #define RAW_EPSIZE 32
 #define CONSOLE_EPSIZE 32
 #define MIDI_STREAM_EPSIZE 64
@@ -310,4 +323,4 @@ enum usb_endpoints {
 #define JOYSTICK_EPSIZE 8
 #define DIGITIZER_EPSIZE 8
 
-uint16_t get_usb_descriptor(const uint16_t wValue, const uint16_t wIndex, const void** const DescriptorAddress);
+uint16_t get_usb_descriptor(const uint16_t wValue, const uint16_t wIndex, const uint16_t wLength, const void** const DescriptorAddress);

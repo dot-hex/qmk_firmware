@@ -21,4 +21,8 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 To enter to the bootloader you need to:
 
+<<<<<<< HEAD:keyboards/ibnuda/squiggle/readme.md
 * Press the key mapped to `RESET`
+=======
+* Press the key mapped to `QK_BOOT`
+>>>>>>> upstream/master:keyboards/squiggle/readme.md

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,4 +21,6 @@ AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 ENCODER_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 SRC += navpad_prefs.c

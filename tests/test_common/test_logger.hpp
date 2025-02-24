@@ -25,6 +25,7 @@ class TestLogger : public std::ostream {
     TestLogger& info();
     TestLogger& trace();
     TestLogger& error();
+<<<<<<< HEAD
     void print_log();
     void reset();
 
@@ -33,3 +34,15 @@ class TestLogger : public std::ostream {
 };
 
 extern TestLogger test_logger;
+=======
+    void        print_log();
+    void        print_header();
+    void        reset();
+
+   private:
+    TestLogger&    timestamp();
+    std::stringbuf m_log;
+};
+
+extern TestLogger test_logger;
+>>>>>>> upstream/master

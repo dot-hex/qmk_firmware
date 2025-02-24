@@ -13,10 +13,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "gud70.h"
 
 void keyboard_pre_init_kb(void) {
   // Enable top LED
   setPinOutput(B3);
   writePinLow(B3);
+=======
+#include "quantum.h"
+
+void keyboard_pre_init_kb(void) {
+  // Enable top LED
+  gpio_set_pin_output(B3);
+  gpio_write_pin_low(B3);
+
+  keyboard_pre_init_user();
+>>>>>>> upstream/master
 }

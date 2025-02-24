@@ -35,6 +35,7 @@ TEST_F(RetroTapping, tap_and_hold_mod_tap_hold_key) {
     set_keymap({mod_tap_hold_key});
 
     /* Press mod-tap-hold key. */
+<<<<<<< HEAD
     EXPECT_CALL(driver, send_keyboard_mock(_)).Times(0);
     mod_tap_hold_key.press();
     idle_for(TAPPING_TERM);
@@ -50,3 +51,20 @@ TEST_F(RetroTapping, tap_and_hold_mod_tap_hold_key) {
     run_one_scan_loop();
     testing::Mock::VerifyAndClearExpectations(&driver);
 }
+=======
+    EXPECT_NO_REPORT(driver);
+    mod_tap_hold_key.press();
+    idle_for(TAPPING_TERM);
+    VERIFY_AND_CLEAR(driver);
+
+    /* Release mod-tap-hold key. */
+    /* TODO: Why is LSHIFT send at all? */
+    EXPECT_REPORT(driver, (KC_LEFT_SHIFT));
+    EXPECT_EMPTY_REPORT(driver);
+    EXPECT_REPORT(driver, (KC_P));
+    EXPECT_EMPTY_REPORT(driver);
+    mod_tap_hold_key.release();
+    run_one_scan_loop();
+    VERIFY_AND_CLEAR(driver);
+}
+>>>>>>> upstream/master

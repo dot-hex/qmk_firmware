@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = caterina
@@ -22,3 +20,5 @@ AUDIO_ENABLE = no           # Audio output
 
 BLUETOOTH_ENABLE = yes
 BLUETOOTH_DRIVER = BluefruitLE
+=======
+>>>>>>> upstream/master

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "wavelet.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef SWAP_HANDS_ENABLE
 __attribute__ ((weak))

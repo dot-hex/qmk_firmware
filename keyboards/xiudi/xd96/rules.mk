@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,9 +19,15 @@ RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 LTO_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 # custom matrix setup
 CUSTOM_MATRIX = lite
 
 VPATH += drivers/gpio
 SRC += pca9555.c matrix.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

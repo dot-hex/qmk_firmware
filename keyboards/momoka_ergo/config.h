@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -127,5 +128,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_KEY_EE_HANDS_LEFT 	KC_T
 #define BOOTMAGIC_KEY_EE_HANDS_RIGHT 	KC_Y
 #define USE_SERIAL
+=======
+#define SELECT_SOFT_SERIAL_SPEED 5
+
+>>>>>>> upstream/master
 #define SPLIT_USB_DETECT
 #define EE_HANDS

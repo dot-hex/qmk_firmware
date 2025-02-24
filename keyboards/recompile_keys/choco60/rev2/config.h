@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
+Copyright 2021 mtei
+=======
 Copyright 2020 Naoto Takai
+>>>>>>> upstream/master
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,7 +18,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
+<<<<<<< HEAD
 #pragma once
 
 /*
@@ -27,20 +31,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { C5, C4, B6, B7, C7 }
-#define MATRIX_ROW_PINS_RIGHT { D3, D2, D5, D6, B0 }
-/* The last three NO_PIN are dummies to make the same size as MATRIX_ROW_PINS_RIGHT. */
-#define MATRIX_COL_PINS { C6, B4, B3, B2, B1, B0, NO_PIN, NO_PIN, NO_PIN }
-#define MATRIX_COL_PINS_RIGHT { C7, B7, B6, B5, B4, B3, B2, C6, D4 }
-#define UNUSED_PINS
+#define MATRIX_ROW_PINS { D4, C6, D7, E6, B4 }
+#define MATRIX_COL_PINS { F4,F4,F5,F5, F6,F6,F7,F7,  B6,B6,B2,B2, B3,B3,B1,B1 }
 
-/* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
+#define MATRIX_MUL_SEL  {  0, 1, 0, 1,  0, 1, 0, 1,   1, 0, 1, 0,  1, 0, 1, 0 }
+/* use 74HC157: quadruple 2-line to 1-line data selectors / multiplexers */
+#define MATRIX_MUL_SELECT  B5 /* 74HC157 pin1:~A/B */
 
-/*
- * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
- */
-#define SOFT_SERIAL_PIN D0
-#define SPLIT_HAND_PIN D1
+#ifdef MATRIX_IO_DELAY_ADAPTIVE_FAST
+#    define MATRIX_IO_DELAY_PORTS  B0, B0, F0, F0
+#    define MATRIX_IO_DELAY_MULSEL  0,  1,  0,  1
+//                                  76543210    76543210    76543210    76543210
+#    define MATRIX_IO_DELAY_MASKS 0b01001110, 0b01001110, 0b11110000, 0b11110000
+#endif
+=======
+
+#pragma once
 
 #define SPLIT_USB_DETECT
+>>>>>>> upstream/master

@@ -15,7 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "skeletyl.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 /**
  * LEDs index.

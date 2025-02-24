@@ -1,4 +1,4 @@
-/* Copyright 2018 Salicylic_acid3
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,9 +16,9 @@
 
 #pragma once
 
+#define CH_CFG_ST_TIMEDELTA 0
 
+#define CH_CFG_USE_CONDVARS_TIMEOUT FALSE
 
-/* Select hand configuration */
+#include_next <chconf.h>
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 200

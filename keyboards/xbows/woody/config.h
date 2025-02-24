@@ -1,11 +1,6 @@
 #pragma once
-#include "config_common.h"
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x1224
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    X-BOWS
-#define PRODUCT         WOO-DY
 
+<<<<<<< HEAD
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
 #define MATRIX_ROW_PINS {B3, B2, B1, B0, B5 }
@@ -76,3 +71,7 @@
 #    define DRIVER_2_LED_TOTAL 32
 #    define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 #endif
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_SDA
+>>>>>>> upstream/master

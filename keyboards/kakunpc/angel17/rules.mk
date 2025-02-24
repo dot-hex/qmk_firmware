@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = numpad_5x4
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = kakunpc/angel17/rev1

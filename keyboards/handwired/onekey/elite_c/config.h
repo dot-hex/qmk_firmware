@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define PRODUCT Onekey Elite-C
@@ -29,4 +30,9 @@
 #define RGB_DI_PIN F6
 #define RGB_CI_PIN B1
 
+=======
+>>>>>>> upstream/master
 #define ADC_PIN F6
+
+#define QMK_WAITING_TEST_BUSY_PIN F6
+#define QMK_WAITING_TEST_YIELD_PIN F7

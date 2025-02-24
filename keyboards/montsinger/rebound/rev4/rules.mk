@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -23,5 +24,8 @@ LAYOUTS_HAS_RGB = no
 
 # Disable unsupported hardware
 RGBLIGHT_SUPPORTED = yes
+=======
+# Disable unsupported hardware
+>>>>>>> upstream/master
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no

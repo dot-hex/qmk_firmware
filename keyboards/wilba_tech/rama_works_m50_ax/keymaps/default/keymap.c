@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:keyboards/wilba_tech/rama_works_m50_ax/keymaps/default/keymap.c
+>>>>>>> upstream/master
 /* Copyright 2020 Jason Williams (Wilba)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -32,7 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     _______, KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     _______, KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
+<<<<<<< HEAD
     _______, _______, KC_LCTL, KC_LALT, KC_LGUI, FN_MO13, KC_SPC,  KC_SPC,  FN_MO23, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+=======
+    _______, _______, KC_LCTL, KC_LALT, KC_LGUI, TL_LOWR, KC_SPC,  KC_SPC,  TL_UPPR, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+>>>>>>> upstream/master
 ),
 
 
@@ -91,3 +99,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 
 };
+<<<<<<< HEAD
+=======
+========
+#include "../default/keymap.c"
+>>>>>>>> upstream/master:keyboards/wilba_tech/rama_works_m50_a/keymaps/via/keymap.c
+>>>>>>> upstream/master

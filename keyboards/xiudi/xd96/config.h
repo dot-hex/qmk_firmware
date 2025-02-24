@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -138,3 +139,8 @@
 /* Bootmagic Lite key configuration */
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
+=======
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 18
+>>>>>>> upstream/master

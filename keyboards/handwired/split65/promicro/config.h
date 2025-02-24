@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 
 #include "config_common.h"
 
@@ -49,5 +50,12 @@
 //#define NO_PRINT
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+#define SELECT_SOFT_SERIAL_SPEED 1
+
+// Feature diable options
+//#define NO_DEBUG
+//#define NO_PRINT
+>>>>>>> upstream/master
 
 #define OLED_DISPLAY_128X64

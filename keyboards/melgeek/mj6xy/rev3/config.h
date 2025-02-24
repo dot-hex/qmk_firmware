@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
@@ -50,3 +51,6 @@
 #    define RGBLIGHT_VAL_STEP 8
 #    define RGBLIGHT_SLEEP
 #endif
+=======
+#define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_EFFECT_RAINBOW_MOOD + 6)
+>>>>>>> upstream/master

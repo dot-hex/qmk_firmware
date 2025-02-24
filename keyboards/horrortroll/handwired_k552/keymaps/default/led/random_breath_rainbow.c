@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 HorrorTroll <https://github.com/HorrorTroll>
+=======
+/* Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +18,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 static uint8_t offset[DRIVER_LED_TOTAL];
+=======
+static uint8_t offset[RGB_MATRIX_LED_COUNT];
+>>>>>>> upstream/master
 
 static void doRandom_breath_rainbow(int i, effect_params_t* params) {
     if (!HAS_ANY_FLAGS(g_led_config.flags[i], params->flags)) return;
@@ -30,10 +38,17 @@ static void doRandom_breath_rainbow(int i, effect_params_t* params) {
     }
 
     //float val = (((float)sin8(time + offset[i]) / 256)/2.1) + .05;
+<<<<<<< HEAD
     HSV hsv = {0, 255, 255};
     hsv.h = scale16by8(g_rgb_timer + offset[i], rgb_matrix_config.speed / 4) + (offset[i]*2);
     hsv.v = scale8(abs8(sin8(time) - 128) * 2, hsv.v);
     RGB rgb = rgb_matrix_hsv_to_rgb(hsv);
+=======
+    hsv_t hsv = {0, 255, 255};
+    hsv.h = scale16by8(g_rgb_timer + offset[i], rgb_matrix_config.speed / 4) + (offset[i]*2);
+    hsv.v = scale8(abs8(sin8(time) - 128) * 2, hsv.v);
+    rgb_t rgb = rgb_matrix_hsv_to_rgb(hsv);
+>>>>>>> upstream/master
     rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
 }
 
@@ -41,7 +56,11 @@ bool RANDOM_BREATH_RAINBOW(effect_params_t* params) {
     
     if (!params->init) {
         // Change one LED every tick, make sure speed is not 0
+<<<<<<< HEAD
         doRandom_breath_rainbow(rand() % DRIVER_LED_TOTAL, params);
+=======
+        doRandom_breath_rainbow(rand() % RGB_MATRIX_LED_COUNT, params);
+>>>>>>> upstream/master
         return false;
     }
 	
@@ -51,5 +70,9 @@ bool RANDOM_BREATH_RAINBOW(effect_params_t* params) {
         doRandom_breath_rainbow(i, params);
     }
 
+<<<<<<< HEAD
     return led_max < DRIVER_LED_TOTAL;
+=======
+    return led_max < RGB_MATRIX_LED_COUNT;
+>>>>>>> upstream/master
 }

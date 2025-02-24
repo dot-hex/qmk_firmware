@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define DEVICE_VER      0x0002
 
@@ -39,3 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 17
 
 
+=======
+// configure oled driver for the 128x32 oled
+#define OLED_UPDATE_INTERVAL 33 // ~30fps
+>>>>>>> upstream/master

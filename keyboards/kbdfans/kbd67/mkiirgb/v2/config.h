@@ -1,11 +1,6 @@
 #pragma once
-#include "config_common.h"
-#define VENDOR_ID       0x4B42 // KB
-#define PRODUCT_ID      0x1225
-#define DEVICE_VER      0x0002
-#define MANUFACTURER    KBDfans
-#define PRODUCT         kbd67mkiirgb v2
 
+<<<<<<< HEAD
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
 #define MATRIX_ROW_PINS {F0, F1, F4, E6, C6 }
@@ -75,3 +70,7 @@
 #    define DRIVER_2_LED_TOTAL 32
 #    define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 #endif
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_VCC
+>>>>>>> upstream/master

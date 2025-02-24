@@ -27,6 +27,7 @@ The PCB should indicate which revision this is.
 
 # Customizing your PloopyCo Trackball
 
+<<<<<<< HEAD
 While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change.  Such as adding DPI control, or to use the ball to scroll while holding a button.   To allow for this sort of control, there is a callback for both the scroll wheel and the mouse sensor. 
 
 The default behavior for this is:
@@ -72,3 +73,6 @@ Nothing needs to be enabled to use this functionality.  Just add the `DRAG_SCROL
 * `#define PLOOPY_DRAGSCROLL_FIXED` - Normally, when activating Drag Scroll, it uses a fraction of the current DPI. You can define this to use a specific, set DPI rather than a fraction of the current DPI. 
   * `#define PLOOPY_DRAGSCROLL_DPI 100` - When the fixed DPI option is enabled, this sets the DPI to be used for Drag Scroll.
 * `#define PLOOPY_DRAGSCROLL_INVERT` - This reverses the direction that the scroll is performed. 
+=======
+You can find customziation options [here](../readme.md).
+>>>>>>> upstream/master

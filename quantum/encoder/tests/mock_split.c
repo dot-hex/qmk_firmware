@@ -19,14 +19,22 @@
 bool pins[32]           = {0};
 bool pinIsInputHigh[32] = {0};
 
+<<<<<<< HEAD
 uint8_t mockSetPinInputHigh(pin_t pin) {
+=======
+uint8_t mock_set_pin_input_high(pin_t pin) {
+>>>>>>> upstream/master
     // dprintf("Setting pin %d input high.", pin);
     pins[pin]           = true;
     pinIsInputHigh[pin] = true;
     return 0;
 }
 
+<<<<<<< HEAD
 bool mockReadPin(pin_t pin) {
+=======
+bool mock_read_pin(pin_t pin) {
+>>>>>>> upstream/master
     return pins[pin];
 }
 

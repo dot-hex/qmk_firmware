@@ -15,8 +15,15 @@ from milc.questions import yesno
 import_names = {
     # A mapping of package name to importable name
     'pep8-naming': 'pep8ext_naming',
+<<<<<<< HEAD
     'pyusb': 'usb.core',
     'qmk-dotty-dict': 'dotty_dict'
+=======
+    'pyserial': 'serial',
+    'pyusb': 'usb.core',
+    'qmk-dotty-dict': 'dotty_dict',
+    'pillow': 'PIL'
+>>>>>>> upstream/master
 }
 
 safe_commands = [
@@ -29,28 +36,44 @@ safe_commands = [
 ]
 
 subcommands = [
+<<<<<<< HEAD
     'qmk.cli.bux',
     'qmk.cli.c2json',
     'qmk.cli.cd',
     'qmk.cli.cformat',
+=======
+    'qmk.cli.ci.validate_aliases',
+    'qmk.cli.bux',
+    'qmk.cli.c2json',
+    'qmk.cli.cd',
+>>>>>>> upstream/master
     'qmk.cli.chibios.confmigrate',
     'qmk.cli.clean',
     'qmk.cli.compile',
     'qmk.cli.docs',
     'qmk.cli.doctor',
+<<<<<<< HEAD
     'qmk.cli.fileformat',
+=======
+    'qmk.cli.find',
+>>>>>>> upstream/master
     'qmk.cli.flash',
     'qmk.cli.format.c',
     'qmk.cli.format.json',
     'qmk.cli.format.python',
     'qmk.cli.format.text',
     'qmk.cli.generate.api',
+<<<<<<< HEAD
+=======
+    'qmk.cli.generate.autocorrect_data',
+>>>>>>> upstream/master
     'qmk.cli.generate.compilation_database',
     'qmk.cli.generate.config_h',
     'qmk.cli.generate.develop_pr_list',
     'qmk.cli.generate.dfu_header',
     'qmk.cli.generate.docs',
     'qmk.cli.generate.info_json',
+<<<<<<< HEAD
     'qmk.cli.generate.keyboard_h',
     'qmk.cli.generate.layouts',
     'qmk.cli.generate.rgb_breathe_table',
@@ -69,6 +92,44 @@ subcommands = [
     'qmk.cli.new.keymap',
     'qmk.cli.pyformat',
     'qmk.cli.pytest',
+=======
+    'qmk.cli.generate.keyboard_c',
+    'qmk.cli.generate.keyboard_h',
+    'qmk.cli.generate.keycodes',
+    'qmk.cli.generate.keycodes_tests',
+    'qmk.cli.generate.keymap_h',
+    'qmk.cli.generate.make_dependencies',
+    'qmk.cli.generate.rgb_breathe_table',
+    'qmk.cli.generate.rules_mk',
+    'qmk.cli.generate.version_h',
+    'qmk.cli.git.submodule',
+    'qmk.cli.hello',
+    'qmk.cli.import.kbfirmware',
+    'qmk.cli.import.keyboard',
+    'qmk.cli.import.keymap',
+    'qmk.cli.info',
+    'qmk.cli.json2c',
+    'qmk.cli.license_check',
+    'qmk.cli.lint',
+    'qmk.cli.kle2json',
+    'qmk.cli.list.keyboards',
+    'qmk.cli.list.keymaps',
+    'qmk.cli.list.layouts',
+    'qmk.cli.mass_compile',
+    'qmk.cli.migrate',
+    'qmk.cli.new.keyboard',
+    'qmk.cli.new.keymap',
+    'qmk.cli.painter',
+    'qmk.cli.pytest',
+    'qmk.cli.test.c',
+    'qmk.cli.userspace.add',
+    'qmk.cli.userspace.compile',
+    'qmk.cli.userspace.doctor',
+    'qmk.cli.userspace.list',
+    'qmk.cli.userspace.path',
+    'qmk.cli.userspace.remove',
+    'qmk.cli.via2json',
+>>>>>>> upstream/master
 ]
 
 
@@ -87,7 +148,11 @@ def _install_deps(requirements):
 
     elif not os.access(sys.prefix, os.W_OK):
         # We can't write to sys.prefix, attempt to install locally
+<<<<<<< HEAD
         command.append('--local')
+=======
+        command.append('--user')
+>>>>>>> upstream/master
 
     return _run_cmd(*command, '-r', requirements)
 
@@ -152,13 +217,29 @@ def _broken_module_imports(requirements):
     return False
 
 
+<<<<<<< HEAD
+=======
+def _yesno(*args):
+    """Wrapper to only prompt if interactive
+    """
+    return sys.stdout.isatty() and yesno(*args)
+
+
+def _eprint(errmsg):
+    """Wrapper to print to stderr
+    """
+    print(errmsg, file=sys.stderr)
+
+
+>>>>>>> upstream/master
 # Make sure our python is new enough
 #
 # Supported version information
 #
 # Based on the OSes we support these are the minimum python version available by default.
-# Last update: 2021 Jan 02
+# Last update: 2024 Jun 24
 #
+<<<<<<< HEAD
 # Arch: 3.9
 # Debian: 3.7
 # Fedora 31: 3.7
@@ -174,6 +255,25 @@ def _broken_module_imports(requirements):
 
 if sys.version_info[0] != 3 or sys.version_info[1] < 7:
     print('Error: Your Python is too old! Please upgrade to Python 3.7 or later.')
+=======
+# Arch: 3.12
+# Debian 11: 3.9
+# Debian 12: 3.11
+# Fedora 39: 3.12
+# Fedora 40: 3.12
+# FreeBSD: 3.11
+# Gentoo: 3.12
+# macOS: 3.12 (from homebrew)
+# msys2: 3.11
+# Slackware: 3.9
+# solus: 3.10
+# Ubuntu 22.04: 3.10
+# Ubuntu 24.04: 3.12
+# void: 3.12
+
+if sys.version_info[0] != 3 or sys.version_info[1] < 9:
+    _eprint('Error: Your Python is too old! Please upgrade to Python 3.9 or later.')
+>>>>>>> upstream/master
     exit(127)
 
 milc_version = __VERSION__.split('.')
@@ -181,17 +281,29 @@ milc_version = __VERSION__.split('.')
 if int(milc_version[0]) < 2 and int(milc_version[1]) < 4:
     requirements = Path('requirements.txt').resolve()
 
+<<<<<<< HEAD
     print(f'Your MILC library is too old! Please upgrade: python3 -m pip install -U -r {str(requirements)}')
+=======
+    _eprint(f'Your MILC library is too old! Please upgrade: python3 -m pip install -U -r {str(requirements)}')
+>>>>>>> upstream/master
     exit(127)
 
 # Make sure we can run binaries in the same directory as our Python interpreter
 python_dir = os.path.dirname(sys.executable)
 
+<<<<<<< HEAD
 if python_dir not in os.environ['PATH'].split(':'):
     os.environ['PATH'] = ":".join((python_dir, os.environ['PATH']))
 
 # Check to make sure we have all our dependencies
 msg_install = f'Please run `{sys.executable} -m pip install -r %s` to install required python dependencies.'
+=======
+if python_dir not in os.environ['PATH'].split(os.pathsep):
+    os.environ['PATH'] = os.pathsep.join((python_dir, os.environ['PATH']))
+
+# Check to make sure we have all our dependencies
+msg_install = f'\nPlease run `{sys.executable} -m pip install -r %s` to install required python dependencies.'
+>>>>>>> upstream/master
 args = sys.argv[1:]
 while args and args[0][0] == '-':
     del args[0]
@@ -200,6 +312,7 @@ safe_command = args and args[0] in safe_commands
 
 if not safe_command:
     if _broken_module_imports('requirements.txt'):
+<<<<<<< HEAD
         if yesno('Would you like to install the required Python modules?'):
             _install_deps('requirements.txt')
         else:
@@ -218,6 +331,22 @@ if not safe_command:
             print(msg_install % (str(Path('requirements-dev.txt').resolve()),))
             print('You can also turn off developer mode: qmk config user.developer=None')
             print()
+=======
+        if _yesno('Would you like to install the required Python modules?'):
+            _install_deps('requirements.txt')
+        else:
+            _eprint(msg_install % (str(Path('requirements.txt').resolve()),))
+            exit(1)
+
+    if cli.config.user.developer and _broken_module_imports('requirements-dev.txt'):
+        if _yesno('Would you like to install the required developer Python modules?'):
+            _install_deps('requirements-dev.txt')
+        elif _yesno('Would you like to disable developer mode?'):
+            _run_cmd(sys.argv[0], 'config', 'user.developer=None')
+        else:
+            _eprint(msg_install % (str(Path('requirements-dev.txt').resolve()),))
+            _eprint('You can also turn off developer mode: qmk config user.developer=None')
+>>>>>>> upstream/master
             exit(1)
 
 # Import our subcommands
@@ -227,6 +356,10 @@ for subcommand in subcommands:
 
     except (ImportError, ModuleNotFoundError) as e:
         if safe_command:
+<<<<<<< HEAD
             print(f'Warning: Could not import {subcommand}: {e.__class__.__name__}, {e}')
+=======
+            _eprint(f'Warning: Could not import {subcommand}: {e.__class__.__name__}, {e}')
+>>>>>>> upstream/master
         else:
             raise

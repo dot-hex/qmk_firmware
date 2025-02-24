@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x3060
@@ -50,6 +51,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 9    // Number of LEDs
 #define RGBLIGHT_ANIMATIONS
 
+=======
+<<<<<<<< HEAD:keyboards/vitamins_included/config.h
+/* Common USB Device descriptor parameters */
+#define VENDOR_ID       0x1209
+#define PRODUCT_ID      0xBEE5
+#define MANUFACTURER    Duckle29
+#define PRODUCT         Vitamins included
+
+#include "config_common.h"
+========
+>>>>>>> upstream/master
 #ifndef IOS_DEVICE_ENABLE
   #define RGBLIGHT_LIMIT_VAL 180
   #define RGBLIGHT_VAL_STEP 17
@@ -57,8 +69,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define RGBLIGHT_LIMIT_VAL 50
   #define RGBLIGHT_VAL_STEP 4
 #endif
+<<<<<<< HEAD
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
+=======
+>>>>>>> upstream/master
 
 #if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
 // USB_MAX_POWER_CONSUMPTION value for naked48 keyboard
@@ -73,3 +88,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   // iOS device need lessthan 100
   #define USB_MAX_POWER_CONSUMPTION 100
 #endif
+<<<<<<< HEAD
+=======
+>>>>>>>> upstream/master:keyboards/salicylic_acid3/getta25/rev1/config.h
+>>>>>>> upstream/master

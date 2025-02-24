@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega328p
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = ortho_4x4
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = keycapsss/plaid_pad/rev1

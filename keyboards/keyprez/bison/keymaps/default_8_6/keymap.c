@@ -26,10 +26,14 @@ enum layer_names {
 };
 
 enum custom_keycodes {
+<<<<<<< HEAD
     KC_QWRTY = SAFE_RANGE,
     KC_COLMK,
     KC_HRM,
     KC_PRVWD,
+=======
+    KC_PRVWD = SAFE_RANGE,
+>>>>>>> upstream/master
     KC_NXTWD
 };
 
@@ -46,6 +50,13 @@ enum custom_keycodes {
 #define HRM_RC MT(MOD_RCTL, KC_K)
 #define HRM_RS MT(MOD_RSFT, KC_J)
 
+<<<<<<< HEAD
+=======
+#define KC_QWRTY PDF(_QWERTY)
+#define KC_COLMK PDF(_COLEMAK)
+#define KC_HRM PDF(_HRM)
+
+>>>>>>> upstream/master
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
     * QWERTY
@@ -188,6 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+<<<<<<< HEAD
         case KC_QWRTY:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(_QWERTY);
@@ -203,6 +215,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(_HRM);
             }
             return false;
+=======
+>>>>>>> upstream/master
         case KC_PRVWD:
             if (record->event.pressed) {
                 register_mods(mod_config(MOD_LCTL));

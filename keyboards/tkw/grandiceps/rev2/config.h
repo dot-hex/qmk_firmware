@@ -15,10 +15,13 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #undef DEVICE_VER
 #define DEVICE_VER 0x0002
 #undef PRODUCT
 #define PRODUCT Grandiceps Split rev2
 
 #define SPLIT_HAND_PIN B3
+=======
+>>>>>>> upstream/master
 #define EEPROM_I2C_24LC64

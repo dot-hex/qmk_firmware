@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define PRODUCT Onekey Proton-C
@@ -32,4 +33,6 @@
 #define RGB_DI_PIN A0
 #define RGB_CI_PIN B13
 
+=======
+>>>>>>> upstream/master
 #define ADC_PIN A0

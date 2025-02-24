@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,3 +23,7 @@ AUDIO_ENABLE = no           # Audio output
 
 
 LAYOUTS = 65_ansi
+=======
+# Processor frequency
+F_CPU = 8000000
+>>>>>>> upstream/master

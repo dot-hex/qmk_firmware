@@ -15,6 +15,7 @@
  */
 
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -61,3 +62,8 @@
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
 #define RGBLIGHT_LIMIT_VAL 200
+=======
+
+/* RGB Definitions */
+#define RGBLIGHT_MAX_LAYERS 32
+>>>>>>> upstream/master

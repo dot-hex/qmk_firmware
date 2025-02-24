@@ -1,5 +1,9 @@
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
+<<<<<<< HEAD
+=======
+Copyright 2015 Jack Humbert
+>>>>>>> upstream/master
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -33,3 +38,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
+=======
+// The 'EH' has previously forced use of I2C so this default has been kept
+// however users can undef to use serial
+#define USE_I2C
+>>>>>>> upstream/master

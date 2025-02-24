@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -28,6 +29,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 17
  
+=======
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 17
+
+>>>>>>> upstream/master
 
 /*
  * Keyboard Matrix Assignments
@@ -40,6 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 #define MATRIX_ROW_PINS { D5, D2, D4, D3, D0, D1 }
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
@@ -84,3 +93,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION ROW2COL
+>>>>>>> upstream/master

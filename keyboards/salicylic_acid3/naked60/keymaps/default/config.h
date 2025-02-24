@@ -16,7 +16,10 @@
 
 #pragma once
 
+<<<<<<< HEAD
+=======
 /* Select hand configuration */
 
-#define TAPPING_FORCE_HOLD
+>>>>>>> upstream/master
+#define QUICK_TAP_TERM 0
 #define TAPPING_TERM 180

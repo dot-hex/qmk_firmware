@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT Tractyl Manuform(5x6) Proton C
 
 // wiring of each half
@@ -39,10 +40,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // WS2812 RGB LED strip input and number of LEDs
 #define RGB_DI_PIN          A6
+=======
+// #define USB_VBUS_PIN        B10
+
+// WS2812 RGB LED strip input and number of LEDs
+>>>>>>> upstream/master
 #define WS2812_PWM_DRIVER   PWMD3  // default: PWMD2
 #define WS2812_PWM_CHANNEL  1      // default: 2
 #define WS2812_PWM_PAL_MODE 2      // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 2
 //#define WS2812_PWM_COMPLEMENTARY_OUTPUT // Define for a complementary timer output (TIMx_CHyN); omit for a normal timer output (TIMx_CHy).
+<<<<<<< HEAD
 // #define WS2812_DMA_STREAM   STM32_DMA1_STREAM3  // DMA Stream for TIMx_UP, see the respective reference manual for the appropriate values for your MCU.
 #define WS2812_DMA_CHANNEL  3  // DMA Channel for TIMx_UP, see the respective reference manual for the appropriate values for your MCU.
 
@@ -50,6 +57,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SPLIT
 #define RGBLED_SPLIT \
     { 10, 10 }
+=======
+// #define WS2812_PWM_DMA_STREAM   STM32_DMA1_STREAM3  // DMA Stream for TIMx_UP, see the respective reference manual for the appropriate values for your MCU.
+#define WS2812_PWM_DMA_CHANNEL  3  // DMA Channel for TIMx_UP, see the respective reference manual for the appropriate values for your MCU.
+>>>>>>> upstream/master
 
 #define DEBUG_LED_PIN C13
 
@@ -75,12 +86,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define I2C1_SDA_PAL_MODE        4
 #define I2C1_CLOCK_SPEED         400000
 
+<<<<<<< HEAD
 /* encoder config */
 #define ENCODERS_PAD_A \
     { A7 }
 #define ENCODERS_PAD_B \
     { A8 }
 
+=======
+>>>>>>> upstream/master
 /* spi config for eeprom and pmw3360 sensor */
 #define SPI_DRIVER                           SPID2
 #define SPI_SCK_PIN                          B13
@@ -99,6 +113,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define DEBUG_EEPROM_OUTPUT
 
 /* pmw3360 config  */
+<<<<<<< HEAD
 #define PMW3360_CS_PIN                       B9
 #define PMW3360_SPI_MODE                     3
 #define PMW3360_SPI_DIVISOR                  8
+=======
+#define PMW33XX_CS_PIN                       B9
+#define PMW33XX_SPI_DIVISOR                  8
+>>>>>>> upstream/master

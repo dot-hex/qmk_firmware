@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Copyright 2021-2022 Alin M Elena <alinm.elena@gmail.com>
 
@@ -57,3 +58,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_EFFECT_TWINKLE
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
+=======
+// Copyright 2021-2023 alin m elena (@alinelena)
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+#define LED_RSE_PIN B13
+#define LED_LWR_PIN B12
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 
@@ -41,4 +42,6 @@ OPT_DEFS += -DOLED_FONT_H=\"keyboards/rgbkb/common/glcdfont.c\"
 # matrix optimisations
 SRC += matrix.c
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = rgbkb/mun/rev1

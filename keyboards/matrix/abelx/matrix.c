@@ -17,10 +17,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
 #include "quantum.h"
+=======
+>>>>>>> upstream/master
 #include "matrix.h"
 #include "tca6424.h"
 #include "abelx.h"

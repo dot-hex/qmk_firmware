@@ -1,6 +1,6 @@
 {
-    "keyboard_name": "Preonic",
     "url": "https://olkb.com/preonic",
+<<<<<<< HEAD
     "maintainer": "jackhumbert",
     "layouts": {
         "LAYOUT_preonic_1x2uC": {
@@ -139,4 +139,7 @@
             ]
         }
     }
+=======
+    "maintainer": "jackhumbert"
+>>>>>>> upstream/master
 }

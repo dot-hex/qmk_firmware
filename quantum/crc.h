@@ -16,7 +16,12 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+#include <stddef.h>
+#include <stdint.h>
+>>>>>>> upstream/master
 
 /**
  * The type of the CRC values.
@@ -41,4 +46,8 @@ __attribute__((weak)) void crc_init(void);
  * \param[in] data_len Number of bytes in the \a data buffer.
  * \return             The calculated crc value.
  */
+<<<<<<< HEAD
 __attribute__((weak)) uint8_t crc8(const void *data, size_t data_len);
+=======
+__attribute__((weak)) uint8_t crc8(const void *data, size_t data_len);
+>>>>>>> upstream/master

@@ -16,13 +16,19 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 #include <stdint.h>
 #include <stdbool.h>
+=======
+>>>>>>> upstream/master
 #include "wait.h"
 #include "util.h"
 #include "matrix.h"
 #include "debounce.h"
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+>>>>>>> upstream/master
 
 #ifdef DIRECT_PINS
 static pin_t direct_pins[MATRIX_ROWS][MATRIX_COLS] = DIRECT_PINS;
@@ -40,7 +46,11 @@ static void init_pins(void) {
         for (int col = 0; col < MATRIX_COLS; col++) {
             pin_t pin = direct_pins[row][col];
             if (pin != NO_PIN) {
+<<<<<<< HEAD
                 setPinInputHigh(pin);
+=======
+                gpio_set_pin_input_high(pin);
+>>>>>>> upstream/master
             }
         }
     }
@@ -53,7 +63,11 @@ static bool read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row)
     for (uint8_t col_index = 0; col_index < MATRIX_COLS; col_index++) {
         pin_t pin = direct_pins[current_row][col_index];
         if (pin != NO_PIN) {
+<<<<<<< HEAD
             current_matrix[current_row] |= readPin(pin) ? 0 : (MATRIX_ROW_SHIFTER << col_index);
+=======
+            current_matrix[current_row] |= gpio_read_pin(pin) ? 0 : (MATRIX_ROW_SHIFTER << col_index);
+>>>>>>> upstream/master
         }
     }
 
@@ -100,6 +114,7 @@ static bool read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row)
 static void select_col(uint8_t col) {
     switch (col) {
         case 0:
+<<<<<<< HEAD
           writePinLow(F4);
           writePinLow(F1);
           writePinHigh(F0);
@@ -188,6 +203,96 @@ static void select_col(uint8_t col) {
           writePinLow(F1);
           writePinLow(F0);
           writePinHigh(F5);
+=======
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 1:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 2:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 3:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 4:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 5:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F5);
+          break;
+        case 6:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 7:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 8:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 9:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 10:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 11:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 12:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 13:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F6);
+          break;
+        case 14:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_high(F5);
+>>>>>>> upstream/master
           break;
     }
 }
@@ -195,6 +300,7 @@ static void select_col(uint8_t col) {
 static void unselect_col(uint8_t col) {
     switch (col) {
         case 0:
+<<<<<<< HEAD
           writePinHigh(F4);
           writePinHigh(F1);
           writePinLow(F0);
@@ -283,6 +389,96 @@ static void unselect_col(uint8_t col) {
           writePinHigh(F1);
           writePinHigh(F0);
           writePinLow(F5);
+=======
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 1:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 2:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 3:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 4:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 5:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F5);
+          break;
+        case 6:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 7:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 8:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 9:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 10:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 11:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 12:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_low(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 13:
+          gpio_write_pin_low(F4);
+          gpio_write_pin_low(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F6);
+          break;
+        case 14:
+          gpio_write_pin_high(F4);
+          gpio_write_pin_high(F1);
+          gpio_write_pin_high(F0);
+          gpio_write_pin_low(F5);
+>>>>>>> upstream/master
           break;
     }
 }
@@ -290,16 +486,25 @@ static void unselect_col(uint8_t col) {
 static void unselect_cols(void) {
 
     //Demultiplexer
+<<<<<<< HEAD
     writePinHigh(F0);
     writePinHigh(F1);
     writePinHigh(F4);
     writePinLow(F5);
     writePinLow(F6);
+=======
+    gpio_write_pin_high(F0);
+    gpio_write_pin_high(F1);
+    gpio_write_pin_high(F4);
+    gpio_write_pin_low(F5);
+    gpio_write_pin_low(F6);
+>>>>>>> upstream/master
 }
 
 static void init_pins(void) {
     unselect_cols();
     for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
+<<<<<<< HEAD
         setPinInputHigh(row_pins[x]);
     }
     setPinOutput(F0);
@@ -307,6 +512,15 @@ static void init_pins(void) {
     setPinOutput(F4);
     setPinOutput(F5);
     setPinOutput(F6);
+=======
+        gpio_set_pin_input_high(row_pins[x]);
+    }
+    gpio_set_pin_output(F0);
+    gpio_set_pin_output(F1);
+    gpio_set_pin_output(F4);
+    gpio_set_pin_output(F5);
+    gpio_set_pin_output(F6);
+>>>>>>> upstream/master
 }
 
 static bool read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col) {
@@ -322,7 +536,11 @@ static bool read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col)
         matrix_row_t last_row_value = current_matrix[row_index];
 
         // Check row pin state
+<<<<<<< HEAD
         if (readPin(row_pins[row_index]) == 0) {
+=======
+        if (gpio_read_pin(row_pins[row_index]) == 0) {
+>>>>>>> upstream/master
             // Pin LO, set col bit
             current_matrix[row_index] |= (MATRIX_ROW_SHIFTER << current_col);
         } else {

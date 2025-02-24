@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,7 +19,7 @@ BACKLIGHT_DRIVER = custom
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
-SRC += matrix.c \
-
-LAYOUTS = 75_ansi
+SRC += matrix.c

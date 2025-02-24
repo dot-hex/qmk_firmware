@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32L422
 
@@ -26,3 +27,8 @@ OPT = 2
 LTO_ENABLE = yes
 
 LAYOUTS = alice_split_bs
+=======
+RGB_MATRIX_CUSTOM_KB = yes
+
+OPT = 2
+>>>>>>> upstream/master

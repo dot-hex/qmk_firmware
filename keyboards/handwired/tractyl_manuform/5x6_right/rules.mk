@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -18,4 +19,9 @@ MOUSE_SHARED_EP = yes
 
 SPLIT_KEYBOARD = yes
 
+=======
+POINTING_DEVICE_DRIVER = pmw3360
+MOUSE_SHARED_EP = yes
+
+>>>>>>> upstream/master
 DEFAULT_FOLDER = handwired/tractyl_manuform/5x6_right/teensy2pp

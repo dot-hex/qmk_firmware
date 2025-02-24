@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -36,23 +37,14 @@
 #define DIODE_DIRECTION COL2ROW
 
 #define SOFT_SERIAL_PIN A15
+=======
+>>>>>>> upstream/master
 #define SELECT_SOFT_SERIAL_SPEED 1
-
-#define MATRIX_IO_DELAY 5
-#define TAP_CODE_DELAY 10
-
-#define ENCODERS_PAD_A { B14 }
-#define ENCODERS_PAD_B { B15 }
-
-#define RGB_DI_PIN B1
-#define RGBLED_NUM 16
-#define RGBLED_SPLIT { 8,8 }
-#define RGBLIGHT_LIMIT_VAL 120
-#define RGBLIGHT_ANIMATIONS
 
 #define WS2812_PWM_DRIVER PWMD3
 #define WS2812_PWM_CHANNEL 4
 #define WS2812_PWM_PAL_MODE 2
+<<<<<<< HEAD
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM2
 #define WS2812_DMA_CHANNEL 5
 
@@ -62,3 +54,7 @@
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM2
+#define WS2812_PWM_DMA_CHANNEL 5
+>>>>>>> upstream/master

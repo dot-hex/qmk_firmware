@@ -17,6 +17,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	/* Base */
+<<<<<<< HEAD
 	[0] = LAYOUT_numpad_6x5_encoder(
 		KC_ESC , KC_PWR , KC_SLEP, KC_F11 , KC_MUTE, KC_VOLD, KC_VOLU,
 		KC_NLCK, KC_BSPC, KC_PSLS, KC_PAST, KC_PMNS,
@@ -35,14 +36,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 	[2] = LAYOUT_numpad_6x5_encoder(
 		_______, _______, _______, _______, _______, _______, _______,
+=======
+	[0] = LAYOUT_numpad_6x5(
+		KC_ESC , KC_PWR , KC_SLEP, KC_F11 , KC_MUTE,
+		KC_NUM,  KC_BSPC, KC_PSLS, KC_PAST, KC_PMNS,
+		RM_NEXT, KC_P7  , KC_P8  , KC_P9  ,
+		RM_PREV, KC_P4  , KC_P5  , KC_P6  , KC_PPLS,
+		RM_TOGG, KC_P1  , KC_P2  , KC_P3  ,
+		MO(1)  , KC_P0  ,          KC_PDOT, KC_PENT
+	),
+	[1] = LAYOUT_numpad_6x5(
+		_______, _______, _______, _______, KC_MPLY,
+		_______, _______, _______, _______, _______,
+		RM_SPDU, RM_HUEU, RM_SATU, RM_VALU,
+		RM_SPDD, RM_HUED, RM_SATD, RM_VALD, _______,
+		_______, _______, _______, _______,
+		_______, _______,          _______, QK_BOOT
+	),
+	[2] = LAYOUT_numpad_6x5(
+		_______, _______, _______, _______, _______,
+>>>>>>> upstream/master
 		_______, _______, _______, _______, _______,
 		_______, _______, _______, _______,
 		_______, _______, _______, _______, _______,
 		_______, _______, _______, _______,
 		_______, _______,          _______, _______
 	),
+<<<<<<< HEAD
 	[3] = LAYOUT_numpad_6x5_encoder(
 		_______, _______, _______, _______, _______, _______, _______,
+=======
+	[3] = LAYOUT_numpad_6x5(
+		_______, _______, _______, _______, _______,
+>>>>>>> upstream/master
 		_______, _______, _______, _______, _______,
 		_______, _______, _______, _______,
 		_______, _______, _______, _______, _______,
@@ -50,3 +76,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______, _______,          _______, _______
 	)
 };
+<<<<<<< HEAD
+=======
+
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [1] = { ENCODER_CCW_CW(_______, _______) },
+    [2] = { ENCODER_CCW_CW(_______, _______) },
+    [3] = { ENCODER_CCW_CW(_______, _______) },
+};
+#endif
+>>>>>>> upstream/master

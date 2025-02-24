@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,10 +18,16 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 UNICODE_ENABLE = yes        # Unicode
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 # project specific files
 SRC += matrix.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += uart.c
+=======
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = sirius/uni660/rev2/ansi

@@ -26,6 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TRNS, TO(2)),
 
 	[2] = LAYOUT(
+<<<<<<< HEAD
 		RGB_TOG, RGB_MOD,
 		TO(3), TO(0)),
 
@@ -39,9 +40,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[5] = LAYOUT(
 		RGB_VAD, RGB_VAI,
+=======
+		UG_TOGG, UG_NEXT,
+		TO(3), TO(0)),
+
+	[3] = LAYOUT(
+		UG_HUED, UG_HUEU,
+		TO(4), TO(2)),
+
+	[4] = LAYOUT(
+		UG_SATD, UG_SATU,
+		TO(5), TO(3)),
+
+	[5] = LAYOUT(
+		UG_VALD, UG_VALU,
+>>>>>>> upstream/master
 		TO(6), TO(4)),
 
 	[6] = LAYOUT(
 		KC_TRNS, KC_TRNS,
+<<<<<<< HEAD
 		RESET, TO(5))
+=======
+		QK_BOOT, TO(5))
+>>>>>>> upstream/master
 };

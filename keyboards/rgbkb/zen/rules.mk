@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -15,4 +16,6 @@ COMMAND_ENABLE = yes        # Commands for debug and configuration
 NKRO_ENABLE = no            # Enable N-Key Rollover
 AUDIO_ENABLE = no           # Audio output
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = rgbkb/zen/rev2

@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -48,10 +49,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define QMK_ESC_INPUT C6
 // #define QMK_SPEAKER B6
 
+=======
+>>>>>>> upstream/master
 #define AUDIO_PIN B6
 #define AUDIO_CLICKY
 #define NO_MUSIC_MODE
 
+<<<<<<< HEAD
 #define RGB_DI_PIN         B5
 #define RGBLED_NUM         5
 #define RGBLIGHT_HUE_STEP  8
@@ -90,3 +94,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // When using the default resolution of 4, if you notice your encoder skipping
 // every other tick, lower the resolution to 2.
 #define ENCODER_RESOLUTION 2
+=======
+#define DRV2605L_FB_ERM_LRA         0
+#define DRV2605L_FB_BRAKEFACTOR     3 /* For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7 */
+#define DRV2605L_FB_LOOPGAIN        1 /* For  Low:0, Medium:1, High:2, Very High:3 */
+
+/* Please refer to your datasheet for the optimal setting for your specific motor. */
+#define DRV2605L_RATED_VOLTAGE      3
+#define DRV2605L_V_PEAK             5
+
+#define DRV2605L_GREETING       DRV2605L_EFFECT_750_MS_ALERT_100
+#define DRV2605L_DEFAULT_MODE   DRV2605L_EFFECT_BUZZ_1_100
+>>>>>>> upstream/master

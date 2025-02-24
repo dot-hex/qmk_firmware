@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,5 +19,8 @@ AUDIO_ENABLE = no           # Audio output
 POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = adns5050
 MOUSEKEY_ENABLE = no        # Mouse keys
+=======
+POINTING_DEVICE_DRIVER = adns5050
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = ploopyco/trackball_nano/rev1_001

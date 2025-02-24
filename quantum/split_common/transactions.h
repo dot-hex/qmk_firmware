@@ -16,8 +16,13 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "stdint.h"
 #include "stdbool.h"
+=======
+#include <stdint.h>
+#include <stdbool.h>
+>>>>>>> upstream/master
 
 #include "matrix.h"
 #include "transaction_id_define.h"

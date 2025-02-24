@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u2
 
@@ -19,4 +20,6 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 
 LAYOUTS = tkl_ansi
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER=bpiphany/pegasushoof/2013

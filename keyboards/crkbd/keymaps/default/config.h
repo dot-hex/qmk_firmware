@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define USE_MATRIX_I2C
 
+<<<<<<< HEAD
 /* Select hand configuration */
 
 #define MASTER_LEFT
@@ -29,6 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define EE_HANDS
 
 //#define TAPPING_FORCE_HOLD
+=======
+//#define QUICK_TAP_TERM 0
+>>>>>>> upstream/master
 //#define TAPPING_TERM 100
 
 #ifdef RGBLIGHT_ENABLE
@@ -47,5 +51,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 #endif
+<<<<<<< HEAD
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+=======
+>>>>>>> upstream/master

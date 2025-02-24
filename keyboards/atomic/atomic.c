@@ -14,15 +14,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "atomic.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 void matrix_init_kb(void) {
     // put your keyboard start-up code here
     // runs once when the firmware starts up
 
     // Turn status LED on
+<<<<<<< HEAD
     setPinOutput(E6);
     writePinHigh(E6);
+=======
+    gpio_set_pin_output(E6);
+    gpio_write_pin_high(E6);
+>>>>>>> upstream/master
 
     matrix_init_user();
 }

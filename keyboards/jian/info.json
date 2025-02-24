@@ -1,7 +1,8 @@
 {
-    "keyboard_name": "jian",
+    "manufacturer": "KgOfHedgehogs",
     "url": "t.me/s/kgofhedgehogs",
     "maintainer": "KGOH",
+<<<<<<< HEAD
     "layouts": {
         "LAYOUT": {
             "layout": [
@@ -61,5 +62,13 @@
                 { "label": "Del",   "x": 11, "y": 3.25  }
             ]
         }
+=======
+    "usb": {
+        "vid": "0xC0DE",
+        "pid": "0x1337"
+    },
+    "build": {
+        "lto": true
+>>>>>>> upstream/master
     }
 }

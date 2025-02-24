@@ -17,7 +17,10 @@
 */
 
 #include "matrix.h"
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+>>>>>>> upstream/master
 
 matrix_row_t read_rows(void) {
     return
@@ -56,6 +59,7 @@ void select_col(uint8_t col) {
 
 void matrix_init_custom(void) {
     /* Column output pins */
+<<<<<<< HEAD
     setPinOutput(D1);
     setPinOutput(D2);
     setPinOutput(D3);
@@ -72,6 +76,24 @@ void matrix_init_custom(void) {
     writePinHigh(B5);
     writePinHigh(B6);
     writePinHigh(C2);
+=======
+    gpio_set_pin_output(D1);
+    gpio_set_pin_output(D2);
+    gpio_set_pin_output(D3);
+    gpio_set_pin_output(D4);
+    gpio_set_pin_output(D5);
+    gpio_set_pin_output(D6);
+
+    /* Row input pins */
+    gpio_write_pin_high(B0);
+    gpio_write_pin_high(B1);
+    gpio_write_pin_high(B2);
+    gpio_write_pin_high(B3);
+    gpio_write_pin_high(B4);
+    gpio_write_pin_high(B5);
+    gpio_write_pin_high(B6);
+    gpio_write_pin_high(C2);
+>>>>>>> upstream/master
 }
 
 bool matrix_scan_custom(matrix_row_t current_matrix[]) {

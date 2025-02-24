@@ -1,6 +1,4 @@
 /*
-This is the c configuration file for the keymap
-
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
 
@@ -20,9 +18,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/crkbd/keymaps/oo/config.h
 #define SPLIT_USB_DETECT
 
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 100
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+=======
+#define DEBUG_LED_PIN   D6
+
+#define AUDIO_PIN       C6
+#define AUDIO_PIN_ALT   B7
+
+#define EE_HANDS
+
+/* PMW33XX Settings */
+#define PMW33XX_CS_PIN B0
+>>>>>>> upstream/master:keyboards/handwired/tractyl_manuform/5x6_right/teensy2pp/config.h

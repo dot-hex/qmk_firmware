@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Copyright 2015 Jun Wako <wakojun@gmail.com>
 
@@ -21,3 +22,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS { D1, D2, D3, D4, D5, D6, D7 }
 #define MATRIX_COL_PINS { C0, C1, C2, C3, C4, C5, C6, C7, D0 }
 #define UNUSED_PINS
+=======
+// Copyright 2023 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+
+#define I2C1_CLOCK_SPEED 400000
+#define I2C1_SCL_PIN B0
+#define I2C1_SDA_PIN B1
+#define I2C1_SCL_PAL_MODE PAL_MODE_ALTERNATIVE_2
+#define I2C1_SDA_PAL_MODE PAL_MODE_ALTERNATIVE_2
+>>>>>>> upstream/master

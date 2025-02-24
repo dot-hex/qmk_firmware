@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define PRODUCT Onekey L432KC
@@ -18,4 +19,6 @@
 #define RGB_DI_PIN A0
 #define RGB_CI_PIN B13
 
+=======
+>>>>>>> upstream/master
 #define ADC_PIN A0

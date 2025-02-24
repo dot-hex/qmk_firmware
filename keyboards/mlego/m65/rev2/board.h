@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Copyright 2021-2022 Alin M Elena <alinm.elena@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -13,6 +14,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+=======
+// Copyright 2020-2022 alin m elena (@alinelena)
+// SPDX-License-Identifier: GPL-2.0-or-later
+>>>>>>> upstream/master
 
 #pragma once
 #include_next <board.h>

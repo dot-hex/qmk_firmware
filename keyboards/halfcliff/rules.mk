@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,4 +23,7 @@ POINTING_DEVICE_ENABLE = no
 CUSTOM_MATRIX = yes
 OLED_ENABLE = no
 
+=======
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 SRC += matrix.c

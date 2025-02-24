@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
+<<<<<<< HEAD
 #include "ak81_ve.h"
 
 #ifdef RGB_MATRIX_ENABLE
@@ -47,11 +48,17 @@ led_config_t g_led_config = { {
 #endif
 
 #if !defined(VIA_ENABLE) && defined(ENCODER_ENABLE)
+=======
+#include "quantum.h"
+
+#if defined(ENCODER_ENABLE) && !defined(ENCODER_MAP_ENABLE)
+>>>>>>> upstream/master
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) {
         return false;
     }
     if (clockwise) {
+<<<<<<< HEAD
         tap_code(KC_VOLD);
     } else {
         tap_code(KC_VOLU);
@@ -59,3 +66,33 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
+=======
+        switch (get_highest_layer(layer_state)) {
+          case 0:
+            tap_code(KC_VOLU);
+            break;
+          case 1:
+            rgb_matrix_step();
+            break;
+          default:
+            tap_code(KC_VOLU);
+            break;
+        }
+      }
+    else {
+        switch (get_highest_layer(layer_state)) {
+          case 0:
+            tap_code(KC_VOLD);
+            break;
+          case 1:
+            rgb_matrix_step_reverse();
+            break;
+          default:
+            tap_code(KC_VOLD);
+            break;
+        }
+    }
+    return true;
+}
+#endif
+>>>>>>> upstream/master

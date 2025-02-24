@@ -1,7 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:layouts/default/ortho_5x10/info.json
+>>>>>>> upstream/master
 {
     "keyboard_name": "5x10 ortholinear layout",
     "url": "",
     "maintainer": "qmk",
+<<<<<<< HEAD
+=======
+========
+ {
+    "keyboard":"montsinger/rewind",
+    "url": "https://montsinger.net",
+    "maintainer": "rossman360",
+>>>>>>>> upstream/master:keyboards/montsinger/rewind/info.json
+>>>>>>> upstream/master
     "layouts": {
         "LAYOUT_ortho_5x10": {
             "layout": [
@@ -58,7 +71,11 @@
                 {"x":6, "y":4},
                 {"x":7, "y":4},
                 {"x":8, "y":4},
+<<<<<<< HEAD
                 {"x":9, "y":4},
+=======
+                {"x":9, "y":4}
+>>>>>>> upstream/master
             ]
         }
     }

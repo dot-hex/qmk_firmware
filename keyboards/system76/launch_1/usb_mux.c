@@ -77,6 +77,7 @@ i2c_status_t usb7206_read_reg(struct USB7206* self, uint32_t addr, uint8_t* data
         return status;
     }
 
+<<<<<<< HEAD
     uint8_t read[2] = {
         0x00,  // Buffer address MSB: always 0
         0x06,  // Buffer address LSB: 6 to skip header
@@ -122,6 +123,16 @@ i2c_status_t usb7206_read_reg(struct USB7206* self, uint32_t addr, uint8_t* data
 error:
     i2c_stop();
 
+=======
+    uint16_t read = 0x0006; // Buffer address 6 to skip header
+    uint8_t data_with_buffer_length[length];
+    status = i2c_read_register16((self->addr << 1), read, data_with_buffer_length, length, I2C_TIMEOUT);
+
+    for (uint16_t i = 0; i < (length - 1) && status >= 0; i++) {
+        data[i] = data_with_buffer_length[i+1];
+    }
+
+>>>>>>> upstream/master
     return (status < 0) ? status : length;
 }
 
@@ -160,6 +171,7 @@ i2c_status_t usb7206_write_reg(struct USB7206* self, uint32_t addr, uint8_t* dat
         (uint8_t)(addr >> 8),   // Register address byte 1
         (uint8_t)(addr >> 0),   // Register address byte 0
     };
+<<<<<<< HEAD
 
     status = i2c_start((self->addr << 1) | I2C_WRITE, I2C_TIMEOUT);
     if (status >= 0) {
@@ -189,6 +201,23 @@ i2c_status_t usb7206_write_reg(struct USB7206* self, uint32_t addr, uint8_t* dat
 
 error:
     i2c_stop();
+=======
+    uint8_t send_buffer_length = sizeof(register_write) + length;
+    uint8_t send_buffer[send_buffer_length];
+    uint8_t j = 0;
+
+    for (uint16_t i = 0; i < sizeof(register_write); i++) {
+        send_buffer[j++] = register_write[i];
+    }
+
+    for (uint16_t i = 0; i < length; i++) {
+        send_buffer[j++] = data[i];
+    }
+
+    status = i2c_transmit((self->addr << 1), send_buffer, send_buffer_length, I2C_TIMEOUT);
+
+    status = usb7206_register_access(self);
+>>>>>>> upstream/master
 
     return (status < 0) ? status : length;
 }
@@ -354,7 +383,11 @@ i2c_status_t ptn5110_init(struct PTN5110* self) {
 
 // Read PTN5110 CC_STATUS.
 // Returns zero on success or a negative number on error.
+<<<<<<< HEAD
 i2c_status_t ptn5110_get_cc_status(struct PTN5110* self, uint8_t* cc) { return i2c_readReg(self->addr << 1, 0x1D, cc, 1, I2C_TIMEOUT); }
+=======
+i2c_status_t ptn5110_get_cc_status(struct PTN5110* self, uint8_t* cc) { return i2c_read_register(self->addr << 1, 0x1D, cc, 1, I2C_TIMEOUT); }
+>>>>>>> upstream/master
 
 // Set PTN5110 SSMUX orientation.
 // Returns zero on success or a negative number on error.
@@ -362,7 +395,11 @@ i2c_status_t ptn5110_set_ssmux(struct PTN5110* self, bool orientation) { return 
 
 // Write PTN5110 COMMAND.
 // Returns zero on success or negative number on error.
+<<<<<<< HEAD
 i2c_status_t ptn5110_command(struct PTN5110* self, uint8_t command) { return i2c_writeReg(self->addr << 1, 0x23, &command, 1, I2C_TIMEOUT); }
+=======
+i2c_status_t ptn5110_command(struct PTN5110* self, uint8_t command) { return i2c_write_register(self->addr << 1, 0x23, &command, 1, I2C_TIMEOUT); }
+>>>>>>> upstream/master
 
 // Set orientation of PTN5110 operating as a sink, call this once.
 // Returns zero on success or a negative number on error.

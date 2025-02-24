@@ -18,4 +18,11 @@
 
 #include "test_common.h"
 
+<<<<<<< HEAD
 #define RETRO_TAPPING
+=======
+#define RETRO_TAPPING
+#define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RIGHT_CTRL
+#define MODS_TO_NEUTRALIZE \
+    { MOD_BIT(KC_LEFT_GUI) }
+>>>>>>> upstream/master

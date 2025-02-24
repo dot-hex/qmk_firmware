@@ -17,8 +17,13 @@
 #undef ENABLE_RGB_MATRIX_SOLID_SPLASH
 
 // 20m timeout (20m * 60s * 1000mil)
+<<<<<<< HEAD
 // #define RGB_DISABLE_TIMEOUT 1200000
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
 #define STM32_ONBOARD_EEPROM_SIZE 2048
 
+=======
+// #define RGB_MATRIX_TIMEOUT 1200000
+#define RGB_MATRIX_SLEEP
+>>>>>>> upstream/master

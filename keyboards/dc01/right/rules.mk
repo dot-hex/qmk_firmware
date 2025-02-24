@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,5 +18,8 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 NO_USB_STARTUP_CHECK = yes  # Disable initialization only when usb is plugged in
 CUSTOM_MATRIX = yes         # Use custom matrix
+=======
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 SRC += matrix.c \
        i2c_slave.c

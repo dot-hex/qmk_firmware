@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -56,3 +57,7 @@
 /* Handle volume control issue with rotary encoder */
 
 #define TAP_CODE_DELAY 10
+=======
+
+#define GRAVE_ESC_CTRL_OVERRIDE
+>>>>>>> upstream/master

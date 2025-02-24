@@ -13,11 +13,15 @@
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
   */ 
-#include "latin17rgb.h"
+#include "quantum.h"
 
 #ifdef RGB_MATRIX_ENABLE
 
+<<<<<<< HEAD:keyboards/latincompass/latin17rgb/latin17rgb.c
 const is31_led PROGMEM g_is31_leds[DRIVER_LED_TOTAL] = {
+=======
+const is31fl3731_led_t PROGMEM g_is31fl3731_leds[IS31FL3731_LED_COUNT] = {
+>>>>>>> upstream/master:keyboards/latin17rgb/latin17rgb.c
 /* Refer to IS31 manual for these locations
  *   driver
  *   |  R location

@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -53,4 +54,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 #define GPIO_INPUT_PIN_DELAY (NUC123_HCLK / 6 / 1000000L)

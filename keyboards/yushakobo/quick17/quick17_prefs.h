@@ -14,6 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+=======
+#pragma once
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "color.h"
+
+>>>>>>> upstream/master
 enum layer_names {
     _CONTROL,
     _EDIT1,
@@ -21,7 +30,11 @@ enum layer_names {
     _FN
 };
 
+<<<<<<< HEAD
 #define _HSV(H, S, V) (HSV){ .h = H, .s = S, .v = V }
+=======
+#define _HSV(H, S, V) (hsv_t){ .h = H, .s = S, .v = V }
+>>>>>>> upstream/master
 #define _RGB(rgb) rgb.r, rgb.g, rgb.b
 
 bool input_mode(void);

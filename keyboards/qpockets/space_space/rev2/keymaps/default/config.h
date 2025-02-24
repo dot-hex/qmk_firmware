@@ -18,6 +18,7 @@
 
 /*Modtaps*/
 #define TAPPING_TERM 165
+<<<<<<< HEAD
 #define IGNORE_MOD_TAP_INTERRUPT
 
 /*Combos*/
@@ -25,3 +26,10 @@
 #    define COMBO_COUNT 5
 #    define COMBO_TERM 50
 #endif 
+=======
+
+/*Combos*/
+#ifdef COMBO_ENABLE
+#    define COMBO_TERM 50
+#endif
+>>>>>>> upstream/master

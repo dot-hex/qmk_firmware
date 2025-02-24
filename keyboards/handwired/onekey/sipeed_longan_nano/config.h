@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define MATRIX_COL_PINS \
@@ -31,6 +32,12 @@
 #define RGB_DI_PIN A2
 #define RGB_CI_PIN B13
 
+=======
+
+#define BACKLIGHT_PWM_DRIVER PWMD5 /* GD32 numbering scheme starts from 0, TIMER4 on GD32 boards is TIMER5 on STM32 boards. */
+#define BACKLIGHT_PWM_CHANNEL 2    /* GD32 numbering scheme starts from 0, Channel 1 on GD32 boards is Channel 2 on STM32 boards. */
+
+>>>>>>> upstream/master
 #define ADC_PIN A0
 
 #define I2C1_CLOCK_SPEED 1000000 /* GD32VF103 supports fast mode plus. */

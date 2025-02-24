@@ -1,7 +1,11 @@
 {
     "keyboard": "ez_maker/directpins/proton_c",
     "keymap": "default",
+<<<<<<< HEAD
     "layout": "LAYOUT_all",
+=======
+    "layout": "LAYOUT",
+>>>>>>> upstream/master
     "layers": [
         [
             "KC_0",

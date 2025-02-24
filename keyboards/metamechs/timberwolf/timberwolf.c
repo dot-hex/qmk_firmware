@@ -14,17 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "timberwolf.h"
+#include "quantum.h"
 
-bool led_update_kb(led_t led_state) {
-    bool runDefault = led_update_user(led_state);
-    if(runDefault) {
-        if (led_state.caps_lock) {
-            backlight_level_noeeprom(get_backlight_level());
-        } else {
-            backlight_set(0);
-        }
+void led_update_ports(led_t led_state) {
+    if (led_state.caps_lock) {
+        backlight_level_noeeprom(get_backlight_level());
+    } else {
+        backlight_set(0);
     }
+<<<<<<< HEAD
     return runDefault;
 }
 
@@ -36,4 +34,6 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 		tap_code(KC_VOLD);
 	}
     return true;
+=======
+>>>>>>> upstream/master
 }

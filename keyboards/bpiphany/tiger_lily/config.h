@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Bathroom Epiphanies
 #define PRODUCT         tiger_lily
+=======
+>>>>>>> upstream/master
 
 /*
  * Frosty Flake Rev. 20140521 made by Bathroom Ephiphanies
@@ -45,6 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS { C2, B3, B4, B2, B1, C7, B6, B5 }
 #define MATRIX_COL_PINS { NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
+<<<<<<< HEAD
 #define UNUSED_PINS { B0, C4, D3 }
 
 #define LED_NUM_LOCK_PIN C5
@@ -80,6 +84,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 //#define FORCE_NKRO
+=======
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -96,5 +102,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

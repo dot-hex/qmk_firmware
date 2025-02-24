@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -56,11 +57,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 3
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
+=======
+>>>>>>> upstream/master
 #if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
   #define USB_MAX_POWER_CONSUMPTION 400
 #else
   #define USB_MAX_POWER_CONSUMPTION 100
 #endif
+<<<<<<< HEAD
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -76,3 +80,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

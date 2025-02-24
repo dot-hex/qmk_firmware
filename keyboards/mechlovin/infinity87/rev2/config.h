@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT_ID  0x8702
 #define DEVICE_VER  0x0001
 <<<<<<< HEAD
@@ -23,6 +24,10 @@
 =======
 #define PRODUCT     Infinity87 rev.2
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 17
+>>>>>>> upstream/master
 
 /*
  * Keyboard Matrix Assignments
@@ -34,6 +39,7 @@
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define MATRIX_ROW_PINS { A3, D5, C3, C2, B3, B4 }
 #define MATRIX_COL_PINS { }
@@ -95,3 +101,9 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+#define MATRIX_ROW_PINS { D5, D2, D4, D3, D0, D1 }
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION ROW2COL
+>>>>>>> upstream/master

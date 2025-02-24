@@ -23,5 +23,9 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 Enter the bootloader in 3 ways:
 
 * **Bootmagic reset**: Hold down the "Esc" key and plug in the keyboard
+<<<<<<< HEAD
 * **Keycode in layout**: Press the key mapped to `RESET` if it is available (default: "Circle" + "R")
+=======
+* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available (default: "Circle" + "R")
+>>>>>>> upstream/master
 * **Physical reset button**: Remove the keyboard’s frame and toggle the programming DIP switch SW84 on the keyboard to “ON”.  Then press the reset button SW83.

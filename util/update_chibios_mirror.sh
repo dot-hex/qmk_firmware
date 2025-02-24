@@ -4,6 +4,7 @@
 # Configuration
 
 # The ChibiOS branches to mirror
+<<<<<<< HEAD
 chibios_branches="trunk stable_20.3.x stable_21.11.x"
 
 # The ChibiOS tags to mirror
@@ -11,6 +12,12 @@ chibios_tags="ver20.3.1 ver20.3.2 ver20.3.3 ver20.3.4 ver21.11.1"
 
 # The ChibiOS-Contrib branches to mirror
 contrib_branches="chibios-20.3.x chibios-21.11.x"
+=======
+chibios_branches="trunk stable_21.11.x"
+
+# The ChibiOS-Contrib branches to mirror
+contrib_branches="chibios-21.11.x"
+>>>>>>> upstream/master
 
 ################################
 # Actions
@@ -32,7 +39,11 @@ contrib_git_config=$(realpath "$contrib_git_location/config")
 cd "$chibios_dir"
 
 if [[ -z "$(cat "$chibios_git_config" | grep '\[svn-remote "svn"\]')" ]] ; then
+<<<<<<< HEAD
     git svn init --stdlayout --prefix='svn/' http://svn.osdn.net/svnroot/chibios/
+=======
+    git svn init --stdlayout --prefix='svn/' https://svn.code.sf.net/p/chibios/code/
+>>>>>>> upstream/master
 fi
 
 if [[ -z "$(cat "$chibios_git_config" | grep '\[remote "qmk"\]')" ]] ; then
@@ -46,6 +57,15 @@ fi
 echo "Updating remotes..."
 git fetch --all --tags --prune
 
+<<<<<<< HEAD
+=======
+echo "Ensure refs actually match up..."
+for branch in $chibios_branches ; do
+    echo "Matching $branch..."
+    git update-ref refs/remotes/svn/$branch refs/remotes/qmk/svn-mirror/$branch
+done
+
+>>>>>>> upstream/master
 echo "Fetching latest from subversion..."
 git svn fetch
 
@@ -56,6 +76,7 @@ for branch in $chibios_branches ; do
         && git push qmk svn-mirror/$branch
 done
 
+<<<<<<< HEAD
 echo "Updating ChibiOS tags..."
 for tagname in $chibios_tags ; do
     echo "Creating tag 'svn-mirror/$tagname' from 'svn/tags/$tagname'..."
@@ -63,6 +84,8 @@ for tagname in $chibios_tags ; do
     git push qmk svn-mirror/$tagname
 done
 
+=======
+>>>>>>> upstream/master
 cd "$contrib_dir"
 
 if [[ -z "$(cat "$contrib_git_config" | grep '\[remote "qmk"\]')" ]] ; then

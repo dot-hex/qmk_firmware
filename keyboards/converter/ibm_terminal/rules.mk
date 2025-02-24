@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,6 +18,9 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 PS2_USE_USART = yes
+=======
+PS2_DRIVER = usart
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 
 SRC = matrix.c led.c

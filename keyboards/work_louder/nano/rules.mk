@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,4 +23,6 @@ LTO_ENABLE = yes
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = WS2812
 
+=======
+>>>>>>> upstream/master
 SRC += rgb_functions.c

@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 // clang-format off
 
@@ -75,10 +76,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+/* default setup after eeprom reset */
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_BREATHING + 2
+
+>>>>>>> upstream/master
 /* Oled Size */
 #define OLED_DISPLAY_128X64
 #define OLED_FONT_END 255
 #define OLED_FONT_H "gfxfont.c"
+<<<<<<< HEAD
 
 /* QMK DFU */
 #define QMK_LED B0
+=======
+>>>>>>> upstream/master

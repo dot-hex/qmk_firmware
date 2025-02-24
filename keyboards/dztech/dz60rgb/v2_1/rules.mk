@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -24,3 +25,6 @@ LTO_ENABLE = yes
 
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
+=======
+BOOTLOADER_SIZE = 6144
+>>>>>>> upstream/master

@@ -15,16 +15,50 @@
  */
 #pragma once
 
+<<<<<<< HEAD
+<<<<<<< HEAD:platforms/chibios/boards/BLACKPILL_STM32_F411/configs/config.h
+=======
+>>>>>>> upstream/master
 #define BOARD_OTG_NOVBUSSENS 1
 
 #ifndef STM32_LSECLK
 #    define STM32_LSECLK 32768U
+<<<<<<< HEAD
 #endif  // STM32_LSECLK
 
 #ifndef STM32_HSECLK
 #    define STM32_HSECLK 25000000U
 #endif  // STM32_HSECLK
 
+=======
+>>>>>>> upstream/master:platforms/chibios/boards/QMK_PROTON_C/configs/config.h
+=======
+#endif // STM32_LSECLK
+
+#ifndef STM32_HSECLK
+#    define STM32_HSECLK 25000000U
+#endif // STM32_HSECLK
+
+>>>>>>> upstream/master
 #ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
 #    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+#endif
+
+<<<<<<< HEAD
+#ifdef CONVERT_TO_PROTON_C
+#    ifndef I2C1_SDA_PIN
+#        define I2C1_SDA_PIN D1
+#    endif
+#    ifndef I2C1_SCL_PIN
+#        define I2C1_SCL_PIN D0
+=======
+#ifdef WEAR_LEVELING_EMBEDDED_FLASH
+#    ifndef WEAR_LEVELING_EFL_FIRST_SECTOR
+#        ifdef BOOTLOADER_TINYUF2
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 3
+#        else
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 1
+#        endif
+>>>>>>> upstream/master
+#    endif
 #endif

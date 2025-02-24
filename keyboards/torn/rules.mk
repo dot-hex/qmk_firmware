@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega328p
 
@@ -18,6 +19,8 @@ ENCODER_ENABLE = yes        # Enable rotary encoder
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 WPM_ENABLE = yes
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 SRC += matrix.c \
@@ -25,4 +28,4 @@ SRC += matrix.c \
     mcp23018.c \
     torn_encoder.c
 
-QUANTUM_LIB_SRC += i2c_master.c
+I2C_DRIVER_REQUIRED = yes

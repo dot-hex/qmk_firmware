@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,4 +22,6 @@ USE_I2C = no
 
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = salicylic_acid3/naked64/rev1

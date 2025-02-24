@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -20,4 +21,6 @@ AUDIO_DRIVER = pwm_hardware
 RGB_MATRIX_ENABLE = no # Do not enable with RGBLIGHT
 RGB_MATRIX_DRIVER = WS2812
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = yanghu/unicorne/f411

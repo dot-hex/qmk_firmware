@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -24,10 +25,14 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 #
 # make hhkb-keymap-clean
 # make hhkb-keymap-dfu HHKB_RN42_ENABLE=yes
+=======
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 
 # project specific files
 SRC = matrix.c
 
+<<<<<<< HEAD
 # debug-on: EXTRAFLAGS += -DDEBUG -DDEBUG_ACTION
 # debug-on: all
 
@@ -36,3 +41,6 @@ SRC = matrix.c
 # debug-off: all
 
 LAYOUTS = 60_hhkb
+=======
+DEFAULT_FOLDER = hhkb/ansi/32u4
+>>>>>>> upstream/master

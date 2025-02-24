@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,6 +19,8 @@ RGBLIGHT_ENABLE = no       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 
+=======
+>>>>>>> upstream/master
 AUDIO_SUPPORTED = no
 RGBLIGHT_SUPPORTED = no
 RGB_MATRIX_SUPPORTED = no

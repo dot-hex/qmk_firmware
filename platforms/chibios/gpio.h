@@ -15,11 +15,30 @@
  */
 #pragma once
 
-#include <hal.h>
-#include "pin_defs.h"
+<<<<<<< HEAD
+// ======== DEPRECATED DEFINES - DO NOT USE ========
+#ifdef BOOTMAGIC_LITE_ROW
+#    define BOOTMAGIC_ROW BOOTMAGIC_LITE_ROW
+#endif
+#ifdef BOOTMAGIC_LITE_COLUMN
+#    define BOOTMAGIC_COLUMN BOOTMAGIC_LITE_COLUMN
+#endif
+#ifdef BOOTMAGIC_LITE_ROW_RIGHT
+#    define BOOTMAGIC_ROW_RIGHT BOOTMAGIC_LITE_ROW_RIGHT
+#endif
+#ifdef BOOTMAGIC_LITE_COLUMN_RIGHT
+#    define BOOTMAGIC_COLUMN_RIGHT BOOTMAGIC_LITE_COLUMN_RIGHT
+#endif
+// ========
 
-typedef ioline_t pin_t;
+#ifndef BOOTMAGIC_COLUMN
+#    define BOOTMAGIC_COLUMN 0
+#endif
+#ifndef BOOTMAGIC_ROW
+#    define BOOTMAGIC_ROW 0
+#endif
 
+<<<<<<< HEAD:platforms/chibios/gpio.h
 /* Operation of GPIO by pin. */
 
 #define setPinInput(pin) palSetLineMode((pin), PAL_MODE_INPUT)
@@ -36,3 +55,36 @@ typedef ioline_t pin_t;
 #define readPin(pin) palReadLine(pin)
 
 #define togglePin(pin) palToggleLine(pin)
+=======
+void bootmagic(void);
+>>>>>>> upstream/master:quantum/bootmagic/bootmagic.h
+=======
+#include <hal.h>
+#include "pin_defs.h"
+
+typedef ioline_t pin_t;
+
+/* Operation of GPIO by pin. */
+
+#define gpio_set_pin_input(pin) palSetLineMode((pin), PAL_MODE_INPUT)
+#define gpio_set_pin_input_high(pin) palSetLineMode((pin), PAL_MODE_INPUT_PULLUP)
+#define gpio_set_pin_input_low(pin) palSetLineMode((pin), PAL_MODE_INPUT_PULLDOWN)
+#define gpio_set_pin_output_push_pull(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_PUSHPULL)
+#define gpio_set_pin_output_open_drain(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_OPENDRAIN)
+#define gpio_set_pin_output(pin) gpio_set_pin_output_push_pull(pin)
+
+#define gpio_write_pin_high(pin) palSetLine(pin)
+#define gpio_write_pin_low(pin) palClearLine(pin)
+#define gpio_write_pin(pin, level)    \
+    do {                              \
+        if (level) {                  \
+            gpio_write_pin_high(pin); \
+        } else {                      \
+            gpio_write_pin_low(pin);  \
+        }                             \
+    } while (0)
+
+#define gpio_read_pin(pin) palReadLine(pin)
+
+#define gpio_toggle_pin(pin) palToggleLine(pin)
+>>>>>>> upstream/master

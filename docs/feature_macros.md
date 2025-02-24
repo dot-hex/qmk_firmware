@@ -2,8 +2,82 @@
 
 Macros allow you to send multiple keystrokes when pressing just one key. QMK has a number of ways to define and use macros. These can do anything you want: type common phrases for you, copypasta, repetitive game movements, or even help you code.
 
-!> **Security Note**: While it is possible to use macros to send passwords, credit card numbers, and other sensitive information it is a supremely bad idea to do so. Anyone who gets a hold of your keyboard will be able to access that information by opening a text editor.
+::: warning
+**Security Note**: While it is possible to use macros to send passwords, credit card numbers, and other sensitive information it is a supremely bad idea to do so. Anyone who gets a hold of your keyboard will be able to access that information by opening a text editor.
+:::
 
+## Using Macros In JSON Keymaps
+
+You can define up to 32 macros in a `keymap.json` file, as used by [Configurator](newbs_building_firmware_configurator), and `qmk compile`. You can define these macros in a list under the `macros` keyword, like this:
+
+```json
+{
+    "keyboard": "handwired/my_macropad",
+    "keymap": "my_keymap",
+    "macros": [
+        [
+            {"action":"down", "keycodes": ["LSFT"]},
+            "hello world1",
+            {"action": "up","keycodes": ["LSFT"]}
+        ],
+        [
+            {"action":"tap", "keycodes": ["LCTL", "LALT", "DEL"]}
+        ],
+        [
+            "ding!",
+            {"action":"beep"}
+        ],
+        [
+            {"action":"tap", "keycodes": ["F1"]},
+            {"action":"delay", "duration": 1000},
+            {"action":"tap", "keycodes": ["PGDN"]}
+        ]
+    ],
+    "layout": "LAYOUT_all",
+    "layers": [
+        ["QK_MACRO_0", "QK_MACRO_1", "QK_MACRO_2", "QK_MACRO_3"]
+    ]
+}
+```
+
+### Selecting Your Host Keyboard Layout
+
+If you type in a language other than English, or use a non-QWERTY layout like Colemak, Dvorak, or Workman, you may have set your computer's input language to match this layout. This presents a challenge when creating macros — you may need to type different keys to get the same letters! To address this you can use [language-specific keycodes](reference_keymap_extras).
+
+### Macro Basics
+
+Each macro is an array consisting of strings and objects (dictionaries). Strings are typed to your computer while objects allow you to control how your macro is typed out.
+
+#### Object Format
+
+All objects have one required key: `action`. This tells QMK what the object does. There are currently 5 actions: beep, delay, down, tap, up
+
+Only basic keycodes (prefixed by `KC_`) are supported. Do not include the `KC_` prefix when listing keycodes.
+
+* `beep`
+    * Play a bell if the keyboard has [audio enabled](features/audio).
+    * Example: `{"action": "beep"}`
+* `delay`
+    * Pause macro playback. Duration is specified in milliseconds (ms).
+    * Example: `{"action": "delay", "duration": 500}`
+* `down`
+    * Send a key down event for one or more keycodes.
+    * Example, single key: `{"action":"down", "keycodes": ["LSFT"]}`
+    * Example, multiple keys: `{"action":"down", "keycodes": ["CTRL", "LSFT"]}`
+* `tap`
+    * Type a chord, which sends a down event for each key followed by an up event for each key.
+    * Example, single key: `{"action":"tap", "keycodes": ["F13"]}`
+    * Example, multiple keys: `{"action":"tap", "keycodes": ["CTRL", "LALT", "DEL"]}`
+* `up`
+    * Send a key up event for one or more keycodes.
+    * Example, single key: `{"action":"up", "keycodes": ["LSFT"]}`
+    * Example, multiple keys: `{"action":"up", "keycodes": ["CTRL", "LSFT"]}`
+
+## Using Macros in C Keymaps
+
+### `SEND_STRING()` & `process_record_user`
+
+<<<<<<< HEAD
 ## Using Macros In JSON Keymaps
 
 You can define up to 32 macros in a `keymap.json` file, as used by [Configurator](newbs_building_firmware_configurator.md), and `qmk compile`. You can define these macros in a list under the `macros` keyword, like this:
@@ -105,6 +179,9 @@ Only basic keycodes (prefixed by `KC_`) are supported. Do not include the `KC_` 
 ## Using Macros in C Keymaps
 
 ### `SEND_STRING()` & `process_record_user`
+=======
+See also: [Send String](features/send_string)
+>>>>>>> upstream/master
 
 Sometimes you want a key to type out words or phrases. For the most common situations, we've provided `SEND_STRING()`, which will type out a string (i.e. a sequence of characters) for you. All ASCII characters that are easily translatable to a keycode are supported (e.g. `qmk 123\n\t`).
 
@@ -144,7 +221,13 @@ If yes, we send the string `"QMK is the best thing ever!"` to the computer via t
 We return `true` to indicate to the caller that the key press we just processed should continue to be processed as normal (as we didn't replace or alter the functionality).
 Finally, we define the keymap so that the first button activates our macro and the second button is just an escape button.
 
+<<<<<<< HEAD
 ?>It is recommended to use the SAFE_RANGE macro as per [Customizing Functionality](custom_quantum_functions.md).
+=======
+::: tip
+It is recommended to use the SAFE_RANGE macro as per [Customizing Functionality](custom_quantum_functions).
+:::
+>>>>>>> upstream/master
 
 You might want to add more than one macro.
 You can do that by adding another keycode and adding another case to the switch statement, like so:
@@ -193,11 +276,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 ```
 
+<<<<<<< HEAD
 ?> An enumerated list of custom keycodes (`enum custom_keycodes`) must be declared before `keymaps[]` array, `process_record_user()` and any other function that use the list for the compiler to recognise it.
+=======
+::: tip
+An enumerated list of custom keycodes (`enum custom_keycodes`) must be declared before `keymaps[]` array, `process_record_user()` and any other function that use the list for the compiler to recognise it.
+:::
+>>>>>>> upstream/master
 
 #### Advanced Macros
 
-In addition to the `process_record_user()` function, is the `post_process_record_user()` function. This runs after `process_record` and can be used to do things after a keystroke has been sent.  This is useful if you want to have a key pressed before and released after a normal key, for instance. 
+In addition to the `process_record_user()` function, is the `post_process_record_user()` function. This runs after `process_record` and can be used to do things after a keystroke has been sent.  This is useful if you want to have a key pressed before and released after a normal key, for instance.
 
 In this example, we modify most normal keypresses so that `F22` is pressed before the keystroke is normally sent, and release it __only after__ it's been released.
 
@@ -246,11 +335,15 @@ You can send arbitrary keycodes by wrapping them in:
 
 For example:
 
-    SEND_STRING(SS_TAP(X_HOME));
+```c
+SEND_STRING(SS_TAP(X_HOME));
+```
 
 Would tap `KC_HOME` - note how the prefix is now `X_`, and not `KC_`. You can also combine this with other strings, like this:
 
-    SEND_STRING("VE"SS_TAP(X_HOME)"LO");
+```c
+SEND_STRING("VE"SS_TAP(X_HOME)"LO");
+```
 
 Which would send "VE" followed by a `KC_HOME` tap, and "LO" (spelling "LOVE" if on a newline).
 
@@ -260,7 +353,9 @@ Delays can be also added to the string:
 
 For example:
 
-    SEND_STRING("VE" SS_DELAY(1000) SS_TAP(X_HOME) "LO");
+```c
+SEND_STRING("VE" SS_DELAY(1000) SS_TAP(X_HOME) "LO");
+```
 
 Which would send "VE" followed by a 1-second delay, then a `KC_HOME` tap, and "LO" (spelling "LOVE" if on a newline, but delayed in the middle).
 
@@ -278,7 +373,9 @@ There's also a couple of mod shortcuts you can use:
 These press the respective modifier, send the supplied string and then release the modifier.
 They can be used like this:
 
-    SEND_STRING(SS_LCTL("a"));
+```c
+SEND_STRING(SS_LCTL("a"));
+```
 
 Which would send Left Control+`a` (Left Control down, `a`, Left Control up) - notice that they take strings (eg `"k"`), and not the `X_K` keycodes.
 
@@ -313,7 +410,9 @@ SEND_STRING(".."SS_TAP(X_END));
 
 There are some functions you may find useful in macro-writing. Keep in mind that while you can write some fairly advanced code within a macro, if your functionality gets too complex you may want to define a custom keycode instead. Macros are meant to be simple.
 
-?> You can also use the functions described in [Useful function](ref_functions.md) and [Checking modifier state](feature_advanced_keycodes#checking-modifier-state) for additional functionality. For example, `reset_keyboard()` allows you to reset the keyboard as part of a macro and `get_mods() & MOD_MASK_SHIFT` lets you check for the existence of active shift modifiers.
+::: tip
+You can also use the functions described in [Useful function](ref_functions) and [Checking modifier state](feature_advanced_keycodes#checking-modifier-state) for additional functionality. For example, `reset_keyboard()` allows you to reset the keyboard as part of a macro and `get_mods() & MOD_MASK_SHIFT` lets you check for the existence of active shift modifiers.
+:::
 
 #### `record->event.pressed`
 
@@ -347,7 +446,11 @@ If the keycode is `KC_CAPS`, it waits `TAP_HOLD_CAPS_DELAY` milliseconds instead
 
 Like `tap_code(<kc>)`, but with a `delay` parameter for specifying arbitrary intervals before sending the unregister event.
 
+<<<<<<< HEAD
 #### `register_code16(<kc>);`, `unregister_code16(<kc>);` and `tap_code16(<kc>);`
+=======
+#### `register_code16(<kc>);`, `unregister_code16(<kc>);`, `tap_code16(<kc>);` and `tap_code16_delay(<kc>, <delay>);`
+>>>>>>> upstream/master
 
 These functions work similar to their regular counterparts, but allow you to use modded keycodes (with Shift, Alt, Control, and/or GUI applied to them).
 
@@ -372,7 +475,7 @@ This will clear all keys besides the mods currently pressed.
 This macro will register `KC_LALT` and tap `KC_TAB`, then wait for 1000ms. If the key is tapped again, it will send another `KC_TAB`; if there is no tap, `KC_LALT` will be unregistered, thus allowing you to cycle through windows.
 
 ```c
-bool is_alt_tab_active = false; // ADD this near the begining of keymap.c
+bool is_alt_tab_active = false; // ADD this near the beginning of keymap.c
 uint16_t alt_tab_timer = 0;     // we will be using them soon.
 
 enum custom_keycodes {          // Make sure have the awesome keycode ready

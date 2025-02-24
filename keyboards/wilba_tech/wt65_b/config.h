@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -89,6 +90,8 @@
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -104,11 +107,17 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master
 
 // enable the mono backlight
 #define MONO_BACKLIGHT_ENABLED 1
+
+// enable the specific indicators
+#define MONO_BACKLIGHT_WT65_B
 
 // disable backlight when USB suspended (PC sleep/hibernate/shutdown)
 #define MONO_BACKLIGHT_DISABLE_WHEN_USB_SUSPENDED 0
@@ -129,5 +138,5 @@
 // dynamic keymaps start after this.
 #define VIA_EEPROM_CUSTOM_CONFIG_SIZE 7
 
-// VIA lighting is handled by the keyboard-level code
-#define VIA_CUSTOM_LIGHTING_ENABLE
+#define IS31FL3736_I2C_ADDRESS_1 IS31FL3736_I2C_ADDRESS_GND_GND
+#define IS31FL3736_LED_COUNT 96

@@ -14,10 +14,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "rev1.h"
 
 void board_init(void) {
     writePinLow(A8);
+=======
+#include "quantum.h"
+
+void board_init(void) {
+<<<<<<<< HEAD:keyboards/matrix/m12og/rev1/rev1.c
+    gpio_write_pin_low(A8);
+>>>>>>> upstream/master
 }
 
 void bootloader_jump(void) {
@@ -29,4 +37,14 @@ void keyboard_post_init_kb(void) {
     rgblight_enable_noeeprom();
     rgblight_sethsv_noeeprom(5, 255, 255);
     rgblight_mode_noeeprom(37);
+<<<<<<< HEAD
+=======
+
+    keyboard_post_init_user();
+========
+    // B9 is configured as I2C1_SDA_PIN in the board file; that function must be
+    // disabled before using B7 as I2C1_SDA.
+    setPinInputHigh(B9);
+>>>>>>>> upstream/master:keyboards/handwired/onekey/blackpill_f401/blackpill_f401.c
+>>>>>>> upstream/master
 }

@@ -19,6 +19,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID  0x4D58   // MX
 #define PRODUCT_ID 0xAB87   // abelx keyboard
@@ -26,6 +27,8 @@
 #define MANUFACTURER MATRIX
 #define PRODUCT ABELX
 
+=======
+>>>>>>> upstream/master
 /* key matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 16
@@ -85,10 +88,15 @@
 #define COL15_MASK 0x04
 #define COL16_MASK 0x02
 
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 #define DIODE_DIRECTION COL2ROW
 #define DEBOUNCE    5
+=======
+
+#define DIODE_DIRECTION COL2ROW
+>>>>>>> upstream/master
 
 // i2c setting
 #define USE_I2CV1
@@ -97,6 +105,7 @@
 #define I2C1_CLOCK_SPEED 400000
 #define I2C1_DUTY_CYCLE FAST_DUTY_CYCLE_2
 
+<<<<<<< HEAD
 
 // rgb light setting
 #define RGBLED_NUM 9
@@ -104,5 +113,9 @@
 #define RGBLIGHT_ANIMATIONS
 
 #define AW9523B_RGB_NUM 4
+=======
+#define AW9523B_RGB_NUM 4
+#define WS2812_LED_COUNT 5
+>>>>>>> upstream/master
 
 #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP FALSE

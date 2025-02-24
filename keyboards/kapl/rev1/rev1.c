@@ -1,6 +1,10 @@
 // Copyright 2022 Alexander Lozyuk (@keyzog)
 // SPDX-License-Identifier: GPL-2.0-or-later
+<<<<<<< HEAD
 #include "kapl.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {

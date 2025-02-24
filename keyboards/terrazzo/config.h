@@ -15,8 +15,9 @@
  */
 #pragma once
 
-#include "config_common.h"
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
 
+<<<<<<< HEAD
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x4d4d // MM
@@ -119,6 +120,11 @@ so there is only one configuration. */
 #endif
 
 /* Terrazzo animations */
+=======
+/* Terrazzo animations */
+#define LED_MATRIX_ROWS 15
+#define LED_MATRIX_COLS 7
+>>>>>>> upstream/master
 
 // #define DISABLE_TERRAZZO_EFFECT_STRIPES
 // #define DISABLE_TERRAZZO_EFFECT_DINO

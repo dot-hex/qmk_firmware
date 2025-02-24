@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 BOARD = QMK_PROTON_C
@@ -23,4 +24,6 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 UNICODE_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 SRC += ds1307.c taphold.c

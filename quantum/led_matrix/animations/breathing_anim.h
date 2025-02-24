@@ -2,6 +2,7 @@
 LED_MATRIX_EFFECT(BREATHING)
 #    ifdef LED_MATRIX_CUSTOM_EFFECT_IMPLS
 
+<<<<<<< HEAD
 bool BREATHING(effect_params_t* params) {
     LED_MATRIX_USE_LIMITS(led_min, led_max);
 
@@ -13,6 +14,14 @@ bool BREATHING(effect_params_t* params) {
         led_matrix_set_value(i, val);
     }
     return led_matrix_check_finished_leds(led_max);
+=======
+static uint8_t BREATHING_math(uint8_t val, uint8_t i, uint8_t time) {
+    return scale8(abs8(sin8(time / 2) - 128) * 2, val);
+}
+
+bool BREATHING(effect_params_t* params) {
+    return effect_runner_i(params, &BREATHING_math);
+>>>>>>> upstream/master
 }
 
 #    endif // LED_MATRIX_CUSTOM_EFFECT_IMPLS

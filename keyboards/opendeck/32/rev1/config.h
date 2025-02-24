@@ -15,8 +15,11 @@
  */
 #pragma once
 
-#include "config_common.h"
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_SDB_PIN D2
+#define IS31FL3731_IRQ_PIN D3
 
+<<<<<<< HEAD
 // USB Device descriptor parameter
 #define VENDOR_ID 0x4345
 #define PRODUCT_ID 0x2EC0
@@ -98,3 +101,6 @@
 #define NO_ACTION_LAYER
 #define NO_ACTION_TAPPING
 #define NO_ACTION_ONESHOT
+=======
+#define POWER_LED_PIN F1
+>>>>>>> upstream/master

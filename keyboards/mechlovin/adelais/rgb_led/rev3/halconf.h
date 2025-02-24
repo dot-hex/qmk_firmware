@@ -18,9 +18,13 @@
 
 #define HAL_USE_I2C TRUE
 
+<<<<<<< HEAD
 #define PAL_USE_CALLBACKS FALSE
 
 #define PAL_USE_WAIT FALSE
+=======
+#define HAL_USE_SPI TRUE
+>>>>>>> upstream/master
 
 #include_next <halconf.h>
 

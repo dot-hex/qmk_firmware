@@ -14,10 +14,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "gk6.h"
 
 #ifdef RGB_MATRIX_ENABLE
 const is31_led PROGMEM g_is31_leds[DRIVER_LED_TOTAL] = {
+=======
+#include "quantum.h"
+
+#ifdef RGB_MATRIX_ENABLE
+const is31fl3731_led_t PROGMEM g_is31fl3731_leds[IS31FL3731_LED_COUNT] = {
+>>>>>>> upstream/master
     {0, C1_8, C2_8, C3_8},     //0 led1
     {0, C1_7, C2_7, C3_7},     //1 led2
     {0, C1_6, C2_6, C3_6},     //2 led3

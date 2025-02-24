@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x444E // "DN"
@@ -93,6 +94,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #endif
 
+=======
+>>>>>>> upstream/master
 #define I2C1_SCL_PIN B8
 #define I2C1_SDA_PIN B9
 

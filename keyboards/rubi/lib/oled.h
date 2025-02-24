@@ -17,6 +17,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
+=======
+#include <stdbool.h>
+#include <stdint.h>
+#include "progmem.h"
+
+>>>>>>> upstream/master
 #define OLED_FRAME_TIMEOUT (1000 / 30)  // 30 fps
 #define OLED_LOGO_TIMEOUT 3000          // 3 sec
 

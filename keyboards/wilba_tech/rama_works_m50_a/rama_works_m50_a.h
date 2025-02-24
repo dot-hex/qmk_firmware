@@ -18,6 +18,7 @@
 #include "quantum.h"
 #include "keyboards/wilba_tech/wt_rgb_backlight_keycodes.h"
 #include "via.h"
+<<<<<<< HEAD
 
 #define ___ KC_NO
 
@@ -41,3 +42,5 @@
     { K30, K31, K32, K33, K34, K35, K36, ___, K38, K39, K3A, K3B, K3C }  \
 }
 
+=======
+>>>>>>> upstream/master

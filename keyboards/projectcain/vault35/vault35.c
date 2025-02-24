@@ -14,10 +14,21 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "vault35.h"
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
+=======
+#include "quantum.h"
+
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+<<<<<<<< HEAD:keyboards/kiwikeebs/macro/macro.c
+    if (!encoder_update_user(index, clockwise)) return false;
+========
+    if (!encoder_update_user(index, clockwise)) { return false; }
+>>>>>>>> upstream/master:keyboards/projectcain/vault35/vault35.c
+>>>>>>> upstream/master
     if (index == 0) { /* First encoder */
         if (clockwise) {
             tap_code(KC_PGDN);
@@ -26,4 +37,12 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     }
     return true;
+<<<<<<< HEAD
 }
+=======
+<<<<<<<< HEAD:keyboards/kiwikeebs/macro/macro.c
+}
+========
+}
+>>>>>>>> upstream/master:keyboards/projectcain/vault35/vault35.c
+>>>>>>> upstream/master

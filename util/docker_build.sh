@@ -1,6 +1,6 @@
 #!/bin/sh
-# NOTE: This script uses tabs for indentation
 
+<<<<<<< HEAD
 errcho() {
 	echo "$@" >&2
 }
@@ -83,3 +83,6 @@ fi
 	-e MAKEFLAGS="$MAKEFLAGS" \
 	qmkfm/qmk_cli \
 	make "$keyboard${keymap:+:$keymap}${target:+:$target}"
+=======
+./util/docker_cmd.sh make "$@"
+>>>>>>> upstream/master

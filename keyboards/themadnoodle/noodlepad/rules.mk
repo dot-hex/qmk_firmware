@@ -1,6 +1,7 @@
-# MCU name
-MCU = atmega32u4
+# Default folder for noodlepad
+DEFAULT_FOLDER = themadnoodle/noodlepad/v1
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
@@ -18,3 +19,5 @@ RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 UNICODE_ENABLE = yes        # Unicode
 ENCODER_ENABLE = yes
+=======
+>>>>>>> upstream/master

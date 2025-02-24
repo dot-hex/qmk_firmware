@@ -15,6 +15,7 @@ BOARD = NUC123SD4AN0
 MCU  = cortex-m0
 # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
 ARMV = 6
+<<<<<<< HEAD
 
 # Build Options
 #   change yes to no to disable
@@ -32,3 +33,5 @@ DIP_SWITCH_ENABLE = yes
 
 # Enter lower-power sleep mode when on the ChibiOS idle thread
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
+=======
+>>>>>>> upstream/master

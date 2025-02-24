@@ -86,7 +86,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______, _______, _______,
         _______,  _______, _______, TG(_MUSIC_4_LIFE),
         MU_OFF,   _______, _______, _______,
+<<<<<<< HEAD
         MU_ON,    _______, _______, MU_MOD
+=======
+        MU_ON,    _______, _______, MU_NEXT
+>>>>>>> upstream/master
     ),
     /* MUSIC_4_LIFE
      * ,-----------------------.
@@ -134,6 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `--------=======------------------------'
      */
     [_TERMINAL] = LAYOUT_ortho_4x4(
+<<<<<<< HEAD
         _______,  TERM_ABOUT, _______, _______,
         TERM_OFF, TERM_PRINT, _______, _______,
         _______,  TERM_FLUSH, _______, _______,
@@ -142,6 +147,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* ADMIN
      * ,-----------------------------------------.
      * |   RESET    |     |           |    X     |
+=======
+        _______, TERM_ABOUT, _______, _______,
+        _______, TERM_PRINT, _______, _______,
+        _______, TERM_FLUSH, _______, _______,
+        _______, TERM_HELP , _______, _______
+    ),
+    /* ADMIN
+     * ,-----------------------------------------.
+     * |   QK_BOOT    |     |           |    X     |
+>>>>>>> upstream/master
      * |------------+-----+-----------+----------|
      * |ABOUT CKEYS |     |           |          |
      * |------------+-----+-----------+----------|
@@ -151,7 +166,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------'
      */
     [_ADMIN] = LAYOUT_ortho_4x4(
+<<<<<<< HEAD
         RESET,       _______, _______, _______,
+=======
+        QK_BOOT,     _______, _______, _______,
+>>>>>>> upstream/master
         CKEYS_ABOUT, _______, _______, _______,
         _______,     _______, _______, CK_OFF,
         _______,     _______, _______, CK_ON

@@ -1,11 +1,19 @@
 # serneity65
 
 More Info at [serneity65](https://shop.wuquestudio.com/)
+<<<<<<< HEAD
 ​
 * Keyboard Maintainer: [spbgzh](https://github.com/spbgzh)
 * Hardware Supported: zoom65 Standard
 * Hardware Availability: [serneity65](https://shop.wuquestudio.com/)  
 ​
+=======
+
+* Keyboard Maintainer: [spbgzh](https://github.com/spbgzh)
+* Hardware Supported: zoom65 Standard
+* Hardware Availability: [serneity65](https://shop.wuquestudio.com/)  
+
+>>>>>>> upstream/master
 Make example for this keyboard (after setting up your build environment):
 
 

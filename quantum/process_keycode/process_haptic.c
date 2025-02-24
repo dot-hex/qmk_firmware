@@ -87,6 +87,7 @@ __attribute__((weak)) bool get_haptic_enabled_key(uint16_t keycode, keyrecord_t 
 bool process_haptic(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
+<<<<<<< HEAD
             case HPT_ON:
                 haptic_enable();
                 break;
@@ -124,12 +125,55 @@ bool process_haptic(uint16_t keycode, keyrecord_t *record) {
                 haptic_cont_increase();
                 break;
             case HPT_COND:
+=======
+            case QK_HAPTIC_ON:
+                haptic_enable();
+                break;
+            case QK_HAPTIC_OFF:
+                haptic_disable();
+                break;
+            case QK_HAPTIC_TOGGLE:
+                haptic_toggle();
+                break;
+            case QK_HAPTIC_RESET:
+                haptic_reset();
+                break;
+            case QK_HAPTIC_FEEDBACK_TOGGLE:
+                haptic_feedback_toggle();
+                break;
+            case QK_HAPTIC_BUZZ_TOGGLE:
+                haptic_buzz_toggle();
+                break;
+            case QK_HAPTIC_MODE_NEXT:
+                haptic_mode_increase();
+                break;
+            case QK_HAPTIC_MODE_PREVIOUS:
+                haptic_mode_decrease();
+                break;
+            case QK_HAPTIC_DWELL_UP:
+                haptic_dwell_increase();
+                break;
+            case QK_HAPTIC_DWELL_DOWN:
+                haptic_dwell_decrease();
+                break;
+            case QK_HAPTIC_CONTINUOUS_TOGGLE:
+                haptic_toggle_continuous();
+                break;
+            case QK_HAPTIC_CONTINUOUS_UP:
+                haptic_cont_increase();
+                break;
+            case QK_HAPTIC_CONTINUOUS_DOWN:
+>>>>>>> upstream/master
                 haptic_cont_decrease();
                 break;
         }
     }
 
+<<<<<<< HEAD
     if (haptic_get_enable() && ((!HAPTIC_OFF_IN_LOW_POWER) || (usb_device_state == USB_DEVICE_STATE_CONFIGURED))) {
+=======
+    if (haptic_get_enable() && ((!HAPTIC_OFF_IN_LOW_POWER) || (usb_device_state_get_configure_state() == USB_DEVICE_STATE_CONFIGURED))) {
+>>>>>>> upstream/master
         if (record->event.pressed) {
             // keypress
             if (haptic_get_feedback() < 2 && get_haptic_enabled_key(keycode, record)) {

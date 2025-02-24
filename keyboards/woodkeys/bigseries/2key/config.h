@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -41,10 +42,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 50
 
+=======
+>>>>>>> upstream/master
 /* key combination for command */
 #define IS_COMMAND() ( \
     false \
 )
+<<<<<<< HEAD
 
 #ifdef RGBLIGHT_ENABLE
 #define RGB_DI_PIN D3
@@ -55,3 +59,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 #define RGBLIGHT_LIMIT_VAL 128
 #endif
+=======
+>>>>>>> upstream/master

@@ -13,14 +13,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 
 #include "kint36.h"
+=======
+<<<<<<<< HEAD:keyboards/zj68/zj68.c
+#include "zj68.h"
+========
+
+#include "quantum.h"
+
+#define LED_POWER C5
+>>>>>>> upstream/master
 
 void matrix_init_kb(void) {
     matrix_init_user();
 
+<<<<<<< HEAD
 // Turn on the Teensy 3.6 Power LED:
 #define LED_POWER C5
     setPinOutput(LED_POWER);
     writePinHigh(LED_POWER);
 }
+=======
+    // Turn on the Teensy 3.6 Power LED:
+    gpio_set_pin_output(LED_POWER);
+    gpio_write_pin_high(LED_POWER);
+}
+>>>>>>>> upstream/master:keyboards/kinesis/kint36/kint36.c
+>>>>>>> upstream/master

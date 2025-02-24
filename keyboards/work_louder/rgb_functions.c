@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include QMK_KEYBOARD_H
 #include "rgb_functions.h"
 
@@ -213,4 +214,26 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+=======
+#include "rgblight.h"
+#include "rgb_matrix.h"
+
+#ifdef RGBLIGHT_ENABLE
+#undef WS2812_DI_PIN
+#define WS2812_DI_PIN RGBLIGHT_DI_PIN
+
+#define ws2812_init ws2812_rgb_init
+#define ws2812_set_color ws2812_rgb_set_color
+#define ws2812_set_color_all ws2812_rgb_set_color_all
+#define ws2812_flush ws2812_rgb_flush
+
+#include "ws2812_bitbang.c"
+
+const rgblight_driver_t rgblight_driver = {
+    .init          = ws2812_init,
+    .set_color     = ws2812_set_color,
+    .set_color_all = ws2812_set_color_all,
+    .flush         = ws2812_flush,
+};
+>>>>>>> upstream/master
 #endif

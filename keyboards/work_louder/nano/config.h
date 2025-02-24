@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -217,3 +218,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     {                    \
         { 4, 0 }         \
     }
+=======
+#define RGBLIGHT_DI_PIN        C7
+
+#define RGB_MATRIX_DISABLE_SHARED_KEYCODES
+>>>>>>> upstream/master

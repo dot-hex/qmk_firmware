@@ -18,8 +18,10 @@
  */
 #pragma once
 
-#include "config_common.h"
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_VCC
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x694E  //'iN'
 #define PRODUCT_ID      0x5336  //'S6'
@@ -120,3 +122,6 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+=======
+#define RGB_MATRIX_DISABLE_SHARED_KEYCODES
+>>>>>>> upstream/master

@@ -17,6 +17,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #ifndef TAP_CODE_DELAY
 #    define TAP_CODE_DELAY 10
+=======
+<<<<<<< HEAD:keyboards/salicylic_acid3/jisplit89/jisplit89.h
+#ifdef KEYBOARD_salicylic_acid3_jisplit89_rev1
+  #include "rev1.h"
+=======
+#ifndef TAP_CODE_DELAY
+#    define TAP_CODE_DELAY 10
+>>>>>>> upstream/master:keyboards/work_louder/loop/post_config.h
+>>>>>>> upstream/master
 #endif

@@ -1,6 +1,6 @@
-# MCU name
-MCU = atmega32u4
+CUSTOM_MATRIX = yes
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
@@ -18,5 +18,8 @@ USB_HID_ENABLE   = yes
 CUSTOM_MATRIX    = yes
 
 SRC = custom_matrix.cpp
+=======
+SRC += custom_matrix.cpp
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = converter/usb_usb/hasu

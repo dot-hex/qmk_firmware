@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Salicylic_Acid
 #define PRODUCT         a52gl
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 8
@@ -33,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // wiring of each half
 #define MATRIX_ROW_PINS { D1, D0, D4, C6 }
 #define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2 }
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 /* Set 0 if debouncing isn't needed */
@@ -42,3 +46,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,6 +20,8 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no

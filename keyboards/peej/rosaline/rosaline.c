@@ -14,16 +14,27 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "rosaline.h"
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     writePin(LED1, record->event.pressed);
+=======
+#include "quantum.h"
+
+bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
+    gpio_write_pin(LED1, record->event.pressed);
+>>>>>>> upstream/master
 
     return process_record_user(keycode, record);
 }
 
 layer_state_t layer_state_set_kb(layer_state_t state) {
+<<<<<<< HEAD
     writePin(LED2, state);
+=======
+    gpio_write_pin(LED2, state);
+>>>>>>> upstream/master
 
     return layer_state_set_user(state);
 }

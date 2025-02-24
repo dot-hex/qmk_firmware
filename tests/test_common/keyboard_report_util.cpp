@@ -15,17 +15,25 @@
  */
 
 #include "keyboard_report_util.hpp"
+#include <cstdint>
 #include <vector>
 #include <algorithm>
+
 using namespace testing;
 
+extern std::map<uint16_t, std::string> KEYCODE_ID_TABLE;
+
 namespace {
+
 std::vector<uint8_t> get_keys(const report_keyboard_t& report) {
     std::vector<uint8_t> result;
 #if defined(NKRO_ENABLE)
 #    error NKRO support not implemented yet
+<<<<<<< HEAD
 #elif defined(RING_BUFFERED_6KRO_REPORT_ENABLE)
 #    error 6KRO support not implemented yet
+=======
+>>>>>>> upstream/master
 #else
     for (size_t i = 0; i < KEYBOARD_REPORT_KEYS; i++) {
         if (report.keys[i]) {
@@ -36,6 +44,22 @@ std::vector<uint8_t> get_keys(const report_keyboard_t& report) {
     std::sort(result.begin(), result.end());
     return result;
 }
+<<<<<<< HEAD
+=======
+
+std::vector<uint8_t> get_mods(const report_keyboard_t& report) {
+    std::vector<uint8_t> result;
+    for (size_t i = 0; i < 8; i++) {
+        if (report.mods & (1 << i)) {
+            uint8_t code = KC_LEFT_CTRL + i;
+            result.emplace_back(code);
+        }
+    }
+    std::sort(result.begin(), result.end());
+    return result;
+}
+
+>>>>>>> upstream/master
 } // namespace
 
 bool operator==(const report_keyboard_t& lhs, const report_keyboard_t& rhs) {
@@ -44,6 +68,7 @@ bool operator==(const report_keyboard_t& lhs, const report_keyboard_t& rhs) {
     return lhs.mods == rhs.mods && lhskeys == rhskeys;
 }
 
+<<<<<<< HEAD
 std::ostream& operator<<(std::ostream& stream, const report_keyboard_t& report) {
     auto keys = get_keys(report);
 
@@ -59,15 +84,47 @@ std::ostream& operator<<(std::ostream& stream, const report_keyboard_t& report) 
     }
 
     return stream << ")" << std::endl;
+=======
+std::ostream& operator<<(std::ostream& os, const report_keyboard_t& report) {
+    auto keys = get_keys(report);
+    auto mods = get_mods(report);
+
+    os << std::setw(10) << std::left << "report: ";
+
+    if (!keys.size() && !mods.size()) {
+        return os << "empty" << std::endl;
+    }
+
+    os << "(";
+    for (auto key = keys.cbegin(); key != keys.cend();) {
+        os << KEYCODE_ID_TABLE.at(*key);
+        key++;
+        if (key != keys.cend()) {
+            os << ", ";
+        }
+    }
+
+    os << ") [";
+
+    for (auto mod = mods.cbegin(); mod != mods.cend();) {
+        os << KEYCODE_ID_TABLE.at(*mod);
+        mod++;
+        if (mod != mods.cend()) {
+            os << ", ";
+        }
+    }
+
+    return os << "]" << std::endl;
+>>>>>>> upstream/master
 }
 
 KeyboardReportMatcher::KeyboardReportMatcher(const std::vector<uint8_t>& keys) {
-    memset(m_report.raw, 0, sizeof(m_report.raw));
+    memset(&m_report, 0, sizeof(report_keyboard_t));
     for (auto k : keys) {
-        if (IS_MOD(k)) {
+        if (IS_MODIFIER_KEYCODE(k)) {
             m_report.mods |= MOD_BIT(k);
         } else {
-            add_key_to_report(&m_report, k);
+            add_key_byte(&m_report, k);
         }
     }
 }

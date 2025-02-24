@@ -21,6 +21,10 @@
 #include "dual_beacon_anim.h"
 #include "rainbow_beacon_anim.h"
 #include "rainbow_pinwheels_anim.h"
+<<<<<<< HEAD
+=======
+#include "flower_blooming_anim.h"
+>>>>>>> upstream/master
 #include "raindrops_anim.h"
 #include "jellybean_raindrops_anim.h"
 #include "hue_breathing_anim.h"
@@ -38,3 +42,10 @@
 #include "solid_reactive_nexus.h"
 #include "splash_anim.h"
 #include "solid_splash_anim.h"
+<<<<<<< HEAD
+=======
+#include "starlight_anim.h"
+#include "starlight_dual_sat_anim.h"
+#include "starlight_dual_hue_anim.h"
+#include "riverflow_anim.h"
+>>>>>>> upstream/master

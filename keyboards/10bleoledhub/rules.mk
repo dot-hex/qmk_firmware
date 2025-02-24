@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = caterina
@@ -24,3 +22,5 @@ BLUETOOTH_DRIVER = BluefruitLE
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
+=======
+>>>>>>> upstream/master

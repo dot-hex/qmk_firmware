@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = at90usb1286
 
@@ -16,6 +17,9 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE  = no   # Enable keyboard backlight functionality
 AUDIO_ENABLE      = no   # Audio output
 CUSTOM_MATRIX     = yes  # We definitely have a nonstandard matrix
+=======
+CUSTOM_MATRIX     = yes
+>>>>>>> upstream/master
 
 # Project specific files
 SRC = matrix.c

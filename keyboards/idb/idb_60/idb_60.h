@@ -9,6 +9,7 @@ void _idb_60_fn_led_off(void);
 
 #define _idb_60_esc_led_on() _idb_60_fn_led_on()
 #define _idb_60_esc_led_off() _idb_60_fn_led_off()
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -168,3 +169,5 @@ void _idb_60_fn_led_off(void);
         { K80, K81, XXX, XXX, XXX, XXX, XXX, XXX }, \
         { XXX, XXX, XXX, K93, XXX, K95, K96, XXX } \
 }
+=======
+>>>>>>> upstream/master

@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD:keyboards/kprepublic/bm68hsrgb/rev1/rev1.c
 #include "rev1.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master:keyboards/bm68rgb/bm68rgb.c
 
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {
@@ -43,10 +47,21 @@ led_config_t g_led_config = { {
 } };
 
 //CAPS backlight
+<<<<<<< HEAD:keyboards/kprepublic/bm68hsrgb/rev1/rev1.c
 __attribute__ ((weak))
 void rgb_matrix_indicators_user(void) {
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(30, 0xFF, 0xFF, 0xFF);
     }
+=======
+bool rgb_matrix_indicators_kb(void) {
+    if (!rgb_matrix_indicators_user()) {
+        return false;
+    }
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(30, 0xFF, 0xFF, 0xFF);
+    }
+    return true;
+>>>>>>> upstream/master:keyboards/bm68rgb/bm68rgb.c
 }
 #endif

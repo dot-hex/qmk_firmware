@@ -16,7 +16,11 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+#include <stdint.h>
+>>>>>>> upstream/master
 
 typedef struct
 {
@@ -26,4 +30,8 @@ typedef struct
 
 char* translate_keycode_to_string(uint16_t code);
 
+<<<<<<< HEAD
 extern lookup_table_t lookup_table[334];
+=======
+extern lookup_table_t lookup_table[333];
+>>>>>>> upstream/master

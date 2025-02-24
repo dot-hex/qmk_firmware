@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,3 +22,6 @@ LTO_ENABLE = yes            # Use LTO flags to reduce firmware size
 
 RGB_MATRIX_ENABLE = no		# Enable keyboard RGB matrix (do not use together with RGBLIGHT_ENABLE)
 RGB_MATRIX_DRIVER = WS2812	# RGB matrix driver support
+=======
+DEFAULT_FOLDER = jacky_studio/bear_65/rev1
+>>>>>>> upstream/master

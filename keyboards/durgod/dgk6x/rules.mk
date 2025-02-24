@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 # Actually F070, but close enough
 MCU = STM32F072
@@ -27,3 +28,9 @@ RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = IS31FL3733
 
 DEFAULT_FOLDER=durgod/dgk6x/hades
+=======
+# Do not put the microcontroller into power saving mode
+NO_SUSPEND_POWER_DOWN = yes
+
+DEFAULT_FOLDER=durgod/dgk6x/hades_ansi
+>>>>>>> upstream/master

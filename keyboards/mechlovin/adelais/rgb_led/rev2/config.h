@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT_ID   0xAEC2
 #define PRODUCT      Adelais En Ciel Rev2
 
@@ -96,3 +97,9 @@
 #define LED_NUM_LOCK_PIN C15
 #define LED_CAPS_LOCK_PIN B2
 #define LED_SCROLL_LOCK_PIN B9
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_SDA
+
+#define RGB_MATRIX_DISABLE_SHARED_KEYCODES
+>>>>>>> upstream/master

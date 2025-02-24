@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER mtei
 #define PRODUCT      Symmetric70 prototype proton-c
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -56,12 +59,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
          +-----------------+
 ***************************************/
 
+<<<<<<< HEAD
 #define UNUSED_PINS
+=======
+>>>>>>> upstream/master
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
 /*
+<<<<<<< HEAD
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
 //#define SOFT_SERIAL_PIN D0  // or D1, D2, D3, E6
@@ -136,6 +143,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define FORCE_NKRO
 
 /*
+=======
+>>>>>>> upstream/master
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
@@ -151,6 +160,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+<<<<<<< HEAD
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
@@ -159,6 +169,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
 
+=======
+>>>>>>> upstream/master
 #ifdef DEBUG_CONFIG
 #    define MATRIX_DEBUG_PIN A9
 #    include "../debug_config.h"

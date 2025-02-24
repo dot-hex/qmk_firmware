@@ -124,6 +124,7 @@ void deferred_exec_advanced_task(deferred_executor_t *table, size_t table_count,
 
         // Run through each of the executors
         for (int i = 0; i < table_count; ++i) {
+<<<<<<< HEAD
             deferred_executor_t *entry = &table[i];
 
             // Check if we're supposed to execute this entry
@@ -131,6 +132,21 @@ void deferred_exec_advanced_task(deferred_executor_t *table, size_t table_count,
                 // Invoke the callback and work work out if we should be requeued
                 uint32_t delay_ms = entry->callback(entry->trigger_time, entry->cb_arg);
 
+=======
+            deferred_executor_t *entry      = &table[i];
+            deferred_token       curr_token = entry->token;
+
+            // Check if we're supposed to execute this entry
+            if (curr_token != INVALID_DEFERRED_TOKEN && ((int32_t)TIMER_DIFF_32(entry->trigger_time, now)) <= 0) {
+                // Invoke the callback and work work out if we should be requeued
+                uint32_t delay_ms = entry->callback(entry->trigger_time, entry->cb_arg);
+
+                // If the token has changed, then the callback has canceled and re-queued. Skip further processing.
+                if (entry->token != curr_token) {
+                    continue;
+                }
+
+>>>>>>> upstream/master
                 // Update the trigger time if we have to repeat, otherwise clear it out
                 if (delay_ms > 0) {
                     // Intentionally add just the delay to the existing trigger time -- this ensures the next

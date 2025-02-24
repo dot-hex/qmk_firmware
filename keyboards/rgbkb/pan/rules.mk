@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -14,10 +15,8 @@ WS2812_DRIVER = bitbang
 ENCODER_ENABLE = yes
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
+=======
+WS2812_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 
-# RGB layout selection
-RGB_ENCODERS = yes # For RGB encoders, solder on both WS2811 chips
-STAGGERED_LAYOUT = no # If you soldered R1-A12 and R4-A12, enable this.
-
-# Default to revision 1
 DEFAULT_FOLDER = rgbkb/pan/rev1

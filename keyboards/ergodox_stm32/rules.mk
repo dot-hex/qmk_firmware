@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F103
 MCU_LDSCRIPT = stm32f103_bootloader
@@ -17,6 +18,13 @@ UNICODE_ENABLE   = yes # Unicode
 
 # Enter lower-power sleep mode when on the ChibiOS idle thread
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
+=======
+# custom bootloader
+MCU_LDSCRIPT = stm32f103_bootloader
+BOARD = ST_NUCLEO64_F103RB
+
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 
 SRC += matrix.c
-QUANTUM_LIB_SRC += i2c_master.c
+I2C_DRIVER_REQUIRED = yes

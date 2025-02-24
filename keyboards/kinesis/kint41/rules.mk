@@ -3,6 +3,7 @@ MCU_SERIES = MIMXRT1062
 MCU_LDSCRIPT = MIMXRT1062
 MCU_STARTUP = MIMXRT1062
 BOARD = IC_TEENSY_4_1
+<<<<<<< HEAD
 MCU  = cortex-m4
 ARMV = 7
 
@@ -12,4 +13,12 @@ ARMV = 7
 DEBOUNCE_TYPE = sym_eager_pk
 
 #Specify firmware format that is copied to root qmk_firmware folder
+=======
+MCU = cortex-m4
+ARMV = 7
+
+# Bootloader selection
+BOOTLOADER = halfkay
+
+>>>>>>> upstream/master
 FIRMWARE_FORMAT = hex

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+#pragma once
+
+#include <stdint.h>
+#include "action.h"
+
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 
 void render_logo(void);

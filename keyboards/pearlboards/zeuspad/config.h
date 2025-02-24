@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -47,12 +48,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+=======
+>>>>>>> upstream/master
 /* OLED Settings */
 #define OLED_TIMEOUT 120000
 #define OLED_FADE_OUT
 /* Audio Function */
 #define AUDIO_CLICKY
 #define AUDIO_PIN C6
+<<<<<<< HEAD
 
 /* Encoder Function */
 #define ENCODERS_PAD_A { D6 }
@@ -88,3 +92,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+>>>>>>> upstream/master

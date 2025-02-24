@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x0BEE
@@ -54,6 +55,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RGBLED_NUM 12    // Number of LEDs
 
+=======
+>>>>>>> upstream/master
 /* Audio settings */
 #ifdef AUDIO_ENABLE
     #define AUDIO_PIN C6 // Define this to enable the buzzer

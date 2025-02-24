@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -46,6 +47,8 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 // I2C setup
 #define I2C1_SCL_PIN        B8
 #define I2C1_SDA_PIN        B9

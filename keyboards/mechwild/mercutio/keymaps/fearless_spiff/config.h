@@ -1,4 +1,8 @@
+<<<<<<< HEAD:keyboards/mechwild/mercutio/keymaps/fearless_spiff/config.h
 /* Copyright 2022 Fearless Spiff
+=======
+/* Copyright 2021 Stefan Kerkmann
+>>>>>>> upstream/master:tests/auto_shift/config.h
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,4 +20,8 @@
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/mechwild/mercutio/keymaps/fearless_spiff/config.h
 #define TAPPING_TERM 180
+=======
+#include "test_common.h"
+>>>>>>> upstream/master:tests/auto_shift/config.h

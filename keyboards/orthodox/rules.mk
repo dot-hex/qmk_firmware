@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -16,4 +17,6 @@ RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = orthodox/rev3

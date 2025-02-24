@@ -25,26 +25,38 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
+<<<<<<< HEAD
         KC_NO,   KC_NO,   KC_NO,  KC_NO, // for encoders
+=======
+>>>>>>> upstream/master
         KC_NO,   KC_NO,   KC_NO,  KC_NO, // for ext keys
         MO(1),   KC_BSPC, KC_SPC, KC_ENT,
         KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT
     ),
     [_FN1] = LAYOUT(
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+<<<<<<< HEAD
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+=======
+>>>>>>> upstream/master
         KC_1,    KC_2,    KC_3,   KC_4,
         KC_5,    KC_6,    KC_7,   KC_8
     ),
     [_FN2] = LAYOUT(
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+<<<<<<< HEAD
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+=======
+>>>>>>> upstream/master
         KC_1,    KC_2,    KC_3,   KC_4,
         KC_5,    KC_6,    KC_7,   KC_8
     ),
     [_FN3] = LAYOUT(
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+<<<<<<< HEAD
         KC_NO,   KC_NO,   KC_NO,  KC_NO,
+=======
+>>>>>>> upstream/master
         KC_1,    KC_2,    KC_3,   KC_4,
         KC_5,    KC_6,    KC_7,   KC_8
     )
@@ -64,5 +76,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(KC_UP);
         }
     }
+<<<<<<< HEAD
     return true;
+=======
+    return false;
+>>>>>>> upstream/master
 }

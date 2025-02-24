@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -37,6 +38,8 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -48,6 +51,7 @@
 /* disable print */
 //#define NO_PRINT
 
+<<<<<<< HEAD
 //rgb light setting
 #define RGBLED_NUM      4
 #define RGB_DI_PIN      D1
@@ -67,6 +71,9 @@
 
 //pin setting
 #define LED_CAPS_LOCK_PIN E2
+=======
+//pin setting
+>>>>>>> upstream/master
 #define LED_POWER_PIN       D5
 #define CHG_EN_PIN          E6
 #define BATTERY_LEVEL_PIN   F0

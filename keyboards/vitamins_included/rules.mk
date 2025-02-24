@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,6 +18,6 @@ RGBLIGHT_ENABLE     = yes  # Enable WS2812 RGB underlight.
 
 LAYOUTS = ortho_4x12
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = vitamins_included/rev2
-
-LTO_ENABLE = yes

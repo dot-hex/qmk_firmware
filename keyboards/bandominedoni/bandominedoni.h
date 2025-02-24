@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 /* This is a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -58,6 +59,8 @@
     {   r55,   r45,   r36,   r25,   r37,   r46,   r56 }  \
 }
 
+=======
+>>>>>>> upstream/master
 //  Uncomment below if a pedal used for Open/Close is normally-on type (such as Yamaha's.)
 // #define PEDAL_NORMALLY_CLOSED
 
@@ -74,8 +77,13 @@
 // Long press: go to _FN layer, tap: MUTE
 #define FN_MUTE  LT(_FN, KC_MUTE)
 #define DF_QWER  DF(_QWERTY)
+<<<<<<< HEAD
 #define MIS_EIS  LT(_MISC,KC_LANG2)
 #define MIS_KAN  LT(_MISC,KC_LANG1)
+=======
+#define MIS_EIS  LT(_MISC,KC_LNG2)
+#define MIS_KAN  LT(_MISC,KC_LNG1)
+>>>>>>> upstream/master
 
 
 //  Overriding is_keyboard_left() in qmk_firmware/quantum/split_common/split_util.c to limit the handedness check only once.
@@ -83,6 +91,9 @@
 //          However, It enables to decide the handedness by the HW by adding one condition: "not to press any keys (especially r30) dusing startup."
 bool is_keyboard_left(void);
 
+<<<<<<< HEAD
 void encoder_action_unregister(void);
 
 void encoder_action_register(uint8_t index, bool clockwise);
+=======
+>>>>>>> upstream/master

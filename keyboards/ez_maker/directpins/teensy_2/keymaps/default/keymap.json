@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
     "keyboard": "ez_maker/directpins/teensy2",
     "keymap": "default",
     "layout": "LAYOUT_all",
+=======
+    "keyboard": "ez_maker/directpins/teensy_2",
+    "keymap": "default",
+    "layout": "LAYOUT",
+>>>>>>> upstream/master
     "layers": [
         [
             "KC_0",                 "KC_1",

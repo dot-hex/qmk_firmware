@@ -14,9 +14,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include <spi_master.h>
-
-#include "quantum.h"
+#include "spi_master.h"
 #include "split_util.h"
 #include "transport.h"
 #include "timer.h"
@@ -55,7 +53,7 @@ bool shake_hands(bool master) {
          * alignment. */
 
         if (master) {
-            writePinLow(SPI_SS_PIN);
+            gpio_write_pin_low(SPI_SS_PIN);
         }
 
         for (i = 0 ; i < 8 ; i += 1) {
@@ -66,7 +64,7 @@ bool shake_hands(bool master) {
         }
 
         if (master) {
-            writePinHigh(SPI_SS_PIN);
+            gpio_write_pin_high(SPI_SS_PIN);
         }
     } while (i < 8);
 
@@ -96,6 +94,7 @@ bool transport_master(matrix_row_t master_matrix[], matrix_row_t slave_matrix[])
 
     do {
         shake_hands(true);
+<<<<<<< HEAD
 
         /* Receive the matrix from the other side, while transmitting
          * LED and layer states. */
@@ -108,6 +107,20 @@ bool transport_master(matrix_row_t master_matrix[], matrix_row_t slave_matrix[])
             x = spi_write(i < sizeof(struct led_context) ?
                           ((uint8_t *)&context)[i] : 0);
 
+=======
+
+        /* Receive the matrix from the other side, while transmitting
+         * LED and layer states. */
+
+        spi_start(SPI_SS_PIN, 0, 0, 4);
+
+        for (i = 0 ; i < sizeof(matrix_row_t[MATRIX_ROWS / 2]) ; i += 1) {
+            spi_status_t x;
+
+            x = spi_write(i < sizeof(struct led_context) ?
+                          ((uint8_t *)&context)[i] : 0);
+
+>>>>>>> upstream/master
             if (x == SPI_STATUS_TIMEOUT) {
                 return false;
             }
@@ -178,8 +191,8 @@ void transport_master_init(void) {
      * above depends on it and the SPI master driver won't do it
      * before we call spi_start(). */
 
-    writePinHigh(SPI_SS_PIN);
-    setPinOutput(SPI_SS_PIN);
+    gpio_write_pin_high(SPI_SS_PIN);
+    gpio_set_pin_output(SPI_SS_PIN);
 
     spi_init();
 
@@ -197,10 +210,10 @@ void transport_slave_init(void) {
      * they're asserted making the MISO pin an output on both ends and
      * leading to potential shorts. */
 
-    setPinInputHigh(SPI_SS_PIN);
-    setPinInput(SPI_SCK_PIN);
-    setPinInput(SPI_MOSI_PIN);
-    setPinOutput(SPI_MISO_PIN);
+    gpio_set_pin_input_high(SPI_SS_PIN);
+    gpio_set_pin_input(SPI_SCK_PIN);
+    gpio_set_pin_input(SPI_MOSI_PIN);
+    gpio_set_pin_output(SPI_MISO_PIN);
 
     SPCR = _BV(SPE);
 

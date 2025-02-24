@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 
 #include "quantum.h"
@@ -154,3 +155,14 @@ inline void ergodox_led_all_set(uint8_t n)              {}
     { L40, L41, L42, L43, L44, L45, L46, R40, R41, R42, R43, R44, R45, R46 }, \
     { XXX, L51, L52, L53, L54, L55, L56, R50, R51, R52, R53, R54, R55, XXX } \
 }
+=======
+// Copyright 2022 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+#include "quantum.h"
+
+// This file only exists to pull in....
+#include "ergodox_compat.h"
+>>>>>>> upstream/master

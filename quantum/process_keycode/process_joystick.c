@@ -1,14 +1,24 @@
-#include "joystick.h"
+/* Copyright 2022
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include "process_joystick.h"
-
-#include "analog.h"
-
-#include <string.h>
-#include <math.h>
-
-bool process_joystick_buttons(uint16_t keycode, keyrecord_t *record);
+#include "joystick.h"
 
 bool process_joystick(uint16_t keycode, keyrecord_t *record) {
+<<<<<<< HEAD
     if (process_joystick_buttons(keycode, record) && (joystick_status.status & JS_UPDATED) > 0) {
         send_joystick_packet(&joystick_status);
         joystick_status.status &= ~JS_UPDATED;
@@ -158,8 +168,16 @@ bool process_joystick_analogread_quantum() {
         }
 
         restorePinState(joystick_axes[axis_index].input_pin, inputSavedState);
+=======
+    switch (keycode) {
+        case QK_JOYSTICK ... QK_JOYSTICK_MAX:
+            if (record->event.pressed) {
+                register_joystick_button(keycode - QK_JOYSTICK);
+            } else {
+                unregister_joystick_button(keycode - QK_JOYSTICK);
+            }
+            return false;
+>>>>>>> upstream/master
     }
-
-#endif
     return true;
 }

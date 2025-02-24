@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -73,6 +74,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 16
+
+#define MATRIX_ROW_PINS { C7, B1, B2, C6, B4, B5 }
+
+#define SN74X154_ADDRESS_PINS { D4, D5, D6, D7 }
+#define SN74X154_E1_PIN D3
+
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -88,7 +101,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

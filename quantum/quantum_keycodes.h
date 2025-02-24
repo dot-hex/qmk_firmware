@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "sequencer.h"
 
 // Fillers to make layering more clear
@@ -598,6 +599,32 @@ enum quantum_keycodes {
     // Start of custom keycode range for keyboards and keymaps - always leave at the end
     SAFE_RANGE
 };
+=======
+//  Pull in dd keycodes to maintain header compatibility
+#include "keycodes.h"
+
+// US ANSI shifted keycode aliases
+#include "keymap_us.h"
+
+// TODO: sub-ranges?
+// clang-format off
+#define QK_LCTL                0x0100
+#define QK_LSFT                0x0200
+#define QK_LALT                0x0400
+#define QK_LGUI                0x0800
+#define QK_RMODS_MIN           0x1000
+#define QK_RCTL                0x1100
+#define QK_RSFT                0x1200
+#define QK_RALT                0x1400
+#define QK_RGUI                0x1800
+
+#define SAFE_RANGE             QK_USER
+// clang-format on
+
+// Generic decoding for the whole QK_MODS range
+#define QK_MODS_GET_MODS(kc) (((kc) >> 8) & 0x1F)
+#define QK_MODS_GET_BASIC_KEYCODE(kc) ((kc)&0xFF)
+>>>>>>> upstream/master
 
 // Keycode modifiers & aliases
 #define LCTL(kc) (QK_LCTL | (kc))
@@ -632,6 +659,7 @@ enum quantum_keycodes {
 #define RCS(kc) (QK_RCTL | QK_RSFT | (kc))
 #define SAGR(kc) RSA(kc)
 
+<<<<<<< HEAD
 #define MOD_HYPR 0xF
 #define MOD_MEH 0x7
 
@@ -700,12 +728,15 @@ enum quantum_keycodes {
 
 #define KC_DELT KC_DELETE // Del key (four letter code)
 
+=======
+>>>>>>> upstream/master
 // Modified keycode aliases
 #define C(kc) LCTL(kc)
 #define S(kc) LSFT(kc)
 #define A(kc) LALT(kc)
 #define G(kc) LGUI(kc)
 
+<<<<<<< HEAD
 #define QK_GESC QK_GRAVE_ESCAPE
 
 #define QK_BOOT QK_BOOTLOADER
@@ -744,76 +775,63 @@ enum quantum_keycodes {
 #define CL_CTRL MAGIC_CAPSLOCK_TO_CONTROL
 #define CL_CAPS MAGIC_UNCAPSLOCK_TO_CONTROL
 #define CL_TOGG MAGIC_TOGGLE_CONTROL_CAPSLOCK
+=======
+// GOTO layer - 32 layer max
+#define TO(layer) (QK_TO | ((layer)&0x1F))
+#define QK_TO_GET_LAYER(kc) ((kc)&0x1F)
 
-#define LCG_SWP MAGIC_SWAP_LCTL_LGUI
-#define LCG_NRM MAGIC_UNSWAP_LCTL_LGUI
-#define RCG_SWP MAGIC_SWAP_RCTL_RGUI
-#define RCG_NRM MAGIC_UNSWAP_RCTL_RGUI
-#define CG_SWAP MAGIC_SWAP_CTL_GUI
-#define CG_NORM MAGIC_UNSWAP_CTL_GUI
-#define CG_TOGG MAGIC_TOGGLE_CTL_GUI
+// Momentary switch layer - 32 layer max
+#define MO(layer) (QK_MOMENTARY | ((layer)&0x1F))
+#define QK_MOMENTARY_GET_LAYER(kc) ((kc)&0x1F)
+>>>>>>> upstream/master
 
-#define LAG_SWP MAGIC_SWAP_LALT_LGUI
-#define LAG_NRM MAGIC_UNSWAP_LALT_LGUI
-#define RAG_SWP MAGIC_SWAP_RALT_RGUI
-#define RAG_NRM MAGIC_UNSWAP_RALT_RGUI
-#define AG_SWAP MAGIC_SWAP_ALT_GUI
-#define AG_NORM MAGIC_UNSWAP_ALT_GUI
-#define AG_TOGG MAGIC_TOGGLE_ALT_GUI
+// Set default layer - 32 layer max
+#define DF(layer) (QK_DEF_LAYER | ((layer)&0x1F))
+#define QK_DEF_LAYER_GET_LAYER(kc) ((kc)&0x1F)
 
+// Set persistent default layer - 32 layer max
+#define PDF(layer) (QK_PERSISTENT_DEF_LAYER | ((layer)&0x1F))
+#define QK_PERSISTENT_DEF_LAYER_GET_LAYER(kc) ((kc)&0x1F)
+
+<<<<<<< HEAD
 #define GUI_OFF MAGIC_NO_GUI
 #define GUI_ON MAGIC_UNNO_GUI
 #define GUI_TOG MAGIC_TOGGLE_GUI
+=======
+// Toggle to layer - 32 layer max
+#define TG(layer) (QK_TOGGLE_LAYER | ((layer)&0x1F))
+#define QK_TOGGLE_LAYER_GET_LAYER(kc) ((kc)&0x1F)
+>>>>>>> upstream/master
 
-#define GE_SWAP MAGIC_SWAP_GRAVE_ESC
-#define GE_NORM MAGIC_UNSWAP_GRAVE_ESC
+// One-shot layer - 32 layer max
+#define OSL(layer) (QK_ONE_SHOT_LAYER | ((layer)&0x1F))
+#define QK_ONE_SHOT_LAYER_GET_LAYER(kc) ((kc)&0x1F)
 
-#define BS_SWAP MAGIC_SWAP_BACKSLASH_BACKSPACE
-#define BS_NORM MAGIC_UNSWAP_BACKSLASH_BACKSPACE
-
-#define NK_ON MAGIC_HOST_NKRO
-#define NK_OFF MAGIC_UNHOST_NKRO
-#define NK_TOGG MAGIC_TOGGLE_NKRO
-
-#define EH_LEFT MAGIC_EE_HANDS_LEFT
-#define EH_RGHT MAGIC_EE_HANDS_RIGHT
-
-// GOTO layer - 16 layers max
-// when:
-// ON_PRESS    = 1
-// ON_RELEASE  = 2
-// Unless you have a good reason not to do so, prefer  ON_PRESS (1) as your default.
-// In fact, we changed it to assume ON_PRESS for sanity/simplicity. If needed, you can add your own
-// keycode modeled after the old version, kept below for this.
-/* #define TO(layer, when) (QK_TO | (when << 0x4) | (layer & 0xFF)) */
-#define TO(layer) (QK_TO | (ON_PRESS << 0x4) | ((layer)&0xFF))
-
-// Momentary switch layer - 256 layer max
-#define MO(layer) (QK_MOMENTARY | ((layer)&0xFF))
-
-// Set default layer - 256 layer max
-#define DF(layer) (QK_DEF_LAYER | ((layer)&0xFF))
-
-// Toggle to layer - 256 layer max
-#define TG(layer) (QK_TOGGLE_LAYER | ((layer)&0xFF))
-
-// One-shot layer - 256 layer max
-#define OSL(layer) (QK_ONE_SHOT_LAYER | ((layer)&0xFF))
-
-// L-ayer M-od: Momentary switch layer with modifiers active - 16 layer max, left mods only
-#define LM(layer, mod) (QK_LAYER_MOD | (((layer)&0xF) << 4) | ((mod)&0xF))
+// L-ayer M-od: Momentary switch layer with modifiers active - 16 layer max
+#define LM(layer, mod) (QK_LAYER_MOD | (((layer)&0xF) << 5) | ((mod)&0x1F))
+#define QK_LAYER_MOD_GET_LAYER(kc) (((kc) >> 5) & 0xF)
+#define QK_LAYER_MOD_GET_MODS(kc) ((kc)&0x1F)
 
 // One-shot mod
-#define OSM(mod) (QK_ONE_SHOT_MOD | ((mod)&0xFF))
+#define OSM(mod) (QK_ONE_SHOT_MOD | ((mod)&0x1F))
+#define QK_ONE_SHOT_MOD_GET_MODS(kc) ((kc)&0x1F)
 
-// Layer tap-toggle
-#define TT(layer) (QK_LAYER_TAP_TOGGLE | ((layer)&0xFF))
+// Layer tap-toggle - 32 layer max
+#define TT(layer) (QK_LAYER_TAP_TOGGLE | ((layer)&0x1F))
+#define QK_LAYER_TAP_TOGGLE_GET_LAYER(kc) ((kc)&0x1F)
+
+// L-ayer, T-ap - 256 keycode max, 16 layer max
+#define LT(layer, kc) (QK_LAYER_TAP | (((layer)&0xF) << 8) | ((kc)&0xFF))
+#define QK_LAYER_TAP_GET_LAYER(kc) (((kc) >> 8) & 0xF)
+#define QK_LAYER_TAP_GET_TAP_KEYCODE(kc) ((kc)&0xFF)
 
 // L-ayer, T-ap - 256 keycode max, 16 layer max
 #define LT(layer, kc) (QK_LAYER_TAP | (((layer)&0xF) << 8) | ((kc)&0xFF))
 
 // M-od, T-ap - 256 keycode max
 #define MT(mod, kc) (QK_MOD_TAP | (((mod)&0x1F) << 8) | ((kc)&0xFF))
+#define QK_MOD_TAP_GET_MODS(kc) (((kc) >> 8) & 0x1F)
+#define QK_MOD_TAP_GET_TAP_KEYCODE(kc) ((kc)&0xFF)
 
 #define LCTL_T(kc) MT(MOD_LCTL, kc)
 #define RCTL_T(kc) MT(MOD_RCTL, kc)
@@ -868,7 +886,10 @@ enum quantum_keycodes {
 // Unicode aliases
 // UNICODE_ENABLE - Allows Unicode input up to 0x7FFF
 #define UC(c) (QK_UNICODE | (c))
+#define QK_UNICODE_GET_CODE_POINT(kc) ((kc)&0x7FFF)
+
 // UNICODEMAP_ENABLE - Allows Unicode input up to 0x10FFFF, requires unicode_map
+<<<<<<< HEAD
 #define X(i) (QK_UNICODEMAP | (i))
 #define XP(i, j) (QK_UNICODEMAP_PAIR | ((i)&0x7F) | (((j)&0x7F) << 7)) // 127 max i and j
 
@@ -956,5 +977,49 @@ enum quantum_keycodes {
 #define PB_32 PROGRAMMABLE_BUTTON_32
 #define PROGRAMMABLE_BUTTON_MIN PROGRAMMABLE_BUTTON_1
 #define PROGRAMMABLE_BUTTON_MAX PROGRAMMABLE_BUTTON_32
+=======
+#define UM(i) (QK_UNICODEMAP | ((i)&0x3FFF))
+#define QK_UNICODEMAP_GET_INDEX(kc) ((kc)&0x3FFF)
+
+#define UP(i, j) (QK_UNICODEMAP_PAIR | ((i)&0x7F) | (((j)&0x7F) << 7)) // 127 max i and j
+#define QK_UNICODEMAP_PAIR_GET_UNSHIFTED_INDEX(kc) ((kc)&0x7F)
+#define QK_UNICODEMAP_PAIR_GET_SHIFTED_INDEX(kc) (((kc) >> 7) & 0x7F)
+
+// Swap Hands
+#define SH_T(kc) (QK_SWAP_HANDS | ((kc)&0xFF))
+#define QK_SWAP_HANDS_GET_TAP_KEYCODE(kc) ((kc)&0xFF)
+
+// Tap dance
+#define TD(i) (QK_TAP_DANCE | ((i)&0xFF))
+#define QK_TAP_DANCE_GET_INDEX(kc) ((kc)&0xFF)
+
+// MIDI aliases
+#define MIDI_TONE_MIN QK_MIDI_NOTE_C_0
+#define MIDI_TONE_MAX QK_MIDI_NOTE_B_5
+#define MIDI_OCTAVE_MIN QK_MIDI_OCTAVE_N2
+#define MIDI_OCTAVE_MAX QK_MIDI_OCTAVE_7
+#define MIDI_TRANSPOSE_MIN QK_MIDI_TRANSPOSE_N6
+#define MIDI_TRANSPOSE_MAX QK_MIDI_TRANSPOSE_6
+#define MIDI_VELOCITY_MIN QK_MIDI_VELOCITY_0
+#define MIDI_VELOCITY_MAX QK_MIDI_VELOCITY_10
+#define MIDI_CHANNEL_MIN QK_MIDI_CHANNEL_1
+#define MIDI_CHANNEL_MAX QK_MIDI_CHANNEL_16
+
+// TODO: somehow migrate sequencer to DD?
+#include "sequencer.h"
+
+#define SEQUENCER_STEP_MIN (QK_SEQUENCER + 0xF)
+#define SEQUENCER_STEP_MAX (SEQUENCER_STEP_MIN + SEQUENCER_STEPS)
+
+#define SEQUENCER_RESOLUTION_MIN (SEQUENCER_STEP_MAX + 1)
+#define SEQUENCER_RESOLUTION_MAX (SEQUENCER_RESOLUTION_MIN + SEQUENCER_RESOLUTIONS)
+
+#define SEQUENCER_TRACK_MIN (SEQUENCER_RESOLUTION_MAX + 1)
+#define SEQUENCER_TRACK_MAX (SEQUENCER_TRACK_MIN + SEQUENCER_TRACKS)
+
+#define SQ_S(n) (n < SEQUENCER_STEPS ? SEQUENCER_STEP_MIN + n : KC_NO)
+#define SQ_R(n) (n < SEQUENCER_RESOLUTIONS ? SEQUENCER_RESOLUTION_MIN + n : KC_NO)
+#define SQ_T(n) (n < SEQUENCER_TRACKS ? SEQUENCER_TRACK_MIN + n : KC_NO)
+>>>>>>> upstream/master
 
 #include "quantum_keycodes_legacy.h"

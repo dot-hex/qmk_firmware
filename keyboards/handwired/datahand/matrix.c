@@ -59,7 +59,11 @@ void matrix_init(void) {
   /* Turn off the lock LEDs. */
   PORTF |= LED_CAPS_LOCK | LED_NUM_LOCK | LED_SCROLL_LOCK | LED_MOUSE_LOCK;
 
+<<<<<<< HEAD
   matrix_init_quantum();
+=======
+  matrix_init_kb();
+>>>>>>> upstream/master
 }
 
 uint8_t matrix_scan(void) {
@@ -73,7 +77,11 @@ uint8_t matrix_scan(void) {
     matrix[row] = read_cols();
   }
 
+<<<<<<< HEAD
   matrix_scan_quantum();
+=======
+  matrix_scan_kb();
+>>>>>>> upstream/master
 
   return 1;
 }
@@ -99,27 +107,27 @@ static void select_row(uint8_t row) {
    */
 
   if (row & (1<<0)) {
-    PORTE |= (1<<6);
+    gpio_write_pin_high(E6);
   } else {
-    PORTE &= ~(1<<6);
+    gpio_write_pin_low(E6);
   }
 
   if (row & (1<<1)) {
-    PORTB |= (1<<7);
+    gpio_write_pin_high(B7);
   } else {
-    PORTB &= ~(1<<7);
+    gpio_write_pin_low(B7);
   }
 
   if (row & (1<<2)) {
-    PORTD |= (1<<0);
+    gpio_write_pin_high(D0);
   } else {
-    PORTD &= ~(1<<0);
+    gpio_write_pin_low(D0);
   }
 
   if (row & (1<<3)) {
-    PORTD |= (1<<1);
+    gpio_write_pin_high(D1);
   } else {
-    PORTD &= ~(1<<1);
+    gpio_write_pin_low(D1);
   }
 }
 

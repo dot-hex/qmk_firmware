@@ -1,0 +1,62 @@
+/*
+Copyright 2012 Jun Wako <wakojun@gmail.com>
+<<<<<<< HEAD
+=======
+Copyright 2015 Jack Humbert
+>>>>>>> upstream/master
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#pragma once
+
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/maple_computing/lets_split_eh/config.h
+#include "config_common.h"
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0xE401
+#define DEVICE_VER      0x0100
+#define MANUFACTURER    That-Canadian
+#define PRODUCT         Lets Split Eh?
+=======
+>>>>>>> upstream/master:keyboards/glenpickle/chimera_ergo/config.h
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 12
+
+#define ONESHOT_TIMEOUT 500
+
+/*
+ * Feature disable options
+ *  These options are also useful to firmware size reduction.
+ */
+
+/* disable debug print */
+//#define NO_DEBUG
+
+/* disable print */
+//#define NO_PRINT
+
+/* disable action features */
+//#define NO_ACTION_LAYER
+//#define NO_ACTION_TAPPING
+//#define NO_ACTION_ONESHOT
+=======
+// The 'EH' has previously forced use of I2C so this default has been kept
+// however users can undef to use serial
+#define USE_I2C
+>>>>>>> upstream/master

@@ -14,11 +14,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "bison.h"
+=======
+<<<<<<<< HEAD:keyboards/ungodly/nines/nines.c
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) return false;
+    if (index == 0) { /* Left encoder */
+========
+#include "quantum.h"
+>>>>>>> upstream/master
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
+<<<<<<< HEAD
+=======
+>>>>>>>> upstream/master:keyboards/keyprez/bison/bison.c
+>>>>>>> upstream/master
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
@@ -26,7 +39,11 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
+<<<<<<< HEAD
             tap_code(KC_PGDOWN);
+=======
+            tap_code(KC_PGDN);
+>>>>>>> upstream/master
         } else {
             tap_code(KC_PGUP);
         }

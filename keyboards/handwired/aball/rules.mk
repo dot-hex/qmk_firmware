@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 # Add trackball support
 POINTING_DEVICE_ENABLE = yes
+=======
+>>>>>>> upstream/master
 POINTING_DEVICE_DRIVER = adns9800

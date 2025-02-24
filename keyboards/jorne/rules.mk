@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,4 +19,6 @@ AUDIO_ENABLE = no          # Audio output
 SPLIT_KEYBOARD = yes       # Split common
 LTO_ENABLE     = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = jorne/rev1

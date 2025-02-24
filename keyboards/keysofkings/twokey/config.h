@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -58,9 +59,10 @@
 #define RGBLIGHT_HUE_STEP 4
 #define RGBLIGHT_SAT_STEP 4
 #define RGBLIGHT_VAL_STEP 4
+=======
+>>>>>>> upstream/master
 #define AUDIO_PIN B6
 #define AUDIO_CLICKY
-#endif
 
 #ifdef AUDIO_ENABLE
 #define STARTUP_SONG SONG(MAJOR_SOUND)

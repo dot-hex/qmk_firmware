@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,3 +22,11 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 # # project specific files
 SRC += matrix.c
 QUANTUM_LIB_SRC += uart.c
+=======
+POINTING_DEVICE_DRIVER = custom
+CUSTOM_MATRIX = yes    # Remote matrix from the wireless bridge
+
+# # project specific files
+SRC += matrix.c
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

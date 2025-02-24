@@ -41,18 +41,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LOWER] = LAYOUT_ortho_4x12(
         KC_VOLD, KC_EXLM,       KC_AT,    KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN,      KC_RPRN,       KC_INS,
+<<<<<<< HEAD
         KC_NLCK, KC_F7,         KC_F8,    KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LCBR, KC_RCBR, KC_UNDS,      KC_PLUS,       LSFT(KC_NUHS),
+=======
+        KC_NUM,  KC_F7,         KC_F8,    KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LCBR, KC_RCBR, KC_UNDS,      KC_PLUS,       LSFT(KC_NUHS),
+>>>>>>> upstream/master
         KC_TRNS, LSFT(KC_NUBS), KC_GRAVE, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, LSFT(KC_GRV), LSFT(KC_NUBS), KC_TRNS,
         KC_TRNS, KC_TRNS,       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN,      KC_PGUP,       KC_END),
 
     [_RAISE] = LAYOUT_ortho_4x12(
         KC_VOLU, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
         KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_NUHS,
+<<<<<<< HEAD
         KC_TRNS, KC_PSCR, KC_SLCK, KC_PAUS, KC_APP,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_GRV,  KC_NUBS, KC_TRNS,
         KC_TAB,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MSTP, KC_MPRV, KC_MPLY, KC_MNXT),
 
     [_ADJUST] = LAYOUT_ortho_4x12(
         KC_TRNS, RGB_TOG,     RGB_MOD, RGB_HUD, RGB_HUI,  RGB_SAD,  RGB_SAI, RGB_VAD, RGB_VAI, KC_TRNS, KC_TRNS, RESET,
+=======
+        KC_TRNS, KC_PSCR, KC_SCRL, KC_PAUS, KC_APP,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_GRV,  KC_NUBS, KC_TRNS,
+        KC_TAB,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MSTP, KC_MPRV, KC_MPLY, KC_MNXT),
+
+    [_ADJUST] = LAYOUT_ortho_4x12(
+        KC_TRNS, UG_TOGG,     UG_NEXT, UG_HUED, UG_HUEU,  UG_SATD,  UG_SATU, UG_VALD, UG_VALU, KC_TRNS, KC_TRNS, QK_BOOT,
+>>>>>>> upstream/master
         KC_TRNS, RGB_M_P,     RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G, RGB_M_T, KC_TRNS, KC_TRNS,
         KC_TRNS, TG(_NUMPAD), KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
@@ -85,8 +97,15 @@ void keyboard_post_init_user(void) {
     rgblight_layers = my_rgb_layers;
 
     // Uncomment for debug mode
+<<<<<<< HEAD
     /* debug_enable=true;
     debug_matrix=true; */
+=======
+    //debug_enable=true;
+    //debug_matrix=true;
+    //debug_keyboard=true;
+    //debug_mouse=true;
+>>>>>>> upstream/master
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -101,6 +120,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+<<<<<<< HEAD
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
         if (clockwise) {
@@ -144,4 +164,14 @@ bool oled_task_user(void) {
     render_status();
     return false;
 }
+=======
+#ifdef ENCODER_MAP_ENABLE
+    const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+        [_QWERTY] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+        [_NUMPAD] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+        [_LOWER] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+        [_RAISE] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+        [_ADJUST] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    };
+>>>>>>> upstream/master
 #endif

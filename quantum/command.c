@@ -19,7 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "wait.h"
 #include "keycode.h"
 #include "host.h"
-#include "keymap.h"
 #include "print.h"
 #include "debug.h"
 #include "util.h"
@@ -33,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "led.h"
 #include "command.h"
 #include "quantum.h"
+#include "usb_device_state.h"
 #include "version.h"
 
 #ifdef BACKLIGHT_ENABLE
@@ -161,7 +161,11 @@ static void command_common_help(void) {
 }
 
 static void print_version(void) {
+<<<<<<< HEAD
     print(/* clang-format off */
+=======
+    xprintf("%s", /* clang-format off */
+>>>>>>> upstream/master
         "\n\t- Version -\n"
         "VID: " STR(VENDOR_ID) "(" STR(MANUFACTURER) ") "
         "PID: " STR(PRODUCT_ID) "(" STR(PRODUCT) ") "
@@ -221,6 +225,7 @@ static void print_version(void) {
 static void print_status(void) {
     xprintf(/* clang-format off */
         "\n\t- Status -\n"
+<<<<<<< HEAD
 
         "host_keyboard_leds(): %02X\n"
 #ifndef PROTOCOL_VUSB
@@ -237,7 +242,20 @@ static void print_status(void) {
         /* these aren't set on the V-USB protocol, so we just ignore them for now */
         , keyboard_protocol
         , keyboard_idle
+=======
+
+        "host_keyboard_leds(): %02X\n"
+        "keyboard_protocol: %02X\n"
+        "keyboard_idle: %02X\n"
+#ifdef NKRO_ENABLE
+        "keymap_config.nkro: %02X\n"
+>>>>>>> upstream/master
 #endif
+        "timer_read32(): %08lX\n"
+
+        , host_keyboard_leds()
+        , usb_device_state_get_protocol()
+        , usb_device_state_get_idle_rate()
 #ifdef NKRO_ENABLE
         , keymap_config.nkro
 #endif
@@ -282,6 +300,10 @@ static void print_eeconfig(void) {
         ".swap_grave_esc: %u\n"
         ".swap_backslash_backspace: %u\n"
         ".nkro: %u\n"
+<<<<<<< HEAD
+=======
+        ".swap_escape_capslock: %u\n"
+>>>>>>> upstream/master
 
         , kc.raw
         , kc.swap_control_capslock
@@ -294,6 +316,10 @@ static void print_eeconfig(void) {
         , kc.swap_grave_esc
         , kc.swap_backslash_backspace
         , kc.nkro
+<<<<<<< HEAD
+=======
+        , kc.swap_escape_capslock
+>>>>>>> upstream/master
     ); /* clang-format on */
 
 #    ifdef BACKLIGHT_ENABLE

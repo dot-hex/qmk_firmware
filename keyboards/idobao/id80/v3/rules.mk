@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,3 +22,7 @@ LTO_ENABLE = yes
 
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = WS2812
+=======
+# Defalt to the ansi version
+DEFAULT_FOLDER = idobao/id80/v3/ansi
+>>>>>>> upstream/master

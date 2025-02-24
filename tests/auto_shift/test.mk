@@ -17,4 +17,8 @@
 # Keep this file, even if it is empty, as a marker that this folder contains tests
 # --------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 AUTO_SHIFT_ENABLE = yes
+=======
+AUTO_SHIFT_ENABLE = yes
+>>>>>>> upstream/master

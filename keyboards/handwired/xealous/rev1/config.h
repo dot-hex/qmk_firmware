@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
+<<<<<<< HEAD
 
 #include "config_common.h"
 
@@ -61,6 +62,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
+=======
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -77,6 +80,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 #define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 #define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 #define IGNORE_MOD_TAP_INTERRUPT
+=======
+>>>>>>> upstream/master

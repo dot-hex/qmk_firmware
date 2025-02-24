@@ -344,18 +344,31 @@ static void USB2422_write_block(void) {
 
 // ***************************************************************
 
+<<<<<<< HEAD:drivers/usb2422.c
 void USB2422_init() {
 #ifdef USB2422_RESET_PIN
     setPinOutput(USB2422_RESET_PIN);
 #endif
 #ifdef USB2422_ACTIVE_PIN
     setPinInput(USB2422_ACTIVE_PIN);
+=======
+void USB2422_init(void) {
+#ifdef USB2422_RESET_PIN
+    gpio_set_pin_output(USB2422_RESET_PIN);
+#endif
+#ifdef USB2422_ACTIVE_PIN
+    gpio_set_pin_input(USB2422_ACTIVE_PIN);
+>>>>>>> upstream/master:tmk_core/protocol/arm_atsam/usb/usb2422.h
 #endif
 
     i2c_init(); // IC2 clk must be high at USB2422 reset release time to signal SMB configuration
 }
 
+<<<<<<< HEAD:drivers/usb2422.c
 void USB2422_configure() {
+=======
+void USB2422_configure(void) {
+>>>>>>> upstream/master:tmk_core/protocol/arm_atsam/usb/usb2422.h
     static const char SERNAME[] = "Unavailable";
 
     memset(&config, 0, sizeof(Usb2422_t));
@@ -385,6 +398,7 @@ void USB2422_configure() {
     USB2422_write_block();
 }
 
+<<<<<<< HEAD:drivers/usb2422.c
 void USB2422_reset() {
 #ifdef USB2422_RESET_PIN
     writePinLow(USB2422_RESET_PIN);
@@ -396,6 +410,19 @@ void USB2422_reset() {
 bool USB2422_active() {
 #ifdef USB2422_ACTIVE_PIN
     return readPin(USB2422_ACTIVE_PIN);
+=======
+void USB2422_reset(void) {
+#ifdef USB2422_RESET_PIN
+    gpio_write_pin_low(USB2422_RESET_PIN);
+    wait_us(2);
+    gpio_write_pin_high(USB2422_RESET_PIN);
+#endif
+}
+
+bool USB2422_active(void) {
+#ifdef USB2422_ACTIVE_PIN
+    return gpio_read_pin(USB2422_ACTIVE_PIN);
+>>>>>>> upstream/master:tmk_core/protocol/arm_atsam/usb/usb2422.h
 #else
     return 1;
 #endif

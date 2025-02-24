@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xB034
 #define PRODUCT_ID      0xFF16
@@ -63,6 +64,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
+=======
+// OLED stuff
+#define OLED_DISPLAY_128X64
+#define OLED_FONT_H "custom_font.h"
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -79,5 +85,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

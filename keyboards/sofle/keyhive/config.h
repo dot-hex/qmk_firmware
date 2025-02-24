@@ -17,6 +17,7 @@
  */
 
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 // USB Device descriptor parameter
@@ -52,10 +53,13 @@
 
 // Communication between sides
 #define SOFT_SERIAL_PIN D2
+=======
+>>>>>>> upstream/master
 
 // OLED settings
 #define OLED_TIMEOUT    80000
 #define OLED_BRIGHTNESS 90
+<<<<<<< HEAD
 
 #define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
@@ -100,3 +104,5 @@
       10,       36,              37,       63        )
 
 #endif
+=======
+>>>>>>> upstream/master

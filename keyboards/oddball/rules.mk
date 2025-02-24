@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -16,5 +17,8 @@ AUDIO_ENABLE = no           # Audio output
 
 SPLIT_KEYBOARD = yes
 POINTING_DEVICE_ENABLE = yes
+=======
+POINTING_DEVICE_DRIVER = adns9800
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = oddball/v1

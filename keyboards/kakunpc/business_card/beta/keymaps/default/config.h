@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/* Copyright 2021 QMK
+=======
 /* Copyright 2019 kakunpc
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,8 +20,19 @@
 
 #pragma once
 
-// place overrides here
+<<<<<<< HEAD
+#include <stdint.h>
 
-#ifdef RGB_DI_PIN
-   #define RGBLIGHT_ANIMATIONS
-#endif
+const char *decode_utf8(const char *str, int32_t *code_point);
+=======
+#    define RGBLIGHT_EFFECT_BREATHING
+#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#    define RGBLIGHT_EFFECT_SNAKE
+#    define RGBLIGHT_EFFECT_KNIGHT
+#    define RGBLIGHT_EFFECT_CHRISTMAS
+#    define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#    define RGBLIGHT_EFFECT_RGB_TEST
+#    define RGBLIGHT_EFFECT_ALTERNATING
+#    define RGBLIGHT_EFFECT_TWINKLE
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -5,5 +6,7 @@ MCU = atmega32u4
 BOOTLOADER = caterina
 
 SPLIT_KEYBOARD = yes
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = sofle/rev1
 SWAP_HANDS_ENABLE = yes

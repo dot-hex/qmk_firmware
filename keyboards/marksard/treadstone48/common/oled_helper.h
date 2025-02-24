@@ -1,4 +1,13 @@
+<<<<<<< HEAD:keyboards/marksard/treadstone48/common/oled_helper.h
 #ifdef OLED_ENABLE
+=======
+#pragma once
+
+#ifdef OLED_ENABLE
+
+#include <stdint.h>
+#include "action.h"
+>>>>>>> upstream/master:keyboards/treadstone48/common/oled_helper.h
 
 void render_logo(void);
 void update_key_status(uint16_t keycode, keyrecord_t *record);

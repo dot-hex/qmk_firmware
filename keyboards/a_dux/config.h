@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Copyright 2018-2020 ENDO Katsuhiro <ka2hiro@curlybracket.co.jp> David Philip Barr <@davidphilipbarr> Pierre Chevalier <pierrechevalier83@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -81,3 +82,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Top right key on right half */
 #define BOOTMAGIC_LITE_ROW_RIGHT 4
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 4
+=======
+// Copyright 2018-2020
+// ENDO Katsuhiro <ka2hiro@curlybracket.co.jp>
+// David Philip Barr <@davidphilipbarr>
+// Pierre Chevalier <pierrechevalier83@gmail.com>
+// SPDX-License-Identifier: GPL-2.0+
+
+#pragma once
+
+#define EE_HANDS
+>>>>>>> upstream/master

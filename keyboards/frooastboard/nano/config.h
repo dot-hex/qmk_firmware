@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -49,4 +50,6 @@
 #define RGBLIGHT_EFFECT_BREATHING
 #define RGBLIGHT_EFFECT_SNAKE
 
+=======
+>>>>>>> upstream/master
 #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD + 2

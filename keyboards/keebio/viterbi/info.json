@@ -1,7 +1,8 @@
 {
-    "keyboard_name": "Viterbi",
+    "manufacturer": "Keebio",
     "url": "https://keeb.io",
     "maintainer": "nooges",
+<<<<<<< HEAD
     "layouts": {
         "LAYOUT": {
             "layout": [
@@ -82,4 +83,15 @@
             ]
         }
     }
+=======
+    "usb": {
+        "vid": "0xCB10"
+    },
+    "split": {
+        "enabled": true
+    },
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
+    "community_layouts": ["ortho_5x14"]
+>>>>>>> upstream/master
 }

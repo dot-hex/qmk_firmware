@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -54,12 +55,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_BREATHING
 
 #define WS2812_SPI SPID1
+=======
+#define WS2812_SPI_DRIVER SPID1
+>>>>>>> upstream/master
 #define WS2812_SPI_MOSI_PAL_MODE 5
-
-#define RGBLIGHT_ANIMATIONS
-
-#define RGBLED_NUM 16
-#define RGB_DI_PIN A7
-#define DRIVER_LED_TOTAL RGBLED_NUM
-
-#define RGB_MATRIX_KEYPRESSES

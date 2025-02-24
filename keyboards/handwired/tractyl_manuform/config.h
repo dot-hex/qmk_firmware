@@ -18,11 +18,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID               0x44DD
 #define MANUFACTURER            Drashna
+=======
+>>>>>>> upstream/master
 
 /* disable debug print */
 // #define NO_DEBUG
@@ -34,8 +37,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master
 
 #define SPLIT_POINTING_ENABLE
 #define POINTING_DEVICE_TASK_THROTTLE_MS 1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -32,3 +33,9 @@ SRC += matrix.c TWIlib.c issi.c lighting.c
 
 DEFAULT_FOLDER = woodkeys/meira/promicro
 LAYOUTS = ortho_4x12
+=======
+CUSTOM_MATRIX = yes
+SRC += matrix.c
+
+DEFAULT_FOLDER = woodkeys/meira/promicro
+>>>>>>> upstream/master

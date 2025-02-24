@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,3 +19,6 @@ AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 
 DEFAULT_FOLDER = maple_computing/christmas_tree/V2017
+=======
+DEFAULT_FOLDER = maple_computing/christmas_tree/v2017
+>>>>>>> upstream/master

@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -31,4 +32,6 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 #define SLEEP_LED_GPT_DRIVER GPTD1

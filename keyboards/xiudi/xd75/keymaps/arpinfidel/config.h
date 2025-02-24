@@ -16,12 +16,16 @@
 
 #pragma once
 
-// place overrides here
-#define TAPPING_TOGGLE 2
+#include "quantum.h"
 
-#define MOUSEKEY_DELAY 0
-#define MOUSEKEY_MAX_SPEED 4
-#define MOUSEKEY_TIME_TO_MAX 5
+void capslock_led_init(void);
+void capslock_led_off(void);
+void capslock_led_on(void);
 
-#define MOUSEKEY_WHEEL_MAX_SPEED 1
-#define MOUSEKEY_WHEEL_TIME_TO_MAX 50
+void gp100_led_init(void);
+void gp100_led_off(void);
+void gp100_led_on(void);
+
+void gp103_led_init(void);
+void gp103_led_off(void);
+void gp103_led_on(void);

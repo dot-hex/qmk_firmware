@@ -16,7 +16,11 @@
 #include "spi_master.h"
 #include "adns.h"
 #include "debug.h"
+<<<<<<< HEAD:keyboards/molecule/adns.c
 #include "quantum.h"
+=======
+#include "wait.h"
+>>>>>>> upstream/master:keyboards/oddball/adns/adns.c
 #include "pointing_device.h"
 #include "adns9800_srom_A6.h"
 
@@ -193,6 +197,7 @@ void pointing_device_init(void) {
     adns_write(REG_LASER_CTRL0, laser_ctrl0 & 0xf0);
 
     wait_ms(1);
+<<<<<<< HEAD:keyboards/molecule/adns.c
 
     // set the configuration_I register to set the CPI
     // 0x01 = 50, minimum
@@ -201,6 +206,16 @@ void pointing_device_init(void) {
     // 0xA4 = 8200, maximum
     adns_write(REG_Configuration_I, 0x10);
 
+=======
+
+    // set the configuration_I register to set the CPI
+    // 0x01 = 50, minimum
+    // 0x44 = 3400, default
+    // 0x8e = 7100
+    // 0xA4 = 8200, maximum
+    adns_write(REG_Configuration_I, 0x10);
+
+>>>>>>> upstream/master:keyboards/oddball/adns/adns.c
     wait_ms(100);
     dprint("INIT ENDED\n");
 }
@@ -226,6 +241,7 @@ motion_delta_t readSensor(void) {
     for (int i = 0; i < pixel_sum; ++i) {
         burst_data[i] = spi_read();
     }
+<<<<<<< HEAD:keyboards/molecule/adns.c
 
     uint16_t delta_x = convertDeltaToInt(burst_data[delta_x_h], burst_data[delta_x_l]);
     uint16_t delta_y = convertDeltaToInt(burst_data[delta_y_h], burst_data[delta_y_l]);
@@ -251,4 +267,31 @@ void pointing_device_task(void) {
 
     pointing_device_set_report(report);
     pointing_device_send();
+=======
+
+    uint16_t delta_x = convertDeltaToInt(burst_data[delta_x_h], burst_data[delta_x_l]);
+    uint16_t delta_y = convertDeltaToInt(burst_data[delta_y_h], burst_data[delta_y_l]);
+    // Only consider the MSB for motion as this byte has other status bits
+    uint8_t motion_ind = burst_data[motion] & 0b10000000;
+    adns_end();
+
+    motion_delta_t delta = {delta_x, delta_y, motion_ind};
+    return delta;
+}
+
+bool pointing_device_task(void) {
+    motion_delta_t delta = readSensor();
+
+    report_mouse_t report = pointing_device_get_report();
+
+    if(delta.motion_ind) {
+        // clamp deltas from -127 to 127
+        report.x = delta.delta_x < -127 ? -127 : delta.delta_x > 127 ? 127 : delta.delta_x;
+        report.x = -report.x;
+        report.y = delta.delta_y < -127 ? -127 : delta.delta_y > 127 ? 127 : delta.delta_y;
+    }
+
+    pointing_device_set_report(report);
+    return pointing_device_send();
+>>>>>>> upstream/master:keyboards/oddball/adns/adns.c
 }

@@ -1,9 +1,7 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
@@ -25,5 +23,10 @@ CUSTOM_MATRIX = lite
 # project specific files
 SRC += matrix.c
 QUANTUM_LIB_SRC += uart.c
+=======
+CUSTOM_MATRIX = lite
+>>>>>>> upstream/master
 
-LAYOUTS = split_3x5_3 split_3x6_3
+# project specific files
+SRC += matrix.c
+UART_DRIVER_REQUIRED = yes

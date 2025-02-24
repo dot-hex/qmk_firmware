@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 // defines to set RGB-led behaviour. Off by default
 #define CAPS_LOCK_ENABLE false
 #define CAPS_LOCK_COLOR HSV_ORANGE
@@ -36,3 +37,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     {k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b, k3c, k3d}, \
     {k40, k41, k42, KC_NO, k44, KC_NO, k46, KC_NO, k48, KC_NO, k4a, k4b, k4c, k4d}, \
 }
+=======
+#define CAPS_LOCK_ENABLE true
+//#define CAPS_LOCK_COLOR HSV_ORANGE
+
+#include "quantum.h"
+>>>>>>> upstream/master

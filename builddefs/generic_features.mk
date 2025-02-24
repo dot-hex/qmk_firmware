@@ -13,22 +13,43 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+<<<<<<< HEAD
 SPACE_CADET_ENABLE ?= yes
 GRAVE_ESC_ENABLE ?= yes
 
 GENERIC_FEATURES = \
     COMBO \
     COMMAND \
+=======
+GRAVE_ESC_ENABLE ?= yes
+MAGIC_ENABLE ?= yes
+SEND_STRING_ENABLE ?= yes
+SPACE_CADET_ENABLE ?= yes
+
+GENERIC_FEATURES = \
+    AUTO_SHIFT \
+    AUTOCORRECT \
+    BOOTMAGIC \
+    CAPS_WORD \
+    COMBO \
+    COMMAND \
+    CRC \
+>>>>>>> upstream/master
     DEFERRED_EXEC \
     DIGITIZER \
     DIP_SWITCH \
     DYNAMIC_KEYMAP \
     DYNAMIC_MACRO \
+<<<<<<< HEAD
     ENCODER \
+=======
+    DYNAMIC_TAPPING_TERM \
+>>>>>>> upstream/master
     GRAVE_ESC \
     HAPTIC \
     KEY_LOCK \
     KEY_OVERRIDE \
+<<<<<<< HEAD
     LEADER \
     PROGRAMMABLE_BUTTON \
     SPACE_CADET \
@@ -37,11 +58,37 @@ GENERIC_FEATURES = \
     VELOCIKEY \
     WPM \
     DYNAMIC_TAPPING_TERM \
+=======
+    LAYER_LOCK \
+    LEADER \
+    MAGIC \
+    MOUSEKEY \
+    MUSIC \
+    OS_DETECTION \
+    PROGRAMMABLE_BUTTON \
+    REPEAT_KEY \
+    SECURE \
+    SEND_STRING \
+    SEQUENCER \
+    SPACE_CADET \
+    SWAP_HANDS \
+    TAP_DANCE \
+    TRI_LAYER \
+    VIA \
+    VIRTSER \
+    WPM \
+>>>>>>> upstream/master
 
 define HANDLE_GENERIC_FEATURE
     # $$(info "Processing: $1_ENABLE $2.c")
     SRC += $$(wildcard $$(QUANTUM_DIR)/process_keycode/process_$2.c)
+<<<<<<< HEAD
     SRC += $$(wildcard $$(QUANTUM_DIR)/$2.c)
+=======
+    SRC += $$(wildcard $$(QUANTUM_DIR)/$2/$2.c)
+    SRC += $$(wildcard $$(QUANTUM_DIR)/$2.c)
+    VPATH += $$(wildcard $$(QUANTUM_DIR)/$2/)
+>>>>>>> upstream/master
     OPT_DEFS += -D$1_ENABLE
 endef
 

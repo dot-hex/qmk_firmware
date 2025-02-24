@@ -28,6 +28,10 @@ void print_set_sendchar(sendchar_func_t send) {
     func = send;
 }
 
+<<<<<<< HEAD:quantum/logging/print.c
 void _putchar(char character) {
+=======
+void putchar_(char character) {
+>>>>>>> upstream/master:tmk_core/common/printf.c
     func(character);
 }

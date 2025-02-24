@@ -14,7 +14,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include_next "mcuconf.h"
+=======
+#pragma once
+
+#include_next <mcuconf.h>
+>>>>>>> upstream/master
 
 // The SysTick timer from the normal quantum/stm32 uses TIM2 -- the WS2812 pin used
 // on the Planck requires the use of TIM2 to run PWM -- rework which timers are

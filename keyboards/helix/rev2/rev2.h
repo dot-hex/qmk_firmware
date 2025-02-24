@@ -15,10 +15,14 @@
  */
 #pragma once
 
-#include "helix.h"
+#include "quantum.h"
 
 bool is_mac_mode(void);
 void set_mac_mode_kb(bool macmode);
+
+#ifdef OLED_ENABLE
+void render_helix_logo(void);
+#endif
 
 #ifndef SPLIT_KEYBOARD
     extern bool is_helix_master(void);
@@ -30,6 +34,7 @@ void set_mac_mode_kb(bool macmode);
 //  for the old keymap.c.
 extern uint8_t is_master; // 'is_master' will be obsolete, it is recommended to use 'is_keyboard_master ()' instead.
 #define has_usb() is_keyboard_master()
+<<<<<<< HEAD
 
 #if MATRIX_ROWS == 8 // HELIX_ROWS == 4
     #ifndef FLIP_HALF
@@ -114,3 +119,5 @@ extern uint8_t is_master; // 'is_master' will be obsolete, it is recommended to 
         }
     #endif
 #endif
+=======
+>>>>>>> upstream/master

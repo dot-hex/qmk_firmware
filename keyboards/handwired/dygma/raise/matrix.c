@@ -13,8 +13,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "quantum.h"
 #include "i2c_master.h"
+=======
+#include "matrix.h"
+#include "i2c_master.h"
+#include "wait.h"
+>>>>>>> upstream/master
 #include <string.h>
 #include "wire-protocol-constants.h"
 

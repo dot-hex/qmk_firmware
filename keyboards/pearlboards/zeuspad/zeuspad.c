@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "zeuspad.h"
 
 // Encoder rotate function
@@ -33,6 +34,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 // 21 characters max
 #ifdef OLED_ENABLE

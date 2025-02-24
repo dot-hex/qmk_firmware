@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define PRODUCT_ID  0x3537
@@ -54,17 +55,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* number of backlight levels */
 // #define BACKLIGHT_LEVELS 3
+=======
+#define SPLIT_TRANSPORT_MIRROR
+>>>>>>> upstream/master
 
 // #define DEBUG_LED_PIN                  D6
 
 #define ROTATIONAL_TRANSFORM_ANGLE     -25
 
+<<<<<<< HEAD
 /* Bootmagic Lite key configuration */
 #define BOOTMAGIC_LITE_ROW             0
 #define BOOTMAGIC_LITE_COLUMN          0
 #define BOOTMAGIC_LITE_ROW_RIGHT       4
 #define BOOTMAGIC_LITE_COLUMN_RIGHT    5
 
+=======
+>>>>>>> upstream/master
 #define AUDIO_PIN                      C6
 #define AUDIO_PIN_ALT                  B7
 
@@ -72,6 +79,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DYNAMIC_KEYMAP_LAYER_COUNT     16
 #define LAYER_STATE_16BIT
 
+<<<<<<< HEAD
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D3
 #define EE_HANDS
@@ -80,14 +88,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
+=======
+#define EE_HANDS
+
+>>>>>>> upstream/master
 /* disable action features */
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
 /* PMW3360 Settings */
 #define PMW3360_CS_PIN           B0
+=======
+
+/* PMW33XX Settings */
+#define PMW33XX_CS_PIN           B0
+>>>>>>> upstream/master
 
 #define POINTING_DEVICE_RIGHT

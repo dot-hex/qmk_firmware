@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 HorrorTroll <https://github.com/HorrorTroll>
+=======
+/* Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +31,7 @@
 // entirely and just use numbers.
 
 enum layer_names {
+<<<<<<< HEAD
     _BASE = 0,
     _WAVE = 1,
     _FN = 2
@@ -35,12 +40,27 @@ enum layer_names {
 // For CUSTOM_GRADIENT
 HSV gradient_0          = {205, 250, 255};
 HSV gradient_100        = {140, 215, 125};
+=======
+    _BASE,
+    _WAVE,
+    _FN,
+};
+
+// For CUSTOM_GRADIENT
+hsv_t gradient_0          = {205, 250, 255};
+hsv_t gradient_100        = {140, 215, 125};
+>>>>>>> upstream/master
 bool reflected_gradient = false;
 uint8_t gp_i            = 0;
 
 typedef struct {
+<<<<<<< HEAD
     HSV gradient_0;
     HSV gradient_1;
+=======
+    hsv_t gradient_0;
+    hsv_t gradient_1;
+>>>>>>> upstream/master
     bool reflected;
 } CUSTOM_PRESETS;
 
@@ -75,7 +95,11 @@ enum layer_keycodes {
     G_PRE,               //Gradient presets
     REF_G,               //Toggle between linear and reflected gradient
     G_FLIP,              //Flip the gradient colors
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> upstream/master
     //Custom led effect keycode
     RGB_C_E,             //Cycle user effect
 };
@@ -110,7 +134,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     {{205, 250, 255}, {140, 215, 125}, false },
     };
 
+<<<<<<< HEAD
     uint8_t gp_length = sizeof(gradient_presets)/sizeof(gradient_presets[0]);
+=======
+    uint8_t gp_length = ARRAY_SIZE(gradient_presets);
+>>>>>>> upstream/master
 
     switch (keycode) {
         case G1_HUI:
@@ -203,7 +231,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case G_FLIP:
             if (record->event.pressed) {
+<<<<<<< HEAD
                 HSV temp_color = gradient_0;
+=======
+                hsv_t temp_color = gradient_0;
+>>>>>>> upstream/master
                 gradient_0 = gradient_100;
                 gradient_100 = temp_color;
             }
@@ -212,12 +244,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 switch (rgb_matrix_get_mode()) {
                     case RGB_MATRIX_CUSTOM_CUSTOM_GRADIENT:
+<<<<<<< HEAD
                         rgb_matrix_mode(RGB_MATRIX_CUSTOM_DIAGONAL);
                         return false;
                     case RGB_MATRIX_CUSTOM_DIAGONAL:
                         rgb_matrix_mode(RGB_MATRIX_CUSTOM_COOL_DIAGONAL);
                         return false;
                     case RGB_MATRIX_CUSTOM_COOL_DIAGONAL:
+=======
+                        rgb_matrix_mode(RGB_MATRIX_CUSTOM_COOL_DIAGONAL);
+                        return false;
+                    case RGB_MATRIX_CUSTOM_COOL_DIAGONAL:
+                        rgb_matrix_mode(RGB_MATRIX_CUSTOM_FLOWER_BLOOMING);
+                        return false;
+                    case RGB_MATRIX_CUSTOM_FLOWER_BLOOMING:
+>>>>>>> upstream/master
                         rgb_matrix_mode(RGB_MATRIX_CUSTOM_KITT);
                         return false;
                     case RGB_MATRIX_CUSTOM_KITT:
@@ -229,7 +270,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
+<<<<<<< HEAD
         case RGB_TOG:
+=======
+        case QK_RGB_MATRIX_TOGGLE:
+>>>>>>> upstream/master
             if (record->event.pressed) {
                 switch (rgb_matrix_get_flags()) {
                     case LED_FLAG_ALL: {
@@ -252,6 +297,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+<<<<<<< HEAD
 void rgb_matrix_indicators_user(void) {
     uint8_t  side_leds_left[3]  = {17, 18, 19};
     uint8_t  side_leds_right[3] = { 4,  5,  6};
@@ -259,6 +305,15 @@ void rgb_matrix_indicators_user(void) {
     uint8_t time = scale16by8(g_rgb_timer, qadd8(32, 1));
     hsv.h        = time;
     RGB      rgb = hsv_to_rgb(hsv);
+=======
+bool rgb_matrix_indicators_user(void) {
+    uint8_t  side_leds_left[3]  = {17, 18, 19};
+    uint8_t  side_leds_right[3] = { 4,  5,  6};
+    hsv_t    hsv = rgb_matrix_config.hsv;
+    uint8_t time = scale16by8(g_rgb_timer, qadd8(32, 1));
+    hsv.h        = time;
+    rgb_t    rgb = hsv_to_rgb(hsv);
+>>>>>>> upstream/master
 
     if ((rgb_matrix_get_flags() & LED_FLAG_ALL)) {
         if (host_keyboard_led_state().caps_lock) {
@@ -297,4 +352,8 @@ void rgb_matrix_indicators_user(void) {
             }
         }
     }
+<<<<<<< HEAD
+=======
+    return false;
+>>>>>>> upstream/master
 }

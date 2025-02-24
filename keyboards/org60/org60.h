@@ -3,6 +3,9 @@
 #include "quantum.h"
 #include "led.h"
 
+#define ORG60_CAPS_LOCK_LED_PIN B2
+#define ORG60_BACKLIGHT_PIN F5
+
 /* Org60 LEDs
  *   GPIO pads
  *   0 F7 not connected
@@ -12,6 +15,7 @@
  *   B2 Capslock LED
  *   B0 not connected
  */
+<<<<<<< HEAD
 inline void org60_caps_led_on(void)    { DDRB |=  (1<<2); PORTB &= ~(1<<2); }
 inline void org60_bl_led_on(void)    	{ DDRF |=  (1<<5); PORTF &= ~(1<<5); }
 
@@ -48,3 +52,20 @@ inline void org60_bl_led_off(void)   	{ DDRF &= ~(1<<5); PORTF &= ~(1<<5); }
     { k30, XXX, k32, k33, k34, k35, k36, k37, k38, k39, k3A, k3B, XXX, k3D }, \
     { k40, k41, k42, XXX, XXX, k45, XXX, XXX, XXX, XXX, k4A, k4B, k4C, k4D } \
 }
+=======
+inline void org60_caps_led_on(void) {
+    gpio_set_pin_output(ORG60_CAPS_LOCK_LED_PIN);
+    gpio_write_pin_low(ORG60_CAPS_LOCK_LED_PIN);
+}
+inline void org60_bl_led_on(void) {
+    gpio_set_pin_output(ORG60_BACKLIGHT_PIN);
+    gpio_write_pin_low(ORG60_BACKLIGHT_PIN);
+}
+
+inline void org60_caps_led_off(void) {
+    gpio_set_pin_input(ORG60_CAPS_LOCK_LED_PIN);
+}
+inline void org60_bl_led_off(void) {
+    gpio_set_pin_input(ORG60_BACKLIGHT_PIN);
+}
+>>>>>>> upstream/master

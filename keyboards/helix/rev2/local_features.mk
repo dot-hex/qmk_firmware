@@ -38,6 +38,7 @@ ifneq ($(strip $(HELIX)),)
         $(call HELIX_OPTION_PARSE,$(A_OPTION_NAME))))
 
     SHOW_HELIX_OPTIONS = yes
+<<<<<<< HEAD
 endif
 
 ifneq ($(strip $(SPLIT_KEYBOARD)), yes)
@@ -56,18 +57,13 @@ ifneq ($(strip $(SPLIT_KEYBOARD)), yes)
   SRC += rev2/custom/split_util.c
   SRC += rev2/custom/split_scomm.c
   KEYBOARD_PATHS += $(HELIX_TOP_DIR)/rev2/custom
+=======
+>>>>>>> upstream/master
 endif
 
 ########
 # convert Helix-specific options (that represent combinations of standard options)
 #   into QMK standard options.
-
-ifneq ($(strip $(HELIX_ROWS)), 4)
-  ifneq ($(strip $(HELIX_ROWS)), 5)
-    $(error HELIX_ROWS = $(strip $(HELIX_ROWS)) is unexpected value)
-  endif
-endif
-OPT_DEFS += -DHELIX_ROWS=$(strip $(HELIX_ROWS))
 
 ifeq ($(strip $(LED_BACK_ENABLE)), yes)
   RGBLIGHT_ENABLE = yes
@@ -88,6 +84,7 @@ ifeq ($(strip $(LED_ANIMATIONS)), yes)
 endif
 
 ifeq ($(strip $(OLED_ENABLE)), yes)
+<<<<<<< HEAD
     ifeq ($(strip $(OLED_SELECT)),core)
         OLED_ENABLE = yes
         OLED_DRIVER = SSD1306
@@ -119,13 +116,22 @@ ifeq ($(strip $(OLED_ENABLE)), yes)
                 OPT_DEFS += -DLOCAL_GLCDFONT
             endif
         endif
+=======
+    ifeq ($(strip $(LOCAL_GLCDFONT)), yes)
+       OPT_DEFS += -DOLED_FONT_H=\<helixfont.h\>
+    else
+       OPT_DEFS += -DOLED_FONT_H=\"common/glcdfont.c\"
+>>>>>>> upstream/master
     endif
 endif
 
 ifneq ($(strip $(SHOW_HELIX_OPTIONS)),)
   $(info Helix Spacific Build Options)
   $(info -  OLED_ENABLE          = $(OLED_ENABLE))
+<<<<<<< HEAD
   $(info -  OLED_SELECT          = $(OLED_SELECT))
+=======
+>>>>>>> upstream/master
   $(info -  LED_BACK_ENABLE      = $(LED_BACK_ENABLE))
   $(info -  LED_UNDERGLOW_ENABLE = $(LED_UNDERGLOW_ENABLE))
   $(info -  LED_ANIMATIONS       = $(LED_ANIMATIONS))

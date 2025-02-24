@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,7 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes        # Rotary Encoder
 
 CUSTOM_MATRIX = lite        # Custom matrix for "Round-Robin Matrix"
+=======
+CUSTOM_MATRIX = lite
+>>>>>>> upstream/master
 SRC += matrix.c
-
-LTO_ENABLE = yes

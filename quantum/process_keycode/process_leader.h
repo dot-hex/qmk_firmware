@@ -16,9 +16,12 @@
 
 #pragma once
 
-#include "quantum.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include "action.h"
 
 bool process_leader(uint16_t keycode, keyrecord_t *record);
+<<<<<<< HEAD
 
 void leader_start(void);
 void leader_end(void);
@@ -41,3 +44,5 @@ void qk_leader_start(void);
 #else
 #    define LEADER_DICTIONARY() if (leading && timer_elapsed(leader_time) > LEADER_TIMEOUT)
 #endif
+=======
+>>>>>>> upstream/master

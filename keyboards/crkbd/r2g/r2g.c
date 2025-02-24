@@ -16,6 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+<<<<<<< HEAD
 #include "r2g.h"
 
 #ifdef RGB_MATRIX_ENABLE
@@ -180,6 +181,12 @@ void render_bootmagic_status_r2g(bool status) {
 }
 
 void oled_render_logo_r2g(void) {
+=======
+#include "quantum.h"
+
+#ifdef OLED_ENABLE
+void oled_render_logo(void) {
+>>>>>>> upstream/master
     static const char PROGMEM mb_logo[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
@@ -218,6 +225,7 @@ void oled_render_logo_r2g(void) {
     //oled_set_cursor(oled_max_chars()/2,oled_max_lines()/2);
     //oled_write_P(PSTR("R2G"), false);
 }
+<<<<<<< HEAD
 
 bool oled_task_kb(void) {
     if (!oled_task_user()) { return false; }
@@ -238,3 +246,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 }
 #endif // OLED_ENABLE
 
+=======
+#endif
+>>>>>>> upstream/master

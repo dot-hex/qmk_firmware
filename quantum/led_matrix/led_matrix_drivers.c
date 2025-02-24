@@ -15,7 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "led_matrix.h"
+=======
+#include "led_matrix_drivers.h"
+>>>>>>> upstream/master
 
 /* Each driver needs to define a struct:
  *
@@ -25,6 +29,7 @@
  * in their own files.
  */
 
+<<<<<<< HEAD
 #if defined(IS31FL3731) || defined(IS31FL3733) || defined(IS31FLCOMMON)
 #    include "i2c_master.h"
 
@@ -195,4 +200,110 @@ const led_matrix_driver_t led_matrix_driver = {
     .set_value_all = IS31FL_simple_set_brigntness_all,
 };
 #    endif
+=======
+#if defined(LED_MATRIX_IS31FL3218)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3218_init,
+    .flush         = is31fl3218_update_pwm_buffers,
+    .set_value     = is31fl3218_set_value,
+    .set_value_all = is31fl3218_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3236)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3236_init_drivers,
+    .flush         = is31fl3236_flush,
+    .set_value     = is31fl3236_set_value,
+    .set_value_all = is31fl3236_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3729)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3729_init_drivers,
+    .flush         = is31fl3729_flush,
+    .set_value     = is31fl3729_set_value,
+    .set_value_all = is31fl3729_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3731)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3731_init_drivers,
+    .flush         = is31fl3731_flush,
+    .set_value     = is31fl3731_set_value,
+    .set_value_all = is31fl3731_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3733)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3733_init_drivers,
+    .flush         = is31fl3733_flush,
+    .set_value     = is31fl3733_set_value,
+    .set_value_all = is31fl3733_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3736)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3736_init_drivers,
+    .flush         = is31fl3736_flush,
+    .set_value     = is31fl3736_set_value,
+    .set_value_all = is31fl3736_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3737)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3737_init_drivers,
+    .flush         = is31fl3737_flush,
+    .set_value     = is31fl3737_set_value,
+    .set_value_all = is31fl3737_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3741)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3741_init_drivers,
+    .flush         = is31fl3741_flush,
+    .set_value     = is31fl3741_set_value,
+    .set_value_all = is31fl3741_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3742A)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3742a_init_drivers,
+    .flush         = is31fl3742a_flush,
+    .set_value     = is31fl3742a_set_value,
+    .set_value_all = is31fl3742a_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3743A)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3743a_init_drivers,
+    .flush         = is31fl3743a_flush,
+    .set_value     = is31fl3743a_set_value,
+    .set_value_all = is31fl3743a_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3745)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3745_init_drivers,
+    .flush         = is31fl3745_flush,
+    .set_value     = is31fl3745_set_value,
+    .set_value_all = is31fl3745_set_value_all,
+};
+
+#elif defined(LED_MATRIX_IS31FL3746A)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = is31fl3746a_init_drivers,
+    .flush         = is31fl3746a_flush,
+    .set_value     = is31fl3746a_set_value,
+    .set_value_all = is31fl3746a_set_value_all,
+};
+
+#elif defined(LED_MATRIX_SNLED27351)
+const led_matrix_driver_t led_matrix_driver = {
+    .init          = snled27351_init_drivers,
+    .flush         = snled27351_flush,
+    .set_value     = snled27351_set_value,
+    .set_value_all = snled27351_set_value_all,
+};
+
+>>>>>>> upstream/master
 #endif

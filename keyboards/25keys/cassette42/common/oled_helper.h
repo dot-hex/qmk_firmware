@@ -1,3 +1,8 @@
+<<<<<<< HEAD:keyboards/25keys/cassette42/common/oled_helper.h
+=======
+#pragma once
+
+>>>>>>> upstream/master:keyboards/cassette42/common/oled_helper.h
 #ifdef OLED_ENABLE
 
 void render_logo(void);

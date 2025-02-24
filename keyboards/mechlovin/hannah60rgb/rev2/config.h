@@ -1,9 +1,9 @@
 #pragma once
 
-#define PRODUCT_ID   0x6002
-#define DEVICE_VER   0x0001
-#define PRODUCT      Hannah60 RGB Rev.2
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_SDA
 
+<<<<<<< HEAD
 #ifdef RGBLIGHT_ENABLE
 #    define RGB_DI_PIN A15
 #    define RGBLED_NUM      18
@@ -86,3 +86,6 @@
 #if defined(RGBLIGHT_ENABLE) && defined(RGB_MATRIX_ENABLE)
 #    define RGB_MATRIX_DISABLE_KEYCODES
 #endif
+=======
+#define RGB_MATRIX_DISABLE_SHARED_KEYCODES
+>>>>>>> upstream/master

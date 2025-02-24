@@ -4,12 +4,12 @@
 #include "pointing_device.h"
 #include "quantum.h"
 
-#define red_led_off()   writePinHigh(F6)
-#define red_led_on()    writePinLow(F6)
-#define blu_led_off()   writePinHigh(F5)
-#define blu_led_on()    writePinLow(F5)
-#define grn_led_off()   writePinHigh(D1)
-#define grn_led_on()    writePinLow(D1)
+#define red_led_off()   gpio_write_pin_high(F6)
+#define red_led_on()    gpio_write_pin_low(F6)
+#define blu_led_off()   gpio_write_pin_high(F5)
+#define blu_led_on()    gpio_write_pin_low(F5)
+#define grn_led_off()   gpio_write_pin_high(D1)
+#define grn_led_on()    gpio_write_pin_low(D1)
 
 #define red_led(flag)   if (flag) red_led_on(); else red_led_off()
 #define blu_led(flag)   if (flag) blu_led_on(); else blu_led_off()
@@ -23,6 +23,7 @@
 #define set_led_magenta() red_led_on();  grn_led_off(); blu_led_on()
 #define set_led_cyan()    red_led_off(); grn_led_on();  blu_led_on()
 #define set_led_white()   red_led_on();  grn_led_on();  blu_led_on()
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -42,3 +43,5 @@
     { XXX, XXX, XXX, k33, k34, k35, k36, k37, k38, XXX, XXX, XXX }, \
     { XXX, XXX, k42, k43, k44, k45, k46, k47, k48, k49, XXX, XXX } \
 }
+=======
+>>>>>>> upstream/master

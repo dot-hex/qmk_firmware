@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 
 SPLIT_KEYBOARD = yes       # Enables split keyboard support
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = omkbd/ergodash/rev1

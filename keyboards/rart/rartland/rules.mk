@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32a
 
@@ -25,3 +26,7 @@ OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
 
 LAYOUTS = 65_ansi 65_iso
+=======
+# Processor frequency
+F_CPU = 16000000
+>>>>>>> upstream/master

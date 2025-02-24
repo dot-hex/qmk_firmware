@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,8 @@ AUDIO_ENABLE = no           # Audio output
 
 CUSTOM_MATRIX = lite
 SRC += matrix.c
+=======
+CUSTOM_MATRIX = lite
+VPATH += drivers/gpio
+SRC += matrix.c sn74x154.c
+>>>>>>> upstream/master

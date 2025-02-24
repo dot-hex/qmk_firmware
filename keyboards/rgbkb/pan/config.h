@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x5247  // "RG" - RGBKB
@@ -90,3 +91,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+#define RGB_MATRIX_LED_COUNT 64
+#define WS2812_LED_COUNT 64
+>>>>>>> upstream/master

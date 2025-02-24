@@ -3,6 +3,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -115,6 +116,9 @@
  *
  */
 //#define FORCE_NKRO
+=======
+#define MASTER_RIGHT
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -131,6 +135,7 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -146,3 +151,5 @@
 #define ENCODERS_PAD_A_RIGHT { D2 }
 #define ENCODERS_PAD_B_RIGHT { D4 }
 #define ENCODER_RESOLUTIONS_RIGHT {4}
+=======
+>>>>>>> upstream/master

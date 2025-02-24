@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## chip/board settings
 # - the next two should match the directories in
 #   <chibios>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
@@ -46,3 +47,14 @@ CUSTOM_MATRIX = lite
 # project specific files
 SRC += matrix.c tca6424.c aw9523b.c
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+# custom bootloader
+MCU_LDSCRIPT = abelx_boot
+BOARD = abelx_bd
+
+CUSTOM_MATRIX = lite
+# project specific files
+SRC += matrix.c tca6424.c aw9523b.c
+I2C_DRIVER_REQUIRED = yes
+WS2812_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

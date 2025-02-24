@@ -18,18 +18,30 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_ortho_2x3(
+<<<<<<< HEAD
         KC_CAPSLOCK,  MO(1), KC_PGUP,
         KC_DEL,  KC_END,  KC_PGDN
     ),
     [1] = LAYOUT_ortho_2x3(
         KC_CAPSLOCK,  MO(1), KC_PGUP,
+=======
+        KC_CAPS,  MO(1), KC_PGUP,
+        KC_DEL,  KC_END,  KC_PGDN
+    ),
+    [1] = LAYOUT_ortho_2x3(
+        KC_CAPS,  MO(1), KC_PGUP,
+>>>>>>> upstream/master
         KC_DEL,  KC_END,  KC_PGDN
     ),
 
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
+<<<<<<< HEAD
     writePin(D0, IS_LAYER_ON_STATE(state, 1));
+=======
+    gpio_write_pin(D0, IS_LAYER_ON_STATE(state, 1));
+>>>>>>> upstream/master
     
     return state;
 }

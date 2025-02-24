@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -46,11 +47,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+=======
+>>>>>>> upstream/master
 /* Audio Function */
 #define AUDIO_CLICKY
 #define AUDIO_PIN C6
 
 /* Haptic feedback */
+<<<<<<< HEAD
 #define FB_ERM_LRA 0
 #define FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
 #define FB_LOOPGAIN 1 // For  Low:0, Medium:1, High:2, Very High:3
@@ -92,3 +96,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+#define DRV2605L_FB_ERM_LRA 0
+#define DRV2605L_FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
+#define DRV2605L_FB_LOOPGAIN 1 // For  Low:0, Medium:1, High:2, Very High:3
+/* Motor settings */
+#define DRV2605L_RATED_VOLTAGE 3
+#define DRV2605L_V_PEAK 5
+>>>>>>> upstream/master

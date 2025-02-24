@@ -21,6 +21,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 
 #define LAYOUT_tkl_iso( \
     K000,       K001, K002, K003, K004, K005, K006, K007, K008, K009, K010, K011, K012,          K013, K014, K015, \
@@ -56,6 +57,8 @@
 	{ K500,  K501,  K502, KC_NO, KC_NO, KC_NO,  K506,  K509,  K510,  K511,  K512,  K513,  K514, KC_NO, K515,KC_NO}, \
 }
 
+=======
+>>>>>>> upstream/master
 void set_pin(uint16_t pin);
 void clear_pin(uint16_t pin);
 uint8_t read_pin(uint16_t pin);

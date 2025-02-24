@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define ___ KC_NO
 
 /* This is a shortcut to help you visually see your layout.
@@ -220,6 +221,8 @@
     { k40, k41, k42, k43 }, \
     { k50, k51, k52, ___ } \
 }
+=======
+>>>>>>> upstream/master
 // Add backwards compatibility for existing keymaps
 #define cospad_bl_led_on   backlight_enable
 #define cospad_bl_led_off  backlight_disable

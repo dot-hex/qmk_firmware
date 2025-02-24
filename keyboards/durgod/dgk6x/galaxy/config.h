@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /* Copyright 2021 Don Kjer
+=======
+<<<<<<< HEAD:keyboards/mode/m80v1/halconf.h
+/* Copyright 2020 QMK
+=======
+/* Copyright 2021 Don Kjer
+>>>>>>> upstream/master:keyboards/durgod/dgk6x/galaxy/config.h
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +24,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -35,3 +44,10 @@
 #define DRIVER_1_LED_TOTAL 58
 #define DRIVER_2_LED_TOTAL 26
 #endif
+=======
+<<<<<<< HEAD:keyboards/mode/m80v1/halconf.h
+#include_next <halconf.h>
+=======
+#define CAPS_LED 46
+>>>>>>> upstream/master:keyboards/durgod/dgk6x/galaxy/config.h
+>>>>>>> upstream/master

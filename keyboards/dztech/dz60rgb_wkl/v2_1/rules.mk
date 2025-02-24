@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,3 +23,6 @@ RGB_MATRIX_DRIVER = IS31FL3733
 LTO_ENABLE = yes
 
 LAYOUTS = 60_tsangan_hhkb
+=======
+BOOTLOADER_SIZE = 6144
+>>>>>>> upstream/master

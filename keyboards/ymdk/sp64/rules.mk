@@ -1,6 +1,6 @@
-# MCU name
-MCU = atmega32a
+AUDIO_SUPPORTED = no
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = bootloadhid
 
@@ -16,10 +16,9 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 #BACKLIGHT_ENABLE = yes       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no    # There is no speaker on this PCB
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 
-# Needed for underglow
-WS2812_DRIVER = i2c
-
-SRC += matrix.c 
-QUANTUM_LIB_SRC += i2c_master.c
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes

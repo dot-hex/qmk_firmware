@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,6 +19,8 @@ RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 
 SRC += matrix.c

@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:keyboards/carbo65/carbo65.c
  #include "carbo65.h"
+=======
+ #include "quantum.h"
+>>>>>>> upstream/master:users/talljoe/visualizer.c
 
 void led_init_ports(void) {
     // Set our LED pins as open drain outputs

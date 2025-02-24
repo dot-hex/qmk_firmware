@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,10 +19,11 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE        = yes # Enable keyboard backlight functionality
 SWAP_HANDS_ENABLE       = no  # Disable Onehand
 RGBLIGHT_ENABLE         = no
+=======
+CUSTOM_MATRIX           = yes # Custom matrix file for the ErgoDone
+>>>>>>> upstream/master
 
 # project specific files
 SRC =  matrix.c     \
-	   i2c_master.c \
        left.c
-
-LAYOUTS = ergodox
+I2C_DRIVER_REQUIRED = yes

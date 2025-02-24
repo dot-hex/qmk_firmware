@@ -1,42 +1,28 @@
+// Copyright 2022 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #include QMK_KEYBOARD_H
-#include "uzu42.h"
-#ifdef PROTOCOL_LUFA
-  #include "lufa.h"
-  #include "split_util.h"
-#endif
-#ifdef SSD1306OLED
-  #include "ssd1306.h"
-#endif
-
-
-#ifdef RGBLIGHT_ENABLE
-#include <stdio.h>
-//Following line allows macro to read current RGB settings
-extern rgblight_config_t rgblight_config;
-#endif
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 enum layer_number {
-  _QWERTY = 0,
-  _LOWER,
-  _RAISE,
-  _ADJUST,
+    _QWERTY = 0,
+    _LOWER,
+    _RAISE,
+    _ADJUST,
 };
 
 enum custom_keycodes {
-  QWERTY = SAFE_RANGE,
-  LOWER,
-  RAISE,
-  ADJUST,
-  RGBRST
+    RGBRST = SAFE_RANGE,
 };
 
-#define KC_CTES  CTL_T(KC_ESC)
-#define KC_SFSP  SFT_T(KC_SPC)
-#define KC_ALBS  ALT_T(KC_BSPC)
+#define KC_CTES CTL_T(KC_ESC)
+#define KC_SFSP SFT_T(KC_SPC)
+#define KC_ALBS ALT_T(KC_BSPC)
+#define LOWER MO(_LOWER)
+#define RAISE MO(_RAISE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
@@ -79,15 +65,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,---------------------------------------.                  ,---------------------------------------.
        KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,                     KC_F6,  KC_F7,  KC_F8,  KC_F9, KC_F10,
   //|-------+-------+-------+-------+-------|                  |-------+-------+-------+-------+-------|
+<<<<<<< HEAD
       KC_F11, KC_F12,  RESET,KC_PSCR, KC_INS,                   RGB_TOG,RGB_HUI,RGB_SAI,RGB_VAI,XXXXXXX,
   //|-------+-------+-------+-------+-------|                  |-------+-------+-------+-------+-------|
      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                   RGB_MOD,RGB_HUD,RGB_SAD,RGB_VAD,RGBRST,
+=======
+      KC_F11, KC_F12,  QK_BOOT,KC_PSCR, KC_INS,                   UG_TOGG,UG_HUEU,UG_SATU,UG_VALU,XXXXXXX,
+  //|-------+-------+-------+-------+-------|                  |-------+-------+-------+-------+-------|
+     XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                   UG_NEXT,UG_HUED,UG_SATD,UG_VALD,RGBRST,
+>>>>>>> upstream/master
   //|-------+-------+-------+-------+-------+-------|  |-------+-------+-------+-------+-------+-------|
      _______,_______,_______,_______,_______,_______,   _______,_______,_______,_______,_______,_______
   //|-------+-------+-------+-------+-------+-------|  |-------+-------+-------+-------+-------+-------|
   )
 };
 
+<<<<<<< HEAD
 int RGB_current_mode;
 
 // Setting ADJUST layer RGB back to default
@@ -279,14 +272,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-#ifdef RGBLIGHT_ENABLE
-
-char rbf_info_str[24];
-const char *read_rgb_info(void) {
-
-  snprintf(rbf_info_str, sizeof(rbf_info_str), "%s %2d h%3d s%3d v%3d",
-    rgblight_config.enable ? "on" : "- ", rgblight_config.mode,
-    rgblight_config.hue, rgblight_config.sat, rgblight_config.val);
-  return rbf_info_str;
+=======
+layer_state_t layer_state_set_user(layer_state_t state) {
+    return update_tri_layer_state(state, _RAISE, _LOWER, _ADJUST);
 }
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RGBRST:
+>>>>>>> upstream/master
+#ifdef RGBLIGHT_ENABLE
+            if (record->event.pressed) {
+                eeconfig_update_rgblight_default();
+                rgblight_enable();
+            }
 #endif
+            break;
+    }
+    return true;
+}

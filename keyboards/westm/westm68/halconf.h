@@ -14,7 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 #pragma once
 
 #define HAL_USE_PWM TRUE

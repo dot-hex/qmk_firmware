@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -43,10 +44,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define SOFT_SERIAL_PIN D2
 
+=======
+>>>>>>> upstream/master
 //#define EE_HANDS
 
 #define SPLIT_USB_DETECT
 #define SPLIT_USB_TIMEOUT 500
+<<<<<<< HEAD
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
@@ -65,12 +69,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+>>>>>>> upstream/master
 
-/* ws2812 RGB LED */
-#ifdef RGBLIGHT_ENABLE
-  #define RGB_DI_PIN B5
-  #define RGBLED_NUM 18    // Number of LEDs */
-#endif
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -86,5 +87,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

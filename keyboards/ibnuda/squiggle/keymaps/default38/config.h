@@ -20,6 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #define COMBO_TERM 100
+<<<<<<< HEAD
 #define COMBO_COUNT 38
 #define IGNORE_MOD_TAP_INTERRUPT
+=======
+>>>>>>> upstream/master
 #define PERMISSIVE_HOLD

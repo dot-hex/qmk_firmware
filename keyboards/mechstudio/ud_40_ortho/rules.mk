@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u2
 
@@ -19,6 +20,8 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = ortho_4x12
 
+=======
+>>>>>>> upstream/master
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no

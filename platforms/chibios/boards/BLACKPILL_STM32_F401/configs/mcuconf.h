@@ -32,7 +32,15 @@
  */
 
 #define STM32F4xx_MCUCONF
+<<<<<<< HEAD
 #define STM32F401_MCUCONF
+=======
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
+#define STM32F411_MCUCONF
+=======
+#define STM32F401_MCUCONF
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+>>>>>>> upstream/master
 
 /*
  * HAL driver system settings.
@@ -48,12 +56,27 @@
 #define STM32_CLOCK48_REQUIRED              TRUE
 #define STM32_SW                            STM32_SW_PLL
 #define STM32_PLLSRC                        STM32_PLLSRC_HSE
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
+#define STM32_PLLM_VALUE                    8
+#define STM32_PLLN_VALUE                    192
+#define STM32_PLLP_VALUE                    2
+#define STM32_PLLQ_VALUE                    4
+#define STM32_HPRE                          STM32_HPRE_DIV1
+#define STM32_PPRE1                         STM32_PPRE1_DIV2
+=======
+>>>>>>> upstream/master
 #define STM32_PLLM_VALUE                    25
 #define STM32_PLLN_VALUE                    336
 #define STM32_PLLP_VALUE                    4
 #define STM32_PLLQ_VALUE                    7
 #define STM32_HPRE                          STM32_HPRE_DIV1
 #define STM32_PPRE1                         STM32_PPRE1_DIV4
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+>>>>>>> upstream/master
 #define STM32_PPRE2                         STM32_PPRE2_DIV2
 #define STM32_RTCSEL                        STM32_RTCSEL_LSI
 #define STM32_RTCPRE_VALUE                  8
@@ -112,7 +135,11 @@
 #define STM32_GPT_USE_TIM1                  FALSE
 #define STM32_GPT_USE_TIM2                  FALSE
 #define STM32_GPT_USE_TIM3                  FALSE
+<<<<<<< HEAD
 #define STM32_GPT_USE_TIM4                  FALSE
+=======
+#define STM32_GPT_USE_TIM4                  TRUE
+>>>>>>> upstream/master
 #define STM32_GPT_USE_TIM5                  FALSE
 #define STM32_GPT_USE_TIM9                  FALSE
 #define STM32_GPT_USE_TIM10                 FALSE
@@ -121,7 +148,11 @@
 /*
  * I2C driver system settings.
  */
+<<<<<<< HEAD
 #define STM32_I2C_USE_I2C1                  FALSE
+=======
+#define STM32_I2C_USE_I2C1                  TRUE
+>>>>>>> upstream/master
 #define STM32_I2C_USE_I2C2                  FALSE
 #define STM32_I2C_USE_I2C3                  FALSE
 #define STM32_I2C_BUSY_TIMEOUT              50
@@ -177,6 +208,20 @@
 #define STM32_PWM_USE_TIM9                  FALSE
 #define STM32_PWM_USE_TIM10                 FALSE
 #define STM32_PWM_USE_TIM11                 FALSE
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
+
+/*
+ * RTC driver system settings.
+ */
+#define STM32_RTC_PRESA_VALUE               32
+#define STM32_RTC_PRESS_VALUE               1024
+#define STM32_RTC_CR_INIT                   0
+#define STM32_RTC_TAMPCR_INIT               0
+=======
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+>>>>>>> upstream/master
 
 /*
  * SERIAL driver system settings.

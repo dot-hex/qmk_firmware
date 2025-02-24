@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 <<<<<<< HEAD
 MCU = atmega32a
@@ -27,6 +28,8 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = yes
 RGBLIGHT_ENABLE = yes
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 SRC += matrix.c

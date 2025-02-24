@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 /* Copyright 2021 bdtc123
  * Copyright 2021 sigprof
  * Copyright 2021 peepeetee
+=======
+<<<<<<< HEAD:keyboards/splitkb/kyria/keymaps/lw/config.h
+/* Copyright 2022 Lucas Waelti (@LucasWaelti)
+=======
+/* Copyright 2021 bdtc123
+ * Copyright 2021 sigprof
+ * Copyright 2021 peepeetee
+>>>>>>> upstream/master:keyboards/kprepublic/bm60hsrgb_iso/rev2/config.h
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +27,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -139,10 +150,25 @@
 #define ISSI_LED_TOTAL DRIVER_1_LED_TOTAL
 
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 180
+=======
+<<<<<<< HEAD:keyboards/splitkb/kyria/keymaps/lw/config.h
+// Lets you roll mod-tap keys
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// If you are using an Elite C rev3 on the slave side, uncomment the lines below:
+// #define SPLIT_USB_DETECT
+// #define NO_USB_STARTUP_CHECK
+
+#define UNICODE_SELECTED_MODES UC_LNX, UC_WINC // support for Linux and Windows unicode 
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_LED_COUNT 64
+>>>>>>> upstream/master
 
 // Underglow LEDs are WS2812, but someone might want to use RGBLIGHT for them;
 // don't use those LEDs in RGB Matrix in that case.
 #ifdef RGBLIGHT_ENABLE
+<<<<<<< HEAD
 #    define WS2812_LED_TOTAL 0
 #else
 #    define WS2812_LED_TOTAL RGBLED_NUM
@@ -154,3 +180,12 @@
 #    define RGB_MATRIX_KEYPRESSES
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #endif
+=======
+#    define WS2812_LED_COUNT 0
+#else
+#    define WS2812_LED_COUNT 6
+#endif
+
+#define RGB_MATRIX_LED_COUNT (IS31FL3733_LED_COUNT + WS2812_LED_COUNT)
+>>>>>>> upstream/master:keyboards/kprepublic/bm60hsrgb_iso/rev2/config.h
+>>>>>>> upstream/master

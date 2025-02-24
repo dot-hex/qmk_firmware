@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Naoto Takai
+Copyright 2020 Gondolindrim
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,19 +17,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+#define BACKLIGHT_PWM_DRIVER PWMD3
+#define BACKLIGHT_PWM_CHANNEL 1
+#define BACKLIGHT_PAL_MODE 1
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x524B // recompile keys
-#define PRODUCT_ID      0x4362 // Choco60
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    recompile keys
-#define PRODUCT         Choco60
+#define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_MODE_RAINBOW_SWIRL + 5)
 
-/* key matrix size */
-#define MATRIX_ROWS 10
-#define MATRIX_COLS 9
+// Elongate has six indicator LEDs. These def's are the indicator pin defs. The LEDs are distributed in two clusters: one next to the numpad and another between spacebars; LEDs are numbered top-to-bottom.
 
-/* Bootmagic Lite key configuration */
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 0
+#define LED1_PIN A2
+#define LED2_PIN A1
+#define LED3_PIN A0
+#define LED4_PIN A4
+#define LED5_PIN A3
+#define LED6_PIN F1

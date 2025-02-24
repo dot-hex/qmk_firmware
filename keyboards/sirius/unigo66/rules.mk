@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,6 +20,8 @@ AUDIO_ENABLE = no           # Audio output
 
 USB_HID_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 SRC += custom_matrix.cpp\
 	main.c

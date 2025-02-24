@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,9 @@ RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 SPLIT_KEYBOARD = yes
 
 DEFAULT_FOLDER = redox/rev1
+=======
+DEFAULT_FOLDER = redox/rev1/base
+>>>>>>> upstream/master
 
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no

@@ -15,8 +15,53 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #if defined(BOOTMAGIC_LITE)
 #    include "bootmagic_lite.h"
 #endif
 
 void bootmagic(void);
+=======
+// ======== DEPRECATED DEFINES - DO NOT USE ========
+#ifdef BOOTMAGIC_LITE_ROW
+#    define BOOTMAGIC_ROW BOOTMAGIC_LITE_ROW
+#endif
+#ifdef BOOTMAGIC_LITE_COLUMN
+#    define BOOTMAGIC_COLUMN BOOTMAGIC_LITE_COLUMN
+#endif
+#ifdef BOOTMAGIC_LITE_ROW_RIGHT
+#    define BOOTMAGIC_ROW_RIGHT BOOTMAGIC_LITE_ROW_RIGHT
+#endif
+#ifdef BOOTMAGIC_LITE_COLUMN_RIGHT
+#    define BOOTMAGIC_COLUMN_RIGHT BOOTMAGIC_LITE_COLUMN_RIGHT
+#endif
+// ========
+
+#ifndef BOOTMAGIC_COLUMN
+#    define BOOTMAGIC_COLUMN 0
+#endif
+#ifndef BOOTMAGIC_ROW
+#    define BOOTMAGIC_ROW 0
+#endif
+
+<<<<<<< HEAD:platforms/chibios/gpio.h
+/* Operation of GPIO by pin. */
+
+#define setPinInput(pin) palSetLineMode((pin), PAL_MODE_INPUT)
+#define setPinInputHigh(pin) palSetLineMode((pin), PAL_MODE_INPUT_PULLUP)
+#define setPinInputLow(pin) palSetLineMode((pin), PAL_MODE_INPUT_PULLDOWN)
+#define setPinOutputPushPull(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_PUSHPULL)
+#define setPinOutputOpenDrain(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_OPENDRAIN)
+#define setPinOutput(pin) setPinOutputPushPull(pin)
+
+#define writePinHigh(pin) palSetLine(pin)
+#define writePinLow(pin) palClearLine(pin)
+#define writePin(pin, level) ((level) ? (writePinHigh(pin)) : (writePinLow(pin)))
+
+#define readPin(pin) palReadLine(pin)
+
+#define togglePin(pin) palToggleLine(pin)
+=======
+void bootmagic(void);
+>>>>>>> upstream/master:quantum/bootmagic/bootmagic.h
+>>>>>>> upstream/master

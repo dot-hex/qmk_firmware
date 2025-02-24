@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "split65.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 // OLED Code inspired by https://github.com/qmk/qmk_firmware/blob/master/keyboards/splitkb/kyria/rev1/rev1.c
 

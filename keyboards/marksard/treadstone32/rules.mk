@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -15,4 +16,6 @@ AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 LEADER_ENABLE = no
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = marksard/treadstone32/rev1

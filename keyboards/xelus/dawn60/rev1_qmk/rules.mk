@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -25,13 +26,25 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight. - We have custom RGB
 
 RGB_MATRIX_ENABLE = yes     # Enable RGB matrix effects.
 RGB_MATRIX_DRIVER = custom  # Enable RGB matrix effects.
+=======
+# Do not put the microcontroller into power saving mode
+# when we get USB suspend event. We want it to keep updating
+# backlight effects.
+NO_SUSPEND_POWER_DOWN = yes
+>>>>>>> upstream/master
 
-COMMON_VPATH += $(DRIVER_PATH)/issi
+I2C_DRIVER_REQUIRED = yes
+WS2812_DRIVER_REQUIRED = yes
 
 # project specific files
+<<<<<<< HEAD
 SRC +=  drivers/led/issi/is31fl3731.c \
         ws2812.c
 
 QUANTUM_LIB_SRC += i2c_master.c 
 
 LTO_ENABLE = yes
+=======
+COMMON_VPATH += $(DRIVER_PATH)/issi
+SRC +=  drivers/led/issi/is31fl3731.c
+>>>>>>> upstream/master

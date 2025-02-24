@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -64,6 +65,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   define RGBLIGHT_LIMIT_VAL 255
 #endif
 
+=======
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 #   define OLED_DISPLAY_128X64
 #   define OLED_TIMEOUT 60000

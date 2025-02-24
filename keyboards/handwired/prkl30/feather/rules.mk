@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = caterina
@@ -23,3 +21,5 @@ RGBLIGHT_ENABLE  = no       # This can be enabled if a ws2812 strip is connected
 
 BLUETOOTH_ENABLE = yes
 BLUETOOTH_DRIVER = BluefruitLE
+=======
+>>>>>>> upstream/master

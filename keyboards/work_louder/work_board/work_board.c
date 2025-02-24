@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "work_board.h"
 
 #if !defined(VIA_ENABLE) && defined(ENCODER_ENABLE)
@@ -29,6 +30,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef OLED_ENABLE
 #    ifdef RGB_MATRIX_ENABLE
@@ -81,6 +85,7 @@ bool oled_task_kb(void) {
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
+<<<<<<< HEAD
 // clang-format off
 led_config_t g_led_config = { {
     { 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 },
@@ -128,6 +133,25 @@ void keyboard_pre_init_kb(void) {
     writePinLow(B2);
     writePinLow(B3);
     writePinLow(B7);
+=======
+bool rgb_matrix_indicators_kb(void) {
+    if (!rgb_matrix_indicators_user()) {
+        return false;
+    }
+    rgb_matrix_set_color(5, 0, 0, 0);
+    rgb_matrix_set_color(7, 0, 0, 0);
+    return true;
+}
+
+void keyboard_pre_init_kb(void) {
+    gpio_set_pin_output(B2);
+    gpio_set_pin_output(B3);
+    gpio_set_pin_output(B7);
+
+    gpio_write_pin_low(B2);
+    gpio_write_pin_low(B3);
+    gpio_write_pin_low(B7);
+>>>>>>> upstream/master
 
     keyboard_pre_init_user();
 }

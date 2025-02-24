@@ -1,4 +1,8 @@
+<<<<<<< HEAD:keyboards/mt84/keymaps/default/config.h
 /* Copyright 2021 QMK
+=======
+/* Copyright 2021 Dan Nixon
+>>>>>>> upstream/master:keyboards/aya/config.h
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,4 +20,8 @@
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/mt84/keymaps/default/config.h
 #define LAYER_STATE_8BIT
+=======
+#define USE_I2C
+>>>>>>> upstream/master:keyboards/aya/config.h

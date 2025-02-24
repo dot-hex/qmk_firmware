@@ -13,6 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x4B42
@@ -55,3 +56,9 @@
 #define RGBLIGHT_SLEEP
 #endif
 #define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
+=======
+
+#pragma once
+
+#define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_EFFECT_RAINBOW_MOOD + 8)
+>>>>>>> upstream/master

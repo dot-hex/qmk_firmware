@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,4 +19,6 @@ MIDI_ENABLE = yes           # MIDI support
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = eco/rev2

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+#pragma once
+
+>>>>>>> upstream/master
 #if defined(__AVR__)
 /* -------------------- AVR (Pro Micro) ----------------------- */
 

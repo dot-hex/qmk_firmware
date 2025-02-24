@@ -29,6 +29,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
     return true;
 }
 
+<<<<<<< HEAD
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (clockwise) {
@@ -40,6 +41,8 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 }
 
 
+=======
+>>>>>>> upstream/master
 // OLED
 #ifdef OLED_ENABLE
 __attribute__((weak)) oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_270; }

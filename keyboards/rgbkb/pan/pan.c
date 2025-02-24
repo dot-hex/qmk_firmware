@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "pan.h"
+=======
+
+>>>>>>> upstream/master
 #include "quantum.h"
 #include "rgb_matrix_types.h"
 
@@ -21,6 +25,7 @@
 #    if defined(KEYBOARD_rgbkb_pan_rev1)
 #        include "ws2812.h"
 
+<<<<<<< HEAD
 // LED color buffer
 LED_TYPE rgb_matrix_ws2812_array[DRIVER_LED_TOTAL];
 
@@ -31,10 +36,13 @@ static void flush(void) {
     ws2812_setleds(rgb_matrix_ws2812_array, DRIVER_LED_TOTAL);
 }
 
+=======
+>>>>>>> upstream/master
 // Set an led in the buffer to a color
 static inline void setled(int i, uint8_t r, uint8_t g, uint8_t b) {
 #        if defined(RGB_ENCODERS) || defined(STAGGERED_RGB_ENCODERS)
     if (i == 0 || i == 1) {  // if encoder LEDs, change LEDs
+<<<<<<< HEAD
         rgb_matrix_ws2812_array[i].r = g;
         rgb_matrix_ws2812_array[i].g = b;
         rgb_matrix_ws2812_array[i].b = r;
@@ -53,14 +61,28 @@ static inline void setled(int i, uint8_t r, uint8_t g, uint8_t b) {
 static void setled_all(uint8_t r, uint8_t g, uint8_t b) {
     for (int i = 0; i < sizeof(rgb_matrix_ws2812_array) / sizeof(rgb_matrix_ws2812_array[0]); i++) {
         setled(i, r, g, b);
+=======
+        ws2812_set_color(i, g, b, r);
+    } else
+#        endif
+    {
+        ws2812_set_color(i, r, g, b);
+>>>>>>> upstream/master
     }
 }
 
 const rgb_matrix_driver_t rgb_matrix_driver = {
+<<<<<<< HEAD
     .init          = init,
     .flush         = flush,
     .set_color     = setled,
     .set_color_all = setled_all,
+=======
+    .init          = ws2812_init,
+    .flush         = ws2812_flush,
+    .set_color     = setled,
+    .set_color_all = ws2812_set_color_all,
+>>>>>>> upstream/master
 };
 #    endif
 

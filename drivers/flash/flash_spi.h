@@ -17,6 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
+=======
+#include "flash.h"
+
+>>>>>>> upstream/master
 /* All the following default configurations are based on MX25L4006E Nor FLASH. */
 
 /*
@@ -74,21 +79,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     The sector size of the FLASH in bytes, as specified in the datasheet.
 */
 #ifndef EXTERNAL_FLASH_SECTOR_SIZE
+<<<<<<< HEAD
 #    define EXTERNAL_FLASH_SECTOR_SIZE (4 * 1024)
+=======
+#    define EXTERNAL_FLASH_SECTOR_SIZE (4 * 1024L)
+>>>>>>> upstream/master
 #endif
 
 /*
     The block size of the FLASH in bytes, as specified in the datasheet.
 */
 #ifndef EXTERNAL_FLASH_BLOCK_SIZE
+<<<<<<< HEAD
 #    define EXTERNAL_FLASH_BLOCK_SIZE (64 * 1024)
+=======
+#    define EXTERNAL_FLASH_BLOCK_SIZE (64 * 1024L)
+>>>>>>> upstream/master
 #endif
 
 /*
     The total size of the FLASH in bytes, as specified in the datasheet.
 */
 #ifndef EXTERNAL_FLASH_SIZE
+<<<<<<< HEAD
 #    define EXTERNAL_FLASH_SIZE (512 * 1024)
+=======
+#    define EXTERNAL_FLASH_SIZE (512 * 1024L)
+>>>>>>> upstream/master
 #endif
 
 /*
@@ -105,6 +122,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     The page count of the FLASH, calculated by total FLASH size and page size.
 */
 #define EXTERNAL_FLASH_PAGE_COUNT ((EXTERNAL_FLASH_SIZE) / (EXTERNAL_FLASH_PAGE_SIZE))
+<<<<<<< HEAD
 
 typedef int16_t flash_status_t;
 
@@ -134,3 +152,5 @@ flash_status_t flash_write_block(uint32_t addr, const void *buf, size_t len);
 #ifdef __cplusplus
 }
 #endif
+=======
+>>>>>>> upstream/master

@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 // clang-format off
 /* USB Device descriptor parameter */
@@ -67,3 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* bootmagic */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
+=======
+/* oled custom font */
+#define OLED_FONT_END 255
+#define OLED_FONT_H "gfxfont.c"
+>>>>>>> upstream/master

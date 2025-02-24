@@ -16,22 +16,10 @@
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x5359
-#define PRODUCT_ID      0x4e34
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    sendyyeah
-#define PRODUCT         Pix
-
-/* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 5
-
 #define OLED_FONT_H "keymaps/default/glcdfont.c"
 #define OLED_TIMEOUT 600000 // Turn of after 10 minutes
 
+<<<<<<< HEAD
 /* Keyboard Matrix Assignments */
 #define DIRECT_PINS { \
     { C6, D7, E6, B4, F6 }, \
@@ -63,3 +51,7 @@
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_LAYER_BLINK
 #endif
+=======
+#define RGBLIGHT_LAYERS
+#define RGBLIGHT_LAYER_BLINK
+>>>>>>> upstream/master

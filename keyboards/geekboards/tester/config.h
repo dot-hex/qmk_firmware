@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 
@@ -82,3 +83,6 @@
 #    define DRIVER_2_LED_TOTAL 0
 #    define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 #endif
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+>>>>>>> upstream/master

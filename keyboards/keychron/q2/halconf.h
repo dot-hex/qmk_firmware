@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/keychron/q2/halconf.h
 /* Copyright 2020 QMK
+=======
+/* Copyright 2022 QMK
+>>>>>>> upstream/master:keyboards/acheron/apollo/87h/gamma/halconf.h
+=======
+/* Copyright 2020 QMK
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

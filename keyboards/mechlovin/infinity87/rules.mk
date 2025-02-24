@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Build Options
 #   change yes to no to disable
@@ -26,3 +27,6 @@ AUDIO_ENABLE = no           # Audio output
 
 DEFAULT_FOLDER = mechlovin/infinity87/rgb_rev1
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
+=======
+DEFAULT_FOLDER = mechlovin/infinity87/rgb_rev1
+>>>>>>> upstream/master

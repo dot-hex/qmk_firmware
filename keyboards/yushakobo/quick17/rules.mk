@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,8 @@ ENCODER_ENABLE = yes
 
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = WS2812
+=======
+>>>>>>> upstream/master
 RGB_MATRIX_CUSTOM_KB = yes
 
 SRC += quick17_prefs.c

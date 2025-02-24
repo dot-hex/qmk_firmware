@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -67,6 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
+=======
+>>>>>>> upstream/master
 /* remap magic keys */
 #define MAGIC_KEY_LOCK             BSLS
 
@@ -85,5 +88,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega328p
 
@@ -23,3 +24,9 @@ LAYOUTS = alice_split_bs
 
 SRC += matrix.c
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+CUSTOM_MATRIX = lite
+
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

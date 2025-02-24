@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define SPLIT_HAND_PIN B4
@@ -54,16 +55,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_SPLIT { 6, 6 }
 
+=======
+>>>>>>> upstream/master
 /* Audio settings */
 #ifdef AUDIO_ENABLE
 #    define AUDIO_PIN C6  // Define this to enable the buzzer
 #endif
-
-#define QMK_ESC_OUTPUT F1 // usually COL
-#define QMK_ESC_INPUT F5 // usually ROW
-#define QMK_LED D5
-#define QMK_SPEAKER C6
-
 
 /*
  * Feature disable options
@@ -80,5 +77,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

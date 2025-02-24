@@ -19,8 +19,18 @@ endif
 # Otherwise the [OK], [ERROR] and [WARN] messages won't be displayed correctly
 override SILENT := false
 
+<<<<<<< HEAD
 ifdef SKIP_VERSION
     SKIP_GIT := yes
+=======
+ifeq ($(shell git rev-parse --is-inside-work-tree 2>/dev/null),)
+    export SKIP_GIT := yes
+    export NOT_REPO := yes
+endif
+
+ifdef SKIP_VERSION
+    export SKIP_GIT := yes
+>>>>>>> upstream/master
 endif
 
 ifndef SUB_IS_SILENT
@@ -33,6 +43,14 @@ $(info QMK Firmware $(QMK_VERSION))
 endif
 endif
 
+<<<<<<< HEAD
+=======
+# Try to determine userspace from qmk config, if set.
+ifeq ($(QMK_USERSPACE),)
+    QMK_USERSPACE = $(shell qmk config -ro user.overlay_dir | cut -d= -f2 | sed -e 's@^None$$@@g')
+endif
+
+>>>>>>> upstream/master
 # Determine which qmk cli to use
 QMK_BIN := qmk
 
@@ -43,17 +61,18 @@ ON_ERROR := error_occurred=1
 
 BREAK_ON_ERRORS = no
 
-STARTING_MAKEFILE := $(firstword $(MAKEFILE_LIST))
-ROOT_MAKEFILE := $(lastword $(MAKEFILE_LIST))
-ROOT_DIR := $(dir $(ROOT_MAKEFILE))
+ROOT_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 ifeq ($(ROOT_DIR),)
     ROOT_DIR := .
 endif
+<<<<<<< HEAD
 ABS_STARTING_MAKEFILE := $(abspath $(STARTING_MAKEFILE))
 ABS_ROOT_MAKEFILE := $(abspath $(ROOT_MAKEFILE))
 ABS_STARTING_DIR := $(dir $(ABS_STARTING_MAKEFILE))
 ABS_ROOT_DIR := $(dir $(ABS_ROOT_MAKEFILE))
 STARTING_DIR := $(subst $(ABS_ROOT_DIR),,$(ABS_STARTING_DIR))
+=======
+>>>>>>> upstream/master
 
 include paths.mk
 
@@ -126,29 +145,16 @@ endef
 define PARSE_RULE
     RULE := $1
     COMMANDS :=
-    REQUIRE_PLATFORM_KEY :=
     # If the rule starts with all, then continue the parsing from
     # PARSE_ALL_KEYBOARDS
     ifeq ($$(call COMPARE_AND_REMOVE_FROM_RULE,all),true)
         KEYBOARD_RULE=all
         $$(eval $$(call PARSE_ALL_KEYBOARDS))
-    else ifeq ($$(call COMPARE_AND_REMOVE_FROM_RULE,all-avr),true)
-        KEYBOARD_RULE=all
-        REQUIRE_PLATFORM_KEY := avr
-        $$(eval $$(call PARSE_ALL_KEYBOARDS))
-    else ifeq ($$(call COMPARE_AND_REMOVE_FROM_RULE,all-chibios),true)
-        KEYBOARD_RULE=all
-        REQUIRE_PLATFORM_KEY := chibios
-        $$(eval $$(call PARSE_ALL_KEYBOARDS))
-    else ifeq ($$(call COMPARE_AND_REMOVE_FROM_RULE,all-arm_atsam),true)
-        KEYBOARD_RULE=all
-        REQUIRE_PLATFORM_KEY := arm_atsam
-        $$(eval $$(call PARSE_ALL_KEYBOARDS))
     else ifeq ($$(call COMPARE_AND_REMOVE_FROM_RULE,test),true)
         $$(eval $$(call PARSE_TEST))
     # If the rule starts with the name of a known keyboard, then continue
     # the parsing from PARSE_KEYBOARD
-    else ifeq ($$(call TRY_TO_MATCH_RULE_FROM_LIST,$$(shell util/list_keyboards.sh | sort -u)),true)
+    else ifeq ($$(call TRY_TO_MATCH_RULE_FROM_LIST,$$(shell $(QMK_BIN) list-keyboards --no-resolve-defaults)),true)
         KEYBOARD_RULE=$$(MATCHED_ITEM)
         $$(eval $$(call PARSE_KEYBOARD,$$(MATCHED_ITEM)))
     else
@@ -205,10 +211,24 @@ define PARSE_KEYBOARD
     KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(ROOT_DIR)/keyboards/$$(KEYBOARD_FOLDER_PATH_3)/keymaps/*/.)))
     KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(ROOT_DIR)/keyboards/$$(KEYBOARD_FOLDER_PATH_4)/keymaps/*/.)))
     KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(ROOT_DIR)/keyboards/$$(KEYBOARD_FOLDER_PATH_5)/keymaps/*/.)))
+<<<<<<< HEAD
+=======
+
+    ifneq ($(QMK_USERSPACE),)
+        KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/keyboards/$$(KEYBOARD_FOLDER_PATH_1)/keymaps/*/.)))
+        KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/keyboards/$$(KEYBOARD_FOLDER_PATH_2)/keymaps/*/.)))
+        KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/keyboards/$$(KEYBOARD_FOLDER_PATH_3)/keymaps/*/.)))
+        KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/keyboards/$$(KEYBOARD_FOLDER_PATH_4)/keymaps/*/.)))
+        KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/keyboards/$$(KEYBOARD_FOLDER_PATH_5)/keymaps/*/.)))
+    endif
+>>>>>>> upstream/master
 
     KEYBOARD_LAYOUTS := $(shell $(QMK_BIN) list-layouts --keyboard $1)
     LAYOUT_KEYMAPS :=
     $$(foreach LAYOUT,$$(KEYBOARD_LAYOUTS),$$(eval LAYOUT_KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(ROOT_DIR)/layouts/*/$$(LAYOUT)/*/.)))))
+    ifneq ($(QMK_USERSPACE),)
+        $$(foreach LAYOUT,$$(KEYBOARD_LAYOUTS),$$(eval LAYOUT_KEYMAPS += $$(notdir $$(patsubst %/.,%,$$(wildcard $(QMK_USERSPACE)/layouts/$$(LAYOUT)/*/.)))))
+    endif
 
     KEYMAPS := $$(sort $$(KEYMAPS) $$(LAYOUT_KEYMAPS))
 
@@ -241,7 +261,7 @@ endef
 # if we are going to compile all keyboards, match the rest of the rule
 # for each of them
 define PARSE_ALL_KEYBOARDS
-    $$(eval $$(call PARSE_ALL_IN_LIST,PARSE_KEYBOARD,$(shell util/list_keyboards.sh noci | sort -u)))
+    $$(eval $$(call PARSE_ALL_IN_LIST,PARSE_KEYBOARD,$(shell $(QMK_BIN) list-keyboards --no-resolve-defaults)))
 endef
 
 # Prints a list of all known keymaps for the given keyboard
@@ -264,7 +284,7 @@ define PARSE_KEYMAP
     # The rest of the rule is the target
     # Remove the leading ":" from the target, as it acts as a separator
     MAKE_TARGET := $$(patsubst :%,%,$$(RULE))
-    # We need to generate an unique indentifer to append to the COMMANDS list
+    # We need to generate an unique identifier to append to the COMMANDS list
     CURRENT_KB_UNDER := $$(subst /,_,$$(CURRENT_KB))
     COMMAND := COMMAND_KEYBOARD_$$(CURRENT_KB_UNDER)_KEYMAP_$$(CURRENT_KM)
     # If we are compiling a keyboard without a subproject, we want to display just the name
@@ -273,7 +293,11 @@ define PARSE_KEYMAP
     # Format it in bold
     KB_SP := $(BOLD)$$(KB_SP)$(NO_COLOR)
     # Specify the variables that we are passing forward to submake
+<<<<<<< HEAD
     MAKE_VARS := KEYBOARD=$$(CURRENT_KB) KEYMAP=$$(CURRENT_KM) REQUIRE_PLATFORM_KEY=$$(REQUIRE_PLATFORM_KEY) QMK_BIN=$$(QMK_BIN)
+=======
+    MAKE_VARS := KEYBOARD=$$(CURRENT_KB) KEYMAP=$$(CURRENT_KM) QMK_BIN=$$(QMK_BIN)
+>>>>>>> upstream/master
     # And the first part of the make command
     MAKE_CMD := $$(MAKE) -r -R -C $(ROOT_DIR) -f $(BUILDDEFS_PATH)/build_keyboard.mk $$(MAKE_TARGET)
     # The message to display
@@ -315,6 +339,7 @@ endef
 define BUILD_TEST
     TEST_PATH := $1
     TEST_NAME := $$(notdir $$(TEST_PATH))
+<<<<<<< HEAD
     MAKE_TARGET := $2
     COMMAND := $1
     MAKE_CMD := $$(MAKE) -r -R -C $(ROOT_DIR) -f $(BUILDDEFS_PATH)/build_test.mk $$(MAKE_TARGET)
@@ -324,8 +349,20 @@ define BUILD_TEST
     ifneq ($$(MAKE_TARGET),clean)
         TEST_EXECUTABLE := $$(TEST_OUTPUT_DIR)/$$(TEST_NAME).elf
         TESTS += $$(TEST_NAME)
+=======
+    TEST_FULL_NAME := $$(subst /,_,$$(patsubst $$(ROOT_DIR)tests/%,%,$$(TEST_PATH)))
+    MAKE_TARGET := $2
+    COMMAND := $1
+    MAKE_CMD := $$(MAKE) -r -R -C $(ROOT_DIR) -f $(BUILDDEFS_PATH)/build_test.mk $$(MAKE_TARGET)
+    MAKE_VARS := TEST=$$(TEST_NAME) TEST_OUTPUT=$$(TEST_FULL_NAME) TEST_PATH=$$(TEST_PATH) FULL_TESTS="$$(FULL_TESTS)"
+    MAKE_MSG := $$(MSG_MAKE_TEST)
+    $$(eval $$(call BUILD))
+    ifneq ($$(MAKE_TARGET),clean)
+        TEST_EXECUTABLE := $$(TEST_OUTPUT_DIR)/$$(TEST_FULL_NAME).elf
+        TESTS += $$(TEST_FULL_NAME)
+>>>>>>> upstream/master
         TEST_MSG := $$(MSG_TEST)
-        $$(TEST_NAME)_COMMAND := \
+        $$(TEST_FULL_NAME)_COMMAND := \
             printf "$$(TEST_MSG)\n"; \
             $$(TEST_EXECUTABLE); \
             if [ $$$$? -gt 0 ]; \
@@ -333,6 +370,12 @@ define BUILD_TEST
             fi; \
             printf "\n";
     endif
+endef
+
+define LIST_TEST
+    include $(BUILDDEFS_PATH)/testlist.mk
+    FOUND_TESTS := $$(patsubst ./tests/%,%,$$(TEST_LIST))
+    $$(info $$(FOUND_TESTS))
 endef
 
 define PARSE_TEST
@@ -343,7 +386,11 @@ define PARSE_TEST
     ifeq ($$(TEST_NAME),all)
         MATCHED_TESTS := $$(TEST_LIST)
     else
+<<<<<<< HEAD
         MATCHED_TESTS := $$(foreach TEST, $$(TEST_LIST),$$(if $$(findstring $$(TEST_NAME), $$(notdir $$(TEST))), $$(TEST),))
+=======
+        MATCHED_TESTS := $$(foreach TEST, $$(TEST_LIST),$$(if $$(findstring x$$(TEST_NAME)x, x$$(patsubst ./tests/%,%,$$(TEST)x)), $$(TEST),))
+>>>>>>> upstream/master
     endif
     $$(foreach TEST,$$(MATCHED_TESTS),$$(eval $$(call BUILD_TEST,$$(TEST),$$(TEST_TARGET))))
 endef
@@ -390,6 +437,7 @@ endef
 # Catch everything and parse the command line ourselves.
 .PHONY: %
 %:
+<<<<<<< HEAD
 	# Check if we have the CMP tool installed
 	cmp $(ROOT_DIR)/Makefile $(ROOT_DIR)/Makefile >/dev/null 2>&1; if [ $$? -gt 0 ]; then printf "$(MSG_NO_CMP)"; exit 1; fi;
 	# Ensure that $(QMK_BIN) works.
@@ -408,6 +456,17 @@ ifndef SKIP_GIT
 			*) printf "$(MSG_SUBMODULE_DIRTY)";break;; \
 		esac \
 	done
+=======
+	# Ensure that $(QMK_BIN) works.
+	if ! $(QMK_BIN) hello 1> /dev/null 2>&1; then printf "$(MSG_PYTHON_MISSING)"; exit 1; fi
+ifdef NOT_REPO
+	printf "$(MSG_NOT_REPO)"
+endif
+ifndef SKIP_GIT
+	$(QMK_BIN) git-submodule --sync
+	# Check if the submodules are dirty, and display a warning if they are
+	if ! $(QMK_BIN) git-submodule --check 1> /dev/null 2>&1; then printf "$(MSG_SUBMODULE_DIRTY)"; fi
+>>>>>>> upstream/master
 endif
 	rm -f $(ERROR_FILE) > /dev/null 2>&1
 	$(eval $(call PARSE_RULE,$@))
@@ -428,9 +487,9 @@ lib/%:
 
 .PHONY: git-submodule
 git-submodule:
-	git submodule sync --recursive
-	git submodule update --init --recursive --progress
+	$(QMK_BIN) git-submodule
 
+<<<<<<< HEAD
 .PHONY: list-keyboards
 list-keyboards:
 	util/list_keyboards.sh | sort -u | tr '\n' ' '
@@ -450,3 +509,56 @@ distclean: clean
 	echo -n 'Deleting *.bin, *.hex, and *.uf2 ... '
 	rm -f *.bin *.hex *.uf2
 	echo 'done.'
+=======
+.PHONY: git-submodules
+git-submodules: git-submodule
+
+.PHONY: list-keyboards
+list-keyboards:
+	$(QMK_BIN) list-keyboards --no-resolve-defaults | tr '\n' ' '
+
+.PHONY: list-tests
+list-tests:
+	$(eval $(call LIST_TEST))
+
+.PHONY: generate-keyboards-file
+generate-keyboards-file:
+	$(QMK_BIN) list-keyboards --no-resolve-defaults
+
+.PHONY: clean
+clean:
+	echo -n 'Deleting .build/ ... '
+	rm -rf $(BUILD_DIR)
+	echo 'done.'
+
+.PHONY: distclean distclean_qmk
+distclean: distclean_qmk
+distclean_qmk: clean
+	echo -n 'Deleting *.bin, *.hex, and *.uf2 ... '
+	rm -f *.bin *.hex *.uf2
+	echo 'done.'
+
+ifneq ($(QMK_USERSPACE),)
+.PHONY: distclean_userspace
+distclean: distclean_userspace
+distclean_userspace: clean
+	echo -n 'Deleting userspace *.bin, *.hex, and *.uf2 ... '
+	rm -f $(QMK_USERSPACE)/*.bin $(QMK_USERSPACE)/*.hex $(QMK_USERSPACE)/*.uf2
+	echo 'done.'
+endif
+
+# Extra targets for formatting and/or pytest, running within the qmk/qmk_cli container to match GHA.
+CONTAINER_PREAMBLE := export HOME="/tmp"; export PATH="/tmp/.local/bin:\$$PATH"; python3 -m pip install --upgrade pip; python3 -m pip install -r requirements-dev.txt
+
+.PHONY: format-core
+format-core:
+	RUNTIME=docker ./util/docker_cmd.sh bash -lic "$(CONTAINER_PREAMBLE); qmk format-c --core-only -a && qmk format-python -a"
+
+.PHONY: pytest
+pytest:
+	RUNTIME=docker ./util/docker_cmd.sh bash -lic "$(CONTAINER_PREAMBLE); qmk pytest"
+
+.PHONY: format-and-pytest
+format-and-pytest:
+	RUNTIME=docker ./util/docker_cmd.sh bash -lic "$(CONTAINER_PREAMBLE); qmk format-c --core-only -a && qmk format-python -a && qmk pytest"
+>>>>>>> upstream/master

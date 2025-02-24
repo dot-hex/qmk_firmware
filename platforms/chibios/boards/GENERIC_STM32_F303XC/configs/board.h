@@ -15,7 +15,11 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include_next "board.h"
+=======
+#include_next <board.h>
+>>>>>>> upstream/master
 
 #undef STM32_HSE_BYPASS
 

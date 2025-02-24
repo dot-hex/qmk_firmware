@@ -17,20 +17,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6050
-#define DEVICE_VER      0x0104
-#define MANUFACTURER    Costar
-#define PRODUCT         Majestouch
 
 /* key matrix size */
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 18
 
 /*
+<<<<<<< HEAD
  * Keyboard Matrix Assignments
  *
  * Change this to how you wired your keyboard
@@ -91,6 +84,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define FORCE_NKRO
 
 /*
+=======
+>>>>>>> upstream/master
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
@@ -105,5 +100,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

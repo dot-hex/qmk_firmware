@@ -14,8 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "we27.h"
 #include "encoder_actions.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 
@@ -45,6 +49,7 @@ led_config_t g_led_config = { {
 } };
 
 #endif
+<<<<<<< HEAD
 
 void matrix_scan_kb(void) {
     encoder_action_unregister();
@@ -56,3 +61,5 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     encoder_action_register(index, clockwise);
     return true;
 };
+=======
+>>>>>>> upstream/master

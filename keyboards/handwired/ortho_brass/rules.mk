@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -16,4 +17,6 @@ RGBLIGHT_ENABLE = no        # Enable RGB underlight.
 
 LAYOUTS = ortho_4x12
 
+=======
+>>>>>>> upstream/master
 RGBLIGHT_SUPPORTED = no

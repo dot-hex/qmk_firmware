@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 Harrison Chan (Xelus)
+=======
+/* Copyright 2023 Harrison Chan (Xelus)
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +20,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x5845 // "XE"
 #define PRODUCT_ID      0x5053 // "PR" + 1
@@ -47,6 +52,11 @@
 // I2C setup
 #define I2C1_SCL            6
 #define I2C1_SDA            7
+=======
+// I2C setup
+#define I2C1_SCL_PIN        B6
+#define I2C1_SDA_PIN        B7
+>>>>>>> upstream/master
 #define I2C1_SCL_PAL_MODE   4
 #define I2C1_SDA_PAL_MODE   4
 #define I2C1_TIMINGR_PRESC  0U
@@ -59,6 +69,7 @@
 #define EEPROM_I2C_24LC64
 
 // RGB Matrix defines
+<<<<<<< HEAD
 #define DRIVER_ADDR_1 0b0110000
 
 #define DRIVER_COUNT 1
@@ -119,3 +130,7 @@
 
 
 #define FORCE_NKRO
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+#define IS31FL3741_LED_COUNT RGB_MATRIX_LED_COUNT // is31fl3741.h does not set this for custom driver
+>>>>>>> upstream/master

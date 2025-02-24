@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = at90usb646
 
@@ -19,3 +20,7 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
+=======
+# Processor frequency
+F_CPU = 8000000
+>>>>>>> upstream/master

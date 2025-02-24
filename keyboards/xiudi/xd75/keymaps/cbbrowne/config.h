@@ -1,4 +1,4 @@
-/* Copyright 2017 REPLACE_WITH_YOUR_NAME
+/* Copyright 2021 Vinam Arora <vinam@posteo.de>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,19 +16,18 @@
 
 #pragma once
 
-// place overrides here
-#ifndef NO_DEBUG
+/*
+ * Feature disable options
+ *  These options are also useful to firmware size reduction.
+ */
+
+/* disable debug print */
 #define NO_DEBUG
-#endif
-#ifndef NO_PRINT
+
+/* disable print */
 #define NO_PRINT
-#endif
 
-#define LEADER_TIMEOUT 300
-#define BACKLIGHT_BREATHING
-
-/* cbbrowne user configuration */
-
-#define randadd 53
-#define randmul 181
-#define randmod 167
+/* disable action features */
+//#define NO_ACTION_LAYER
+//#define NO_ACTION_TAPPING
+//#define NO_ACTION_ONESHOT

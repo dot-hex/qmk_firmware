@@ -17,7 +17,10 @@
 #include QMK_KEYBOARD_H
 
 #ifdef JOYSTICK_ENABLE
+<<<<<<< HEAD
 #   include "joystick.h"
+=======
+>>>>>>> upstream/master
 #   include "analog.h"
 #endif
 
@@ -31,9 +34,13 @@ enum lime_layers {
 };
 
 enum custom_keycodes {
+<<<<<<< HEAD
     KC_QWERTY = SAFE_RANGE,
     KC_COLEMAK,
     KC_LOWER,
+=======
+    KC_LOWER = SAFE_RANGE,
+>>>>>>> upstream/master
     KC_RAISE,
     KC_ADJUST,
     KC_PRVWD,
@@ -48,6 +55,12 @@ enum custom_keycodes {
     KC_JOYSTICK_DEBUG,
 };
 
+<<<<<<< HEAD
+=======
+#define KC_QWERTY PDF(_QWERTY)
+#define KC_COLEMAK PDF(_COLEMAK)
+
+>>>>>>> upstream/master
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * QWERTY
@@ -70,7 +83,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                            KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_GRV,
   KC_CAPS,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                            KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_QUOT,
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  XXXXXXX,        KC_MUTE,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_BSLS,
+<<<<<<< HEAD
         KC_LOWER, KC_LGUI,KC_LALT,KC_DEL, KC_LCTRL, KC_THUMB_LEFT,       KC_THUMB_RIGHT,  KC_RAISE, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+=======
+        KC_LOWER, KC_LGUI,KC_LALT,KC_DEL, KC_LCTL,  KC_THUMB_LEFT,       KC_THUMB_RIGHT,  KC_RAISE, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+>>>>>>> upstream/master
 ),
 
 /*
@@ -94,7 +111,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_P,    KC_G,                            KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,  KC_GRV,
   KC_CAPS,  KC_A,   KC_R,    KC_S,    KC_T,    KC_D,                            KC_H,    KC_N,    KC_E,    KC_I,    KC_O,     KC_QUOT,
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  XXXXXXX,        KC_MUTE,  KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_BSLS,
+<<<<<<< HEAD
         KC_LOWER, KC_LGUI,KC_LALT,KC_DEL, KC_LCTRL, KC_THUMB_LEFT,       KC_THUMB_RIGHT,  KC_RAISE, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+=======
+        KC_LOWER, KC_LGUI,KC_LALT,KC_DEL, KC_LCTL,  KC_THUMB_LEFT,       KC_THUMB_RIGHT,  KC_RAISE, KC_LBRC, KC_RBRC, KC_MINS, KC_EQL
+>>>>>>> upstream/master
 ),
 
 /* RAISE
@@ -143,7 +164,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
+<<<<<<< HEAD
  * | RESET|      |      |      |      |      |                    |      |      |      |      |      |      |
+=======
+ * | QK_BOOT|      |      |      |      |      |                    |      |      |      |      |      |      |
+>>>>>>> upstream/master
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |QWERTY|      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
@@ -156,7 +181,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *      `----------------------------------------'            '------''----------------------------------'
  */
   [_ADJUST] = LAYOUT(
+<<<<<<< HEAD
   RESET,   XXXXXXX,    XXXXXXX,   XXXXXXX,          XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+=======
+  QK_BOOT, XXXXXXX,    XXXXXXX,   XXXXXXX,          XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+>>>>>>> upstream/master
   XXXXXXX, KC_QWERTY,  XXXXXXX,   XXXXXXX,          CG_TOGG, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX,    XXXXXXX,   KC_JOYSTICK_DEBUG,XXXXXXX, XXXXXXX,                       XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX,    XXXXXXX,   KC_COLEMAK,       XXXXXXX, XXXXXXX, XXXXXXX,     _______, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX,
@@ -174,13 +203,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Joystick + Encoder fix */
     void keyboard_post_init_kb(void) {
         if (is_keyboard_master()) {
+<<<<<<< HEAD
             writePinLow(JOYSTICK_X_PIN);
             writePinLow(JOYSTICK_Y_PIN);
+=======
+            gpio_write_pin_low(JOYSTICK_X_PIN);
+            gpio_write_pin_low(JOYSTICK_Y_PIN);
+>>>>>>> upstream/master
         }
     }
 
     /* Joystick axes settings */
+<<<<<<< HEAD
     joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
+=======
+    joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+>>>>>>> upstream/master
         [0] = JOYSTICK_AXIS_IN(JOYSTICK_X_PIN, 268, 514, 813),
         [1] = JOYSTICK_AXIS_IN(JOYSTICK_Y_PIN, 865, 519, 260)
     };
@@ -481,6 +519,7 @@ bool showedJump = true;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+<<<<<<< HEAD
         case KC_QWERTY:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(_QWERTY);
@@ -491,6 +530,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(_COLEMAK);
             }
             return false;
+=======
+>>>>>>> upstream/master
         case KC_LOWER:
             if (record->event.pressed) {
                 layer_on(_LOWER);

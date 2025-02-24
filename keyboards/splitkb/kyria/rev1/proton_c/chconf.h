@@ -19,4 +19,8 @@
 #define CH_CFG_ST_RESOLUTION 16
 #define CH_CFG_ST_FREQUENCY  10000
 
+<<<<<<< HEAD
 #include_next "chconf.h"
+=======
+#include_next <chconf.h>
+>>>>>>> upstream/master

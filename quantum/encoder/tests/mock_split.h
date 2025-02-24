@@ -20,6 +20,7 @@
 #include <stdbool.h>
 
 #define SPLIT_KEYBOARD
+<<<<<<< HEAD
 /* Here, "pins" from 0 to 31 are allowed. */
 #define ENCODERS_PAD_A \
     { 0 }
@@ -34,15 +35,27 @@ typedef uint8_t pin_t;
 extern bool     isLeftHand;
 void            encoder_state_raw(uint8_t* slave_state);
 void            encoder_update_raw(uint8_t* slave_state);
+=======
+typedef uint8_t pin_t;
+>>>>>>> upstream/master
 
 extern bool pins[];
 extern bool pinIsInputHigh[];
 
+<<<<<<< HEAD
 #define setPinInputHigh(pin) (mockSetPinInputHigh(pin))
 #define readPin(pin) (mockReadPin(pin))
 
 uint8_t mockSetPinInputHigh(pin_t pin);
 
 bool mockReadPin(pin_t pin);
+=======
+#define gpio_set_pin_input_high(pin) (mock_set_pin_input_high(pin))
+#define gpio_read_pin(pin) (mock_read_pin(pin))
+
+uint8_t mock_set_pin_input_high(pin_t pin);
+
+bool mock_read_pin(pin_t pin);
+>>>>>>> upstream/master
 
 bool setPin(pin_t pin, bool val);

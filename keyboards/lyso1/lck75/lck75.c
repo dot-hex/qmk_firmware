@@ -12,6 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:keyboards/lyso1/lck75/lck75.c
 #include "lck75.h"
 
 bool encoder_update_kb(uint8_t index, bool clockwise) {
@@ -25,6 +26,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     }
     return true;
 }
+=======
+#include "quantum.h"
+>>>>>>> upstream/master:keyboards/lck75/lck75.c
 
 #define IDLE_FRAMES 5
 #define IDLE_SPEED 30

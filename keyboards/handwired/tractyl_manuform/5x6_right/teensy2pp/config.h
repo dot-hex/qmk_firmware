@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT Tractyl Manuform(5x6) Teensy 2.0 ++
 
 // wiring of each half
@@ -37,11 +38,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_LIMIT_VAL 80
 #define OLED_BRIGHTNESS    50
 
+=======
+<<<<<<< HEAD:keyboards/crkbd/keymaps/oo/config.h
+#define SPLIT_USB_DETECT
+
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 100
+
+#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+=======
+>>>>>>> upstream/master
 #define DEBUG_LED_PIN   D6
 
 #define AUDIO_PIN       C6
 #define AUDIO_PIN_ALT   B7
 
+<<<<<<< HEAD
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D2
 #define EE_HANDS
@@ -53,3 +65,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* PMW3360 Settings */
 #define PMW3360_CS_PIN B0
+=======
+#define EE_HANDS
+
+/* PMW33XX Settings */
+#define PMW33XX_CS_PIN B0
+>>>>>>> upstream/master:keyboards/handwired/tractyl_manuform/5x6_right/teensy2pp/config.h
+>>>>>>> upstream/master

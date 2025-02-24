@@ -15,17 +15,24 @@
  */
 #include QMK_KEYBOARD_H
 
+<<<<<<< HEAD
 
 // enum custom_keycodes {
 //     FIRST = NEW_SAFE_RANGE,
 // };
 
+=======
+>>>>>>> upstream/master
 // Defines names for use in layer keycodes and the keymap
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [0] = LAYOUT(
                                        ENC_PRESS,
+<<<<<<< HEAD
             KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
+=======
+            KC_NUM , KC_PSLS, KC_PAST, KC_PMNS,
+>>>>>>> upstream/master
             KC_P7  , KC_P8  , KC_P9  , KC_PPLS,
             KC_P4  , KC_P5  , KC_P6  ,
             KC_P1  , KC_P2  , KC_P3  , KC_PENT,
@@ -51,7 +58,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+<<<<<<< HEAD
             KC_TRNS, RESET  , KC_TRNS,
+=======
+            KC_TRNS, QK_BOOT  , KC_TRNS,
+>>>>>>> upstream/master
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                      KC_TRNS, KC_TRNS
             ),

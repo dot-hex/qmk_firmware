@@ -15,10 +15,12 @@
  */
 
 #include "process_unicode_common.h"
-#include "eeprom.h"
-#include <ctype.h>
-#include <string.h>
+#include "unicode.h"
+#include "action_util.h"
+#include "keycodes.h"
+#include "modifiers.h"
 
+<<<<<<< HEAD
 unicode_config_t unicode_config;
 uint8_t          unicode_saved_mods;
 bool             unicode_saved_caps_lock;
@@ -342,31 +344,52 @@ static void audio_helper(void) {
             break;
 #    endif
     }
+=======
+#if defined(UNICODE_ENABLE)
+#    include "process_unicode.h"
+#elif defined(UNICODEMAP_ENABLE)
+#    include "process_unicodemap.h"
+#elif defined(UCIS_ENABLE)
+#    include "process_ucis.h"
+>>>>>>> upstream/master
 #endif
-}
-
-// clang-format on
 
 bool process_unicode_common(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         bool shifted = get_mods() & MOD_MASK_SHIFT;
         switch (keycode) {
-            case UNICODE_MODE_FORWARD:
-                cycle_unicode_input_mode(shifted ? -1 : +1);
-                audio_helper();
+            case QK_UNICODE_MODE_NEXT:
+                if (shifted) {
+                    unicode_input_mode_step_reverse();
+                } else {
+                    unicode_input_mode_step();
+                }
                 break;
-            case UNICODE_MODE_REVERSE:
-                cycle_unicode_input_mode(shifted ? +1 : -1);
-                audio_helper();
+            case QK_UNICODE_MODE_PREVIOUS:
+                if (shifted) {
+                    unicode_input_mode_step();
+                } else {
+                    unicode_input_mode_step_reverse();
+                }
                 break;
-
-            case UNICODE_MODE_MAC ... UNICODE_MODE_WINC: {
-                // Keycodes and input modes follow the same ordering
-                uint8_t delta = keycode - UNICODE_MODE_MAC;
-                set_unicode_input_mode(UC_MAC + delta);
-                audio_helper();
+            case QK_UNICODE_MODE_MACOS:
+                set_unicode_input_mode(UNICODE_MODE_MACOS);
                 break;
-            }
+            case QK_UNICODE_MODE_LINUX:
+                set_unicode_input_mode(UNICODE_MODE_LINUX);
+                break;
+            case QK_UNICODE_MODE_WINDOWS:
+                set_unicode_input_mode(UNICODE_MODE_WINDOWS);
+                break;
+            case QK_UNICODE_MODE_BSD:
+                set_unicode_input_mode(UNICODE_MODE_BSD);
+                break;
+            case QK_UNICODE_MODE_WINCOMPOSE:
+                set_unicode_input_mode(UNICODE_MODE_WINCOMPOSE);
+                break;
+            case QK_UNICODE_MODE_EMACS:
+                set_unicode_input_mode(UNICODE_MODE_EMACS);
+                break;
         }
     }
 

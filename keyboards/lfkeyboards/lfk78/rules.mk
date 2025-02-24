@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
@@ -21,4 +22,6 @@ ISSI_ENABLE = yes               # If the I2C pullup resistors aren't install thi
 WATCHDOG_ENABLE = no            # Resets keyboard if matrix_scan isn't run every 250ms
 CAPSLOCK_LED = no              # Toggle back light LED of Caps Lock
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = lfkeyboards/lfk78/revj

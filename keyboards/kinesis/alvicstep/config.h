@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 
 #include "../config.h"
@@ -6,10 +7,17 @@
 /* USB Device descriptor parameter */
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
+=======
+// Copyright 2023 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 16
 #define MATRIX_COLS  8 
+<<<<<<< HEAD
 
 /*
  * Keyboard Matrix Assignments
@@ -30,3 +38,5 @@
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
+=======
+>>>>>>> upstream/master

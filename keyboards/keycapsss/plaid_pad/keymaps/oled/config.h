@@ -18,5 +18,8 @@
 
 // place overrides here
 #define OLED_FONT_H "keyboards/keycapsss/plaid_pad/keymaps/oled/glcdfont.c"
+<<<<<<< HEAD
 
 #define COMBO_COUNT 3
+=======
+>>>>>>> upstream/master

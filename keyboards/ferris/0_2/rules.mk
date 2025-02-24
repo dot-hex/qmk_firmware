@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F072
 
@@ -25,3 +26,11 @@ SRC += matrix.c
 QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = split_3x5_2
+=======
+CUSTOM_MATRIX = lite
+
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes
+
+DEFAULT_FOLDER = ferris/0_2/base
+>>>>>>> upstream/master

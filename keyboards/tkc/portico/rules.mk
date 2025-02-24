@@ -1,6 +1,7 @@
-# MCU name
-MCU = atmega32u4
+CIE1931_CURVE = yes
+I2C_DRIVER_REQUIRED = yes
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
@@ -20,12 +21,17 @@ RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = IS31FL3731
 CIE1931_CURVE = yes
 
+=======
+>>>>>>> upstream/master
 # project specific files
 SRC += keyboards/wilba_tech/wt_main.c \
        keyboards/wilba_tech/wt_rgb_backlight.c \
        quantum/color.c \
        drivers/led/issi/is31fl3731.c
+<<<<<<< HEAD
 
 QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = 65_ansi_blocker
+=======
+>>>>>>> upstream/master

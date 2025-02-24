@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32a
-
 # Processor frequency
 F_CPU = 16000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = usbasploader
@@ -21,3 +19,5 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = tkl_ansi
+=======
+>>>>>>> upstream/master

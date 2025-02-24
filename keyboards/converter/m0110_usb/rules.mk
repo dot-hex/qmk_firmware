@@ -1,9 +1,7 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
@@ -18,6 +16,8 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 EXTRAKEY_ENABLE  = yes
 USB_HID_ENABLE   = yes
 BACKLIGHT_ENABLE = no
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX    = yes
 
 SRC = matrix.c m0110.c

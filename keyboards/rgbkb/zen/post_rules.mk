@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ifeq ($(strip $(CTPC)), yes)
   CONVERT_TO_PROTON_C=yes
 endif
@@ -11,4 +12,8 @@ else
   # Currently moved to Pro Micro only section because of lack of Proton-C support
   SPLIT_KEYBOARD = yes
   RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
+=======
+ifeq ($(strip $(CONVERT_TO)), proton_c)
+  RGBLIGHT_ENABLE = no  # OOB incompatible with split on ARM
+>>>>>>> upstream/master
 endif

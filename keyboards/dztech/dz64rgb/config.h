@@ -16,6 +16,7 @@
  
 #pragma once
 
+<<<<<<< HEAD
 #define VENDOR_ID       0x445A
 #define PRODUCT_ID      0x1013
 #define DEVICE_VER      0x0002
@@ -70,3 +71,8 @@
 #define DRIVER_LED_TOTAL 64
 #endif
 #define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+
+#define USB_SUSPEND_WAKEUP_DELAY 5000
+>>>>>>> upstream/master

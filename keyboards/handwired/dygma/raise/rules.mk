@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F411
 
@@ -18,15 +19,23 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = custom
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 # TODO(ibash) we don't actually need to enable raw, but there's some side effect
 # in the usb driver this triggers that allows mousekeys to work. The same side
 # effect happens if console or midi is enabled -- so something to do with
 # alternate usb endpoints.
+<<<<<<< HEAD
 RAW_ENABLE = yes
 
 QUANTUM_LIB_SRC += i2c_master.c
 SRC += leds.c matrix.c
+=======
+
+I2C_DRIVER_REQUIRED = yes
+SRC += matrix.c
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = handwired/dygma/raise/ansi

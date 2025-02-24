@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -23,3 +24,9 @@ SRC += indicators.c \
 QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = alice alice_split_bs
+=======
+# project specific files
+SRC += indicators.c \
+       drivers/led/issi/is31fl3731-mono.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

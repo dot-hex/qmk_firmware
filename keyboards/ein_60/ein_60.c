@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "ein_60.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 
@@ -47,12 +51,21 @@ led_config_t g_led_config = { {
 #endif
 
 #ifdef AUDIO_ENABLE
+<<<<<<< HEAD
 const uint8_t music_map[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
    30, 31, 32, 33, 34, 35, 35, 36, 37, 38, 39, 40, 41,
    18,  9, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
     6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
     1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1
 );
+=======
+const uint8_t music_map[MATRIX_ROWS][MATRIX_COLS] = {
+   {30, 31, 32, 33, 34, 35, 35, 36, 37, 38, 39, 40, 41},
+   {18, 19, 20, 21, 22, 23,  0, 25, 25, 26, 27, 28, 29},
+   { 6,  7,  8,  9, 10, 11,  0, 12, 13, 14, 15, 16, 17},
+   { 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1}
+};
+>>>>>>> upstream/master
 #endif
 
 #ifdef OLED_ENABLE

@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "ck60.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #define __ NO_LED
 

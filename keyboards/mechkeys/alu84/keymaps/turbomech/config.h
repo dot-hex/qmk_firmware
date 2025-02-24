@@ -1,4 +1,4 @@
-/* Copyright 2017 @TurboMech /u/TurboMech <discord> @A9entOran9e#6134
+/* Copyright 2018-2021 Harrison Chan (@Xelus)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD:keyboards/mechkeys/alu84/keymaps/turbomech/config.h
 #pragma once
 
 // place overrides here
 #define TAPPING_TOGGLE 2
+=======
+/* Address for jumping to bootloader on STM32 chips. */
+/* It is chip dependent, the correct number can be looked up by checking against ST's application note AN2606.
+ */
+
+#ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
+#    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+#endif
+>>>>>>> upstream/master:platforms/chibios/boards/GENERIC_STM32_L412XB/configs/config.h

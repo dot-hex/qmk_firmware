@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT      Adelais
 
 #define MATRIX_ROW_PINS { B1, A0, C13, A1, A2}
@@ -40,3 +41,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_NUM_LOCK_PIN C15
 #define LED_CAPS_LOCK_PIN B2
 #define LED_SCROLL_LOCK_PIN B9
+=======
+#define BACKLIGHT_PWM_DRIVER PWMD3
+>>>>>>> upstream/master

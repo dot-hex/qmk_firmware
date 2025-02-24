@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /*
  * Keyboard Matrix Assignments
  *
@@ -40,3 +41,6 @@
 
 #define RGB_MATRIX_CENTER { 108, 30 }
 
+=======
+#define DRIVER_INDICATOR_LED_TOTAL 3
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 
@@ -28,3 +29,7 @@ RGB_MATRIX_DRIVER = WS2812
 SRC += matrix.c
 
 LAYOUTS = ortho_5x12
+=======
+CUSTOM_MATRIX = yes
+SRC += matrix.c
+>>>>>>> upstream/master

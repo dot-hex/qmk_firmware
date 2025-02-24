@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 LTO_ENABLE = yes
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = keebio/foldkb/rev1

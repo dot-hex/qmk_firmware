@@ -16,8 +16,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "quantum.h"
 
+<<<<<<< HEAD
 #include "drivers/led/issi/is31fl3731.h"
 
+=======
+#ifdef RGB_MATRIX_ENABLE
+>>>>>>> upstream/master
 /*
 |      Left        ||    Right       |
 |    | 3  |   | 0  || 0 |   | 3  |   |
@@ -27,7 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 |    | 4  |   |    ||   |   | 4  |   |
 | 6  |    |   | 2  || 2 |   |    | 5 |
 */
+<<<<<<< HEAD
 const is31_led g_is31_leds[DRIVER_LED_TOTAL] = {
+=======
+const is31fl3731_led_t PROGMEM g_is31fl3731_leds[IS31FL3731_LED_COUNT] = {
+>>>>>>> upstream/master
     /* Refer to IS31 manual for these locations
      *   driver
      *   |  R location
@@ -49,6 +57,7 @@ const is31_led g_is31_leds[DRIVER_LED_TOTAL] = {
     {0, C9_11, C8_11, C7_11},  // Left  RGB 4
     {0, C9_9, C8_9, C7_9},     // Left  RGB 6
 };
+<<<<<<< HEAD
 // clang-format off
 led_config_t g_led_config = {
     // Key Matrix to LED Index
@@ -75,3 +84,6 @@ led_config_t g_led_config = {
         4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
     }
 };
+=======
+#endif
+>>>>>>> upstream/master

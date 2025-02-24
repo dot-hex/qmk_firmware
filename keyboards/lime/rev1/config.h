@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x0666
 #define PRODUCT_ID      0x2784
@@ -66,3 +67,8 @@
 #    define SPLIT_WPM_ENABLE
 #endif
 
+=======
+#define JOYSTICK_BUTTON_COUNT 1
+
+#define SPLIT_USB_DETECT
+>>>>>>> upstream/master

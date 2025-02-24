@@ -17,6 +17,10 @@
 
 #include <ch.h>
 #include <hal.h>
+<<<<<<< HEAD
+=======
+#include "chibios_config.h"
+>>>>>>> upstream/master
 
 /* chThdSleepX of zero maps to infinite - so we map to a tiny delay to still yield */
 #define wait_ms(ms)                     \
@@ -30,6 +34,14 @@
 
 #ifdef WAIT_US_TIMER
 void wait_us(uint16_t duration);
+<<<<<<< HEAD
+=======
+#elif PORT_SUPPORTS_RT == TRUE
+#    define wait_us(us)                                            \
+        do {                                                       \
+            chSysPolledDelayX(US2RTC(REALTIME_COUNTER_CLOCK, us)); \
+        } while (0)
+>>>>>>> upstream/master
 #else
 #    define wait_us(us)                     \
         do {                                \

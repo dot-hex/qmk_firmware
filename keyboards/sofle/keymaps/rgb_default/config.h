@@ -22,17 +22,24 @@
 
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
+<<<<<<< HEAD
 
 #define MASTER_LEFT
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
+=======
+>>>>>>> upstream/master
 #define CUSTOM_FONT
 
 #define CUSTOM_LAYER_READ //if you remove this it causes issues - needs better guarding
 
 
+<<<<<<< HEAD
 #define TAPPING_FORCE_HOLD
+=======
+#define QUICK_TAP_TERM 0
+>>>>>>> upstream/master
 #ifdef TAPPING_TERM
     #undef TAPPING_TERM
     #define TAPPING_TERM 200
@@ -45,6 +52,7 @@
 #define RGBLIGHT_LAYERS
 
 /* ws2812 RGB LED */
+<<<<<<< HEAD
 #define RGB_DI_PIN D3
 
 
@@ -58,6 +66,20 @@
     #undef RGBLED_NUM
 
     //#define RGBLIGHT_ANIMATIONS
+=======
+#define WS2812_DI_PIN D3
+
+
+#ifdef RGB_MATRIX_ENABLE
+#define RGBLIGHT_LED_COUNT 35    // Number of LEDs
+#define RGBLIGHT_LED_COUNT 35    // Number of LEDs
+#define RGB_MATRIX_LED_COUNT RGBLIGHT_LED_COUNT
+#endif
+
+#ifdef RGBLIGHT_ENABLE
+    #undef RGBLIGHT_LED_COUNT
+
+>>>>>>> upstream/master
 	//#define RGBLIGHT_EFFECT_BREATHING
 	#define RGBLIGHT_EFFECT_RAINBOW_MOOD
 	//#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
@@ -69,11 +91,20 @@
 	//#define RGBLIGHT_EFFECT_ALTERNATING
 	//#define RGBLIGHT_EFFECT_TWINKLE
 
+<<<<<<< HEAD
     #define RGBLED_NUM 70
 	//#define RGBLED_SPLIT
 	#define RGBLED_SPLIT { 35, 35 } // haven't figured out how to use this yet
 
 	//#define RGBLED_NUM 30
+=======
+    #define RGBLIGHT_LED_COUNT 70
+	#undef RGBLED_SPLIT
+	#define RGBLED_SPLIT { 35, 35 } // haven't figured out how to use this yet
+
+	//#define RGBLIGHT_LED_COUNT 30
+    #undef RGBLIGHT_LIMIT_VAL
+>>>>>>> upstream/master
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17
@@ -83,6 +114,7 @@
 #ifdef RGB_MATRIX_ENABLE
 #   define RGB_MATRIX_KEYPRESSES // reacts to keypresses
 // #   define RGB_MATRIX_KEYRELEASES // reacts to keyreleases (instead of keypresses)
+<<<<<<< HEAD
 // #   define RGB_DISABLE_AFTER_TIMEOUT 0 // number of ticks to wait until disabling effects
 #   define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
 #   define RGB_MATRIX_FRAMEBUFFER_EFFECTS
@@ -91,6 +123,15 @@
 #    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
 
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_GRADIENT_LEFT_RIGHT
+=======
+#   define RGB_MATRIX_SLEEP // turn off effects when suspended
+#   define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+// #   define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
+// #   define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
+
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_GRADIENT_LEFT_RIGHT
+>>>>>>> upstream/master
 
 #    define RGB_MATRIX_HUE_STEP 8
 #    define RGB_MATRIX_SAT_STEP 8

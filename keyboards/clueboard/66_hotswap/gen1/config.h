@@ -16,6 +16,7 @@
  */
 
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
@@ -46,6 +47,8 @@
  *
  */
 //#define FORCE_NKRO
+=======
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -62,6 +65,7 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
@@ -79,9 +83,12 @@
 #define LED_DRIVER_ADDR_1 0b1110100
 #define I2C1_SCL_PIN B8
 #define I2C1_SDA_PIN B9
+=======
+>>>>>>> upstream/master
 
-#define LED_DRIVER_COUNT 1
-#define DRIVER_LED_TOTAL 71
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define I2C1_SCL_PIN B8
+#define I2C1_SDA_PIN B9
 
 // LED Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:

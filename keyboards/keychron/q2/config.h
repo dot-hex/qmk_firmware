@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x3434
 #define MANUFACTURER    Keychron
@@ -119,3 +120,15 @@
 #ifdef VIA_ENABLE
 #    define VIA_QMK_RGBLIGHT_ENABLE
 #endif
+=======
+#define MATRIX_UNSELECT_DRIVE_HIGH
+
+/* RGB Matrix Driver Configuration */
+#define SNLED27351_I2C_ADDRESS_1 SNLED27351_I2C_ADDRESS_VDDIO
+#define SNLED27351_I2C_ADDRESS_2 SNLED27351_I2C_ADDRESS_GND
+
+#define SNLED27351_PHASE_CHANNEL SNLED27351_SCAN_PHASE_9_CHANNEL
+
+/* Encoder Configuration*/
+#define ENCODER_DEFAULT_POS 0x3
+>>>>>>> upstream/master

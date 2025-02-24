@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -42,6 +43,8 @@
 #define ENCODERS_PAD_B \
     { B12, B0 }
 
+=======
+>>>>>>> upstream/master
 /* I2C - required for custom i2c_init */
 #define I2C1_SCL_PIN B6
 #define I2C1_SDA_PIN B7
@@ -53,6 +56,7 @@
 #define AUDIO_PWM_PAL_MODE 1
 #define AUDIO_PWM_DRIVER PWMD1
 #define AUDIO_PWM_CHANNEL 1
+<<<<<<< HEAD
 #define AUDIO_STATE_TIMER GPTD4
 
 /* RGB LED */
@@ -69,10 +73,13 @@
 #define RGBLIGHT_EFFECT_RGB_TEST
 #define RGBLIGHT_EFFECT_ALTERNATING
 #define RGBLIGHT_EFFECT_TWINKLE
+=======
+>>>>>>> upstream/master
 
 #define WS2812_PWM_DRIVER PWMD3
 #define WS2812_PWM_CHANNEL 4
 #define WS2812_PWM_PAL_MODE 2
+<<<<<<< HEAD
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM2
 #define WS2812_DMA_CHANNEL 5
 #define WS2812_EXTERNAL_PULLUP
@@ -80,3 +87,8 @@
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM2
+#define WS2812_PWM_DMA_CHANNEL 5
+#define WS2812_EXTERNAL_PULLUP
+>>>>>>> upstream/master

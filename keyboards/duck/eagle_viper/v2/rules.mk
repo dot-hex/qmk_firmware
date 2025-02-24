@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,5 +21,7 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = 60_ansi 60_hhkb 60_ansi_split_bs_rshift
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 SRC += indicator_leds.c matrix.c duck_led/duck_led.c

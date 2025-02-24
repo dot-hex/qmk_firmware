@@ -15,10 +15,18 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+<<<<<<< HEAD
 
 #include "quantum.h"
 #include "matrix.h"
 #include "uart.h"
+=======
+
+#include "matrix.h"
+#include "uart.h"
+
+#define UART_MATRIX_RESPONSE_TIMEOUT 10000
+>>>>>>> upstream/master
 
 void matrix_init_custom(void) {
     uart_init(500000);
@@ -39,11 +47,24 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
         //wait for the serial data, timeout if it's been too long
         while (!uart_available()) {
             timeout++;
+<<<<<<< HEAD
             if (timeout > 10000) {
                 break;
             }
         }
         uart_data[i] = uart_read();
+=======
+            if (timeout > UART_MATRIX_RESPONSE_TIMEOUT) {
+                break;
+            }
+        }
+
+        if (timeout < UART_MATRIX_RESPONSE_TIMEOUT) {
+            uart_data[i] = uart_read();
+        } else {
+            uart_data[i] = 0x00;
+        }
+>>>>>>> upstream/master
     }
 
     //check for the end packet, the key state bytes use the LSBs, so 0xE0

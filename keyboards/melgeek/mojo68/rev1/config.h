@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /*
  * Keyboard Matrix Assignments
  *
@@ -35,4 +36,9 @@
 #define DIODE_DIRECTION COL2ROW
 
 #define DRIVER_LED_TOTAL 68
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+#define IS31FL3741_SDB_PIN B7
+
+>>>>>>> upstream/master
 #define DRIVER_INDICATOR_LED_TOTAL 3

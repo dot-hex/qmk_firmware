@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* Select hand configuration */
 
 #define MASTER_LEFT
@@ -31,6 +32,16 @@
 #endif
 
 #define RGBLED_NUM 55    // Number of LEDs
+=======
+#define QUICK_TAP_TERM 0
+#define TAPPING_TERM 180
+
+#ifdef RGBLIGHT_LED_COUNT
+  #undef RGBLIGHT_LED_COUNT
+#endif
+
+#define RGBLIGHT_LED_COUNT 55    // Number of LEDs
+>>>>>>> upstream/master
 #define RGBLIGHT_SPLIT
 #define RGBLED_SPLIT { 48, 7 }
 

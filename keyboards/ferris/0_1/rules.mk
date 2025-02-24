@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,11 +18,15 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 UNICODE_ENABLE = yes
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
-NO_USB_STARTUP_CHECK = yes
-LTO_ENABLE = yes
 
 SRC += matrix.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = split_3x5_2
+=======
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

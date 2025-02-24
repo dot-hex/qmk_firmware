@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -35,6 +36,8 @@
 #define ENCODERS_PAD_A { B1 }
 #define ENCODERS_PAD_B { B3 }
 
+=======
+>>>>>>> upstream/master
 /* misc */
 #define LAYER_STATE_8BIT
 #define NO_ACTION_TAPPING

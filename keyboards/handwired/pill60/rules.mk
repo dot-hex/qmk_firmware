@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -16,4 +17,6 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = handwired/pill60/bluepill

@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "xt8x.h"
 
 void matrix_init_kb(void) {
@@ -22,10 +23,17 @@ void matrix_init_kb(void) {
     setPinOutput(LED_CAPS_LOCK_PIN); // Caps
 	setPinOutput(LED_SCROLL_LOCK_PIN); // Scroll lock
     setPinOutput(INDICATOR_PIN_0); // Layer indicator on F13
+=======
+#include "quantum.h"
+
+void matrix_init_kb(void) {
+    gpio_set_pin_output(INDICATOR_PIN_0); // Layer indicator on F13
+>>>>>>> upstream/master
 
 	matrix_init_user();
 }
 
+<<<<<<< HEAD
 bool led_update_kb(led_t led_state) {
 
     bool res = led_update_user(led_state);
@@ -39,5 +47,9 @@ bool led_update_kb(led_t led_state) {
 
 __attribute__((weak)) layer_state_t layer_state_set_user(layer_state_t state) {
   writePin(INDICATOR_PIN_0, layer_state_cmp(state, 1));
+=======
+__attribute__((weak)) layer_state_t layer_state_set_user(layer_state_t state) {
+  gpio_write_pin(INDICATOR_PIN_0, layer_state_cmp(state, 1));
+>>>>>>> upstream/master
   return state;
 }

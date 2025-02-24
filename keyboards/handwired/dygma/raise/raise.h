@@ -19,6 +19,7 @@
 #include "quantum.h"
 
 #include "leds.h"
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -81,3 +82,5 @@
 		{ R30, R31, R32, R33, R34, R35, XXX, XXX }, \
 		{ R40, R41, R42, R43, R44, R45, R46, R47 } \
 }
+=======
+>>>>>>> upstream/master

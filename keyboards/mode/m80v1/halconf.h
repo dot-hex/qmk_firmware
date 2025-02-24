@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/mode/m80v1/halconf.h
 /* Copyright 2020 QMK
+=======
+/* Copyright 2021 Don Kjer
+>>>>>>> upstream/master:keyboards/durgod/dgk6x/galaxy/config.h
+=======
+/* Copyright 2020 QMK
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,4 +24,12 @@
 
 #pragma once
 
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/mode/m80v1/halconf.h
 #include_next <halconf.h>
+=======
+#define CAPS_LED 46
+>>>>>>> upstream/master:keyboards/durgod/dgk6x/galaxy/config.h
+=======
+#include_next <halconf.h>
+>>>>>>> upstream/master

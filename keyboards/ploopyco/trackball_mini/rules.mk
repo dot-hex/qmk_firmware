@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -24,5 +25,8 @@ OPTS_DEF += -DENCODER_ENABLE
 
 QUANTUM_LIB_SRC += analog.c
 SRC += opt_encoder.c
+=======
+POINTING_DEVICE_DRIVER = adns5050
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = ploopyco/trackball_mini/rev1_001

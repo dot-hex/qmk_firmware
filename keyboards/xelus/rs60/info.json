@@ -1,5 +1,6 @@
 {
     "keyboard_name": "RS60",
+<<<<<<< HEAD
     "url": "",
     "maintainer": "Xelus22",
     "layouts": {
@@ -70,5 +71,28 @@
                 {"label":"Ctrl", "x":13.75, "y":4, "w":1.25}
             ]
         }
+=======
+    "manufacturer": "Xelus",
+    "url": "",
+    "maintainer": "Xelus22",
+    "usb": {
+        "vid": "0x5845",
+        "pid": "0x5253"
+    },
+    "qmk": {
+        "locking": {
+            "enabled": true,
+            "resync": true
+        }
+    },
+    "community_layouts": [
+        "60_ansi",
+        "60_ansi_split_bs_rshift",
+        "60_ansi_tsangan",
+        "60_ansi_tsangan_split_bs_rshift"
+    ],
+    "layout_aliases": {
+        "LAYOUT_60_tsangan_hhkb": "LAYOUT_60_ansi_tsangan_split_bs_rshift"
+>>>>>>> upstream/master
     }
 }

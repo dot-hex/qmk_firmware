@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 
 #include "quantum.h"
@@ -62,8 +63,14 @@ enum oled_modes {
   OLED_OFF,
   _NUM_OLED_MODES
 };
+=======
+// Copyright 2023 Andrew Kannan
+// SPDX-License-Identifier: GPL-2.0-or-later
+>>>>>>> upstream/master
 
+#pragma once
 
+<<<<<<< HEAD
 // Keyboard Information
 extern volatile uint8_t led_numlock;
 extern volatile uint8_t led_capslock;
@@ -121,3 +128,6 @@ void breathing_enable(void);
 void breathing_disable(void);
 void custom_config_load(void);
 void backlight_config_save(void);
+=======
+#include "satisfaction_keycodes.h"
+>>>>>>> upstream/master

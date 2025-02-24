@@ -15,6 +15,22 @@
  */
 #pragma once
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:platforms/chibios/boards/BLACKPILL_STM32_F411/configs/config.h
+#define BOARD_OTG_NOVBUSSENS 1
+
+#ifndef STM32_LSECLK
+#    define STM32_LSECLK 32768U
+#endif  // STM32_LSECLK
+
+#ifndef STM32_HSECLK
+#    define STM32_HSECLK 25000000U
+#endif  // STM32_HSECLK
+
+=======
+>>>>>>> upstream/master:platforms/chibios/boards/QMK_PROTON_C/configs/config.h
+>>>>>>> upstream/master
 #ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
 #    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
 #endif

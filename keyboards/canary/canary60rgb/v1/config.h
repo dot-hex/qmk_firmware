@@ -13,6 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
  #pragma once
 
 /* USB Device descriptor parameter */
@@ -92,3 +93,8 @@
 #    define DRIVER_COUNT 1
 #    define DRIVER_LED_TOTAL 63
 #endif
+=======
+#pragma once
+
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+>>>>>>> upstream/master

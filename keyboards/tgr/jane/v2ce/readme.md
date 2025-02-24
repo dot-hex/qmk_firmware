@@ -10,7 +10,11 @@ Make example for this keyboard (after setting up your build environment):
 
     make tgr/jane/v2ce:default
 
+<<<<<<< HEAD
 Flashing example for this keyboard ([after setting up the bootloadHID flashing environment](https://docs.qmk.fm/#/flashing_bootloadhid))
+=======
+Flashing example for this keyboard:
+>>>>>>> upstream/master
 
     make tgr/jane/v2ce:default:flash
 

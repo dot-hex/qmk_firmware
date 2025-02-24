@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x574D // WM
 #define PRODUCT_ID      0x0001 
@@ -59,3 +60,8 @@
 /* Hold ESC key (first key of first column) to trigger bootloader */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
+=======
+
+/* Ensure we jump to bootloader if the QK_BOOT keycode was pressed */
+#define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+>>>>>>> upstream/master

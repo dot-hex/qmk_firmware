@@ -25,6 +25,7 @@ enum layer_names {
     _FN,
 };
 
+<<<<<<< HEAD
 enum custom_keycodes {
     KC_QWRTY = SAFE_RANGE,
     KC_COLMK,
@@ -33,6 +34,8 @@ enum custom_keycodes {
     KC_NXTWD
 };
 
+=======
+>>>>>>> upstream/master
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define FN MO(_FN)
@@ -46,6 +49,16 @@ enum custom_keycodes {
 #define HRM_RC MT(MOD_RCTL, KC_K)
 #define HRM_RS MT(MOD_RSFT, KC_J)
 
+<<<<<<< HEAD
+=======
+#define KC_QWRTY PDF(_QWERTY)
+#define KC_COLMK PDF(_COLEMAK)
+#define KC_HRM PDF(_HRM)
+
+#define KC_PRVWD LCTL(KC_LEFT)
+#define KC_NXTWD LCTL(KC_RGHT)
+
+>>>>>>> upstream/master
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
     * QWERTY
@@ -185,6 +198,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           _______,_______, _______,       _______,              _______,      _______, _______, _______
     ),
 };
+<<<<<<< HEAD
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -224,3 +238,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+=======
+>>>>>>> upstream/master

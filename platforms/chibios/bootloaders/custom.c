@@ -17,5 +17,9 @@
 #include "bootloader.h"
 
 __attribute__((weak)) void bootloader_jump(void) {}
+<<<<<<< HEAD
+=======
+__attribute__((weak)) void mcu_reset(void) {}
+>>>>>>> upstream/master
 
 __attribute__((weak)) void enter_bootloader_mode_if_requested(void) {}

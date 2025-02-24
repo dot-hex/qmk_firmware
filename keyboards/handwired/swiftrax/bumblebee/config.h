@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -51,8 +52,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN E6
 #define RGBLED_NUM 3
 
+=======
+>>>>>>> upstream/master
 /* Solenid Pin */
 #define SOLENOID_PIN D2
 
 /* Piezo Buzzer */
+<<<<<<< HEAD
 #define AUDIO_PIN B7
+=======
+#define AUDIO_PIN B7
+>>>>>>> upstream/master

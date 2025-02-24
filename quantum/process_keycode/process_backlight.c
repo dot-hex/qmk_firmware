@@ -15,16 +15,21 @@
  */
 
 #include "process_backlight.h"
+<<<<<<< HEAD
 
 #ifdef LED_MATRIX_ENABLE
 #    include "led_matrix.h"
 #else
 #    include "backlight.h"
 #endif
+=======
+#include "backlight.h"
+>>>>>>> upstream/master
 
 bool process_backlight(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
+<<<<<<< HEAD
 #ifdef LED_MATRIX_ENABLE
             case BL_ON:
                 led_matrix_enable();
@@ -46,25 +51,33 @@ bool process_backlight(uint16_t keycode, keyrecord_t *record) {
                 return false;
 #else
             case BL_ON:
+=======
+            case QK_BACKLIGHT_ON:
+>>>>>>> upstream/master
                 backlight_level(BACKLIGHT_LEVELS);
                 return false;
-            case BL_OFF:
+            case QK_BACKLIGHT_OFF:
                 backlight_level(0);
                 return false;
-            case BL_DEC:
+            case QK_BACKLIGHT_DOWN:
                 backlight_decrease();
                 return false;
-            case BL_INC:
+            case QK_BACKLIGHT_UP:
                 backlight_increase();
                 return false;
-            case BL_TOGG:
+            case QK_BACKLIGHT_TOGGLE:
                 backlight_toggle();
                 return false;
-            case BL_STEP:
+            case QK_BACKLIGHT_STEP:
                 backlight_step();
                 return false;
+<<<<<<< HEAD
 #    ifdef BACKLIGHT_BREATHING
             case BL_BRTG:
+=======
+#ifdef BACKLIGHT_BREATHING
+            case QK_BACKLIGHT_TOGGLE_BREATHING:
+>>>>>>> upstream/master
                 backlight_toggle_breathing();
                 return false;
 #    endif

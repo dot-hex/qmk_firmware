@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -102,3 +103,8 @@
 #define DRIVER_LED_TOTAL 67
 #define DRIVER_INDICATOR_LED_TOTAL 0
 #endif
+=======
+#define USB_SUSPEND_WAKEUP_DELAY 5000
+
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+>>>>>>> upstream/master

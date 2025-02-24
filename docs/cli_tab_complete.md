@@ -10,18 +10,45 @@ There are several ways you can setup tab completion.
 
 Add this to the end of your `.profile` or `.bashrc`:
 
+<<<<<<< HEAD
     source ~/qmk_firmware/util/qmk_tab_complete.sh
 
 If you put `qmk_firmware` into another location you will need to adjust this path.
 
+=======
+```
+source ~/qmk_firmware/util/qmk_tab_complete.sh
+```
+
+If you put `qmk_firmware` into another location you will need to adjust this path.
+
+Zsh users will need to load `bashcompinit`. The following can be added to `~/.zshrc` file:
+
+```
+autoload -Uz bashcompinit && bashcompinit
+```
+
+>>>>>>> upstream/master
 ### System Wide Symlink
 
 If you want the tab completion available to all users of the system you can add a symlink to the `qmk_tab_complete.sh` script:
 
+<<<<<<< HEAD
     ln -s ~/qmk_firmware/util/qmk_tab_complete.sh /etc/profile.d/qmk_tab_complete.sh
+=======
+```
+ln -s ~/qmk_firmware/util/qmk_tab_complete.sh /etc/profile.d/qmk_tab_complete.sh
+```
+>>>>>>> upstream/master
 
 ### System Wide Copy
 
 In some cases a symlink may not work. Instead you can copy the file directly into place. Be aware that updates to the tab complete script may happen from time to time, you will want to recopy the file periodically.
 
+<<<<<<< HEAD
     cp util/qmk_tab_complete.sh /etc/profile.d
+=======
+```
+cp util/qmk_tab_complete.sh /etc/profile.d
+```
+>>>>>>> upstream/master

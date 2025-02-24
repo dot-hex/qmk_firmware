@@ -2,7 +2,11 @@
 RGB_MATRIX_EFFECT(CYCLE_OUT_IN)
 #    ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
+<<<<<<< HEAD
 static HSV CYCLE_OUT_IN_math(HSV hsv, int16_t dx, int16_t dy, uint8_t dist, uint8_t time) {
+=======
+static hsv_t CYCLE_OUT_IN_math(hsv_t hsv, int16_t dx, int16_t dy, uint8_t dist, uint8_t time) {
+>>>>>>> upstream/master
     hsv.h = 3 * dist / 2 + time;
     return hsv;
 }

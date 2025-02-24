@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #undef SOFT_SERIAL_PIN
@@ -40,6 +41,16 @@
 #define SOFT_SERIAL_PIN B6     // USART TX pin
 #define SERIAL_USART_RX_PIN B7     // USART RX pin
 #define SERIAL_USART_TX_PIN SOFT_SERIAL_PIN     // USART TX pin
+=======
+// in col2row col is input, and row is output
+// #define SPLIT_HAND_MATRIX_GRID A10, A4
+// 68kohm
+
+/* connection */
+#define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
+#define SERIAL_USART_RX_PIN B7     // USART RX pin
+#define SERIAL_USART_TX_PIN B6     // USART TX pin
+>>>>>>> upstream/master
 
 #define SELECT_SOFT_SERIAL_SPEED 1 // or 0, 2, 3, 4, 5
                                    //  0: 460800 baud

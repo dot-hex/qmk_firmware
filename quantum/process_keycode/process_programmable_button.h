@@ -18,6 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include <stdint.h>
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+#include <stdbool.h>
+#include "action.h"
+>>>>>>> upstream/master
 
 bool process_programmable_button(uint16_t keycode, keyrecord_t *record);

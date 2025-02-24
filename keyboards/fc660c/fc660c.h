@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define XXX KC_NO
 
 #define LAYOUT( \
@@ -34,3 +35,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { XXX, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3A, k3B, k3C, k3D, XXX, XXX }, \
     { k40, k41, k42, k43, k44, k45, k46, k47, k48, k49, k4A, k4B, XXX, XXX, k4E, XXX } \
 }
+=======
+#ifdef ACTUATION_DEPTH_ADJUSTMENT
+#    include "ad5258.h"
+
+// see keymaps/actuation-point-example to see how these functions can be used.
+void actuation_point_up(void);
+void actuation_point_down(void);
+
+// be careful with this.
+void adjust_actuation_point(int offset);
+#endif
+>>>>>>> upstream/master

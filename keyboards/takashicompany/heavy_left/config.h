@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Copyright 2021 takashicompany
 
@@ -145,3 +146,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BOOTMAGIC_LITE_COLUMN 0
 
 #define EE_HANDS
+=======
+// Copyright 2023 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#define EE_HANDS
+>>>>>>> upstream/master

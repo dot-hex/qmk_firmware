@@ -5,6 +5,10 @@
 static uint32_t ticks_offset = 0;
 static uint32_t last_ticks   = 0;
 static uint32_t ms_offset    = 0;
+<<<<<<< HEAD
+=======
+static uint32_t saved_ms     = 0;
+>>>>>>> upstream/master
 #if CH_CFG_ST_RESOLUTION < 32
 static uint32_t last_systime = 0;
 static uint32_t overflow     = 0;
@@ -40,7 +44,11 @@ static virtual_timer_t update_timer;
 #    define UPDATE_INTERVAL (((sysinterval_t)1) << (CH_CFG_ST_RESOLUTION - 1))
 
 // VT callback function to keep the overflow bits of the system tick counter updated.
+<<<<<<< HEAD
 static void update_fn(void *arg) {
+=======
+static void update_fn(struct ch_virtual_timer *timer, void *arg) {
+>>>>>>> upstream/master
     (void)arg;
     chSysLockFromISR();
     get_system_time_ticks();
@@ -73,6 +81,29 @@ void timer_clear(void) {
     chSysUnlock();
 }
 
+<<<<<<< HEAD
+=======
+__attribute__((weak)) void platform_timer_save_value(uint32_t value) {
+    saved_ms = value;
+}
+
+__attribute__((weak)) uint32_t platform_timer_restore_value(void) {
+    return saved_ms;
+}
+
+void timer_restore(void) {
+    chSysLock();
+    ticks_offset = get_system_time_ticks();
+    last_ticks   = 0;
+    ms_offset    = platform_timer_restore_value();
+    chSysUnlock();
+}
+
+void timer_save(void) {
+    platform_timer_save_value(timer_read32());
+}
+
+>>>>>>> upstream/master
 uint16_t timer_read(void) {
     return (uint16_t)timer_read32();
 }

@@ -1,4 +1,4 @@
-/* Copyright 2018 Salicylic_acid3
+/* Copyright 2021 Dztech <moyi4681@Live.cn>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,8 +16,6 @@
 
 #pragma once
 
-/* Select hand configuration */
+#define USB_SUSPEND_WAKEUP_DELAY 5000
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 180
-//#define MASTER_RIGHT
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND

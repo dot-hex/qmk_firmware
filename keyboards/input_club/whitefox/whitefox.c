@@ -15,10 +15,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 #include "whitefox.h"
 
 #ifdef LED_MATRIX_ENABLE
 const is31_led PROGMEM g_is31_leds[DRIVER_LED_TOTAL] = {
+=======
+#include "quantum.h"
+
+#ifdef LED_MATRIX_ENABLE
+const is31fl3731_led_t PROGMEM g_is31fl3731_leds[IS31FL3731_LED_COUNT] = {
+>>>>>>> upstream/master
 // The numbers in the comments are the led numbers DXX on the PCB
 /* Refer to IS31 manual for these locations
  *  driver
@@ -36,6 +43,7 @@ const is31_led PROGMEM g_is31_leds[DRIVER_LED_TOTAL] = {
   { 0, C8_6 }, { 0, C8_7 }, { 0, C8_8 },                                        { 0, C9_1 },                           { 0, C9_2 }, { 0, C9_3 }, { 0, C9_4 }, { 0, C9_5 }, { 0, C9_6 }, { 0, C9_7 },
 };
 
+<<<<<<< HEAD
 led_config_t g_led_config = {
     {
       // Key Matrix to LED Index
@@ -79,10 +87,14 @@ void matrix_init_kb(void) {
     // runs once when the firmware starts up
 
 #ifdef LED_MATRIX_ENABLE
+=======
+void matrix_init_kb(void) {
+>>>>>>> upstream/master
     /*
      * Since K20x is stuck with a 32 byte EEPROM (see tmk_core/common/chibios/eeprom_teensy.c),
      * and neither led_matrix_eeconfig.speed or .flags fit in this boundary, just force their values to default on boot.
      */
+<<<<<<< HEAD
 #    if !defined(LED_MATRIX_STARTUP_SPD)
 #        define LED_MATRIX_STARTUP_SPD UINT8_MAX / 2
 #    endif
@@ -92,3 +104,11 @@ void matrix_init_kb(void) {
 
     matrix_init_user();
 }
+=======
+    led_matrix_set_speed(LED_MATRIX_DEFAULT_SPD),
+    led_matrix_set_flags(LED_FLAG_ALL);
+
+    matrix_init_user();
+}
+#endif
+>>>>>>> upstream/master

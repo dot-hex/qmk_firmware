@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 HorrorTroll <https://github.com/HorrorTroll>
+=======
+/* Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 extern HSV gradient_0;
 extern HSV gradient_100;
 extern bool reflected_gradient;
@@ -21,6 +26,15 @@ extern bool reflected_gradient;
 static HSV INTERPOLATE_HSV(float step, HSV gradient_0, HSV gradient_100) {
     uint8_t cw, ccw;
     HSV color;
+=======
+extern hsv_t gradient_0;
+extern hsv_t gradient_100;
+extern bool reflected_gradient;
+
+static hsv_t INTERPOLATE_HSV(float step, hsv_t gradient_0, hsv_t gradient_100) {
+    uint8_t cw, ccw;
+    hsv_t color;
+>>>>>>> upstream/master
 
     cw = (gradient_0.h >= gradient_100.h) ? 255 + gradient_100.h - gradient_0.h : gradient_100.h - gradient_0.h;  // Hue range is 0 to 255.
     ccw = (gradient_0.h >= gradient_100.h) ? gradient_0.h - gradient_100.h : 255 + gradient_0.h - gradient_100.h;
@@ -33,13 +47,21 @@ static HSV INTERPOLATE_HSV(float step, HSV gradient_0, HSV gradient_100) {
 
     color.s = gradient_0.s + step * (gradient_100.s - gradient_0.s);
 
+<<<<<<< HEAD
     // Scale V with global RGB Matrix's V, so users can still control overall brightness with RGB_VAI & RGB_VAD0
+=======
+    // Scale V with global RGB Matrix's V, so users can still control overall brightness with RM_VALU & RM_VALD
+>>>>>>> upstream/master
     color.v = round((gradient_0.v + step * (gradient_100.v - gradient_0.v)) * ((float)rgb_matrix_config.hsv.v / 255));
 
     return color;
 }
 
+<<<<<<< HEAD
 static HSV CUSTOM_GRADIENT_math(uint8_t led_x, uint8_t min_x, uint8_t max_x) {
+=======
+static hsv_t CUSTOM_GRADIENT_math(uint8_t led_x, uint8_t min_x, uint8_t max_x) {
+>>>>>>> upstream/master
     float step = (float)led_x / (max_x - min_x);
     float mid_gradient_pos = 0.5;
 
@@ -64,11 +86,20 @@ static bool CUSTOM_GRADIENT(effect_params_t* params) {
     for (uint8_t i = led_min; i < led_max; i++) {
         RGB_MATRIX_TEST_LED_FLAGS();
 
+<<<<<<< HEAD
         HSV hsv_orig = CUSTOM_GRADIENT_math(g_led_config.point[i].x, min_x, max_x);
         RGB rgb = hsv_to_rgb(hsv_orig);
+=======
+        hsv_t hsv_orig = CUSTOM_GRADIENT_math(g_led_config.point[i].x, min_x, max_x);
+        rgb_t rgb = hsv_to_rgb(hsv_orig);
+>>>>>>> upstream/master
 
         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
 
+<<<<<<< HEAD
     return led_max < DRIVER_LED_TOTAL;
+=======
+    return led_max < RGB_MATRIX_LED_COUNT;
+>>>>>>> upstream/master
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 Jessica Sullivan and Don Kjer 
+=======
+/* Copyright 2021 Jessica Sullivan and Don Kjer
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +21,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #ifdef KEYBOARD_durgod_dgk6x_hades
 #   include "hades.h"
 #elif defined KEYBOARD_durgod_dgk6x_venus
@@ -41,6 +46,8 @@ enum DGK6X_keycodes {
 #define SAFE_RANGE NEW_SAFE_RANGE
 #endif /* WINLOCK_DISABLED */
 
+=======
+>>>>>>> upstream/master
 /* Function Prototype */
 void off_all_leds(void);
 void on_all_leds(void);

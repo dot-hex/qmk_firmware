@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/* Copyright 2023 @ Keychron (https://www.keychron.com)
+=======
 /* Copyright 2018 Salicylic_acid3
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,16 +20,22 @@
 
 #pragma once
 
-/* Select hand configuration */
+<<<<<<< HEAD
+/* RGB Matrix Driver Configuration */
+#define SNLED27351_I2C_ADDRESS_1 SNLED27351_I2C_ADDRESS_VDDIO
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
-#define USE_SERIAL_PD2
+#define SNLED27351_PHASE_CHANNEL SNLED27351_SCAN_PHASE_9_CHANNEL
 
-#define TAPPING_FORCE_HOLD
+/* Encoder Configuration*/
+#define ENCODER_DEFAULT_POS 0x3
+
+/* Enable num-lock LED */
+#define NUM_LOCK_LED_INDEX 5
+=======
+#define QUICK_TAP_TERM 0
 #define TAPPING_TERM 180
 
-#define RGBLED_NUM 12    // Number of LEDs
+#define RGBLIGHT_LED_COUNT 12    // Number of LEDs
 #define RGBLIGHT_LED_MAP { 0, 1, 3, 2, 2, 3, 2, 3, 4, 5, 6, 7 }
 
+>>>>>>> upstream/master

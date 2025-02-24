@@ -8,18 +8,28 @@
  */
 
 #include "rev1.h"
+<<<<<<< HEAD
+=======
+#include "touch_encoder.h"
+#include "common_oled.h"
+#include "transactions.h"
+>>>>>>> upstream/master
 
 #define NUMBER_OF_TOUCH_ENCODERS 2
 #define TOUCH_ENCODER_OPTIONS TOUCH_SEGMENTS + 2
 
+<<<<<<< HEAD
 #define NUMBER_OF_ENCODERS 4
 #define ENCODER_OPTIONS 2
 
+=======
+>>>>>>> upstream/master
 typedef struct PACKED {
     uint8_t r;
     uint8_t c;
 } encodermap_t;
 
+<<<<<<< HEAD
 // this maps encoders and then touch encoders to their respective electrical matrix entry
 // mapping is row (y) then column (x) when looking at the electrical layout
 const encodermap_t encoder_map[NUMBER_OF_ENCODERS][ENCODER_OPTIONS] = 
@@ -31,12 +41,16 @@ const encodermap_t encoder_map[NUMBER_OF_ENCODERS][ENCODER_OPTIONS] =
 }; 
 
 const encodermap_t touch_encoder_map[NUMBER_OF_TOUCH_ENCODERS][TOUCH_ENCODER_OPTIONS] = 
+=======
+const encodermap_t touch_encoder_map[NUMBER_OF_TOUCH_ENCODERS][TOUCH_ENCODER_OPTIONS] =
+>>>>>>> upstream/master
 {
     { {  6, 0 }, {  6, 1 }, {  6, 2 }, {  6, 3 }, {  6, 4 } }, // Touch Encoder 1 matrix entries
     { { 13, 0 }, { 13, 1 }, { 13, 2 }, { 13, 3 }, { 13, 4 } }  // Touch Encoder 2 matrix entries
 };
 
 static void process_encoder_matrix(encodermap_t pos) {
+<<<<<<< HEAD
     action_exec((keyevent_t){
         .key = (keypos_t){.row = pos.r, .col = pos.c}, .pressed = true, .time = (timer_read() | 1) /* time should not be 0 */
     });
@@ -64,6 +78,13 @@ bool touch_encoder_update_kb(uint8_t index, bool clockwise) {
     // Mapping clockwise (typically increase) to zero, and counter clockwise (decrease) to 1
     process_encoder_matrix(touch_encoder_map[index][clockwise ? 0 : 1]);
     return false;
+=======
+    action_exec(MAKE_KEYEVENT(pos.r, pos.c, true));
+#if TAP_CODE_DELAY > 0
+    wait_ms(TAP_CODE_DELAY);
+#endif
+    action_exec(MAKE_KEYEVENT(pos.r, pos.c, false));
+>>>>>>> upstream/master
 }
 
 bool touch_encoder_tapped_kb(uint8_t index, uint8_t section) {
@@ -82,15 +103,25 @@ led_config_t g_led_config = { {
     {  14,  15,  16,  17,  18,  19,  20 },
     {  27,  26,  25,  24,  23,  22,  21 },
     {  28,  29,  30,  31,  32,  33,  34 },
+<<<<<<< HEAD
     { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
     { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
+=======
+    { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
+    { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
+>>>>>>> upstream/master
     {  49,  50,  51,  52,  53,  54,  55 },
     {  62,  61,  60,  59,  58,  57,  56 },
     {  63,  64,  65,  66,  67,  68,  69 },
     {  76,  75,  74,  73,  72,  71,  70 },
     {  77,  78,  79,  80,  81,  82,  83 },
+<<<<<<< HEAD
     { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
     { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED }
+=======
+    { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED },
+    { NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED, NO_LED }
+>>>>>>> upstream/master
 }, {
     {  16,  16},{  34,  16},{  49,  16},{  64,  16},{  79,  16},{  94,  16},{ 109,  16},
     { 109,  31},{  94,  31},{  79,  31},{  64,  31},{  49,  31},{  34,  31},{  16,  31},
@@ -120,3 +151,18 @@ led_config_t g_led_config = { {
 } };
 // clang-format on
 #endif
+<<<<<<< HEAD
+=======
+
+void keyboard_post_init_kb(void) {
+    touch_encoder_init();
+    transaction_register_rpc(TOUCH_ENCODER_SYNC, touch_encoder_slave_sync);
+    transaction_register_rpc(RGB_MENU_SYNC, rgb_menu_slave_sync);
+    keyboard_post_init_user();
+}
+
+void housekeeping_task_kb(void) {
+    touch_encoder_update(TOUCH_ENCODER_SYNC);
+    rgb_menu_update(RGB_MENU_SYNC);
+}
+>>>>>>> upstream/master

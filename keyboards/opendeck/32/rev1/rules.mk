@@ -1,8 +1,6 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
@@ -23,3 +21,5 @@ RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = IS31FL3731
 
 LTO_ENABLE = yes
+=======
+>>>>>>> upstream/master

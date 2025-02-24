@@ -1,9 +1,7 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
@@ -19,6 +17,9 @@ CUSTOM_MATRIX = yes         # Custom matrix file
 NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
+=======
+CUSTOM_MATRIX = yes         # Custom matrix file
+>>>>>>> upstream/master
 
 # Project specific files
 SRC = matrix.c

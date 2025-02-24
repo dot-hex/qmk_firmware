@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F411
 
@@ -14,3 +15,7 @@ SERIAL_DRIVER = usart
 AUDIO_DRIVER  = pwm_hardware
 
 DEBOUNCE_TYPE = asym_eager_defer_pk
+=======
+KEYBOARD_SHARED_EP = yes
+MOUSE_SHARED_EP    = yes
+>>>>>>> upstream/master

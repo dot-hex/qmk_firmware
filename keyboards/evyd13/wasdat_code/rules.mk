@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,7 +18,8 @@ BACKLIGHT_ENABLE = yes      # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
-SRC += matrix.c
-
-LAYOUTS = fullsize_ansi fullsize_iso tkl_ansi tkl_iso
+VPATH += drivers/gpio
+SRC += matrix.c sn74x138.c

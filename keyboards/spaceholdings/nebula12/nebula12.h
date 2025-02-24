@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #define XXX KC_NO
 
 #include "quantum.h"
@@ -33,3 +34,7 @@
     { K20, K21, K22, }, \
     { K30, K31, K32, }  \
 }
+=======
+#include "quantum.h"
+#include "../wilba_tech/wt_rgb_backlight_keycodes.h"
+>>>>>>> upstream/master

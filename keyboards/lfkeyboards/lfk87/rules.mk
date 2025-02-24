@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Set the LFK87 hardware version.
 #
 # A - Green PCB. at90usb1286 Only 3 exist
@@ -32,3 +33,6 @@ SLEEP_LED_ENABLE = yes
 
 ISSI_ENABLE = yes			# If the I2C pullup resistors aren't install this must be disabled
 WATCHDOG_ENABLE = no		# Resets keyboard if matrix_scan isn't run every 250ms
+=======
+DEFAULT_FOLDER = lfkeyboards/lfk78/revc
+>>>>>>> upstream/master

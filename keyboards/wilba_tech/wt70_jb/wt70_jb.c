@@ -13,6 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 #include "wt70_jb.h"
 
 bool g_first_execution = false;
@@ -30,6 +31,12 @@ bool led_update_kb(led_t led_state) {
     return true;
 }
 
+=======
+#include "quantum.h"
+
+bool g_first_execution = false;
+
+>>>>>>> upstream/master
 // This is some magic so that PCBs flashed with VIA firmware at the factory
 // will start with an RGB test pattern. Not relevant for non-VIA firmware.
 #ifdef VIA_ENABLE
@@ -38,9 +45,15 @@ bool led_update_kb(led_t led_state) {
 // Called from matrix_init_kb() if not VIA_ENABLE
 void via_init_kb(void)
 {
+<<<<<<< HEAD
     // If the EEPROM has the magic, the data is good.
     // OK to load from EEPROM
     if (via_eeprom_is_valid()) {
+=======
+    // This checks both an EEPROM reset (from bootmagic lite, keycodes)
+    // and also firmware build date (from via_eeprom_is_valid())
+    if (eeconfig_is_enabled()) {
+>>>>>>> upstream/master
     } else	{
         // Cache "first execution" state so we can do something
         // specific after QMK initialization has done its thing.
@@ -49,12 +62,21 @@ void via_init_kb(void)
     }
 }
 
+<<<<<<< HEAD
 void keyboard_post_init_kb() {
+=======
+void keyboard_post_init_kb(void) {
+>>>>>>> upstream/master
     // This is a workaround to ensure "EEPROM cleared" PCBs will
     // start with the RGB test mode, essential for testing LEDs.
     if ( g_first_execution ) {
         rgblight_mode(RGBLIGHT_MODE_RGB_TEST);
     }
+<<<<<<< HEAD
+=======
+
+    keyboard_post_init_user();
+>>>>>>> upstream/master
 }
 
 #endif // VIA_ENABLE

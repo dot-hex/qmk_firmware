@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0x1C11
 #define PRODUCT_ID   0xB04D
@@ -82,6 +83,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -98,6 +101,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 
+<<<<<<< HEAD
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
@@ -184,3 +188,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define DRIVER_2_LED_TOTAL 55
 #    define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 #endif
+=======
+// i2c_master defines
+#define I2C_COUNT 2
+#define I2C1_CLOCK_SPEED 400000
+
+#define I2C1_SCL_PIN B0 // A2 on pinout = B0
+#define I2C1_SDA_PIN B1 // A2 on pinout = B1
+#define I2C1_SCL_PAL_MODE PAL_MODE_ALTERNATIVE_2
+#define I2C1_SDA_PAL_MODE PAL_MODE_ALTERNATIVE_2
+
+#define USE_I2C2
+#define I2C2_SCL_PIN C10 // A2 on pinout = C10
+#define I2C2_SDA_PIN C11 // A2 on pinout = C11
+#define I2C2_SCL_PAL_MODE PAL_MODE_ALTERNATIVE_2
+#define I2C2_SDA_PAL_MODE PAL_MODE_ALTERNATIVE_2
+
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_I2C_ADDRESS_2 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_SDB_PIN B16
+>>>>>>> upstream/master

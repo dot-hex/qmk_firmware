@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -44,14 +45,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define QMK_SPEAKER C6
 
+=======
+>>>>>>> upstream/master
 #ifdef AUDIO_ENABLE
 #define AUDIO_PIN C6
 #define STARTUP_SONG SONG(PREONIC_SOUND)
 // Disable music mode to keep the firmware size down
 #define NO_MUSIC_MODE
 #endif
+<<<<<<< HEAD
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
 #define DEBOUNCE 5
+=======
+>>>>>>> upstream/master

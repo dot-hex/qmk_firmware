@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -120,3 +121,8 @@
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+/* Midi Slider */
+#define SLIDER_PIN F6
+#define MIDI_ADVANCED
+>>>>>>> upstream/master

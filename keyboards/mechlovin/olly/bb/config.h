@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER Mechlovin.Studio
 #define PRODUCT      Olly BB
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -41,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 #define MATRIX_ROW_PINS {D6, A5, A4, A3, A6}
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 #define BACKLIGHT_PIN D4
@@ -70,3 +74,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+>>>>>>> upstream/master

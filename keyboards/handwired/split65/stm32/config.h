@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 // USB Device descriptor parameter
@@ -23,12 +24,15 @@
 #define DEVICE_VER    0x0000 // first revision
 #define MANUFACTURER  percyjw
 #define PRODUCT       split65
+=======
+>>>>>>> upstream/master
 
 // Audio
 #define AUDIO_PIN A5
 #define AUDIO_PIN_ALT A4
 #define AUDIO_PIN_ALT_AS_NEGATIVE
 
+<<<<<<< HEAD
 // Matrix Assignments
 #define MATRIX_ROWS 10 //Rows are doubled-up
 #define MATRIX_COLS 8
@@ -43,11 +47,14 @@
 
 // Split Keyboard specifics
 #define SOFT_SERIAL_PIN A9
+=======
+>>>>>>> upstream/master
 #define SELECT_SOFT_SERIAL_SPEED 1
 #define SERIAL_USART_DRIVER SD1
 #define SERIAL_USART_TX_PAL_MODE 7
 #define SERIAL_USART_TIMEOUT 100
 
+<<<<<<< HEAD
 // Debounce to reduce unintended double-presses use 0 if not needed
 #define DEBOUNCE 5
 
@@ -56,5 +63,10 @@
 //#define NO_PRINT
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+=======
+// Feature diable options
+//#define NO_DEBUG
+//#define NO_PRINT
+>>>>>>> upstream/master
 
 #define OLED_DISPLAY_128X64

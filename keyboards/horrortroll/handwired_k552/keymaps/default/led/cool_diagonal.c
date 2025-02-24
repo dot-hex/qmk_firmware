@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2021 HorrorTroll <https://github.com/HorrorTroll>
+=======
+/* Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,10 +17,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
 
 static HSV COOL_DIAGONAL_math(HSV hsv, uint8_t i, uint8_t time) {
+=======
+<<<<<<<< HEAD:keyboards/horrortroll/handwired_k552/keymaps/default/led/cool_diagonal.c
+
+static hsv_t COOL_DIAGONAL_math(hsv_t hsv, uint8_t i, uint8_t time) {
+>>>>>>> upstream/master
     hsv.h = (g_led_config.point[i].x / 4) - g_led_config.point[i].y - time;
     return hsv;
 }
 
+<<<<<<< HEAD
 bool COOL_DIAGONAL(effect_params_t* params) { return effect_runner_i(params, &COOL_DIAGONAL_math); }
+=======
+bool COOL_DIAGONAL(effect_params_t* params) { return effect_runner_i(params, &COOL_DIAGONAL_math); }
+========
+#include "lunar.h"
+>>>>>>>> upstream/master:keyboards/ai03/lunar/lunar.c
+>>>>>>> upstream/master

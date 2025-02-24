@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,3 +22,7 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = 65_ansi_blocker 65_ansi_blocker_split_bs
+=======
+# Processor frequency
+F_CPU = 8000000
+>>>>>>> upstream/master

@@ -1,5 +1,6 @@
 {
     "keyboard_name": "3w6",
+<<<<<<< HEAD
     "url": "https://github.com/weteor/3W6/",
     "maintainer": "weteor",
     "layouts": {
@@ -50,5 +51,13 @@
                 {"label": "k37", "x": 8.8, "y": 3.6}
             ]
         }
+=======
+    "manufacturer": "weteor",
+    "url": "https://github.com/weteor/3W6/",
+    "maintainer": "weteor",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x4658"
+>>>>>>> upstream/master
     }
 }

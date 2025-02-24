@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ifeq ($(LFK_REV), A)
     MCU = at90usb1286
 else
@@ -8,6 +9,8 @@ ifeq ($(strip $(ISSI_ENABLE)), yes)
     OPT_DEFS += -DISSI_ENABLE
 endif
 
+=======
+>>>>>>> upstream/master
 ifeq ($(strip $(WATCHDOG_ENABLE)), yes)
     OPT_DEFS += -DWATCHDOG_ENABLE
 endif

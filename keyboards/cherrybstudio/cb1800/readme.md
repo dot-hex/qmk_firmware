@@ -4,7 +4,11 @@
 
 A G80-1800 inspired PCB for CB1800 Zakabato and any suitable 1800 layout keyboards.
 
+<<<<<<< HEAD
 * Keyboard Maintainer: duongaanh
+=======
+* Keyboard Maintainer: [lunaticwhat](https://github.com/lunaticwhat)
+>>>>>>> upstream/master
 * Hardware Supported: cb1800, atmega32u4
 * Hardware Availability: [CherryB Studio](https://www.reddit.com/r/mechmarket/comments/mneayy/ic_cb1800zanbato_1800_classic_by_cherryb/)
 

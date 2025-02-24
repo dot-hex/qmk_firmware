@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x7856
@@ -53,11 +54,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
+=======
+>>>>>>> upstream/master
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+<<<<<<< HEAD
 
 /* Bootmagic Lite key configuration */
 #define BOOTMAGIC_LITE_ROW 0
@@ -68,6 +72,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_TIMEOUT 10000
 
 #define UNICODE_SELECTED_MODES UC_WINC, UC_MAC, UC_LNX
+=======
+#define OLED_TIMEOUT 10000
+
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_MACOS, UNICODE_MODE_LINUX
+>>>>>>> upstream/master
 
 #define UNICODE_CYCLE_PERSIST false
 
@@ -76,6 +85,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* #define NO_AUTO_SHIFT_SPECIAL */
 /* #define NO_AUTO_SHIFT_NUMERIC */
 
+<<<<<<< HEAD
 #ifdef LOCKING_SUPPORT_ENABLE
 #    undef LOCKING_SUPPORT_ENABLE
 #endif
@@ -86,5 +96,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
 #define TAPPING_TERM 200
+=======
+#define PERMISSIVE_HOLD
+>>>>>>> upstream/master
 
 #define NO_ACTION_ONESHOT

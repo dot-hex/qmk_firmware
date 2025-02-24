@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,3 +21,8 @@ AUDIO_ENABLE = no           # Audio output
 CUSTOM_MATRIX = yes
 SRC += matrix.c
 QUANTUM_LIB_SRC += uart.c
+=======
+CUSTOM_MATRIX = yes
+SRC += matrix.c
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

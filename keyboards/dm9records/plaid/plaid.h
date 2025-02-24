@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define LAYOUT_plaid_mit( \
 	k00, k01, k02, k03, k04, k05, k06, k07, k08, k09, k0a, k0b, \
 	k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, \
@@ -48,5 +49,7 @@
 #define LAYOUT_ortho_4x12 LAYOUT_plaid_grid
 #define LAYOUT_planck_mit LAYOUT_plaid_mit
 
+=======
+>>>>>>> upstream/master
 #define LED_RED C5
 #define LED_GREEN C4

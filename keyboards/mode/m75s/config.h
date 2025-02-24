@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x00DE
 #define PRODUCT_ID      0x7583 // For 75S
@@ -73,3 +74,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAP_CODE_DELAY 50
 
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 16383 // Overriding to use more EEPROM
+=======
+#define BACKLIGHT_PWM_DRIVER PWMD3
+#define BACKLIGHT_PWM_CHANNEL 1
+>>>>>>> upstream/master

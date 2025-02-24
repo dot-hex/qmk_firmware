@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 
@@ -28,3 +29,7 @@ SRC += matrix.c
 
 LAYOUTS = ortho_4x12 planck_mit
 LAYOUTS_HAS_RGB = no
+=======
+CUSTOM_MATRIX = lite
+SRC += matrix.c
+>>>>>>> upstream/master

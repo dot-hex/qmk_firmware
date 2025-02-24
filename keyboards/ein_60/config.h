@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -41,6 +42,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define ENCODER_RESOLUTIONS { 4, 4 }
 #endif
 
+=======
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X64
 #    define OLED_TIMEOUT 450000
@@ -52,6 +55,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define AUDIO_CLICKY
 #    define AUDIO_DAC_SAMPLE_MAX 4095U
 #endif
+<<<<<<< HEAD
 
 #define RGB_DI_PIN E7
 #ifdef RGB_DI_PIN
@@ -96,3 +100,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+=======
+>>>>>>> upstream/master

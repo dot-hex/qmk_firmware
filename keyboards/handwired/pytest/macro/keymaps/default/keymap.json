@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
     "keyboard": "handwired/pytest/basic",
     "keymap": "default_json",
     "layout": "LAYOUT_ortho_1x1",
     "layers": [["MACRO_0"]],
+=======
+    "keyboard": "handwired/pytest/macro",
+    "keymap": "default_json",
+    "layout": "LAYOUT_ortho_1x1",
+    "layers": [["QK_MACRO_0"]],
+>>>>>>> upstream/master
     "macros": [
         [
             "Hello, World!",

@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 #include "quantum.h"
 #include "ws2812.h"
+=======
+#include "ws2812.h"
+#include "gpio.h"
+#include "util.h"
+#include "chibios_config.h"
+>>>>>>> upstream/master
 
 /* Adapted from https://github.com/gamazeps/ws2812b-chibios-SPIDMA/ */
 
 // Define the spi your LEDs are plugged to here
+<<<<<<< HEAD
 #ifndef WS2812_SPI
 #    define WS2812_SPI SPID1
+=======
+#ifndef WS2812_SPI_DRIVER
+#    define WS2812_SPI_DRIVER SPID1
+>>>>>>> upstream/master
 #endif
 
 #ifndef WS2812_SPI_MOSI_PAL_MODE
@@ -16,6 +28,13 @@
 #    define WS2812_SPI_SCK_PAL_MODE 5
 #endif
 
+<<<<<<< HEAD
+=======
+#ifndef WS2812_SPI_DIVISOR
+#    define WS2812_SPI_DIVISOR 16
+#endif
+
+>>>>>>> upstream/master
 // Push Pull or Open Drain Configuration
 // Default Push Pull
 #ifndef WS2812_EXTERNAL_PULLUP
@@ -34,6 +53,7 @@
 
 // Define SPI config speed
 // baudrate should target 3.2MHz
+<<<<<<< HEAD
 // F072 fpclk = 48MHz
 // 48/16 = 3Mhz
 #if WS2812_SPI_DIVISOR == 2
@@ -54,6 +74,55 @@
 #    define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0)
 #else
 #    define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_1 | SPI_CR1_BR_0) // default
+=======
+#if defined(AT32F415)
+#    if WS2812_SPI_DIVISOR == 2
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (0)
+#    elif WS2812_SPI_DIVISOR == 4
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_0)
+#    elif WS2812_SPI_DIVISOR == 8
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_1)
+#    elif WS2812_SPI_DIVISOR == 16 // default
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_1 | SPI_CTRL1_MDIV_0)
+#    elif WS2812_SPI_DIVISOR == 32
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_2)
+#    elif WS2812_SPI_DIVISOR == 64
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_2 | SPI_CTRL1_MDIV_0)
+#    elif WS2812_SPI_DIVISOR == 128
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_2 | SPI_CTRL1_MDIV_1)
+#    elif WS2812_SPI_DIVISOR == 256
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_2 | SPI_CTRL1_MDIV_1 | SPI_CTRL1_MDIV_0)
+#    elif WS2812_SPI_DIVISOR == 512
+#        define WS2812_SPI_DIVISOR_CTRL2_MDIV_X (SPI_CTRL1_MDIV_3)
+#    elif WS2812_SPI_DIVISOR == 1024
+#        define WS2812_SPI_DIVISOR_CTRL2_MDIV_X (SPI_CTRL1_MDIV_3)
+#        define WS2812_SPI_DIVISOR_CTRL1_MDIV_X (SPI_CTRL1_MDIV_0)
+#    else
+#        error "Configured WS2812_SPI_DIVISOR value is not supported at this time."
+#    endif
+#else
+// F072 fpclk = 48MHz
+// 48/16 = 3Mhz
+#    if WS2812_SPI_DIVISOR == 2
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (0)
+#    elif WS2812_SPI_DIVISOR == 4
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_0)
+#    elif WS2812_SPI_DIVISOR == 8
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_1)
+#    elif WS2812_SPI_DIVISOR == 16 // default
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_1 | SPI_CR1_BR_0)
+#    elif WS2812_SPI_DIVISOR == 32
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_2)
+#    elif WS2812_SPI_DIVISOR == 64
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_2 | SPI_CR1_BR_0)
+#    elif WS2812_SPI_DIVISOR == 128
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_2 | SPI_CR1_BR_1)
+#    elif WS2812_SPI_DIVISOR == 256
+#        define WS2812_SPI_DIVISOR_CR1_BR_X (SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0)
+#    else
+#        error "Configured WS2812_SPI_DIVISOR value is not supported at this time."
+#    endif
+>>>>>>> upstream/master
 #endif
 
 // Use SPI circular buffer
@@ -70,13 +139,21 @@
 #endif
 
 #define BYTES_FOR_LED_BYTE 4
+<<<<<<< HEAD
 #ifdef RGBW
+=======
+#ifdef WS2812_RGBW
+>>>>>>> upstream/master
 #    define WS2812_CHANNELS 4
 #else
 #    define WS2812_CHANNELS 3
 #endif
 #define BYTES_FOR_LED (BYTES_FOR_LED_BYTE * WS2812_CHANNELS)
+<<<<<<< HEAD
 #define DATA_SIZE (BYTES_FOR_LED * RGBLED_NUM)
+=======
+#define DATA_SIZE (BYTES_FOR_LED * WS2812_LED_COUNT)
+>>>>>>> upstream/master
 #define RESET_SIZE (1000 * WS2812_TRST_US / (2 * WS2812_TIMING))
 #define PREAMBLE_SIZE 4
 
@@ -100,7 +177,11 @@ static uint8_t get_protocol_eq(uint8_t data, int pos) {
     return eq;
 }
 
+<<<<<<< HEAD
 static void set_led_color_rgb(LED_TYPE color, int pos) {
+=======
+static void set_led_color_rgb(ws2812_led_t color, int pos) {
+>>>>>>> upstream/master
     uint8_t* tx_start = &txbuf[PREAMBLE_SIZE];
 
 #if (WS2812_BYTE_ORDER == WS2812_BYTE_ORDER_GRB)
@@ -125,6 +206,7 @@ static void set_led_color_rgb(LED_TYPE color, int pos) {
     for (int j = 0; j < 4; j++)
         tx_start[BYTES_FOR_LED * pos + BYTES_FOR_LED_BYTE * 2 + j] = get_protocol_eq(color.r, j);
 #endif
+<<<<<<< HEAD
 #ifdef RGBW
     for (int j = 0; j < 4; j++)
         tx_start[BYTES_FOR_LED * pos + BYTES_FOR_LED_BYTE * 4 + j] = get_protocol_eq(color.w, j);
@@ -133,12 +215,25 @@ static void set_led_color_rgb(LED_TYPE color, int pos) {
 
 void ws2812_init(void) {
     palSetLineMode(RGB_DI_PIN, WS2812_MOSI_OUTPUT_MODE);
+=======
+#ifdef WS2812_RGBW
+    for (int j = 0; j < 4; j++)
+        tx_start[BYTES_FOR_LED * pos + BYTES_FOR_LED_BYTE * 3 + j] = get_protocol_eq(color.w, j);
+#endif
+}
+
+ws2812_led_t ws2812_leds[WS2812_LED_COUNT];
+
+void ws2812_init(void) {
+    palSetLineMode(WS2812_DI_PIN, WS2812_MOSI_OUTPUT_MODE);
+>>>>>>> upstream/master
 
 #ifdef WS2812_SPI_SCK_PIN
     palSetLineMode(WS2812_SPI_SCK_PIN, WS2812_SCK_OUTPUT_MODE);
 #endif // WS2812_SPI_SCK_PIN
 
     // TODO: more dynamic baudrate
+<<<<<<< HEAD
     static const SPIConfig spicfg = {WS2812_SPI_BUFFER_MODE, NULL, PAL_PORT(RGB_DI_PIN), PAL_PAD(RGB_DI_PIN), WS2812_SPI_DIVISOR_CR1_BR_X};
 
     spiAcquireBus(&WS2812_SPI);     /* Acquire ownership of the bus.    */
@@ -158,15 +253,91 @@ void ws2812_setleds(LED_TYPE* ledarray, uint16_t leds) {
 
     for (uint8_t i = 0; i < leds; i++) {
         set_led_color_rgb(ledarray[i], i);
+=======
+    static const SPIConfig spicfg = {
+#ifndef HAL_LLD_SELECT_SPI_V2
+// HAL_SPI_V1
+#    if SPI_SUPPORTS_CIRCULAR == TRUE
+        WS2812_SPI_BUFFER_MODE,
+#    endif
+        NULL, // end_cb
+        PAL_PORT(WS2812_DI_PIN),
+        PAL_PAD(WS2812_DI_PIN),
+#    if defined(WB32F3G71xx) || defined(WB32FQ95xx)
+        0,
+        0,
+        WS2812_SPI_DIVISOR
+#    else
+        WS2812_SPI_DIVISOR_CR1_BR_X,
+        0
+#    endif
+#else
+    // HAL_SPI_V2
+#    if SPI_SUPPORTS_CIRCULAR == TRUE
+        WS2812_SPI_BUFFER_MODE,
+#    endif
+#    if SPI_SUPPORTS_SLAVE_MODE == TRUE
+        false,
+#    endif
+        NULL, // data_cb
+        NULL, // error_cb
+        PAL_PORT(WS2812_DI_PIN),
+        PAL_PAD(WS2812_DI_PIN),
+#    if defined(AT32F415)
+        WS2812_SPI_DIVISOR_CTRL1_MDIV_X,
+#        if (WS2812_SPI_DIVISOR == 512 || WS2812_SPI_DIVISOR == 1024)
+        WS2812_SPI_DIVISOR_CTRL2_MDIV_X,
+#        endif
+        0
+#    else
+        WS2812_SPI_DIVISOR_CR1_BR_X,
+        0
+#    endif
+#endif
+    };
+
+    spiAcquireBus(&WS2812_SPI_DRIVER);     /* Acquire ownership of the bus.    */
+    spiStart(&WS2812_SPI_DRIVER, &spicfg); /* Setup transfer parameters.       */
+    spiSelect(&WS2812_SPI_DRIVER);         /* Slave Select assertion.          */
+#ifdef WS2812_SPI_USE_CIRCULAR_BUFFER
+    spiStartSend(&WS2812_SPI_DRIVER, ARRAY_SIZE(txbuf), txbuf);
+#endif
+}
+
+void ws2812_set_color(int index, uint8_t red, uint8_t green, uint8_t blue) {
+    ws2812_leds[index].r = red;
+    ws2812_leds[index].g = green;
+    ws2812_leds[index].b = blue;
+#if defined(WS2812_RGBW)
+    ws2812_rgb_to_rgbw(&ws2812_leds[index]);
+#endif
+}
+
+void ws2812_set_color_all(uint8_t red, uint8_t green, uint8_t blue) {
+    for (int i = 0; i < WS2812_LED_COUNT; i++) {
+        ws2812_set_color(i, red, green, blue);
+    }
+}
+
+void ws2812_flush(void) {
+    for (int i = 0; i < WS2812_LED_COUNT; i++) {
+        set_led_color_rgb(ws2812_leds[i], i);
+>>>>>>> upstream/master
     }
 
     // Send async - each led takes ~0.03ms, 50 leds ~1.5ms, animations flushing faster than send will cause issues.
     // Instead spiSend can be used to send synchronously (or the thread logic can be added back).
 #ifndef WS2812_SPI_USE_CIRCULAR_BUFFER
 #    ifdef WS2812_SPI_SYNC
+<<<<<<< HEAD
     spiSend(&WS2812_SPI, sizeof(txbuf) / sizeof(txbuf[0]), txbuf);
 #    else
     spiStartSend(&WS2812_SPI, sizeof(txbuf) / sizeof(txbuf[0]), txbuf);
+=======
+    spiSend(&WS2812_SPI_DRIVER, ARRAY_SIZE(txbuf), txbuf);
+#    else
+    spiStartSend(&WS2812_SPI_DRIVER, ARRAY_SIZE(txbuf), txbuf);
+>>>>>>> upstream/master
 #    endif
 #endif
 }

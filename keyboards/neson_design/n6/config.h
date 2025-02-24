@@ -18,6 +18,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -67,3 +68,9 @@
 #define RGBLIGHT_SAT_STEP   8
 #define RGBLIGHT_VAL_STEP   8
 #define RGBLIGHT_LIMIT_VAL  192
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2 IS31FL3731_I2C_ADDRESS_VCC
+#define IS31FL3731_LED_COUNT 64
+#define WS2812_LED_COUNT 1
+>>>>>>> upstream/master

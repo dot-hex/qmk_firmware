@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 MCU = atmega32u4
 
 BOOTLOADER = atmel-dfu
@@ -16,3 +17,12 @@ LAYOUTS = split_3x5_3
 DEBOUNCE_TYPE = sym_eager_pr
 SRC += matrix.c
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+# Build Options
+#   change yes to no to disable
+#
+CUSTOM_MATRIX = yes
+
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

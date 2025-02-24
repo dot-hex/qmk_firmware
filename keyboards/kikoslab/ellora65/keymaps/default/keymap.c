@@ -36,7 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F17 ,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,                
     KC_F18 ,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS, 
     KC_F19 ,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS, 
+<<<<<<< HEAD
     KC_F20 ,   KC_TRNS,   KC_TRNS,   KC_TRNS,              KC_TRNS,              RESET  ,              KC_TRNS,              KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS
+=======
+    KC_F20 ,   KC_TRNS,   KC_TRNS,   KC_TRNS,              KC_TRNS,              QK_BOOT  ,              KC_TRNS,              KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS
+>>>>>>> upstream/master
   )
 };
 
@@ -68,7 +72,10 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 /* timers */
 uint32_t anim_timer = 0;
+<<<<<<< HEAD
 uint32_t anim_sleep = 0;
+=======
+>>>>>>> upstream/master
 
 /* current frame */
 uint8_t current_frame = 0;
@@ -160,6 +167,7 @@ static void render_luna(int LUNA_X, int LUNA_Y) {
 
         /* current status */
         if (led_usb_state.caps_lock) {
+<<<<<<< HEAD
             oled_write_raw_P(bark[abs(1 - current_frame)], ANIM_SIZE);
 
         } else if (isSneaking) {
@@ -176,11 +184,40 @@ static void render_luna(int LUNA_X, int LUNA_Y) {
         }
     }
 
+=======
+            oled_write_raw_P(bark[current_frame], ANIM_SIZE);
+
+        } else if (isSneaking) {
+            oled_write_raw_P(sneak[current_frame], ANIM_SIZE);
+
+        } else if (current_wpm <= MIN_WALK_SPEED) {
+            oled_write_raw_P(sit[current_frame], ANIM_SIZE);
+
+        } else if (current_wpm <= MIN_RUN_SPEED) {
+            oled_write_raw_P(walk[current_frame], ANIM_SIZE);
+
+        } else {
+            oled_write_raw_P(run[current_frame], ANIM_SIZE);
+        }
+    }
+
+#    if OLED_TIMEOUT > 0
+    /* the animation prevents the normal timeout from occuring */
+    if (last_input_activity_elapsed() > OLED_TIMEOUT && last_led_activity_elapsed() > OLED_TIMEOUT) {
+        oled_off();
+        return;
+    } else {
+        oled_on();
+    }
+#    endif
+
+>>>>>>> upstream/master
     /* animation timer */
     if (timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
         anim_timer = timer_read32();
         animate_luna();
     }
+<<<<<<< HEAD
 
     /* this fixes the screen on and off bug */
     if (current_wpm > 0) {
@@ -189,6 +226,8 @@ static void render_luna(int LUNA_X, int LUNA_Y) {
     } else if (timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {
         oled_off();
     }
+=======
+>>>>>>> upstream/master
 }
 
 

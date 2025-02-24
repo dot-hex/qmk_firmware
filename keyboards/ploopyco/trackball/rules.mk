@@ -1,9 +1,7 @@
-# MCU name
-MCU = atmega32u4
-
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -24,5 +22,8 @@ OPTS_DEF += -DENCODER_ENABLE
 
 QUANTUM_LIB_SRC += analog.c
 SRC += opt_encoder.c
+=======
+POINTING_DEVICE_DRIVER = pmw3360
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = ploopyco/trackball/rev1_005

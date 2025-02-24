@@ -1,6 +1,7 @@
-# MCU name
-MCU = STM32F103
+# Configure for 128K flash
+MCU_LDSCRIPT = STM32F103xB
 
+<<<<<<< HEAD
 # Bootloader selection
 # BOOTLOADER = stm32duino
 
@@ -37,3 +38,7 @@ RAW_ENABLE = yes            # Enables HID RAW communication between the board an
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 LTO_ENABLE = yes
+=======
+# Extra include
+SRC += keycode_lookup.c
+>>>>>>> upstream/master

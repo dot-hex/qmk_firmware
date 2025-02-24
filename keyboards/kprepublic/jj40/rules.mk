@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32a
 
@@ -22,3 +23,6 @@ LAYOUTS = ortho_4x12 planck_mit
 
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
+=======
+DEFAULT_FOLDER = kprepublic/jj40/rev1
+>>>>>>> upstream/master

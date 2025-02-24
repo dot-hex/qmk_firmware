@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306   # Enables the use of OLED displays
 ENCODER_ENABLE = yes       # ENables the use of one or more encoders
@@ -6,3 +7,6 @@ RGB_MATRIX_ENABLE = no     # Enable keyboard RGB matrix (do not use together wit
 RGB_MATRIX_DRIVER = WS2812 # RGB matrix driver support
 
 RGB_MATRIX_SUPPORTED = yes
+=======
+DEFAULT_FOLDER = splitkb/kyria/rev1/base
+>>>>>>> upstream/master

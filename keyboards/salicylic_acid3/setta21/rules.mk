@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -24,3 +25,6 @@ RGB_MATRIX_DRIVER = WS2812
 DEFAULT_FOLDER = salicylic_acid3/setta21/rev1
 
 LAYOUTS = numpad_6x4
+=======
+DEFAULT_FOLDER = salicylic_acid3/setta21/rev1
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -16,10 +17,16 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
+=======
+>>>>>>> upstream/master
 #HARDWARE_SERIAL = yes
 CUSTOM_MATRIX = yes
 
 SRC += matrix.c led.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += uart.c
+=======
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = converter/sun_usb/type5

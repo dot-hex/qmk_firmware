@@ -16,12 +16,18 @@
  */
 
 #include "wpm.h"
+#include "timer.h"
+#include "keycode.h"
+#include "quantum_keycodes.h"
+#include "action_util.h"
+#include <math.h>
 
 #include <math.h>
 
 // WPM Stuff
 static uint8_t  current_wpm = 0;
 static uint32_t wpm_timer   = 0;
+<<<<<<< HEAD
 
 /* The WPM calculation works by specifying a certain number of 'periods' inside
  * a ring buffer, and we count the number of keypresses which occur in each of
@@ -39,6 +45,25 @@ static int16_t period_presses[MAX_PERIODS] = {0};
 static uint8_t current_period              = 0;
 static uint8_t periods                     = 1;
 
+=======
+
+/* The WPM calculation works by specifying a certain number of 'periods' inside
+ * a ring buffer, and we count the number of keypresses which occur in each of
+ * those periods.  Then to calculate WPM, we add up all of the keypresses in
+ * the whole ring buffer, divide by the number of keypresses in a 'word', and
+ * then adjust for how much time is captured by our ring buffer.  The size
+ * of the ring buffer can be configured using the keymap configuration
+ * value `WPM_SAMPLE_PERIODS`.
+ *
+ */
+#define MAX_PERIODS (WPM_SAMPLE_PERIODS)
+#define PERIOD_DURATION (1000 * WPM_SAMPLE_SECONDS / MAX_PERIODS)
+
+static int16_t period_presses[MAX_PERIODS] = {0};
+static uint8_t current_period              = 0;
+static uint8_t periods                     = 1;
+
+>>>>>>> upstream/master
 #if !defined(WPM_UNFILTERED)
 /* LATENCY is used as part of filtering, and controls how quickly the reported
  * WPM trails behind our actual instantaneous measured WPM value, and is
@@ -100,7 +125,25 @@ __attribute__((weak)) uint8_t wpm_regress_count(uint16_t keycode) {
         }
     } else {
         return 0;
+<<<<<<< HEAD
     }
+}
+#endif
+
+// Outside 'raw' mode we smooth results over time.
+
+void update_wpm(uint16_t keycode) {
+    if (wpm_keycode(keycode) && period_presses[current_period] < INT16_MAX) {
+        period_presses[current_period]++;
+=======
+>>>>>>> upstream/master
+    }
+#if defined(WPM_ALLOW_COUNT_REGRESSION)
+    uint8_t regress = wpm_regress_count(keycode);
+    if (regress && period_presses[current_period] > INT16_MIN) {
+        period_presses[current_period]--;
+    }
+#endif
 }
 #endif
 
@@ -122,10 +165,17 @@ void decay_wpm(void) {
     int32_t presses = period_presses[0];
     for (int i = 1; i <= periods; i++) {
         presses += period_presses[i];
+<<<<<<< HEAD
     }
     if (presses < 0) {
         presses = 0;
     }
+=======
+    }
+    if (presses < 0) {
+        presses = 0;
+    }
+>>>>>>> upstream/master
     int32_t  elapsed  = timer_elapsed32(wpm_timer);
     uint32_t duration = (((periods)*PERIOD_DURATION) + elapsed);
     int32_t  wpm_now  = (60000 * presses) / (duration * WPM_ESTIMATED_WORD_SIZE);

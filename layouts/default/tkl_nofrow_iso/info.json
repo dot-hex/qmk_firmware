@@ -1,7 +1,15 @@
 {
     "keyboard_name": "Tenkeyless No F-Row ISO Layout",
     "url": "",
+<<<<<<< HEAD
     "maintainer": "qmk",
+=======
+<<<<<<< HEAD:keyboards/reviung/reviung61/info.json
+    "maintainer": "gtips",
+=======
+    "maintainer": "qmk",
+>>>>>>> upstream/master:layouts/default/tkl_nofrow_iso/info.json
+>>>>>>> upstream/master
     "layouts": {
         "LAYOUT_tkl_nofrow_iso": {
             "layout": [

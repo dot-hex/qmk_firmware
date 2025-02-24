@@ -1,6 +1,6 @@
 {
-    "keyboard_name": "Ferris",
     "url": "https://github.com/pierrechevalier83/ferris/",
+<<<<<<< HEAD
     "maintainer": "@pierrec83",
     "layouts": {
         "LAYOUT_split_3x5_2": {
@@ -49,4 +49,7 @@
             ]
         }
     }
+=======
+    "maintainer": "@pierrec83"
+>>>>>>> upstream/master
 }

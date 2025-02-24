@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x414C
@@ -74,3 +75,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* #define RGBLIGHT_SLEEP */
 /* #endif */
 
+=======
+#define OLED_TIMEOUT 10000
+>>>>>>> upstream/master

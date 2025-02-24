@@ -1,5 +1,6 @@
 # Processor frequency
 F_CPU = 8000000
+<<<<<<< HEAD
 
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = no       # Mouse keys
@@ -15,3 +16,5 @@ BLUETOOTH_ENABLE = yes
 BLUETOOTH_DRIVER = BluefruitLE
 
 LTO_ENABLE = yes
+=======
+>>>>>>> upstream/master

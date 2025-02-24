@@ -1,4 +1,4 @@
-/* Copyright 2020 Salicylic_acid3
+/* Copyright 2021 knaruo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,8 @@
 #pragma once
 
 /* Select hand configuration */
+#define SPLIT_HAND_MATRIX_GRID B0,B7
+#define SPLIT_HAND_MATRIX_GRID_LOW_IS_LEFT
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 180
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
+#define MATRIX_MASKED
+#define SPLIT_USB_DETECT

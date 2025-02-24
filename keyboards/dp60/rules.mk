@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,5 +22,7 @@ RGB_MATRIX_DRIVER = IS31FL3731 # Use RGB matrix
 
 LAYOUTS = 60_ansi 60_hhkb 60_iso 60_ansi_split_bs_rshift
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 SRC += matrix.c

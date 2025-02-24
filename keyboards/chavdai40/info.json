@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "keyboard_name": "chavdai40", 
     "url": "https://github.com/dvorak55/chavdai40", 
     "maintainer": "t-miyajima", 
@@ -95,5 +96,13 @@
                 {"label":"Win", "x":10.13, "y":3, "w":1.25},
                 {"label":"Alt", "x":11.38, "y":3, "w":1.25}]
         }
+=======
+    "manufacturer": "t-miyajima",
+    "url": "https://github.com/dvorak55/chavdai40",
+    "maintainer": "t-miyajima",
+    "usb": {
+        "vid": "0x16D0",
+        "pid": "0x0F95"
+>>>>>>> upstream/master
     }
 }

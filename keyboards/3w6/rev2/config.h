@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED
@@ -25,6 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER weteor
 #define PRODUCT      3w6
 
+=======
+>>>>>>> upstream/master
 /* key matrix size */
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 10
@@ -44,15 +47,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS_L { B0, B1, B2, B4}
 #define MATRIX_COL_PINS_L { B3, E6, F7, B6, B5 }
+<<<<<<< HEAD
 #define UNUSED_PINS_L { B7, C6, C7, D2, D3, D4, D5, D6, D7, F0, F1, F4, F5, F6 }
 
 #define MATRIX_ROW_PINS_R { P10, P11, P12, P05 }
 #define MATRIX_COL_PINS_R { P06, P13, P14, P01, P00 }
 #define UNUSED_PINS_R { P02, P03, P04, P07, P15, P16, P17 }
+=======
+
+#define MATRIX_ROW_PINS_R { P10, P11, P12, P05 }
+#define MATRIX_COL_PINS_R { P06, P13, P14, P01, P00 }
+>>>>>>> upstream/master
 
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
+<<<<<<< HEAD
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -61,3 +71,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
+=======
+>>>>>>> upstream/master

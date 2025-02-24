@@ -1,5 +1,5 @@
 /*
-Copyright 2020 Salicylic_Acid
+Copyright 2021 gregorio
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,4 +17,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
+#define OLED_FONT_H "lib/glcdfont.c"

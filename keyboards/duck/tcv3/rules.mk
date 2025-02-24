@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,6 +18,8 @@ BACKLIGHT_ENABLE = no      # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 SRC += indicator_leds.c \
 			 matrix.c duck_led/duck_led.c

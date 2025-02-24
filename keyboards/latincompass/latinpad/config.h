@@ -16,6 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 #define VENDOR_ID       0x6C63 // "lc" = latincompass
 #define PRODUCT_ID      0x6C70 // "lp" = latinpad
@@ -98,3 +99,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 #define ENCODERS_PAD_B { B2, B6 }
 
 #define ENCODER_RESOLUTION 4
+=======
+#define OLED_FONT_H "./lib/glcdfont.c"
+>>>>>>> upstream/master

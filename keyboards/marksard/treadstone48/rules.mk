@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -22,4 +23,6 @@ RGBLIGHT_ENABLE = yes        # Enable keyboard RGB underglow
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = marksard/treadstone48/rev1

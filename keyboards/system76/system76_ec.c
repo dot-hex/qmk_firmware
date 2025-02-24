@@ -22,6 +22,15 @@
 #include "raw_hid.h"
 #include "rgb_matrix.h"
 #include "version.h"
+<<<<<<< HEAD
+=======
+#include "keyboard.h"
+#include "eeprom.h"
+#include "matrix.h"
+#include "action_layer.h"
+#include "bootloader.h"
+#include "wait.h"
+>>>>>>> upstream/master
 
 enum Command {
     CMD_PROBE         = 1,   // Probe for System76 EC protocol
@@ -87,6 +96,10 @@ bool system76_ec_is_unlocked(void) { return bootloader_unlocked; }
 enum Mode {
     MODE_SOLID_COLOR = 0,
     MODE_PER_KEY,
+<<<<<<< HEAD
+=======
+    #ifndef DISABLE_RGB_MATRIX_ANIMATIONS
+>>>>>>> upstream/master
     MODE_CYCLE_ALL,
     MODE_CYCLE_LEFT_RIGHT,
     MODE_CYCLE_UP_DOWN,
@@ -98,6 +111,10 @@ enum Mode {
     MODE_RAINDROPS,
     MODE_SPLASH,
     MODE_MULTISPLASH,
+<<<<<<< HEAD
+=======
+    #endif  // DISABLE_RGB_MATRIX_ANIMATIONS
+>>>>>>> upstream/master
     MODE_ACTIVE_KEYS,
     MODE_DISABLED,
     MODE_LAST,
@@ -107,6 +124,10 @@ enum Mode {
 static enum rgb_matrix_effects mode_map[] = {
     RGB_MATRIX_SOLID_COLOR,
     RGB_MATRIX_CUSTOM_raw_rgb,
+<<<<<<< HEAD
+=======
+    #ifndef DISABLE_RGB_MATRIX_ANIMATIONS
+>>>>>>> upstream/master
     RGB_MATRIX_CYCLE_ALL,
     RGB_MATRIX_CYCLE_LEFT_RIGHT,
     RGB_MATRIX_CYCLE_UP_DOWN,
@@ -118,6 +139,10 @@ static enum rgb_matrix_effects mode_map[] = {
     RGB_MATRIX_RAINDROPS,
     RGB_MATRIX_SPLASH,
     RGB_MATRIX_MULTISPLASH,
+<<<<<<< HEAD
+=======
+    #endif  // DISABLE_RGB_MATRIX_ANIMATIONS
+>>>>>>> upstream/master
     RGB_MATRIX_CUSTOM_active_keys,
     RGB_MATRIX_NONE,
 };
@@ -125,13 +150,18 @@ static enum rgb_matrix_effects mode_map[] = {
 
 _Static_assert(sizeof(mode_map) == MODE_LAST, "mode_map_length");
 
+<<<<<<< HEAD
 RGB raw_rgb_data[DRIVER_LED_TOTAL];
+=======
+rgb_t raw_rgb_data[RGB_MATRIX_LED_COUNT];
+>>>>>>> upstream/master
 
 // clang-format off
 rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
     // Layer 0
     {
         .enable = 1,
+<<<<<<< HEAD
         .mode = RGB_MATRIX_STARTUP_MODE,
         .hsv = {
             .h = RGB_MATRIX_STARTUP_HUE,
@@ -139,6 +169,15 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
+=======
+        .mode = RGB_MATRIX_DEFAULT_MODE,
+        .hsv = {
+            .h = RGB_MATRIX_DEFAULT_HUE,
+            .s = RGB_MATRIX_DEFAULT_SAT,
+            .v = RGB_MATRIX_DEFAULT_VAL,
+        },
+        .speed = RGB_MATRIX_DEFAULT_SPD,
+>>>>>>> upstream/master
         .flags = LED_FLAG_KEYLIGHT,
     },
     // Layer 1
@@ -146,11 +185,19 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
+<<<<<<< HEAD
             .h = RGB_MATRIX_STARTUP_HUE,
             .s = RGB_MATRIX_STARTUP_SAT,
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
+=======
+            .h = RGB_MATRIX_DEFAULT_HUE,
+            .s = RGB_MATRIX_DEFAULT_SAT,
+            .v = RGB_MATRIX_DEFAULT_VAL,
+        },
+        .speed = RGB_MATRIX_DEFAULT_SPD,
+>>>>>>> upstream/master
         .flags = LED_FLAG_KEYLIGHT,
     },
     // Layer 2
@@ -158,11 +205,19 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
+<<<<<<< HEAD
             .h = RGB_MATRIX_STARTUP_HUE,
             .s = RGB_MATRIX_STARTUP_SAT,
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
+=======
+            .h = RGB_MATRIX_DEFAULT_HUE,
+            .s = RGB_MATRIX_DEFAULT_SAT,
+            .v = RGB_MATRIX_DEFAULT_VAL,
+        },
+        .speed = RGB_MATRIX_DEFAULT_SPD,
+>>>>>>> upstream/master
         .flags = LED_FLAG_KEYLIGHT,
     },
     // Layer 3
@@ -170,11 +225,19 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
+<<<<<<< HEAD
             .h = RGB_MATRIX_STARTUP_HUE,
             .s = RGB_MATRIX_STARTUP_SAT,
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
+=======
+            .h = RGB_MATRIX_DEFAULT_HUE,
+            .s = RGB_MATRIX_DEFAULT_SAT,
+            .v = RGB_MATRIX_DEFAULT_VAL,
+        },
+        .speed = RGB_MATRIX_DEFAULT_SPD,
+>>>>>>> upstream/master
         .flags = LED_FLAG_KEYLIGHT,
     },
 };
@@ -290,7 +353,11 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
         case CMD_LED_GET_COLOR:
             if (!bootloader_unlocked) {
                 uint8_t index = data[2];
+<<<<<<< HEAD
                 if (index < DRIVER_LED_TOTAL) {
+=======
+                if (index < RGB_MATRIX_LED_COUNT) {
+>>>>>>> upstream/master
                     data[3] = raw_rgb_data[index].r;
                     data[4] = raw_rgb_data[index].g;
                     data[5] = raw_rgb_data[index].b;
@@ -312,13 +379,21 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
             if (!bootloader_unlocked) {
                 uint8_t index = data[2];
 
+<<<<<<< HEAD
                 RGB rgb = {
+=======
+                rgb_t rgb = {
+>>>>>>> upstream/master
                     .r = data[3],
                     .g = data[4],
                     .b = data[5],
                 };
 
+<<<<<<< HEAD
                 if (index < DRIVER_LED_TOTAL) {
+=======
+                if (index < RGB_MATRIX_LED_COUNT) {
+>>>>>>> upstream/master
                     raw_rgb_data[index] = rgb;
                     data[1] = 0;
                 } else {

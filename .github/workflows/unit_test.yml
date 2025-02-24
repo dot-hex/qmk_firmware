@@ -1,5 +1,11 @@
 name: Unit Tests
 
+<<<<<<< HEAD
+=======
+permissions:
+  contents: read
+
+>>>>>>> upstream/master
 on:
   push:
     branches:
@@ -20,6 +26,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+<<<<<<< HEAD
     container: qmkfm/base_container
 
     steps:
@@ -28,3 +35,15 @@ jobs:
         submodules: recursive
     - name: Run tests
       run: make test:all
+=======
+    container: ghcr.io/qmk/qmk_cli
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: Install dependencies
+      run: pip3 install -r requirements-dev.txt
+    - name: Run tests
+      run: qmk test-c
+>>>>>>> upstream/master

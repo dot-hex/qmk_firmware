@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,4 +19,6 @@ AUDIO_ENABLE     = no
 RGBLIGHT_ENABLE  = yes
 OLED_ENABLE = no
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = 8pack/rev12

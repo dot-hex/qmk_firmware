@@ -15,15 +15,20 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 #include <stdint.h>
 #include <stdbool.h>
 #include "matrix.h"
 #include "quantum.h"
+=======
+#include "matrix.h"
+>>>>>>> upstream/master
 #include "sn74x138.h"
 
 static const pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 static const pin_t col_pins[MATRIX_COLS] = MATRIX_COL_PINS;
 
+<<<<<<< HEAD
 /* col 0: C7
  * col 1: B6
  * col 2: C6
@@ -49,6 +54,34 @@ static const pin_t col_pins[MATRIX_COLS] = MATRIX_COL_PINS;
 static void select_col(uint8_t col) {
     if (col_pins[col] != NO_PIN) {
         writePinLow(col_pins[col]);
+=======
+/* Columns 6-12 use a 74HC138 3-to-8 demultiplexer.
+ *
+ * 0:  C7
+ * 1:  B6
+ * 2:  C6
+ * 3:  B4
+ * 4:  B5
+ * 5:  D7
+ *
+ *     A2   A1   A0
+ *     D0   D1   D2
+ * 6:   1    1    1
+ * 7:   1    1    0
+ * 8:   1    0    1
+ * 9:   1    0    0
+ * 10:  0    1    1
+ * 11:  0    1    0
+ * 12:  0    0    1
+ *
+ * 13: D3
+ * 14: B7
+ * 15: B3
+ */
+static void select_col(uint8_t col) {
+    if (col_pins[col] != NO_PIN) {
+        gpio_write_pin_low(col_pins[col]);
+>>>>>>> upstream/master
     } else {
         sn74x138_set_addr(13 - col);
     }
@@ -56,8 +89,13 @@ static void select_col(uint8_t col) {
 
 static void unselect_col(uint8_t col) {
     if (col_pins[col] != NO_PIN) {
+<<<<<<< HEAD
         setPinOutput(col_pins[col]);
         writePinHigh(col_pins[col]);
+=======
+        gpio_set_pin_output(col_pins[col]);
+        gpio_write_pin_high(col_pins[col]);
+>>>>>>> upstream/master
     } else {
         sn74x138_set_addr(0);
     }
@@ -67,8 +105,13 @@ static void unselect_cols(void) {
     // Native
     for (uint8_t x = 0; x < MATRIX_COLS; x++) {
         if (col_pins[x] != NO_PIN) {
+<<<<<<< HEAD
             setPinOutput(col_pins[x]);
             writePinHigh(col_pins[x]);
+=======
+            gpio_set_pin_output(col_pins[x]);
+            gpio_write_pin_high(col_pins[x]);
+>>>>>>> upstream/master
         }
     }
 
@@ -79,7 +122,7 @@ static void unselect_cols(void) {
 static void init_pins(void) {
     unselect_cols();
     for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
-        setPinInputHigh(row_pins[x]);
+        gpio_set_pin_input_high(row_pins[x]);
     }
 }
 
@@ -96,7 +139,7 @@ static bool read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col)
         matrix_row_t last_row_value = current_matrix[row_index];
 
         // Check row pin state
-        if (readPin(row_pins[row_index]) == 0) {
+        if (gpio_read_pin(row_pins[row_index]) == 0) {
             // Pin LO, set col bit
             current_matrix[row_index] |= (MATRIX_ROW_SHIFTER << current_col);
         } else {
@@ -117,6 +160,8 @@ static bool read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col)
 }
 
 void matrix_init_custom(void) {
+    // initialize demultiplexer
+    sn74x138_init();
     // initialize key pins
     init_pins();
     // initialize demultiplexer

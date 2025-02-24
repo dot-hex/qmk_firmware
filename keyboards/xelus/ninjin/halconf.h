@@ -16,6 +16,16 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define HAL_USE_PWM TRUE
 
 #include_next <halconf.h>
+=======
+<<<<<<< HEAD:keyboards/xelus/dharma/keymaps/default/config.h
+#define QMK_KEYS_PER_SCAN 4
+=======
+#define HAL_USE_PWM TRUE
+
+#include_next <halconf.h>
+>>>>>>> upstream/master:keyboards/xelus/ninjin/halconf.h
+>>>>>>> upstream/master

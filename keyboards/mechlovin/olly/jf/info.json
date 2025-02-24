@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "keyboard_name": "Mechlovin Olly",
     "url": "",
     "maintainer": "Mechlovin' Studio",
@@ -116,4 +117,32 @@
         }
     }
     ,"meta": "https://noroadsleft.github.io/kbf_qmk_converter/"
+=======
+    "manufacturer": "Mechlovin.Studio",
+    "url": "",
+    "maintainer": "Mechlovin' Studio",
+    "usb": {
+        "vid": "0x4D4C"
+    },
+    "diode_direction": "ROW2COL",
+    "rgblight": {
+        "led_count": 27,
+        "sleep": true,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    },
+    "bootmagic": {
+        "matrix": [1, 14]
+    }
+>>>>>>> upstream/master
 }

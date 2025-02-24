@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright 2022 QMK (James Young @noroadsleft)
+=======
+// Copyright 2022 QMK / James Young (@noroadsleft)
+>>>>>>> upstream/master
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H

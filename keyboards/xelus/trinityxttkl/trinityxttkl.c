@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "trinityxttkl.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 // Tested and verified working on Trinity XT TKL
 void matrix_io_delay(void) { __asm__ volatile("nop\nnop\nnop\n"); }

@@ -25,6 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_ortho_4x4( /* Fn Layer */
+<<<<<<< HEAD
     RGB_TOG,   RGB_HUI,    RGB_SAI,    RGB_VAI,
     RGB_MOD,   RGB_HUD,    RGB_SAD,    RGB_VAD,
     KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
@@ -32,3 +33,45 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+=======
+    RM_TOGG,   RM_HUEU,    RM_SATU,    RM_VALU,
+    RM_NEXT,   RM_HUED,    RM_SATD,    RM_VALD,
+    RM_SPDD,   RM_SPDU,    KC_TRNS,    KC_TRNS,
+    KC_TRNS,   KC_TRNS,    KC_TRNS,    QK_BOOT
+  ),
+};
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+<<<<<<<< HEAD:keyboards/1upkeyboards/super16v2/keymaps/default/keymap.c
+    if (index == 0) { /* First encoder */
+========
+    switch(index) {
+      case 0:
+        if (clockwise) {
+          tap_code(KC_VOLU); // Volume
+        } else {
+          tap_code(KC_VOLD);
+        }
+        break;
+      case 1:
+>>>>>>>> upstream/master:keyboards/dmqdesign/spin/keymaps/codecoffeecode/keymap.c
+        if (clockwise) {
+            tap_code_delay(KC_VOLU, 10);
+        } else {
+            tap_code_delay(KC_VOLD, 10);
+        }
+    } else if (index == 1) { /* Second encoder */
+        if (clockwise) {
+            rgb_matrix_increase_hue();
+        } else {
+            rgb_matrix_decrease_hue();
+        }
+    }
+<<<<<<<< HEAD:keyboards/1upkeyboards/super16v2/keymaps/default/keymap.c
+    return false;
+}
+========
+    return true;
+}
+>>>>>>>> upstream/master:keyboards/dmqdesign/spin/keymaps/codecoffeecode/keymap.c
+>>>>>>> upstream/master

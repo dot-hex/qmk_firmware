@@ -2,7 +2,10 @@ MOUSEKEY_ENABLE = yes       # Mouse keys
 
 RGBLIGHT_ENABLE = yes        # Enable keyboard RGB underglow
 OLED_ENABLE = yes
+<<<<<<< HEAD:keyboards/marksard/treadstone48/rev1/keymaps/like_jis_rs/rules.mk
 OLED_DRIVER = SSD1306
+=======
+>>>>>>> upstream/master:keyboards/treadstone48/rev1/keymaps/like_jis_rs/rules.mk
 LTO_ENABLE = yes
 
 # If you use connection the Rhymestone, please enable RS_EXTRA_LED

@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -50,3 +51,7 @@
 
 /* Unicode select mode */
 #define UNICODE_SELECTED_MODES UC_MAC, UC_LNX, UC_WINC
+=======
+/* Unicode select mode */
+#define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS, UNICODE_MODE_LINUX, UNICODE_MODE_WINCOMPOSE
+>>>>>>> upstream/master

@@ -19,7 +19,11 @@
 // The following is required to disable the pull-down on PA9, when PA9 is used for the keyboard matrix:
 #define BOARD_OTG_NOVBUSSENS
 
+<<<<<<< HEAD
 #include_next "board.h"
+=======
+#include_next <board.h>
+>>>>>>> upstream/master
 
 #undef STM32_HSE_BYPASS
 

@@ -16,4 +16,8 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "test_common.h"
+=======
+#include "test_common.h"
+>>>>>>> upstream/master

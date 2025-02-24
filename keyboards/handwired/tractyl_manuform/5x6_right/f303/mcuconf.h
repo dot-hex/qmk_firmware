@@ -16,7 +16,11 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include_next "mcuconf.h"
+=======
+#include_next <mcuconf.h>
+>>>>>>> upstream/master
 
 #undef STM32_I2C_USE_I2C1
 #define STM32_I2C_USE_I2C1 TRUE

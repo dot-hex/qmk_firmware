@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,6 +20,8 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SPLIT_KEYBOARD = no
 WAIT_FOR_USB = yes
 LAYOUTS_HAS_RGB = no
+=======
+>>>>>>> upstream/master
 CUSTOM_MATRIX = yes
 
 SRC = matrix.c

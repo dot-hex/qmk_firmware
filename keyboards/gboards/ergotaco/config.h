@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Copy and worked on with love from the EZ team
 
 #pragma once
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VERBOSE
@@ -30,6 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER    g Heavy Industries 
 #define PRODUCT         ErgoTaco
 
+=======
+
+#define VERBOSE
+
+>>>>>>> upstream/master
 /* key matrix size */
 #define MATRIX_ROWS 12
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
@@ -40,6 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_TIME_TO_MAX    60
 #define MOUSEKEY_MAX_SPEED      7
 #define MOUSEKEY_WHEEL_DELAY 0
+<<<<<<< HEAD
 #define TAPPING_TOGGLE  1
 
 /* define if matrix has ghost */
@@ -58,3 +65,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DEBOUNCE    5
 #define USB_MAX_POWER_CONSUMPTION 500
+=======
+
+/* key combination for command */
+#define IS_COMMAND() (get_mods() == MOD_MASK_CTRL || get_mods() == MOD_MASK_SHIFT)
+>>>>>>> upstream/master

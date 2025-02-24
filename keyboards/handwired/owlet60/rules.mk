@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,7 +19,8 @@ RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 CUSTOM_MATRIX = yes
 OLED_ENABLE = no
+=======
+CUSTOM_MATRIX = yes
+>>>>>>> upstream/master
 
 SRC += matrix.c
-
-LAYOUTS = alice alice_split_bs

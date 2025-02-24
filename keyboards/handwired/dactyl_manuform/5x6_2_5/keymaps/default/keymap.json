@@ -46,7 +46,11 @@
             "KC_SCLN",
             "KC_QUOT",
 
+<<<<<<< HEAD
             "KC_LSPO",
+=======
+            "SC_LSPO",
+>>>>>>> upstream/master
             "KC_Z",
             "KC_X",
             "KC_C",
@@ -57,7 +61,11 @@
             "KC_COMM",
             "KC_DOT",
             "KC_SLSH",
+<<<<<<< HEAD
             "KC_RSPC",
+=======
+            "SC_RSPC",
+>>>>>>> upstream/master
 
             "KC_LCTL",
             "KC_LALT",
@@ -77,8 +85,13 @@
             "KC_RCTL",
 
             "LCTL_T(KC_LBRC)",
+<<<<<<< HEAD
             "KC_LSPO",
             "KC_RSPC",
+=======
+            "SC_LSPO",
+            "SC_RSPC",
+>>>>>>> upstream/master
             "RCTL_T(KC_RBRC)"
         ],
         [
@@ -121,7 +134,11 @@
             "KC_O",
             "KC_QUOT",
 
+<<<<<<< HEAD
             "KC_LSPO",
+=======
+            "SC_LSPO",
+>>>>>>> upstream/master
             "KC_Z",
             "KC_X",
             "KC_C",
@@ -132,7 +149,11 @@
             "KC_COMM",
             "KC_DOT",
             "KC_SLSH",
+<<<<<<< HEAD
             "KC_RSPC",
+=======
+            "SC_RSPC",
+>>>>>>> upstream/master
 
             "KC_LCTL",
             "KC_LALT",
@@ -151,8 +172,13 @@
             "KC_RALT",
             "KC_RCTL",
             "LCTL_T(KC_LBRC)",
+<<<<<<< HEAD
             "KC_LSPO",
             "KC_RSPC",
+=======
+            "SC_LSPO",
+            "SC_RSPC",
+>>>>>>> upstream/master
             "RCTL_T(KC_RBRC)"
         ],
         [
@@ -396,7 +422,11 @@
             "KC_NO",
             "KC_NO",
             "KC_NO",
+<<<<<<< HEAD
             "RESET",
+=======
+            "QK_BOOT",
+>>>>>>> upstream/master
             "KC_PWR",
 
             "KC_TRNS",

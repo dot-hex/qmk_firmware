@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "keyboard_name": "jiran", 
     "url": "t.me/s/ladniys", 
     "maintainer": "Ladniy", 
@@ -62,6 +63,28 @@
             {"label":"Back", "x":11.75, "y":4.5},
             {"label":"Fn", "x":12.75, "y":4.38}
             ]
+=======
+    "keyboard_name": "Jiran",
+    "manufacturer": "Ladniy",
+    "url": "t.me/s/ladniys",
+    "maintainer": "Ladniy",
+    "usb": {
+         "vid": "0x1209",
+         "pid": "0x3735",
+         "device_version": "3.0.0"
+     },
+    "matrix_pins": {
+        "cols": ["D3", "D2", "D4", "C6", "D7", "E6"],
+        "rows": ["B4", "B5", "F4", "F5", "F6"]
+    },
+    "diode_direction": "COL2ROW",
+     "split": {
+        "enabled": true,
+        "serial": {
+            "pin": "D1"
+>>>>>>> upstream/master
         }
-    }
+     },
+    "processor": "atmega32u4",
+    "bootloader": "caterina"
 }

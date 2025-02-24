@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID 0xFEED
@@ -39,11 +40,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL
 #define SOFT_SERIAL_PIN D2
 
+=======
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
   #define OLED_DISPLAY_128X64
   #define OLED_TIMEOUT 30000
 #endif
 
+<<<<<<< HEAD
 #define RGB_DI_PIN D3
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
@@ -64,6 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODER_RESOLUTIONS { 4, 4, 4, 1}
 #define UNUSED_PINS
 
+=======
+>>>>>>> upstream/master
 #define EE_HANDS
 
 #define LAYER_STATE_8BIT

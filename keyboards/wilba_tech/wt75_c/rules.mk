@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,6 +20,12 @@ AUDIO_ENABLE = no           # Audio output
 # project specific files
 SRC =	drivers/led/issi/is31fl3736.c \
 		i2c_master.c \
+=======
+I2C_DRIVER_REQUIRED = yes
+
+# project specific files
+SRC =	drivers/led/issi/is31fl3736-mono.c \
+>>>>>>> upstream/master
 		quantum/color.c \
 		keyboards/wilba_tech/wt_mono_backlight.c \
 		keyboards/wilba_tech/wt_main.c

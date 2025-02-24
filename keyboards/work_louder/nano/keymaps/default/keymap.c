@@ -18,7 +18,11 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [0] = LAYOUT(KC_PSCR, KC_LSFT, MO(1)),
+<<<<<<< HEAD
     [1] = LAYOUT(RESET, KC_LCTL, _______)};
+=======
+    [1] = LAYOUT(QK_BOOT, KC_LCTL, _______)};
+>>>>>>> upstream/master
 
 //  bool encoder_update_user(uint8_t index, bool clockwise) {
 //     if (clockwise) {

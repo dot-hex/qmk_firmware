@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* Use I2C or Serial, not both */
 #define USE_SERIAL
 // #define USE_I2C
@@ -24,3 +25,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 // #define MASTER_LEFT
 #define EE_HANDS
+=======
+/* Select hand configuration */
+#define EE_HANDS
+<<<<<<<< HEAD:keyboards/redox_media/keymaps/default/config.h
+========
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 175
+
+>>>>>>>> upstream/master:keyboards/keebio/iris/keymaps/fluffactually/config.h
+>>>>>>> upstream/master

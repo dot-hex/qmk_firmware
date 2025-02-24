@@ -1,6 +1,6 @@
-# MCU name
-MCU = atmega32u4
+CUSTOM_MATRIX = lite
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
@@ -19,10 +19,16 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes        # Use rotary encoder
 LTO_ENABLE = yes            # Link-time optimization
 CUSTOM_MATRIX = lite        # Lite custom matrix
+=======
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master
 
 # Project specific files
 SRC += matrix.c \
        common/bitc_led.c \
        big_led.c \
        common/remote_kb.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += uart.c
+=======
+>>>>>>> upstream/master

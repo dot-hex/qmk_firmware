@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -125,6 +126,9 @@
  *
  */
 //#define FORCE_NKRO
+=======
+#define MOUSEKEY_MOVE_DELTA 25
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -141,6 +145,7 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -149,3 +154,5 @@
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+=======
+>>>>>>> upstream/master

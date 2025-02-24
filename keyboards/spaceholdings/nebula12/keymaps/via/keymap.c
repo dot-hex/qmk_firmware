@@ -1,5 +1,4 @@
-/* Copyright 2020 Yiancar
- *
+/* Copyright 2021 Ocean
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
@@ -16,27 +15,31 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[0] = LAYOUT_all( /* Base */
+  [0] = LAYOUT_ortho_4x3(
     KC_P7, KC_P8, KC_P9,
     KC_P4, KC_P5, KC_P6,
     KC_P1, KC_P2, KC_P3,
-    MO(1), KC_P0, KC_PDOT),
+    KC_PENT, KC_P0, MO(1)
+  ),
 
-[1] = LAYOUT_all( /* FN */
-    RGB_TOG, RGB_MOD, KC_TRNS,
-    EF_DEC,  EF_INC,  KC_TRNS,
+  [1] = LAYOUT_ortho_4x3(
     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_PENT),
+    KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS
+  ),
 
-[2] = LAYOUT_all( /* Empty for dynamic keymaps */
+  [2] = LAYOUT_ortho_4x3(
     KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS),
+    KC_TRNS, KC_TRNS, KC_TRNS
+  ),
 
-[3] = LAYOUT_all( /* Empty for dynamic keymaps */
+  [3] = LAYOUT_ortho_4x3(
     KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS),
+    KC_TRNS, KC_TRNS, KC_TRNS
+  )
 };

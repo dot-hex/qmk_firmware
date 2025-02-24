@@ -17,6 +17,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define PRODUCT_ID 0xA4F9
 #define DEVICE_VER 0x0006
@@ -58,6 +59,8 @@
 #define DIP_SWITCH_PINS \
     { B14, A15, A0, B9 }
 
+=======
+>>>>>>> upstream/master
 #define MUSIC_MAP
 #undef AUDIO_VOICES
 #undef AUDIO_PIN
@@ -65,6 +68,7 @@
 #define AUDIO_PIN_ALT A4
 #define AUDIO_PIN_ALT_AS_NEGATIVE
 
+<<<<<<< HEAD
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 // #define DEBOUNCE 6
 
@@ -94,6 +98,8 @@
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -109,12 +115,16 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master
 
 /*
  * WS2812 Underglow Matrix options
  */
+<<<<<<< HEAD
 #define RGB_DI_PIN A1
 #define RGBLED_NUM 9
 #define DRIVER_LED_TOTAL RGBLED_NUM
@@ -126,3 +136,10 @@
 #define WS2812_DMA_CHANNEL 2
 
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
+=======
+#define WS2812_PWM_DRIVER PWMD2
+#define WS2812_PWM_CHANNEL 2
+#define WS2812_PWM_PAL_MODE 1
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM2
+#define WS2812_PWM_DMA_CHANNEL 2
+>>>>>>> upstream/master

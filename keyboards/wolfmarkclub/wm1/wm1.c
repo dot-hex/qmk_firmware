@@ -1,8 +1,9 @@
-#include "wm1.h"
+#include "quantum.h"
 
 void bootloader_jump(void) {
     // This board doesn't use the "standard" stm32duino bootloader, and no information is available regarding how to enter bootloader mode. All we can do here is reset.
     NVIC_SystemReset();
+<<<<<<< HEAD
 }
 
 void matrix_init_kb(void) {
@@ -19,4 +20,6 @@ bool led_update_kb(led_t led_state) {
         writePin(C5, led_state.scroll_lock);
     }
     return true;
+=======
+>>>>>>> upstream/master
 }

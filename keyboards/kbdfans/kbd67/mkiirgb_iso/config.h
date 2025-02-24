@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -107,3 +108,6 @@
 #endif
 
 #define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
+=======
+#define USB_SUSPEND_WAKEUP_DELAY 5000
+>>>>>>> upstream/master

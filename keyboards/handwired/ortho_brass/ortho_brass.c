@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "ortho_brass.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef SWAP_HANDS_ENABLE
 __attribute__((weak)) const keypos_t hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {

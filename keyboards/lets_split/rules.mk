@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,4 +22,6 @@ SPLIT_KEYBOARD = yes
 
 LAYOUTS = ortho_4x12
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = lets_split/rev2

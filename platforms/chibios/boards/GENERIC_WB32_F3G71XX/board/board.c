@@ -73,6 +73,10 @@ void __early_init(void) {
   wb32_clock_init();
   wb32_gpio_init();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 /**
  * @brief   Board-specific initialization code.
  * @note    You can add your board-specific code here.

@@ -22,6 +22,7 @@
 #pragma once
 
 #include_next <mcuconf.h>
+<<<<<<< HEAD
 #undef STM32_PLLM_VALUE
 #undef STM32_PLLN_VALUE
 #undef STM32_PLLP_VALUE
@@ -38,3 +39,8 @@
 
 #undef STM32_I2C_USE_I2C1
 #define STM32_I2C_USE_I2C1 TRUE
+=======
+
+#undef STM32_PWM_USE_TIM3
+#define STM32_PWM_USE_TIM3 TRUE
+>>>>>>> upstream/master

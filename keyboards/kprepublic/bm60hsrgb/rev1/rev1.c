@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:keyboards/kprepublic/bm60hsrgb/rev1/rev1.c
 #include "rev1.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master:keyboards/bm60rgb/bm60rgb.c
 
 led_config_t g_led_config = { {
   { 0,      1,      2,      3,      4,      5,      6,      7,      8,      9,      10,     11,     12,     13 },

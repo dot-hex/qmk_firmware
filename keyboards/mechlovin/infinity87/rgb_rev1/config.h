@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT_ID  0x8710
 #define DEVICE_VER  0x0001
 #define PRODUCT     Infinity 87 RGB rev1
@@ -110,3 +111,6 @@
 #define DRIVER_LED_TOTAL 91
 >>>>>>> 8e9d45d2708d71cf89bed704e8e0e1bf5671804f
 #define DRIVER_INDICATOR_LED_TOTAL 0
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_SDA
+>>>>>>> upstream/master

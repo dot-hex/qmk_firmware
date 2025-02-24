@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32a
 
@@ -22,3 +23,6 @@ AUDIO_ENABLE = no           # Audio output
 CUSTOM_MATRIX = lite
 
 SRC += matrix.c
+=======
+DEFAULT_FOLDER = mechlovin/olly/jf/rev1
+>>>>>>> upstream/master

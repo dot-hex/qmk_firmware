@@ -2,12 +2,16 @@
 #include "analog.h"
 #include "timer.h"
 #include "matrix.h"
+<<<<<<< HEAD
 #include "musical_notes.h"
 #include "bluefruit_le.h"
 
 float fauxclicky_pressed_note[2] = MUSICAL_NOTE(_A4, 0.0625);
 float fauxclicky_released_note[2] = MUSICAL_NOTE(_A4, 0.0625);
 float fauxclicky_beep_note[2] = MUSICAL_NOTE(_C6, 0.25);
+=======
+#include "bluefruit_le.h"
+>>>>>>> upstream/master
 
 // cubic fit {3.3, 0}, {3.5, 2.9}, {3.6, 5}, {3.7, 8.6}, {3.8, 36},  {3.9, 62}, {4.0, 73}, {4.05, 83}, {4.1, 89}, {4.15, 94}, {4.2, 100}
 
@@ -22,7 +26,11 @@ __attribute__ ((weak))
 void battery_poll(uint8_t level) {
 }
 
+<<<<<<< HEAD
 void matrix_scan_kb(void) {
+=======
+void housekeeping_task_kb(void) {
+>>>>>>> upstream/master
     static uint16_t counter = BATTERY_POLL;
     counter++;
 
@@ -30,6 +38,9 @@ void matrix_scan_kb(void) {
         counter = 0;
         battery_poll(battery_level());
     }
+<<<<<<< HEAD
 
     matrix_scan_user();
+=======
+>>>>>>> upstream/master
 }

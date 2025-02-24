@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 #define DEVICE_VER 0x0000
 #undef PRODUCT
@@ -38,6 +39,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DIP_SWITCH_PINS { D0, D1, D4, D6 }
 
+=======
+>>>>>>> upstream/master
 // THK uses D5 for audio
 #undef AUDIO_PIN
 #define AUDIO_PIN D5

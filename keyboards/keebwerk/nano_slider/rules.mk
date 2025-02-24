@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,3 +21,6 @@ AUDIO_ENABLE = no           # Audio output
 LTO_ENABLE = yes
 
 SRC += analog.c
+=======
+ANALOG_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #pragma once
 
 /* USB Device descriptor parameter */
@@ -38,10 +39,18 @@
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_LIMIT_VAL 200
 
+=======
+<<<<<<< HEAD:keyboards/xelus/dharma/dharma.c
+#include "quantum.h"
+=======
+#pragma once
+
+>>>>>>> upstream/master
 // PWM RGB Underglow Defines
 #define WS2812_PWM_DRIVER PWMD1
 #define WS2812_PWM_CHANNEL 3
 #define WS2812_PWM_PAL_MODE 2
+<<<<<<< HEAD
 #define WS2812_DMA_STREAM STM32_DMA1_STREAM5
 #define WS2812_DMA_CHANNEL 3
 #define WS2812_EXTERNAL_PULLUP
@@ -58,3 +67,9 @@
 #define LED_CAPS_LOCK_PIN A2
 #define LED_SCROLL_LOCK_PIN A13
 #define LED_PIN_ON_STATE 1
+=======
+#define WS2812_PWM_DMA_STREAM STM32_DMA1_STREAM5
+#define WS2812_PWM_DMA_CHANNEL 3
+#define WS2812_EXTERNAL_PULLUP
+>>>>>>> upstream/master:keyboards/xelus/ninjin/config.h
+>>>>>>> upstream/master

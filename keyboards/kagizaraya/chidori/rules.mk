@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega328p
 
@@ -17,9 +18,18 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
+=======
+# Build Options
+#   change yes to no to disable
+#
+>>>>>>> upstream/master
 CUSTOM_MATRIX = lite
 
 # project specific files
 SRC += matrix.c
 SRC += board.c
+<<<<<<< HEAD
 QUANTUM_LIB_SRC += i2c_master.c
+=======
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

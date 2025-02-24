@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,4 +21,6 @@ RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = WS2812
 
 LAYOUTS = 65_ansi_blocker_split_bs 65_iso_blocker_split_bs
+=======
+>>>>>>> upstream/master
 RGB_MATRIX_CUSTOM_KB = yes

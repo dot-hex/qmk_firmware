@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
@@ -23,6 +24,16 @@
 #include "wait.h"
 #include "debug.h"
 #include "matrix.h"
+=======
+#include "matrix.h"
+#include "debug.h"
+#include "timer.h"
+#include "wait.h"
+
+#ifndef DEBOUNCE
+#    define DEBOUNCE 5
+#endif
+>>>>>>> upstream/master
 
 typedef uint16_t matrix_col_t;
 
@@ -40,9 +51,19 @@ __attribute__((weak)) void matrix_init_user(void) {}
 
 __attribute__((weak)) void matrix_scan_user(void) {}
 
+<<<<<<< HEAD
 __attribute__((weak)) void matrix_init_kb(void) { matrix_init_user(); }
 
 __attribute__((weak)) void matrix_scan_kb(void) { matrix_scan_user(); }
+=======
+__attribute__((weak)) void matrix_init_kb(void) {
+    matrix_init_user();
+}
+
+__attribute__((weak)) void matrix_scan_kb(void) {
+    matrix_scan_user();
+}
+>>>>>>> upstream/master
 
 void matrix_init(void) {
     dprintf("matrix init\n");
@@ -70,7 +91,11 @@ void matrix_init(void) {
     memset(matrix, 0, MATRIX_ROWS * sizeof(matrix_row_t));
     memset(matrix_debouncing, 0, MATRIX_COLS * sizeof(matrix_col_t));
 
+<<<<<<< HEAD
     matrix_init_quantum();
+=======
+    matrix_init_kb();
+>>>>>>> upstream/master
 }
 
 uint8_t matrix_scan(void) {
@@ -145,14 +170,28 @@ uint8_t matrix_scan(void) {
         debouncing = false;
     }
 
+<<<<<<< HEAD
     matrix_scan_quantum();
+=======
+    matrix_scan_kb();
+>>>>>>> upstream/master
 
     return 1;
 }
 
+<<<<<<< HEAD
 bool matrix_is_on(uint8_t row, uint8_t col) { return (matrix[row] & (1 << col)); }
 
 matrix_row_t matrix_get_row(uint8_t row) { return matrix[row]; }
+=======
+bool matrix_is_on(uint8_t row, uint8_t col) {
+    return (matrix[row] & (1 << col));
+}
+
+matrix_row_t matrix_get_row(uint8_t row) {
+    return matrix[row];
+}
+>>>>>>> upstream/master
 
 void matrix_print(void) {
     dprintf("\nr/c 01234567\n");

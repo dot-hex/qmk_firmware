@@ -9,6 +9,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "mun.h"
 #include "touch_encoder.h"
 
@@ -41,3 +42,7 @@
     { T10, T11, T12, T13, T14,   KC_NO, KC_NO } \
 }
 // clang-format on
+=======
+#include "quantum.h"
+#include "touch_encoder.h"
+>>>>>>> upstream/master

@@ -1,5 +1,6 @@
 // Copyright 2021 Ll3macorn (@ll3macorn)
 // SPDX-License-Identifier: GPL-2.0-or-later
+<<<<<<< HEAD
 #include "bongopad.h"
 
 
@@ -17,6 +18,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef OLED_ENABLE
 bool oled_task_kb(void) {

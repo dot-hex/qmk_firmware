@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SRC = matrix.c \
       i2c_master.c
 
@@ -21,3 +22,9 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 CUSTOM_MATRIX = lite
+=======
+CUSTOM_MATRIX = lite
+
+SRC = matrix.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

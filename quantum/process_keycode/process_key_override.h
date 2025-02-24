@@ -18,9 +18,14 @@
 #pragma once
 
 #include <stdbool.h>
+<<<<<<< HEAD
 #include <stddef.h>
 #include <stdint.h>
 
+=======
+#include <stdint.h>
+#include "action.h"
+>>>>>>> upstream/master
 #include "action_layer.h"
 
 /**
@@ -56,7 +61,11 @@ typedef enum {
 } ko_option_t;
 
 /** Defines a single key override */
+<<<<<<< HEAD
 typedef struct {
+=======
+typedef struct key_override_t {
+>>>>>>> upstream/master
     // The non-modifier keycode that triggers the override. This keycode, and the necessary modifiers (trigger_mods) must be pressed to activate this override. Set this to the keycode of the key that should activate the override. Set to KC_NO to require only the necessary modifiers to be pressed and no non-modifier.
     uint16_t trigger;
 
@@ -88,9 +97,12 @@ typedef struct {
     bool *enabled;
 } key_override_t;
 
+<<<<<<< HEAD
 /** Define this as a null-terminated array of pointers to key overrides. These key overrides will be used by qmk. */
 extern const key_override_t **key_overrides;
 
+=======
+>>>>>>> upstream/master
 /** Turns key overrides on */
 void key_override_on(void);
 

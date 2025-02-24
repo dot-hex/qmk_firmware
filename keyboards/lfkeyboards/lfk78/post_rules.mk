@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Extra source files for IS3731 lighting
 SRC += TWIlib.c issi.c lighting.c
 
@@ -11,4 +12,8 @@ endif
 
 ifeq ($(strip $(CAPSLOCK_LED)), yes)
     TMK_COMMON_DEFS += -DCAPSLOCK_LED
+=======
+ifeq ($(strip $(WATCHDOG_ENABLE)), yes)
+    OPT_DEFS += -DWATCHDOG_ENABLE
+>>>>>>> upstream/master
 endif

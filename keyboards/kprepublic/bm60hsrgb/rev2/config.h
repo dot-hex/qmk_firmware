@@ -15,6 +15,7 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -120,10 +121,21 @@
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
 
 #define ISSI_LED_TOTAL DRIVER_1_LED_TOTAL
+=======
+<<<<<<< HEAD:keyboards/splitkb/kyria/keymaps/tessachka/config.h
+#ifdef OLED_ENABLE
+  #define OLED_DISPLAY_128X64
+#endif
+=======
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_LED_COUNT 63
+>>>>>>> upstream/master:keyboards/kprepublic/bm60hsrgb/rev2/config.h
+>>>>>>> upstream/master
 
 // Underglow LEDs are WS2812, but someone might want to use RGBLIGHT for them;
 // don't use those LEDs in RGB Matrix in that case.
 #ifdef RGBLIGHT_ENABLE
+<<<<<<< HEAD
 #    define WS2812_LED_TOTAL 0
 #else
 #    define WS2812_LED_TOTAL 6
@@ -136,3 +148,11 @@
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #endif
 
+=======
+#    define WS2812_LED_COUNT 0
+#else
+#    define WS2812_LED_COUNT 6
+#endif
+
+#define RGB_MATRIX_LED_COUNT (IS31FL3733_LED_COUNT + WS2812_LED_COUNT)
+>>>>>>> upstream/master

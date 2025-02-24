@@ -6,8 +6,17 @@ from pathlib import Path
 
 from milc import cli
 
+<<<<<<< HEAD:lib/python/qmk/cli/doctor/linux.py
 from qmk.constants import QMK_FIRMWARE
 from .check import CheckStatus
+=======
+from qmk.constants import QMK_FIRMWARE, BOOTLOADER_VIDS_PIDS
+from .check import CheckStatus, release_info
+
+
+def _is_wsl():
+    return 'microsoft' in platform.uname().release.lower()
+>>>>>>> upstream/master:lib/python/qmk/os_helpers/linux/__init__.py
 
 
 def _udev_rule(vid, pid=None, *args):
@@ -24,6 +33,18 @@ def _udev_rule(vid, pid=None, *args):
     if args:
         rule = ', '.join([rule, *args])
     return rule
+
+
+def _generate_desired_rules(bootloader_vids_pids):
+    rules = dict()
+    for bl in bootloader_vids_pids.keys():
+        rules[bl] = set()
+        for vid_pid in bootloader_vids_pids[bl]:
+            if bl == 'caterina' or bl == 'md-boot':
+                rules[bl].add(_udev_rule(vid_pid[0], vid_pid[1], 'ENV{ID_MM_DEVICE_IGNORE}="1"'))
+            else:
+                rules[bl].add(_udev_rule(vid_pid[0], vid_pid[1]))
+    return rules
 
 
 def _deprecated_udev_rule(vid, pid=None):
@@ -47,6 +68,7 @@ def check_udev_rules():
         Path("/run/udev/rules.d/"),
         Path("/etc/udev/rules.d/"),
     ]
+<<<<<<< HEAD:lib/python/qmk/cli/doctor/linux.py
     desired_rules = {
         'atmel-dfu': {
             _udev_rule("03eb", "2fef"),  # ATmega16U2
@@ -88,6 +110,10 @@ def check_udev_rules():
             _udev_rule("16c0", "0478")  # PJRC halfkay
         }
     }
+=======
+
+    desired_rules = _generate_desired_rules(BOOTLOADER_VIDS_PIDS)
+>>>>>>> upstream/master:lib/python/qmk/os_helpers/linux/__init__.py
 
     # These rules are no longer recommended, only use them to check for their presence.
     deprecated_rules = {
@@ -105,10 +131,13 @@ def check_udev_rules():
 
         # Collect all rules from the config files
         for rule_file in udev_rules:
-            for line in rule_file.read_text(encoding='utf-8').split('\n'):
-                line = line.strip()
-                if not line.startswith("#") and len(line):
-                    current_rules.add(line)
+            try:
+                for line in rule_file.read_text(encoding='utf-8').split('\n'):
+                    line = line.strip()
+                    if not line.startswith("#") and len(line):
+                        current_rules.add(line)
+            except PermissionError:
+                cli.log.debug("Failed to read: %s", rule_file)
 
         # Check if the desired rules are among the currently present rules
         for bootloader, rules in desired_rules.items():
@@ -154,17 +183,37 @@ def check_modem_manager():
 def os_test_linux():
     """Run the Linux specific tests.
     """
+<<<<<<< HEAD:lib/python/qmk/cli/doctor/linux.py
     # Don't bother with udev on WSL, for now
     if 'microsoft' in platform.uname().release.lower():
         cli.log.info("Detected {fg_cyan}Linux (WSL){fg_reset}.")
 
+=======
+    info = release_info()
+    release_id = info.get('PRETTY_NAME', info.get('ID', 'Unknown'))
+    plat = 'WSL, ' if _is_wsl() else ''
+
+    cli.log.info(f"Detected {{fg_cyan}}Linux ({plat}{release_id}){{fg_reset}}.")
+
+    # Don't bother with udev on WSL, for now
+    if _is_wsl():
+>>>>>>> upstream/master:lib/python/qmk/os_helpers/linux/__init__.py
         # https://github.com/microsoft/WSL/issues/4197
         if QMK_FIRMWARE.as_posix().startswith("/mnt"):
             cli.log.warning("I/O performance on /mnt may be extremely slow.")
             return CheckStatus.WARNING
 
+<<<<<<< HEAD:lib/python/qmk/cli/doctor/linux.py
         return CheckStatus.OK
     else:
         cli.log.info("Detected {fg_cyan}Linux{fg_reset}.")
 
         return check_udev_rules()
+=======
+    else:
+        rc = check_udev_rules()
+        if rc != CheckStatus.OK:
+            return rc
+
+    return CheckStatus.OK
+>>>>>>> upstream/master:lib/python/qmk/os_helpers/linux/__init__.py

@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* Use I2C or Serial, not both */
 #define USE_SERIAL
 //#define USE_I2C
@@ -28,4 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MASTER_LEFT
 //#define MASTER_RIGHT
 
+=======
+/* Select hand configuration */
+>>>>>>> upstream/master
 #define EE_HANDS

@@ -1,6 +1,7 @@
-# MCU name
-MCU = STM32F072
+# Wildcard to allow APM32 MCU
+DFU_SUFFIX_ARGS = -v FFFF -p FFFF
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = stm32-dfu
 
@@ -24,3 +25,6 @@ DEFAULT_FOLDER = cannonkeys/db60/rev2
 
 # Enter lower-power sleep mode when on the ChibiOS idle thread
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
+=======
+DEFAULT_FOLDER = cannonkeys/db60/rev2
+>>>>>>> upstream/master

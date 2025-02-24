@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define fn_led_on() writePinLow(D0)
 #define fn_led_off() writePinHigh(D0)
 
@@ -42,3 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		/* 7 */  { KA7 , KB7 , KC7 , KD7 , KE7 , KF7 , KG7 , KH7 , KI7 , KJ7 , ___ , ___ , ___ , ___ , KO7 , ___ , KQ7 , KR7 }  \
 	}
 
+=======
+#define fn_led_on() gpio_write_pin_low(D0)
+#define fn_led_off() gpio_write_pin_high(D0)
+>>>>>>> upstream/master

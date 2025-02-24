@@ -13,10 +13,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 #pragma once
 
 #include <stdbool.h>
 
 void usb_disconnect(void);
+<<<<<<< HEAD
 bool usb_connected_state(void);
+=======
+
+bool usb_connected_state(void);
+
+>>>>>>> upstream/master
 bool usb_vbus_state(void);

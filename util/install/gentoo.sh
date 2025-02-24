@@ -19,10 +19,14 @@ _qmk_install() {
 
     sudo touch /etc/portage/package.use/qmkfirmware
     # tee is used here since sudo doesn't apply to >>
-    echo "sys-devel/gcc multilib" | sudo tee --append /etc/portage/package.use/qmkfirmware >/dev/null
+    echo "sys-devel/gcc multilib\ncross-arm-none-eabi/newlib nano" | sudo tee --append /etc/portage/package.use/qmkfirmware >/dev/null
     sudo emerge -auN sys-devel/gcc
     sudo emerge -au --noreplace \
+<<<<<<< HEAD
         app-arch/unzip app-arch/zip net-misc/wget sys-devel/clang \
+=======
+        app-arch/unzip app-arch/zip net-misc/wget llvm-core/clang \
+>>>>>>> upstream/master
         sys-devel/crossdev \>=dev-lang/python-3.7 dev-embedded/avrdude \
         dev-embedded/dfu-programmer app-mobilephone/dfu-util sys-apps/hwloc \
         dev-libs/hidapi

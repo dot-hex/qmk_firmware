@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2020 Boardsource
+=======
+/* Copyright 2022 Boardsource
+>>>>>>> upstream/master
  * Copyright 2021 @filterpaper
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,6 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "technik_o.h"
 
 #ifdef RGB_MATRIX_ENABLE
@@ -38,6 +43,8 @@ led_config_t g_led_config = { {
 } };
 #endif
 
+=======
+>>>>>>> upstream/master
 #ifdef SWAP_HANDS_ENABLE
 __attribute__ ((weak))
 const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
@@ -46,5 +53,25 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
     {{11, 2}, {10, 2}, {9, 2}, {8, 2}, {7, 2}, {6, 2}, {5, 2}, {4, 2}, {3, 2}, {2, 2}, {1, 2}, {0, 2}},
     {{11, 3}, {10, 3}, {9, 3}, {8, 3}, {7, 3}, {6, 3}, {5, 3}, {4, 3}, {3, 3}, {2, 3}, {1, 3}, {0, 3}}
 };
+<<<<<<< HEAD
 #endif
 
+=======
+<<<<<<<< HEAD:keyboards/boardsource/technik_o/technik_o.c
+========
+
+#ifdef ENCODER_ENABLE
+#include "encoder.h"
+bool encoder_update_user(uint8_t index, bool clockwise) {
+  if (index == 0) { /* First encoder */
+    if (clockwise) {
+      tap_code(KC_VOLU);
+    } else {
+      tap_code(KC_VOLD);
+    }
+  }
+  return true;
+}
+>>>>>>>> upstream/master:keyboards/handwired/bento/keymaps/cbc02009/keymap.c
+#endif
+>>>>>>> upstream/master

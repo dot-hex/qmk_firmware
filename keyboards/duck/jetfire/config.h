@@ -17,14 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x444B // Duck ("DK")
-#define PRODUCT_ID      0x4A46 // Jetfire ("JF")
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Duck
-#define PRODUCT         Jetfire
 
 /* key matrix size */
 #define MATRIX_ROWS 6
@@ -33,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+<<<<<<< HEAD
 #define BACKLIGHT_LEVELS 1
 
 #define RGB_DI_PIN D6
@@ -77,6 +70,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -92,5 +87,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

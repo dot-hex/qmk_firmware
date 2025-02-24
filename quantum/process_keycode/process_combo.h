@@ -16,9 +16,11 @@
 
 #pragma once
 
-#include "progmem.h"
-#include "quantum.h"
 #include <stdint.h>
+#include <stdbool.h>
+#include "action.h"
+#include "keycodes.h"
+#include "quantum_keycodes.h"
 
 #ifdef EXTRA_SHORT_COMBOS
 #    define MAX_COMBO_LENGTH 6
@@ -37,7 +39,11 @@
 #    define COMBO_BUFFER_LENGTH 4
 #endif
 
+<<<<<<< HEAD
 typedef struct {
+=======
+typedef struct combo_t {
+>>>>>>> upstream/master
     const uint16_t *keys;
     uint16_t        keycode;
 #ifdef EXTRA_SHORT_COMBOS
@@ -69,7 +75,11 @@ typedef struct {
 #endif
 
 /* check if keycode is only modifiers */
+<<<<<<< HEAD
 #define KEYCODE_IS_MOD(code) (IS_MOD(code) || (code >= QK_MODS && code <= QK_MODS_MAX && !(code & QK_BASIC_MAX)))
+=======
+#define KEYCODE_IS_MOD(code) (IS_MODIFIER_KEYCODE(code) || (IS_QK_MODS(code) && !QK_MODS_GET_BASIC_KEYCODE(code)))
+>>>>>>> upstream/master
 
 bool process_combo(uint16_t keycode, keyrecord_t *record);
 void combo_task(void);

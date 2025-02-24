@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "rev2.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef SWAP_HANDS_ENABLE
 __attribute__ ((weak))

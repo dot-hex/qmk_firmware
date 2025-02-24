@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -35,3 +36,6 @@
 #define DRIVER_1_LED_TOTAL 53
 #define DRIVER_2_LED_TOTAL 8
 #endif
+=======
+#define CAPS_LED 28
+>>>>>>> upstream/master

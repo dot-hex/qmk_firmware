@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -28,3 +29,6 @@ GRAVE_ESC_ENABLE = no
 LTO_ENABLE = yes
 
 SRC += analog.c
+=======
+ANALOG_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 /* This is a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -42,3 +43,6 @@
 	{ k50, k51, k52, k53, k54, k55, k56 }, \
    	{ KC_NO, KC_NO, k03, KC_NO, KC_NO, KC_NO, KC_NO } \
    	}
+=======
+#include "navpad_prefs.h"
+>>>>>>> upstream/master

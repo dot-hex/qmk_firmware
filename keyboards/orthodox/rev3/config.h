@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -66,15 +67,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 // #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 /* key combination for command */
 #define IS_COMMAND() ( \
-    get_mods() == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_LGUI)) \
+    get_mods() == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_LGUI)) \
 )
-
-/* ws2812 RGB LED */
-//#define RGB_DI_PIN D3
-
-//#define RGBLED_NUM 16    // Number of LEDs
 
 /*
  * Feature disable options
@@ -91,5 +89,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

@@ -13,9 +13,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
  #include "knight_plus.h"
  #ifdef RGB_MATRIX_ENABLE
  const is31_led PROGMEM g_is31_leds[DRIVER_LED_TOTAL] = {
+=======
+ #include "quantum.h"
+ #ifdef RGB_MATRIX_ENABLE
+ const is31fl3731_led_t PROGMEM g_is31fl3731_leds[IS31FL3731_LED_COUNT] = {
+>>>>>>> upstream/master
 
   {0, C1_3, C2_3, C3_3},   // L01
   {0, C1_4, C2_4, C3_4},   // L02
@@ -135,10 +141,21 @@
  } };
 
 
+<<<<<<< HEAD
  __attribute__ ((weak)) void rgb_matrix_indicators_user(void) {
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(44, 0xFF, 0xFF, 0xFF);
     }
+=======
+bool rgb_matrix_indicators_kb(void) {
+    if (!rgb_matrix_indicators_user()) {
+        return false;
+    }
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(44, 0xFF, 0xFF, 0xFF);
+    }
+    return true;
+>>>>>>> upstream/master
 }
 
 #endif

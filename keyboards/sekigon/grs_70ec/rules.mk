@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,3 +21,10 @@ CUSTOM_MATRIX = lite
 SPLIT_KEYBOARD = yes
 
 SRC += analog.c ec_switch_matrix.c matrix.c
+=======
+CUSTOM_MATRIX = lite
+
+ANALOG_DRIVER_REQUIRED = yes
+
+SRC += ec_switch_matrix.c matrix.c
+>>>>>>> upstream/master

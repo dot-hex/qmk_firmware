@@ -17,6 +17,7 @@
 #pragma once
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define LAYOUT( \
 K01, K02, K03, K04,	\
                    K05, \
@@ -27,6 +28,8 @@ K01, K02, K03, K04,	\
 K06, K07, K08, K09 \
 } }
 
+=======
+>>>>>>> upstream/master
 /*led work*/
 void turn_off_leds(void);
 void turn_on_led(pin_t pin);

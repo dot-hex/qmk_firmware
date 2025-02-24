@@ -17,28 +17,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0x03A8
-#define PRODUCT_ID 0x0000
-#define DEVICE_VER 0x0001
-#define MANUFACTURER keebwerk.
-#define PRODUCT nano. slider
-
-/* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 4
-
-/*
- * Keyboard Matrix Assignments
- */
-#define MATRIX_ROW_PINS { F0, F1 }
-#define MATRIX_COL_PINS { B0, B1, B2, B3 }
-#define UNUSED_PINS
-
 #define SLIDER_PIN D4
 
+<<<<<<< HEAD
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
@@ -90,6 +71,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 // #define GRAVE_ESC_CTRL_OVERRIDE
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -105,6 +88,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
@@ -113,3 +97,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
+=======
+>>>>>>> upstream/master

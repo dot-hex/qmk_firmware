@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
 # Bootloader selection
 BOOTLOADER = halfkay
 
+=======
+>>>>>>> upstream/master
 # If you have Left LEDs (see
 # https://geekhack.org/index.php?topic=22780.msg873819#msg873819 for
 # details), include the following define:
 # OPT_DEFS += -DLEFT_LEDS
 
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -25,16 +29,21 @@ SWAP_HANDS_ENABLE= no   # Allow swapping hands of keyboard
 RGB_MATRIX_ENABLE = no # enable later
 RGB_MATRIX_DRIVER = IS31FL3731
 DEBOUNCE_TYPE = sym_eager_pr
+=======
+CUSTOM_MATRIX    = lite # Custom matrix file for the ErgoDox EZ
+>>>>>>> upstream/master
 
 # project specific files
-SRC += matrix.c \
-	   led_i2c.c
-QUANTUM_LIB_SRC += i2c_master.c
-
-LAYOUTS = ergodox
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes
 
 # Disable unsupported hardware
 AUDIO_SUPPORTED = no
 BACKLIGHT_SUPPORTED = no
 
 MOUSE_SHARED_EP = no
+<<<<<<< HEAD
+=======
+
+DEFAULT_FOLDER = ergodox_ez/base
+>>>>>>> upstream/master

@@ -21,6 +21,10 @@
 #include "wait.h"
 #include "debug.h"
 #include "gpio.h"
+<<<<<<< HEAD
+=======
+#include "pointing_device_internal.h"
+>>>>>>> upstream/master
 
 // Registers
 // clang-format off
@@ -45,11 +49,28 @@
 #define REG_MOTION_BURST   0x63
 // clang-format on
 
+<<<<<<< HEAD
 void adns5050_init(void) {
     // Initialize the ADNS serial pins.
     setPinOutput(ADNS5050_SCLK_PIN);
     setPinOutput(ADNS5050_SDIO_PIN);
     setPinOutput(ADNS5050_CS_PIN);
+=======
+const pointing_device_driver_t adns5050_pointing_device_driver = {
+    .init       = adns5050_init,
+    .get_report = adns5050_get_report,
+    .set_cpi    = adns5050_set_cpi,
+    .get_cpi    = adns5050_get_cpi,
+};
+
+static bool powered_down = false;
+
+void adns5050_init(void) {
+    // Initialize the ADNS serial pins.
+    gpio_set_pin_output(ADNS5050_SCLK_PIN);
+    gpio_set_pin_output(ADNS5050_SDIO_PIN);
+    gpio_set_pin_output(ADNS5050_CS_PIN);
+>>>>>>> upstream/master
 
     // reboot the adns.
     // if the adns hasn't initialized yet, this is harmless.
@@ -59,6 +80,11 @@ void adns5050_init(void) {
     // this ensures that the adns is actuall ready after reset.
     wait_ms(55);
 
+<<<<<<< HEAD
+=======
+    powered_down = false;
+
+>>>>>>> upstream/master
     // read a burst from the adns and then discard it.
     // gets the adns ready for write commands
     // (for example, setting the dpi).
@@ -69,6 +95,7 @@ void adns5050_init(void) {
 // Just as with the serial protocol, this is used by the slave to send a
 // synchronization signal to the master.
 void adns5050_sync(void) {
+<<<<<<< HEAD
     writePinLow(ADNS5050_CS_PIN);
     wait_us(1);
     writePinHigh(ADNS5050_CS_PIN);
@@ -93,6 +120,32 @@ uint8_t adns5050_serial_read(void) {
         byte = (byte << 1) | readPin(ADNS5050_SDIO_PIN);
 
         writePinHigh(ADNS5050_SCLK_PIN);
+=======
+    gpio_write_pin_low(ADNS5050_CS_PIN);
+    wait_us(1);
+    gpio_write_pin_high(ADNS5050_CS_PIN);
+}
+
+void adns5050_cs_select(void) {
+    gpio_write_pin_low(ADNS5050_CS_PIN);
+}
+
+void adns5050_cs_deselect(void) {
+    gpio_write_pin_high(ADNS5050_CS_PIN);
+}
+
+uint8_t adns5050_serial_read(void) {
+    gpio_set_pin_input(ADNS5050_SDIO_PIN);
+    uint8_t byte = 0;
+
+    for (uint8_t i = 0; i < 8; ++i) {
+        gpio_write_pin_low(ADNS5050_SCLK_PIN);
+        wait_us(1);
+
+        byte = (byte << 1) | gpio_read_pin(ADNS5050_SDIO_PIN);
+
+        gpio_write_pin_high(ADNS5050_SCLK_PIN);
+>>>>>>> upstream/master
         wait_us(1);
     }
 
@@ -100,6 +153,7 @@ uint8_t adns5050_serial_read(void) {
 }
 
 void adns5050_serial_write(uint8_t data) {
+<<<<<<< HEAD
     setPinOutput(ADNS5050_SDIO_PIN);
 
     for (int8_t b = 7; b >= 0; b--) {
@@ -113,6 +167,21 @@ void adns5050_serial_write(uint8_t data) {
         wait_us(2);
 
         writePinHigh(ADNS5050_SCLK_PIN);
+=======
+    gpio_set_pin_output(ADNS5050_SDIO_PIN);
+
+    for (int8_t b = 7; b >= 0; b--) {
+        gpio_write_pin_low(ADNS5050_SCLK_PIN);
+
+        if (data & (1 << b))
+            gpio_write_pin_high(ADNS5050_SDIO_PIN);
+        else
+            gpio_write_pin_low(ADNS5050_SDIO_PIN);
+
+        wait_us(2);
+
+        gpio_write_pin_high(ADNS5050_SCLK_PIN);
+>>>>>>> upstream/master
     }
 
     // tSWR. See page 15 of the ADNS spec sheet.
@@ -163,6 +232,13 @@ report_adns5050_t adns5050_read_burst(void) {
     data.dx = 0;
     data.dy = 0;
 
+<<<<<<< HEAD
+=======
+    if (powered_down) {
+        return data;
+    }
+
+>>>>>>> upstream/master
     adns5050_serial_write(REG_MOTION_BURST);
 
     // We don't need a minimum tSRAD here. That's because a 4ms wait time is
@@ -211,3 +287,25 @@ bool adns5050_check_signature(void) {
 
     return (pid == 0x12 && rid == 0x01 && pid2 == 0x26);
 }
+<<<<<<< HEAD
+=======
+
+void adns5050_power_down(void) {
+    if (!powered_down) {
+        powered_down = true;
+        adns5050_write_reg(REG_MOUSE_CONTROL, 0b10);
+    }
+}
+
+report_mouse_t adns5050_get_report(report_mouse_t mouse_report) {
+    report_adns5050_t data = adns5050_read_burst();
+
+    if (data.dx != 0 || data.dy != 0) {
+        pd_dprintf("Raw ] X: %d, Y: %d\n", data.dx, data.dy);
+        mouse_report.x = (mouse_xy_report_t)data.dx;
+        mouse_report.y = (mouse_xy_report_t)data.dy;
+    }
+
+    return mouse_report;
+}
+>>>>>>> upstream/master

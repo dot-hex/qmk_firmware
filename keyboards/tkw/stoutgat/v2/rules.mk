@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -16,5 +17,6 @@ AUDIO_ENABLE = no           # Audio output
 WS2812_DRIVER = pwm
 OPT_DEFS += -DSTM32_DMA_REQUIRED=TRUE
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = tkw/stoutgat/v2/f411
-LAYOUTS = 65_iso 65_ansi

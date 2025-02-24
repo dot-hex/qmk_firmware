@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -35,14 +36,6 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 #define NO_ACTION_ONESHOT
-#define TAPPING_TOGGLE 3
-
-/*#define RGB_DI_PIN F4*/
-#ifdef RGB_DI_PIN
-/*#define RGBLIGHT_ANIMATIONS*/
-#define RGBLED_NUM 1
-#define RGBLIGHT_HUE_STEP 1
-#define RGBLIGHT_SAT_STEP 1
-#define RGBLIGHT_VAL_STEP 1
-#endif

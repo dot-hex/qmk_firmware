@@ -16,7 +16,19 @@
 
 #pragma once
 
-// 3 layers or else it will not fit in EEPROM
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
+#include "quantum.h"
 
+<<<<<<< HEAD:keyboards/xelus/pachi/mini_32u4/keymaps/via/config.h
 #define QMK_KEYS_PER_SCAN 4
+=======
+typedef union {
+    uint32_t raw;
+    struct {
+        bool startup_animation_dots;
+    };
+} keyboard_config_t;
+
+enum la_plus_keycodes {
+    STARTUP_ANIMATION_CONFIG = QK_KB_0,
+};
+>>>>>>> upstream/master:keyboards/xelus/la_plus/la_plus.h

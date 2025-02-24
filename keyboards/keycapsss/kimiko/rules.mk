@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 
 DEFAULT_FOLDER = keycapsss/kimiko/rev1
+=======
+DEFAULT_FOLDER = keycapsss/kimiko/rev2
+>>>>>>> upstream/master

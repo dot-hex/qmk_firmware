@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #define ____ KC_NO
 
 #define LAYOUT_all( \
@@ -34,6 +35,11 @@
   { K400, K401, K402, ____, ____, ____, ____, ____, K408, K409, K410, ____, K412, K413, K414 } \
 }
 
+=======
+<<<<<<< HEAD:keyboards/xelus/pachi/mini_32u4/keymaps/via/config.h
+#define QMK_KEYS_PER_SCAN 4
+=======
+>>>>>>> upstream/master
 typedef union {
     uint32_t raw;
     struct {
@@ -42,9 +48,15 @@ typedef union {
 } keyboard_config_t;
 
 enum la_plus_keycodes {
+<<<<<<< HEAD
 #ifdef VIA_ENABLE
     STARTUP_ANIMATION_CONFIG = USER00,
 #else
     STARTUP_ANIMATION_CONFIG = SAFE_RANGE,
 #endif
 };
+=======
+    STARTUP_ANIMATION_CONFIG = QK_KB_0,
+};
+>>>>>>> upstream/master:keyboards/xelus/la_plus/la_plus.h
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Copyright 2021 Erovia
 #
 # This program is free software: you can redistribute it and/or modify
@@ -38,3 +39,7 @@ ENCODER_ENABLE = yes
 DIP_SWITCH_ENABLE = yes
 
 LAYOUTS = ortho_4x12 planck_mit
+=======
+# Processor frequency
+F_CPU = 16000000
+>>>>>>> upstream/master

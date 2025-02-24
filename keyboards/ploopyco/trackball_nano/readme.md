@@ -28,6 +28,7 @@ Occasionally, new revisions of the PCB will be released. Every board comes with 
 
 Match the firmware that you flash onto the board with the designator on the board.
 
+<<<<<<< HEAD
 # Customizing your Ploopy Nano Trackball
 
 You can change the DPI/CPI or speed of the trackball by calling `adns_set_cpi` at any time. Additionally, there is a `DPI_CONFIG` macro that will cycle through an array of options for the DPI.  This is set to 375, 750, and 1375, but can be changed. 750 is the default. 
@@ -43,6 +44,8 @@ The `PLOOPY_DPI_OPTIONS` array sets the values that you want to be able to cycle
 
 The `DPI_CONFIG` macro will cycle through the values in the array, each time you hit it.  It stores this value in persistent memory, so it will load it the next time the device powers up.
 
+=======
+>>>>>>> upstream/master
 ## Fuse settings
 
 When flashing the bootloader, use the following fuse settings:
@@ -52,3 +55,10 @@ When flashing the bootloader, use the following fuse settings:
 | Low      | `0x5E`      |
 | High     | `0x99`      |
 | Extended | `0xC3`      |
+<<<<<<< HEAD
+=======
+
+# Customizing your PloopyCo Trackball Nano
+
+You can find customziation options [here](../readme.md).
+>>>>>>> upstream/master

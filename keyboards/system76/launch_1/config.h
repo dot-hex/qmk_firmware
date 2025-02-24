@@ -17,6 +17,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 // USB device descriptor parameter
@@ -87,6 +88,8 @@
 // Locking resynchronize hack
 #define LOCKING_RESYNC_ENABLE
 
+=======
+>>>>>>> upstream/master
 // I2C {
 #define F_SCL 100000UL // Run I2C bus at 100 kHz
 #define I2C_START_RETRY_COUNT 20

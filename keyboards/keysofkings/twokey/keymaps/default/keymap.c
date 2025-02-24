@@ -27,6 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	LAYOUT(
 		TO(0),
+<<<<<<< HEAD
 		RGB_TOG, RGB_MOD),
 
 	LAYOUT(
@@ -36,6 +37,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAYOUT(
 		TO(0),
 		RGB_HUI, RGB_HUD),
+=======
+		UG_TOGG, UG_NEXT),
+
+	LAYOUT(
+		TO(0),
+		UG_VALU, UG_VALD),
+
+    LAYOUT(
+		TO(0),
+		UG_HUEU, UG_HUED),
+>>>>>>> upstream/master
 
 	LAYOUT(
 		TO(5),
@@ -43,7 +55,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	LAYOUT(
 		TO(0),
+<<<<<<< HEAD
 		RGB_SAI, RGB_SAD),
+=======
+		UG_SATU, UG_SATD),
+>>>>>>> upstream/master
 
 	LAYOUT(
 		TO(8),
@@ -51,11 +67,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	LAYOUT(
 		TO(0),
+<<<<<<< HEAD
 		CK_TOGG, MU_TOG),
 
 	LAYOUT(
 		TO(0),
 		RESET, EEPROM_RESET),
+=======
+		CK_TOGG, MU_TOGG),
+
+	LAYOUT(
+		TO(0),
+		QK_BOOT, EE_CLR),
+>>>>>>> upstream/master
 };
 
 void matrix_init_user(void) {

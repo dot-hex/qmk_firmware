@@ -1,7 +1,11 @@
 // Copyright 2021 Cedric Vincent (@cdc-mkb)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+<<<<<<< HEAD
 #include "mntre.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef OLED_ENABLE
 bool oled_task_kb(void) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -26,3 +27,11 @@ SRC = \
     expander.c \
 
 LAYOUTS = ergodox
+=======
+# custom matrix setup
+CUSTOM_MATRIX = lite
+
+VPATH += drivers/gpio
+SRC += mcp23018.c matrix.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

@@ -1,6 +1,6 @@
-# MCU name
-MCU = atmega32u4
+CUSTOM_MATRIX = lite
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
@@ -22,3 +22,8 @@ CUSTOM_MATRIX = lite
 # project specific files
 SRC += matrix.c
 QUANTUM_LIB_SRC += uart.c
+=======
+# project specific files
+SRC += matrix.c
+UART_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

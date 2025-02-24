@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -27,6 +28,11 @@
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION ROW2COL
 
+=======
+
+#define WAIT_US_TIMER           GPTD3
+
+>>>>>>> upstream/master
 // Dynamic EEPROM
 // Something sensible or else VIA may crash
 // Users may enable more if they wish
@@ -35,6 +41,7 @@
 // Increase VIA layer count
 #define DYNAMIC_KEYMAP_LAYER_COUNT 16
 
+<<<<<<< HEAD
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
@@ -67,6 +74,16 @@
 
 #define DRIVER_COUNT 2
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+=======
+#define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+
+/* LED indicator pins */
+#define LED_WIN_LOCK_PIN    C5
+#define LED_MR_LOCK_PIN     LED_SCROLL_LOCK_PIN
+
+#define IS31FL3733_I2C_ADDRESS_1 IS31FL3733_I2C_ADDRESS_GND_GND
+#define IS31FL3733_I2C_ADDRESS_2 IS31FL3733_I2C_ADDRESS_GND_VCC
+>>>>>>> upstream/master
 
 /* I2C Alternate function settings */
 #define I2C1_SCL_PAL_MODE 1
@@ -78,6 +95,7 @@
 #define I2C1_TIMINGR_SDADEL  0x0U
 #define I2C1_TIMINGR_SCLH   0x0cU
 #define I2C1_TIMINGR_SCLL   0x22U
+<<<<<<< HEAD
 
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED  // turn off effects when suspended
 #    define RGB_MATRIX_FRAMEBUFFER_EFFECTS
@@ -138,3 +156,5 @@
 #define VIA_QMK_RGBLIGHT_ENABLE
 
 #endif /* RGB_MATRIX_ENABLE */
+=======
+>>>>>>> upstream/master

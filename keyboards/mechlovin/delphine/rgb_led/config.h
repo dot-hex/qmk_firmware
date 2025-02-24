@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT_ID      0xDEF2
 #define DEVICE_VER      0x0001
 
@@ -90,3 +91,6 @@
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+=======
+#define IS31FL3731_I2C_ADDRESS_1 IS31FL3731_I2C_ADDRESS_SDA
+>>>>>>> upstream/master

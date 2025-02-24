@@ -5,7 +5,11 @@ extern "C" {
 #include "debug.h"
 
 int8_t sendchar(uint8_t c) {
+<<<<<<< HEAD
     fprintf(stderr, "%c", c);
+=======
+    fprintf(stdout, "%c", c);
+>>>>>>> upstream/master
     return 0;
 }
 
@@ -29,4 +33,8 @@ int main(int argc, char **argv) {
     init_logging();
 
     return RUN_ALL_TESTS();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master

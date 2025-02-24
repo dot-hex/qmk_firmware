@@ -17,7 +17,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
+=======
+>>>>>>> upstream/master
 
 /*
  * Keyboard Matrix Assignments
@@ -34,6 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COL_PINS { B1, B3, B2, B6, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN }
 #define MATRIX_COL_PINS_SCANNED { B1, B3, B2, B6 }
 
+<<<<<<< HEAD
 #define LED_EN_PIN D2
 #define UNUSED_PINS
 
@@ -69,20 +73,41 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 //#define FORCE_NKRO
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:keyboards/woodkeys/meira/promicro/config.h
+>>>>>>> upstream/master
 /* disable debug print */
 //#define NO_DEBUG
 
 /* disable print */
 //#define NO_PRINT
+<<<<<<< HEAD
+=======
+========
+#define LED_CAPS_LOCK_PIN B9
+#define LED_PIN_ON_STATE  0
+
+#define BACKLIGHT_PIN B8
+#define BACKLIGHT_BREATHING
+#define BACKLIGHT_PWM_DRIVER PWMD4
+#define BACKLIGHT_PWM_CHANNEL 3
+>>>>>>>> upstream/master:keyboards/mechlovin/hannah65/config.h
+>>>>>>> upstream/master
 
 /* disable action features */
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT Tractyl Manuform(5x6) Elite C
 
 // wiring of each half
@@ -49,3 +50,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* PMW3360 Settings */
 #define PMW3360_CS_PIN B6
+=======
+#define AUDIO_PIN       C6
+
+#define EE_HANDS
+
+/* PMW33XX Settings */
+#define PMW33XX_CS_PIN B6
+>>>>>>> upstream/master

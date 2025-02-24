@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,8 @@ AUDIO_ENABLE = no           # Audio output
 CUSTOM_MATRIX = yes         # Use custom matrix
 SRC += matrix.c \
        i2c_master.c
+=======
+CUSTOM_MATRIX = yes
+SRC += matrix.c
+I2C_DRIVER_REQUIRED = yes
+>>>>>>> upstream/master

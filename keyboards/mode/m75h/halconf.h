@@ -21,6 +21,9 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #define HAL_USE_I2C TRUE
 
+=======
+>>>>>>> upstream/master
 #include_next <halconf.h>

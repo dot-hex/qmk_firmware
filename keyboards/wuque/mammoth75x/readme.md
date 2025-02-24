@@ -1,4 +1,5 @@
 # mammoth75x
+<<<<<<< HEAD
 ​
 ![mammoth75x](https://i.imgur.com/mhIKh2P.jpeg) 
 ​
@@ -8,6 +9,17 @@ More Info at [wuquestudio](https://shop.wuquestudio.com/).
 * Hardware Supported: mammoth75x Standard
 * Hardware Availability: [mammoth75x](https://shop.wuquestudio.com/)
 ​
+=======
+
+![mammoth75x](https://i.imgur.com/mhIKh2P.jpeg) 
+
+More Info at [wuquestudio](https://shop.wuquestudio.com/).
+
+* Keyboard Maintainer: [spbgzh](https://github.com/spbgzh)
+* Hardware Supported: mammoth75x Standard
+* Hardware Availability: [mammoth75x](https://shop.wuquestudio.com/)
+
+>>>>>>> upstream/master
 Make example for this keyboard (after setting up your build environment):
 
     make wuque/mammoth75x:default

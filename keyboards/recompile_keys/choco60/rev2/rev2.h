@@ -1,4 +1,4 @@
-/* Copyright 2020 Naoto Takai
+/* Copyright 2017 Cole Markham
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,7 +13,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 #pragma once
 
 #include "quantum.h"
+
+void reset_keyboard_kb(void);

@@ -11,7 +11,11 @@ RGB_MATRIX_EFFECT(SOLID_MULTISPLASH)
 
 #        ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
+<<<<<<< HEAD
 HSV SOLID_SPLASH_math(HSV hsv, int16_t dx, int16_t dy, uint8_t dist, uint16_t tick) {
+=======
+hsv_t SOLID_SPLASH_math(hsv_t hsv, int16_t dx, int16_t dy, uint8_t dist, uint16_t tick) {
+>>>>>>> upstream/master
     uint16_t effect = tick - dist;
     if (effect > 255) effect = 255;
     hsv.v = qadd8(hsv.v, 255 - effect);

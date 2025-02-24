@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -55,5 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed (5 is default) */
 #define DEBOUNCE 5
 
+=======
+>>>>>>> upstream/master
 /* The Mini M has no diodes */
 #define MATRIX_HAS_GHOST

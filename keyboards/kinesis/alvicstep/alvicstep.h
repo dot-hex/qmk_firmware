@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+#pragma once
+=======
+// Copyright 2023 QMK
+// SPDX-License-Identifier: GPL-2.0-or-later
+>>>>>>> upstream/master
+
 #pragma once
 
-#include "../kinesis.h"
+#include "quantum.h"
 
-#define ___ KC_NO
-
+<<<<<<< HEAD
 #define LAYOUT( \
     k02, k22, k12, k01, k21, k11, k00, k20, k10, \
     k80, k70, k60, k50, k40, k30, \
@@ -94,3 +100,11 @@
   PB6   col6  |        |        |        | LCtrl  | Delete | Bksp   | RCtrl  | Enter  | Space  | H      | J      | K      |        | L      | ;:     | '"
   PB7   col7  |        |        |        |        | RGUI   |        | PageUp |        | PageDn | N      | M      | ,<     |        | .>     | /?     | RShift
 */
+=======
+void all_led_off(void);
+void all_led_on(void);
+void num_lock_led_on(void);
+void caps_lock_led_on(void);
+void scroll_lock_led_on(void);
+void keypad_led_on(void);
+>>>>>>> upstream/master

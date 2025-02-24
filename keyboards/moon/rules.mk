@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,12 +18,11 @@ BACKLIGHT_ENABLE = yes      # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
+=======
+>>>>>>> upstream/master
 # custom matrix setup
 CUSTOM_MATRIX = yes
 
 VPATH += drivers/gpio
 SRC += pca9555.c matrix.c
-QUANTUM_LIB_SRC += i2c_master.c
-
-# Supported layouts
-LAYOUTS = tkl_ansi tkl_iso
+I2C_DRIVER_REQUIRED = yes

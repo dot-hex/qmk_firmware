@@ -13,4 +13,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:keyboards/kprepublic/bm16a/bm16a.c
 #include "bm16a.h"
+=======
+
+#pragma once
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 18
+>>>>>>> upstream/master:keyboards/xiudi/xd96/config.h

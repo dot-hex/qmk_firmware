@@ -16,8 +16,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-#include "config_common.h"
 
+<<<<<<< HEAD
 #define VENDOR_ID 0xDA12
 #define PRODUCT_ID 0x6060
 #define DEVICE_VER 0x0001
@@ -95,6 +95,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
 #endif
+=======
+#define WS2812_SPI_DRIVER SPID1
+#define WS2812_SPI_MOSI_PAL_MODE 5
+>>>>>>> upstream/master
 
 #ifdef AUDIO_ENABLE
     #define AUDIO_PIN A5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 SPLIT_KEYBOARD = yes       # Enables split keyboard support
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = omkbd/runner3680/5x8

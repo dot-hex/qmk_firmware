@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega16u2
 
@@ -19,3 +20,8 @@ CUSTOM_MATRIX = yes
 
 SRC += matrix.c
 LAYOUTS = ortho_2x3
+=======
+CUSTOM_MATRIX = yes
+
+SRC += matrix.c
+>>>>>>> upstream/master

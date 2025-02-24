@@ -1,5 +1,6 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #undef PRODUCT
@@ -15,17 +16,16 @@
 #define MATRIX_COL_PINS \
     { E6, E3, E4, D3, D4, D5, C0, A7, A6, E1, E0, D7 }
 
+=======
+>>>>>>> upstream/master
 #define AUDIO_PIN     C6
 #define AUDIO_PIN_ALT B5
-
-#undef BACKLIGHT_PIN
-
-#define BACKLIGHT_PIN A5
 
 #define NO_USB_STARTUP_CHECK
 
 #define PLANCK_MIT_LAYOUT
 
+<<<<<<< HEAD
 // This is a 7-bit address, that gets left-shifted and bit 0
 // set to 0 for write, 1 for read (as per I2C protocol)
 // The address will vary depending on your wiring:
@@ -88,3 +88,7 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+=======
+#define IS31FL3731_I2C_ADDRESS_1      IS31FL3731_I2C_ADDRESS_GND
+#define IS31FL3731_I2C_ADDRESS_2      IS31FL3731_I2C_ADDRESS_SDA
+>>>>>>> upstream/master

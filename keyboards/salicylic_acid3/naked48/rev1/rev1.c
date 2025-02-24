@@ -1,5 +1,6 @@
 /*
 Copyright 2021 Salicylic_Acid
+<<<<<<< HEAD:keyboards/salicylic_acid3/naked48/rev1/rev1.c
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -11,11 +12,28 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
+=======
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+>>>>>>> upstream/master:keyboards/naked48/rev1/rev1.c
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD:keyboards/salicylic_acid3/naked48/rev1/rev1.c
 #include "naked48.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master:keyboards/naked48/rev1/rev1.c
 
 #ifdef RGB_MATRIX_ENABLE
     led_config_t g_led_config = { {

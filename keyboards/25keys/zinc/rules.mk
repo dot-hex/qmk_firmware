@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -23,3 +24,6 @@ DEFAULT_FOLDER = 25keys/zinc/rev1
 
 #SRC += i2c.c
 SRC += serial.c
+=======
+DEFAULT_FOLDER = 25keys/zinc/rev1
+>>>>>>> upstream/master

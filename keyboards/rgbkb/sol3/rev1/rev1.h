@@ -9,6 +9,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "sol3.h"
 
 // clang-format off
@@ -61,6 +62,11 @@
     { E3L, E3R, E4L, E4R, E5L, E5R, RSL, RSR   } \
 }
 // clang-format on
+=======
+#include "quantum.h"
+#include "touch_encoder.h"
+#include "common_oled.h"
+>>>>>>> upstream/master
 
 // weak functions overridable by the user
 void render_layer_status(void);

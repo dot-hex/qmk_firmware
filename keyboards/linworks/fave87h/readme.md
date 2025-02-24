@@ -5,6 +5,10 @@ The following is the QMK Firmware for the FAve 87H Hotswap PCB.
 The PCB features:
 * QMK & VIA compatibility
 * Hotswap
+<<<<<<< HEAD
+=======
+* Perkey RGB and Underglow
+>>>>>>> upstream/master
 
 ---
 
@@ -18,5 +22,10 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader Enter the bootloader in 3 ways: 
 * **Bootmagic reset**: Hold down the key ESC key and plug in the keyboard (Top Left most switch)
+<<<<<<< HEAD
 * **Physical reset button**: Briefly press the button on the back of the PCB
 * **Keycode in layout**: Press the B key on layer 1 which is mapped to `RESET`
+=======
+* **Physical reset short**: Briefly short the 2 pads labelled `RESET` on the back of the PCB
+* **Keycode in layout**: Press the B key on layer 1 which is mapped to `QK_BOOT`
+>>>>>>> upstream/master

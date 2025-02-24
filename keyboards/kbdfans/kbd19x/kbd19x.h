@@ -20,12 +20,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 #include "led.h"
 
-inline void kbd19x_caps_led_on(void)    { writePinHigh(LED_CAPS_LOCK_PIN); }
-inline void kbd19x_caps_led_off(void)   { writePinLow(LED_CAPS_LOCK_PIN); }
+inline void kbd19x_caps_led_on(void)    { gpio_write_pin_high(LED_CAPS_LOCK_PIN); }
+inline void kbd19x_caps_led_off(void)   { gpio_write_pin_low(LED_CAPS_LOCK_PIN); }
 
-inline void kbd19x_sclk_led_on(void)    { writePinHigh(LED_SCROLL_LOCK_PIN); }
-inline void kbd19x_sclk_led_off(void)   { writePinLow(LED_SCROLL_LOCK_PIN); }
+inline void kbd19x_sclk_led_on(void)    { gpio_write_pin_high(LED_SCROLL_LOCK_PIN); }
+inline void kbd19x_sclk_led_off(void)   { gpio_write_pin_low(LED_SCROLL_LOCK_PIN); }
 
+<<<<<<< HEAD
 inline void kbd19x_nmlk_led_on(void)    { writePinHigh(LED_NUM_LOCK_PIN); }
 inline void kbd19x_nmlk_led_off(void)   { writePinLow(LED_NUM_LOCK_PIN); }
 
@@ -108,3 +109,7 @@ inline void kbd19x_nmlk_led_off(void)   { writePinLow(LED_NUM_LOCK_PIN); }
   {k60, k61, k62, k63, k64, k65, k66, k67, k68, k69, k6a, k6b, k6c},\
   {XXX, k71, k72, k73, k74, k75, k76, k77, k78, k79, k7a, k7b, XXX},\
 }
+=======
+inline void kbd19x_nmlk_led_on(void)    { gpio_write_pin_high(LED_NUM_LOCK_PIN); }
+inline void kbd19x_nmlk_led_off(void)   { gpio_write_pin_low(LED_NUM_LOCK_PIN); }
+>>>>>>> upstream/master

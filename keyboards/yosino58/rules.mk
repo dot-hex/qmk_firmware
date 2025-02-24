@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,8 +22,6 @@ USE_I2C = yes
 
 CUSTOM_MATRIX = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = yosino58/rev1
-
-SRC += i2c.c
-SRC += serial.c
-SRC += ssd1306.c

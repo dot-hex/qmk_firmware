@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Copyright 2021 NachoxMacho
 *
 * This program is free software: you can redistribute it and/or modify
@@ -13,6 +14,10 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 */
+=======
+// Copyright 2021 QMK / NachoxMacho
+// SPDX-License-Identifier: GPL-2.0-or-later
+>>>>>>> upstream/master
 
 #include QMK_KEYBOARD_H
 
@@ -57,7 +62,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └───┴───────┴───┘───┘
      */
     [1] = LAYOUT_numpad_6x5(
+<<<<<<< HEAD
         _______, RESET,   _______, _______, _______,
+=======
+        _______, QK_BOOT,   _______, _______, _______,
+>>>>>>> upstream/master
         _______, _______, _______, _______, _______,
         _______, KC_HOME, KC_UP,   KC_PGUP,
         _______, KC_LEFT, XXXXXXX, KC_RGHT, _______,

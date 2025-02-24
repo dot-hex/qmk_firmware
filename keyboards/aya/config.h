@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /* Copyright 2021 Dan Nixon
+=======
+<<<<<<< HEAD:keyboards/mt84/keymaps/default/config.h
+/* Copyright 2021 QMK
+=======
+/* Copyright 2021 Dan Nixon
+>>>>>>> upstream/master:keyboards/aya/config.h
+>>>>>>> upstream/master
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +24,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x1209
@@ -35,3 +44,10 @@
 
 #define SPLIT_HAND_PIN B5
 #define USE_I2C
+=======
+<<<<<<< HEAD:keyboards/mt84/keymaps/default/config.h
+#define LAYER_STATE_8BIT
+=======
+#define USE_I2C
+>>>>>>> upstream/master:keyboards/aya/config.h
+>>>>>>> upstream/master

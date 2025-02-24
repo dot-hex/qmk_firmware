@@ -147,5 +147,9 @@ void boardInit(void) {}
 
 
 void restart_usb_driver(USBDriver *usbp) {
+<<<<<<< HEAD:platforms/chibios/boards/IC_TEENSY_3_1/board/board.c
     // Do nothing. Restarting the USB driver on these boards breaks it.
+=======
+  // Do nothing. Restarting the USB driver on these boards breaks it.
+>>>>>>> upstream/master:platforms/chibios/IC_TEENSY_3_1/board/board.c
 }

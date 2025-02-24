@@ -16,5 +16,8 @@
 #pragma once
 
 /* Combos */
+<<<<<<< HEAD
 #define COMBO_COUNT 5
+=======
+>>>>>>> upstream/master
 #define COMBO_TERM 50

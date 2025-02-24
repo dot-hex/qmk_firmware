@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -21,5 +22,8 @@ SUBPROJECT_rev1 = yes
 
 SRC += matrix.c
 DEBOUNCE_TYPE = sym_eager_pk
+=======
+SRC += matrix.c
+>>>>>>> upstream/master
 
 DEFAULT_FOLDER = handwired/xealous/rev1

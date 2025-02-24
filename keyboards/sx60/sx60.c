@@ -27,9 +27,16 @@ uint8_t init_mcp23018(void) {
         0b00000000,
     };
 
+<<<<<<< HEAD
     mcp23018_status = i2c_writeReg(I2C_ADDR, IODIRA, direction, 2, I2C_TIMEOUT);
     if (mcp23018_status) return mcp23018_status;
 
     mcp23018_status = i2c_writeReg(I2C_ADDR, GPPUA, pullup, 2, I2C_TIMEOUT);
+=======
+    mcp23018_status = i2c_write_register(I2C_ADDR, IODIRA, direction, 2, I2C_TIMEOUT);
+    if (mcp23018_status) return mcp23018_status;
+
+    mcp23018_status = i2c_write_register(I2C_ADDR, GPPUA, pullup, 2, I2C_TIMEOUT);
+>>>>>>> upstream/master
     return mcp23018_status;
 }

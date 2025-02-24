@@ -8,14 +8,18 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
-    RGB_HUI,  QMKURL
+    UG_HUEU,  QMKURL
   )
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     switch (keycode) {
+<<<<<<< HEAD:keyboards/xiudi/xd002/keymaps/rgb_lite/keymap.c
       case RGB_HUI:
+=======
+      case QK_UNDERGLOW_HUE_UP:
+>>>>>>> upstream/master:keyboards/xd002/keymaps/rgb_lite/keymap.c
         rgblite_increase_hue();
         break;
       case QMKURL:
@@ -27,5 +31,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void keyboard_post_init_user(void) {
+<<<<<<< HEAD:keyboards/xiudi/xd002/keymaps/rgb_lite/keymap.c
+=======
+  rgblite_init();
+>>>>>>> upstream/master:keyboards/xd002/keymaps/rgb_lite/keymap.c
   rgblite_increase_hue();
 }

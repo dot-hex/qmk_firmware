@@ -36,10 +36,17 @@ ifeq ($(strip $(MCU)), risc-v)
     # RISC-V Support
     # As of 7.4.2021 there is only one supported RISC-V platform in Chibios-Contrib,
     # therefore all required settings are hard-coded
+<<<<<<< HEAD
     STARTUP_MK = $(CHIBIOS_CONTRIB)/os/common/startup/RISCV-ECLIC/compilers/GCC/mk/startup_$(MCU_STARTUP).mk
     PORT_V = $(CHIBIOS_CONTRIB)/os/common/ports/RISCV-ECLIC/compilers/GCC/mk/port.mk
     RULESPATH = $(CHIBIOS_CONTRIB)/os/common/startup/RISCV-ECLIC/compilers/GCC
     PLATFORM_MK = $(CHIBIOS_CONTRIB)/os/hal/ports/GD/GD32VF103/platform.mk
+=======
+    USE_CHIBIOS_CONTRIB = yes
+    STARTUP_MK = $(CHIBIOS_CONTRIB)/os/common/startup/RISCV-ECLIC/compilers/GCC/mk/startup_$(MCU_STARTUP).mk
+    PORT_V = $(CHIBIOS_CONTRIB)/os/common/ports/RISCV-ECLIC/compilers/GCC/mk/port.mk
+    RULESPATH = $(CHIBIOS_CONTRIB)/os/common/startup/RISCV-ECLIC/compilers/GCC
+>>>>>>> upstream/master
 else
     # ARM Support
     CHIBIOS_PORT ?=
@@ -82,6 +89,7 @@ ifeq ("$(PLATFORM_NAME)","")
     PLATFORM_NAME = platform
 endif
 
+<<<<<<< HEAD
 ifeq ("$(wildcard $(PLATFORM_MK))","")
     PLATFORM_MK = $(CHIBIOS)/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)/$(PLATFORM_NAME).mk
     ifeq ("$(wildcard $(PLATFORM_MK))","")
@@ -89,6 +97,25 @@ ifeq ("$(wildcard $(PLATFORM_MK))","")
     endif
 endif
 
+=======
+# If no MCU port name was specified, use the family instead
+ifeq ("$(MCU_PORT_NAME)","")
+    MCU_PORT_NAME = $(MCU_FAMILY)
+endif
+
+ifeq ("$(wildcard $(PLATFORM_MK))","")
+    PLATFORM_MK = $(CHIBIOS_CONTRIB)/os/hal/ports/$(MCU_PORT_NAME)/$(MCU_SERIES)/$(PLATFORM_NAME).mk
+    ifeq ("$(wildcard $(PLATFORM_MK))","")
+        PLATFORM_MK = $(CHIBIOS)/os/hal/ports/$(MCU_PORT_NAME)/$(MCU_SERIES)/$(PLATFORM_NAME).mk
+    endif
+endif
+
+# If no MCU architecture specified, use the MCU instead (allows for mcu_selection.mk to swap to cortex-m0 etc.)
+ifeq ("$(MCU_ARCH)","")
+    MCU_ARCH = $(MCU)
+endif
+
+>>>>>>> upstream/master
 include $(STARTUP_MK)
 include $(PORT_V)
 include $(PLATFORM_MK)
@@ -145,6 +172,13 @@ ifdef WB32_BOOTLOADER_ADDRESS
     OPT_DEFS += -DWB32_BOOTLOADER_ADDRESS=$(WB32_BOOTLOADER_ADDRESS)
 endif
 
+<<<<<<< HEAD
+=======
+ifdef AT32_BOOTLOADER_ADDRESS
+    OPT_DEFS += -DAT32_BOOTLOADER_ADDRESS=$(AT32_BOOTLOADER_ADDRESS)
+endif
+
+>>>>>>> upstream/master
 # Work out if we need to set up the include for the bootloader definitions
 ifneq ("$(wildcard $(KEYBOARD_PATH_5)/bootloader_defs.h)","")
     OPT_DEFS += -include $(KEYBOARD_PATH_5)/bootloader_defs.h
@@ -225,6 +259,14 @@ else ifneq ("$(wildcard $(KEYBOARD_PATH_2)/ld/$(MCU_LDSCRIPT).ld)","")
     LDSCRIPT = $(KEYBOARD_PATH_2)/ld/$(MCU_LDSCRIPT).ld
 else ifneq ("$(wildcard $(KEYBOARD_PATH_1)/ld/$(MCU_LDSCRIPT).ld)","")
     LDSCRIPT = $(KEYBOARD_PATH_1)/ld/$(MCU_LDSCRIPT).ld
+<<<<<<< HEAD
+=======
+else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld/$(MCU_LDSCRIPT)_$(BOOTLOADER).ld)","")
+    LDFLAGS += -L$(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld
+    LDSCRIPT = $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld/$(MCU_LDSCRIPT)_$(BOOTLOADER).ld
+else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/boards/common/ld/$(MCU_LDSCRIPT)_$(BOOTLOADER).ld)","")
+    LDSCRIPT = $(TOP_DIR)/platforms/chibios/boards/common/ld/$(MCU_LDSCRIPT)_$(BOOTLOADER).ld
+>>>>>>> upstream/master
 else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld/$(MCU_LDSCRIPT).ld)","")
     LDFLAGS += -L$(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld
     LDSCRIPT = $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/ld/$(MCU_LDSCRIPT).ld
@@ -243,8 +285,13 @@ endif
 
 # HAL-OSAL files (optional).
 include $(CHIBIOS)/os/hal/hal.mk
+<<<<<<< HEAD
 -include $(CHIBIOS)/os/hal/osal/rt/osal.mk         # ChibiOS <= 19.x
 -include $(CHIBIOS)/os/hal/osal/rt-nil/osal.mk     # ChibiOS >= 20.x
+=======
+include $(CHIBIOS)/os/oslib/oslib.mk
+include $(CHIBIOS)/os/hal/osal/rt-nil/osal.mk
+>>>>>>> upstream/master
 # RTOS files (optional).
 include $(CHIBIOS)/os/rt/rt.mk
 # Other files (optional).
@@ -255,28 +302,60 @@ PLATFORM_SRC = \
         $(KERNSRC) \
         $(PORTSRC) \
         $(OSALSRC) \
+<<<<<<< HEAD
+=======
+        $(OSLIBSRC) \
+>>>>>>> upstream/master
         $(HALSRC) \
         $(PLATFORMSRC) \
         $(BOARDSRC) \
         $(STREAMSSRC) \
         $(CHIBIOS)/os/various/syscalls.c \
         $(PLATFORM_COMMON_DIR)/syscall-fallbacks.c \
+<<<<<<< HEAD
         $(PLATFORM_COMMON_DIR)/wait.c
+=======
+        $(PLATFORM_COMMON_DIR)/wait.c \
+        $(PLATFORM_COMMON_DIR)/synchronization_util.c \
+        $(PLATFORM_COMMON_DIR)/interrupt_handlers.c
+>>>>>>> upstream/master
 
 # Ensure the ASM files are not subjected to LTO -- it'll strip out interrupt handlers otherwise.
 QUANTUM_LIB_SRC += $(STARTUPASM) $(PORTASM) $(OSALASM) $(PLATFORMASM)
 
 PLATFORM_SRC := $(patsubst $(TOP_DIR)/%,%,$(PLATFORM_SRC))
 
+<<<<<<< HEAD
 EXTRAINCDIRS += $(CHIBIOS)/os/license $(CHIBIOS)/os/oslib/include \
          $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/configs \
          $(TOP_DIR)/platforms/chibios/boards/common/configs \
          $(HALCONFDIR) $(CHCONFDIR) \
          $(STARTUPINC) $(KERNINC) $(PORTINC) $(OSALINC) \
+=======
+EXTRAINCDIRS += $(CHIBIOS)/os/license \
+         $(TOP_DIR)/platforms/chibios/boards/$(BOARD)/configs \
+         $(TOP_DIR)/platforms/chibios/boards/common/configs \
+         $(HALCONFDIR) $(CHCONFDIR) \
+         $(STARTUPINC) $(KERNINC) $(PORTINC) $(OSALINC) $(OSLIBINC) \
+>>>>>>> upstream/master
          $(HALINC) $(PLATFORMINC) $(BOARDINC) $(TESTINC) \
          $(STREAMSINC) $(CHIBIOS)/os/various $(COMMON_VPATH)
 
 #
+<<<<<<< HEAD
+=======
+# QMK specific MCU family support selection.
+##############################################################################
+ifneq ("$(wildcard $(PLATFORM_PATH)/$(PLATFORM_KEY)/vendors/$(MCU_FAMILY)/$(MCU_SERIES).mk)","")
+    # Either by MCU series e.g. STM32/STM32F1xx.mk or...
+    include $(PLATFORM_PATH)/$(PLATFORM_KEY)/vendors/$(MCU_FAMILY)/$(MCU_SERIES).mk
+else ifneq ("$(wildcard $(PLATFORM_PATH)/$(PLATFORM_KEY)/vendors/$(MCU_FAMILY)/$(MCU_FAMILY).mk)","")
+    # By MCU family e.g. STM32/STM32.mk
+    include $(PLATFORM_PATH)/$(PLATFORM_KEY)/vendors/$(MCU_FAMILY)/$(MCU_FAMILY).mk
+endif
+
+#
+>>>>>>> upstream/master
 # ChibiOS-Contrib
 ##############################################################################
 
@@ -327,10 +406,21 @@ SHARED_CFLAGS = -fomit-frame-pointer \
                 -ffunction-sections \
                 -fdata-sections \
                 -fno-common \
+<<<<<<< HEAD
                 -fshort-wchar
 
 # Shared Linker flags for all toolchains
 SHARED_LDFLAGS = -T $(LDSCRIPT) \
+=======
+                -fshort-wchar \
+                -fno-builtin-printf
+
+LDSCRIPT_PATH := $(shell dirname "$(LDSCRIPT)")
+
+# Shared Linker flags for all toolchains
+SHARED_LDFLAGS = -T $(LDSCRIPT) \
+                 -L $(LDSCRIPT_PATH) \
+>>>>>>> upstream/master
                  -Wl,--gc-sections \
                  -nostartfiles
 
@@ -370,6 +460,20 @@ ifeq ($(strip $(MCU)), risc-v)
                -mabi=$(MCU_ABI) \
                -mcmodel=$(MCU_CMODEL) \
                -mstrict-align
+<<<<<<< HEAD
+=======
+
+    # Deal with different arch revisions and gcc renaming them
+    ifneq ($(shell echo 'int main() { asm("csrc 0x300,8"); return 0; }' | $(TOOLCHAIN)gcc $(MCUFLAGS) $(TOOLCHAIN_CFLAGS) -x c -o /dev/null - 2>/dev/null >/dev/null; echo $$?),0)
+        MCUFLAGS = -march=$(MCU_ARCH)_zicsr \
+                   -mabi=$(MCU_ABI) \
+                   -mcmodel=$(MCU_CMODEL) \
+                   -mstrict-align
+        ifneq ($(shell echo 'int main() { asm("csrc 0x300,8"); return 0; }' | $(TOOLCHAIN)gcc $(MCUFLAGS) $(TOOLCHAIN_CFLAGS) -x c -o /dev/null - 2>/dev/null >/dev/null; echo $$?),0)
+            $(call CATASTROPHIC_ERROR,Incompatible toolchain,No compatible RISC-V toolchain found. Can't work out correct architecture.)
+        endif
+    endif
+>>>>>>> upstream/master
 else
     # ARM toolchain specific configuration
     TOOLCHAIN ?= arm-none-eabi-
@@ -401,6 +505,18 @@ else
     endif
 endif
 
+<<<<<<< HEAD
+=======
+# Extra config.h files for the platform
+ifneq ("$(wildcard $(PLATFORM_COMMON_DIR)/vendors/$(MCU_FAMILY)/$(MCU_SERIES)/config.h)","")
+    CONFIG_H += $(PLATFORM_COMMON_DIR)/vendors/$(MCU_FAMILY)/$(MCU_SERIES)/config.h
+endif
+ifneq ("$(wildcard $(PLATFORM_COMMON_DIR)/vendors/$(MCU_FAMILY)/config.h)","")
+    CONFIG_H += $(PLATFORM_COMMON_DIR)/vendors/$(MCU_FAMILY)/config.h
+endif
+CONFIG_H += $(PLATFORM_COMMON_DIR)/config.h
+
+>>>>>>> upstream/master
 # Assembler flags
 ASFLAGS  += $(SHARED_ASFLAGS) $(TOOLCHAIN_ASFLAGS)
 
@@ -416,6 +532,15 @@ LDFLAGS  += $(SHARED_LDFLAGS) $(SHARED_LDSYMBOLS) $(TOOLCHAIN_LDFLAGS) $(TOOLCHA
 # Tell QMK that we are hosting it on ChibiOS.
 OPT_DEFS += -DPROTOCOL_CHIBIOS
 
+<<<<<<< HEAD
+=======
+# And what flavor of MCU
+OPT_DEFS += -DMCU_$(MCU_FAMILY)
+
+# ChibiOS supports synchronization primitives like a Mutex
+OPT_DEFS += -DPLATFORM_SUPPORTS_SYNCHRONIZATION
+
+>>>>>>> upstream/master
 # Workaround to stop ChibiOS from complaining about new GCC -- it's been fixed for 7/8/9 already
 OPT_DEFS += -DPORT_IGNORE_GCC_VERSION_CHECK=1
 
@@ -430,6 +555,14 @@ HEX     = $(OBJCOPY) -O $(FORMAT)
 EEP     =
 BIN     = $(OBJCOPY) -O binary
 
+<<<<<<< HEAD
+=======
+# disable warning about RWX triggered by ChibiOS linker scripts
+ifeq ("$(shell echo "int main(){}" | $(CC) -shared -Wl,--no-warn-rwx-segments -x c - -o /dev/null 2>&1)", "")
+	SHARED_LDFLAGS += -Wl,--no-warn-rwx-segments
+endif
+
+>>>>>>> upstream/master
 ##############################################################################
 # Make targets
 #

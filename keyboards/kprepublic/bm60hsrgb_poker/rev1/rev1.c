@@ -13,7 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:keyboards/kprepublic/bm60hsrgb_poker/rev1/rev1.c
 #include "rev1.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master:keyboards/bm60poker/bm60poker.c
 
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {

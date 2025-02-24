@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID 0xAC12
 #define PRODUCT_ID 0x4176
@@ -33,45 +34,16 @@
 #define DIODE_DIRECTION COL2ROW
 
 #define BACKLIGHT_PIN A6
+=======
+>>>>>>> upstream/master
 #define BACKLIGHT_PWM_DRIVER PWMD3
 #define BACKLIGHT_PWM_CHANNEL 1
 #define BACKLIGHT_PAL_MODE 1
-#define BACKLIGHT_LEVELS 6
-#define BACKLIGHT_BREATHING
-#define BREATHING_PERIOD 6
 
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
-/* Define RGBLED */
-#define RGB_DI_PIN A5
-#define RGBLED_NUM 1
-#define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_LAYERS
 
-//The 3D-printed version of Boston uses APA106 LEDs, which are reversed 
+//The 3D-printed version of Boston uses APA106 LEDs, which are reversed
 #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
-
-/* Define encoder */
-#define ENCODERS_PAD_A \
-    { C13 }
-#define ENCODERS_PAD_B \
-    { F1 }
-#define ENCODER_RESOLUTION 2
-#define TAP_CODE_DELAY 15
-
-/* Lock LEDs */
-#define LED_NUM_LOCK_PIN A0
-#define LED_CAPS_LOCK_PIN A1
-#define LED_SCROLL_LOCK_PIN A2
 
 /*
  * Feature disable options
@@ -88,5 +60,3 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

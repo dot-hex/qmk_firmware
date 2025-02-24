@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x4D65
@@ -45,3 +46,13 @@
 
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
+=======
+<<<<<<<< HEAD:keyboards/merge/uma/config.h
+#pragma once
+
+#define SPLIT_USB_DETECT
+#define SPLIT_MODS_ENABLE
+========
+#include "bde.h"
+>>>>>>>> upstream/master:keyboards/mechwild/bde/lefty/lefty.c
+>>>>>>> upstream/master

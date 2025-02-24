@@ -1,5 +1,6 @@
 /*
 Copyright 2021 KapCave
+<<<<<<< HEAD:keyboards/kapcave/paladin64/config.h
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,25 +16,43 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
+=======
+>>>>>>> upstream/master:keyboards/paladin64/config.h
 
-#include "config_common.h"
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
+<<<<<<< HEAD:keyboards/kapcave/paladin64/config.h
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x4B43
 #define PRODUCT_ID      0x5036
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    KapCave
 #define PRODUCT         paladin64
+=======
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+>>>>>>> upstream/master:keyboards/paladin64/config.h
 
-/* key matrix size */
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 8
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+#pragma once
 
+<<<<<<< HEAD:keyboards/kapcave/paladin64/config.h
 #define BOOTMAGIC_LITE_ROW 3
 #define BOOTMAGIC_LITE_COLUMN 6
 
 /* Only required if you add in a trackpoint hardware to the pcb */
 #ifdef PS2_USE_USART
+=======
+/* Only required if you add in a trackpoint hardware to the pcb */
+#ifdef PS2_DRIVER_USART
+>>>>>>> upstream/master:keyboards/paladin64/config.h
 #define PS2_CLOCK_PIN   D5
 #define PS2_DATA_PIN    D2
 
@@ -70,7 +89,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define PS2_USART_RX_VECT       USART1_RX_vect
 #endif
 
+<<<<<<< HEAD:keyboards/kapcave/paladin64/config.h
 #ifdef PS2_USE_INT
+=======
+#ifdef PS2_DRIVER_INTERRUPT
+>>>>>>> upstream/master:keyboards/paladin64/config.h
 #define PS2_CLOCK_PIN   D2
 #define PS2_DATA_PIN    D5
 
@@ -87,6 +110,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define PS2_INT_VECT   INT2_vect
 
 #endif
+<<<<<<< HEAD:keyboards/kapcave/paladin64/config.h
 
 /* key matrix pins */
 #define MATRIX_ROW_PINS { C6, B6, B5, B4, D7, D6, B0, D3 }
@@ -119,3 +143,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 12
 #endif
+=======
+>>>>>>> upstream/master:keyboards/paladin64/config.h

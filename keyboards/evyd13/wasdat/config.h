@@ -17,14 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x4705
-#define PRODUCT_ID      0xC474
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Evyd13
-#define PRODUCT         Wasdat
 
 /* key matrix size */
 #define MATRIX_ROWS 8
@@ -42,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #define MATRIX_ROW_PINS { D6, D4, F6, F7, F4, F5, F0, F1 }
 #define MATRIX_COL_PINS { C7, B6, C6, B4, B5, D7, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, NO_PIN, D3, B7, B3 } // Columns 6-12 controlled by demux
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 #define SN74X138_ADDRESS_PINS { D2, D1, D0 }
@@ -126,6 +119,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 //#define FORCE_NKRO
+=======
+
+#define SN74X138_ADDRESS_PINS { D2, D1, D0 }
+>>>>>>> upstream/master
 
 /*
  * Feature disable options
@@ -142,6 +139,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
@@ -150,3 +148,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_COLUMN 5
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
+=======
+>>>>>>> upstream/master

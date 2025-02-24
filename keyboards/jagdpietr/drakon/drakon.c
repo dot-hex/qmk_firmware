@@ -14,10 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "drakon.h"
+#include "quantum.h"
 
 char wpm_str[10];
 
+<<<<<<< HEAD
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) return false;
         if (clockwise) {
@@ -28,6 +29,8 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 
+=======
+>>>>>>> upstream/master
 #ifdef OLED_ENABLE
 
 // Defines names for use in layer keycodes and the keymap

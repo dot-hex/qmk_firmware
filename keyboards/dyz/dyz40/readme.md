@@ -24,4 +24,8 @@ Enter the bootloader in 3 ways:
 
 -   **Bootmagic reset**: Hold the `Esc` key while plugging in the USB cable
 -   **Physical reset button**: Briefly short the pins under the Enter key
+<<<<<<< HEAD
 -   **Keycode in layout**: Press the key mapped to `RESET` if it is available
+=======
+-   **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+>>>>>>> upstream/master

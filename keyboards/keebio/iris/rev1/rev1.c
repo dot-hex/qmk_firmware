@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "rev1.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef SWAP_HANDS_ENABLE
 __attribute__ ((weak))

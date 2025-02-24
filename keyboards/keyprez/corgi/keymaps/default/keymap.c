@@ -26,15 +26,24 @@ enum layer_names {
     _CMD,
 };
 
+<<<<<<< HEAD
 enum corgi_keycodes {
     QWERTY = SAFE_RANGE,
     COLEMAK
 };
 
+=======
+>>>>>>> upstream/master
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define CMD   MO(_CMD)
 
+<<<<<<< HEAD
+=======
+#define QWERTY PDF(_QWERTY)
+#define COLEMAK PDF(_COLEMAK)
+
+>>>>>>> upstream/master
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Qwerty
      * ,-----------------------------------------------------------------------------------.
@@ -136,6 +145,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     tap_code(clockwise ? KC_VOLU : KC_VOLD);
     return true;
 }
+<<<<<<< HEAD
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -154,3 +164,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+=======
+>>>>>>> upstream/master

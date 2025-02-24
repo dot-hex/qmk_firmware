@@ -1,4 +1,10 @@
 #pragma once
+<<<<<<< HEAD
+=======
+
+#include <stdint.h>
+
+>>>>>>> upstream/master
 // clang-format off
 
 #if defined(__AVR__)

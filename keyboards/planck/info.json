@@ -1,7 +1,7 @@
 {
-  "keyboard_name": "Planck",
   "url": "https://olkb.com/planck",
   "maintainer": "jackhumbert",
+<<<<<<< HEAD
   "layouts": {
     "LAYOUT_planck_1x2uC": {
       "layout": [
@@ -103,6 +103,12 @@
         { "w": 1, "x": 9, "y": 3 },
         { "w": 1, "x": 10, "y": 3 },
         { "w": 1, "x": 11, "y": 3 } ]
+=======
+  "qmk": {
+    "locking": {
+      "enabled": true,
+      "resync": true
+>>>>>>> upstream/master
     }
   }
 }

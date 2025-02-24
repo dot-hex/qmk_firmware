@@ -23,6 +23,7 @@ void oled_render_capslock(bool caps_on);
 void oled_render_mods(void);
 void oled_render_keylog(void);
 #endif
+<<<<<<< HEAD
 /* This a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -48,3 +49,5 @@ void oled_render_keylog(void);
 // clang-format on
 
 #define LAYOUT LAYOUT_split_3x6_4
+=======
+>>>>>>> upstream/master

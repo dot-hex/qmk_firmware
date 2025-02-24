@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,7 +18,10 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no
+=======
+CUSTOM_MATRIX    = yes
+>>>>>>> upstream/master
 
 # project specific files
-SRC = i2c_master.c \
-	  matrix.c
+SRC = matrix.c
+I2C_DRIVER_REQUIRED = yes

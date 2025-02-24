@@ -1,5 +1,5 @@
 /*
-    ChibiOS - Copyright (C) 2006..2018 Giovanni Di Sirio
+    ChibiOS - Copyright (C) 2006..2020 Giovanni Di Sirio
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -32,7 +32,15 @@
  */
 
 #define STM32F4xx_MCUCONF
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
 #define STM32F411_MCUCONF
+=======
+#define STM32F401_MCUCONF
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+=======
+#define STM32F411_MCUCONF
+>>>>>>> upstream/master
 
 /*
  * HAL driver system settings.
@@ -48,12 +56,27 @@
 #define STM32_CLOCK48_REQUIRED              TRUE
 #define STM32_SW                            STM32_SW_PLL
 #define STM32_PLLSRC                        STM32_PLLSRC_HSE
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
+=======
+>>>>>>> upstream/master
 #define STM32_PLLM_VALUE                    8
 #define STM32_PLLN_VALUE                    192
 #define STM32_PLLP_VALUE                    2
 #define STM32_PLLQ_VALUE                    4
 #define STM32_HPRE                          STM32_HPRE_DIV1
 #define STM32_PPRE1                         STM32_PPRE1_DIV2
+<<<<<<< HEAD
+=======
+#define STM32_PLLM_VALUE                    25
+#define STM32_PLLN_VALUE                    336
+#define STM32_PLLP_VALUE                    4
+#define STM32_PLLQ_VALUE                    7
+#define STM32_HPRE                          STM32_HPRE_DIV1
+#define STM32_PPRE1                         STM32_PPRE1_DIV4
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+=======
+>>>>>>> upstream/master
 #define STM32_PPRE2                         STM32_PPRE2_DIV2
 #define STM32_RTCSEL                        STM32_RTCSEL_LSI
 #define STM32_RTCPRE_VALUE                  8
@@ -169,7 +192,6 @@
 /*
  * PWM driver system settings.
  */
-#define STM32_PWM_USE_ADVANCED              FALSE
 #define STM32_PWM_USE_TIM1                  FALSE
 #define STM32_PWM_USE_TIM2                  FALSE
 #define STM32_PWM_USE_TIM3                  FALSE
@@ -178,6 +200,10 @@
 #define STM32_PWM_USE_TIM9                  FALSE
 #define STM32_PWM_USE_TIM10                 FALSE
 #define STM32_PWM_USE_TIM11                 FALSE
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/matrix/abelx/mcuconf.h
+=======
+>>>>>>> upstream/master
 
 /*
  * RTC driver system settings.
@@ -186,6 +212,11 @@
 #define STM32_RTC_PRESS_VALUE               1024
 #define STM32_RTC_CR_INIT                   0
 #define STM32_RTC_TAMPCR_INIT               0
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/mcuconf.h
+=======
+>>>>>>> upstream/master
 
 /*
  * SERIAL driver system settings.

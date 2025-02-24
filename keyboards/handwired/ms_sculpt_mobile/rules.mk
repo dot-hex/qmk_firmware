@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 ifdef ASTAR
     MCU = atmega32u4
@@ -24,3 +25,6 @@ COMMAND_ENABLE = yes        # Commands for debug and configuration
 NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
+=======
+DEFAULT_FOLDER = handwired/ms_sculpt_mobile/teensy2pp
+>>>>>>> upstream/master

@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -54,10 +55,14 @@
 
 /* SPI Config for LED Driver */
 #define SPI_DRIVER SPID1
+=======
+/* SPI Config for LED Driver */
+>>>>>>> upstream/master
 #define SPI_SCK_PIN A5
 #define SPI_MOSI_PIN A6
 #define SPI_MISO_PIN A7
 
+<<<<<<< HEAD
 #define DRIVER_1_CS B13
 #define DRIVER_2_CS B14
 #define DRIVER_1_EN C13
@@ -122,3 +127,8 @@
 
 /* Force NKRO on boot up regardless of the setting saved in the EEPROM (uncomment to enable it) */
 // #define FORCE_NKRO
+=======
+#define AW20216S_CS_PIN_1 B13
+#define AW20216S_CS_PIN_2 B14
+#define AW20216S_EN_PIN C13
+>>>>>>> upstream/master

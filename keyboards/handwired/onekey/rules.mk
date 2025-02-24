@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build Options
 #   change yes to no to disable
 #
@@ -14,3 +15,6 @@ AUDIO_ENABLE = no           # Audio output
 DEFAULT_FOLDER = handwired/onekey/promicro
 
 LAYOUTS = ortho_1x1
+=======
+DEFAULT_FOLDER = handwired/onekey/promicro
+>>>>>>> upstream/master

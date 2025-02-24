@@ -16,8 +16,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
+<<<<<<< HEAD
 #define PRODUCT_ID   0xAD04
 #define PRODUCT      Adelais AVR
+=======
+>>>>>>> upstream/master
 /*
  * Keyboard Matrix Assignments
  *
@@ -29,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 #define MATRIX_ROW_PINS { B0, B1, B2, B3, B4 }
+<<<<<<< HEAD
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
@@ -65,3 +69,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+=======
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION ROW2COL
+>>>>>>> upstream/master

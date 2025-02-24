@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "mkiirgb_iso.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = {
@@ -33,6 +37,7 @@ led_config_t g_led_config = {
 }, {
     1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
     1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
+<<<<<<< HEAD
     1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 
     1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
     1, 1, 1, 4, 1, 1, 1, 1, 1	
@@ -47,3 +52,21 @@ void rgb_matrix_indicators_user(void) {
 }
 #endif
 
+=======
+    1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
+    1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1,
+    1, 1, 1, 4, 1, 1, 1, 1, 1
+} };
+
+
+bool rgb_matrix_indicators_kb(void) {
+    if (!rgb_matrix_indicators_user()) {
+        return false;
+    }
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(29, 0xFF, 0xFF, 0xFF);
+    }
+    return true;
+}
+#endif
+>>>>>>> upstream/master

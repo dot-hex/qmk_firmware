@@ -18,6 +18,7 @@
 
 #include "quantum.h"
 
+<<<<<<< HEAD
 #if defined(KEYBOARD_handwired_tractyl_manuform_5x6_right)
 #    include "5x6_right.h"
 #elif defined(KEYBOARD_handwired_tractyl_manuform_4x6_right)
@@ -32,6 +33,10 @@ enum charybdis_keycodes {
 #        else
     POINTER_DEFAULT_DPI_FORWARD = SAFE_RANGE,
 #        endif  // VIA_ENABLE
+=======
+enum charybdis_keycodes {
+    POINTER_DEFAULT_DPI_FORWARD = QK_KB_0,
+>>>>>>> upstream/master
     POINTER_DEFAULT_DPI_REVERSE,
     POINTER_SNIPING_DPI_FORWARD,
     POINTER_SNIPING_DPI_REVERSE,
@@ -39,9 +44,13 @@ enum charybdis_keycodes {
     SNIPING_MODE_TOGGLE,
     DRAGSCROLL_MODE,
     DRAGSCROLL_MODE_TOGGLE,
+<<<<<<< HEAD
     KEYMAP_SAFE_RANGE,
 };
 #        define CHARYBDIS_SAFE_RANGE KEYMAP_SAFE_RANGE
+=======
+};
+>>>>>>> upstream/master
 #        define DPI_MOD POINTER_DEFAULT_DPI_FORWARD
 #        define DPI_RMOD POINTER_DEFAULT_DPI_REVERSE
 #        define S_D_MOD POINTER_SNIPING_DPI_FORWARD
@@ -50,8 +59,13 @@ enum charybdis_keycodes {
 #        define SNP_TOG SNIPING_MODE_TOGGLE
 #        define DRGSCRL DRAGSCROLL_MODE
 #        define DRG_TOG DRAGSCROLL_MODE_TOGGLE
+<<<<<<< HEAD
 #    endif  // !NO_CHARYBDIS_KEYCODES
 
+=======
+
+#ifdef POINTING_DEVICE_ENABLE
+>>>>>>> upstream/master
 /** \brief Return the current DPI value for the pointer's default mode. */
 uint16_t charybdis_get_pointer_default_dpi(void);
 

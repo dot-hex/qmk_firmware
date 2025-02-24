@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32a
 
@@ -19,3 +20,6 @@ WS2812_DRIVER = i2c         # This driver powers the RGB Lighting and RGB Matrix
 LTO_ENABLE = yes            # Enable link time optimization
 
 LAYOUTS = ortho_5x12
+=======
+DEFAULT_FOLDER = kprepublic/jj50/rev1
+>>>>>>> upstream/master

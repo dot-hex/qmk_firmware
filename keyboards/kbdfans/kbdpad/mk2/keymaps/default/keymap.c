@@ -17,12 +17,27 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+<<<<<<< HEAD
   [0] = LAYOUT_ortho_6x4( /* Base */
     KC_ESC,  KC_LCTL, KC_LALT, KC_BSPC,
     KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
+=======
+<<<<<<<< HEAD:keyboards/40percentclub/6lit/keymaps/macro/keymap.c
+  [0] = LAYOUT_macro( /* Base */
+    KC_F19,   KC_F20,   KC_F21,
+    KC_F22,   KC_F23,   KC_F24
+========
+  [0] = LAYOUT_ortho_6x4( /* Base */
+    KC_ESC,  KC_LCTL, KC_LALT, KC_BSPC,
+    KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS,
+>>>>>>> upstream/master
     KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
     KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
     KC_P1,   KC_P2,   KC_P3,   KC_PENT,
     KC_P0,   KC_P0,   KC_PDOT, KC_PENT
+<<<<<<< HEAD
+=======
+>>>>>>>> upstream/master:keyboards/kbdfans/kbdpad/mk2/keymaps/default/keymap.c
+>>>>>>> upstream/master
   ),
 };

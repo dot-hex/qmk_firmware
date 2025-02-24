@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,4 +20,6 @@ RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 OLED_ENABLE = no      # OLED display
 SPLIT_KEYBOARD = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = uzu42/rev1

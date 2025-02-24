@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -20,6 +21,8 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 SRC += lib/oled.c \
 	   lib/encoder.c \
 	   lib/calc.c

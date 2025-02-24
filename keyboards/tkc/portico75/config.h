@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -117,6 +118,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // WT_RGB IS31FL3741 driver code
 #    define DRIVER_COUNT 1
 #    define DRIVER_LED_TOTAL 98
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+
+#ifndef RGB_MATRIX_ENABLE
+// WT_RGB IS31FL3741 driver code
+#    define IS31FL3741_LED_COUNT 98
+>>>>>>> upstream/master
 
 #    define RGB_BACKLIGHT_ENABLED 1
 
@@ -173,7 +181,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Backlight config starts after VIA's EEPROM usage,
 // dynamic keymaps start after this.
 #    define VIA_EEPROM_CUSTOM_CONFIG_SIZE 31
+<<<<<<< HEAD
 
 // VIA lighting is handled by the keyboard-level code
 #    define VIA_CUSTOM_LIGHTING_ENABLE
+=======
+>>>>>>> upstream/master
 #endif

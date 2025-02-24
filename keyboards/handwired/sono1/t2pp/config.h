@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #undef DEVICE_VER
@@ -34,3 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LED_KB_LOCK_PIN B1
 #define LED_PIN_ON_STATE 0
 
+=======
+#define LED_CTRL_XFER_PIN B4
+#define LED_KB_LOCK_PIN B1
+>>>>>>> upstream/master

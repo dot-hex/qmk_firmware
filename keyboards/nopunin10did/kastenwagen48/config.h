@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -34,10 +35,13 @@
 #define MATRIX_COL_PINS     { F4, F5, F6, F7, B1, B3, B2, E6 }
 #define UNUSED_PINS
 
+=======
+>>>>>>> upstream/master
 /* Indicator LEDs */
 #define LED_INDICATOR_TOP   B0
 #define LED_INDICATOR_MID   D4
 #define LED_INDICATOR_BOT   C6
+<<<<<<< HEAD
 
 /* Rotary encoder rotation pins */
 #define ENCODERS_PAD_A      { D0, D3 }
@@ -49,3 +53,5 @@
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE            5
+=======
+>>>>>>> upstream/master

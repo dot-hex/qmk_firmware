@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID 0xC2AB
 #define PRODUCT_ID 0x0001
@@ -24,6 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER Cuddly Keyboards Ltd.
 #define PRODUCT Ferris 0.2
 
+=======
+>>>>>>> upstream/master
 /* key matrix size */
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 10
@@ -31,39 +34,54 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
 #define MATRIX_COLS_PER_SIDE (MATRIX_COLS / 2)
 
+<<<<<<< HEAD
 #define UNUSED_MCU 24
 #define UNUSED_MCP 7
 
+=======
+>>>>>>> upstream/master
 // wiring
 #define MATRIX_ROW_PINS_MCU \
     { B7, B6, B5, A2 }
 #define MATRIX_COL_PINS_MCU \
     { B8, B4, B3, A15, A14 }
+<<<<<<< HEAD
 #define UNUSED_PINS_MCU \
     { A0, A1, A3, A4, A5, A6, A7, A8, A9, A10, A13, B0, B1, B2, B9, B12, B13, B14, B15, C13, C14, C15, F0, F1 }
+=======
+>>>>>>> upstream/master
 #define MATRIX_ROW_PINS_MCP \
     { B0, B1, B2, B3 }
 #define MATRIX_COL_PINS_MCP \
     { A0, A1, A2, A3, A4 }
+<<<<<<< HEAD
 #define UNUSED_PINS_MCP \
     { B4, B5, B6, B7, A5, A6, A7 }
+=======
+>>>>>>> upstream/master
 
 #define MATRIX_ROW_PINS \
     { B7, B6, B5, A2, A0, A0, A0, A0 }
 #define MATRIX_COL_PINS \
     { B8, B4, B3, A15, A14, A1, A1, A1, A1, A1 }
+<<<<<<< HEAD
 #define UNUSED_PINS \
     { A3, A4, A5, A6, A7, A8, A9, A10, A13, B0, B1, B2, B9, B12, B13, B14, B15, C13, C14, C15, F0, F1 }
+=======
+>>>>>>> upstream/master
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+<<<<<<< HEAD
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
+=======
+>>>>>>> upstream/master
 /* i2c settings */
 
 #define I2C_DRIVER I2CD2

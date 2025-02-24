@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -10,4 +11,6 @@ OPT_DEFS += -DOLED_FONT_H=\"common/glcdfont.c\"
 SPLIT_KEYBOARD = yes
 ENCODER_ENABLE = yes
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = rgbkb/sol/rev2

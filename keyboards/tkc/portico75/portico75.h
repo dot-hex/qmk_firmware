@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "keyboards/wilba_tech/wt_rgb_backlight_keycodes.h"
 #include "via.h"
 #endif
+<<<<<<< HEAD
 
 #define XXX KC_NO
 
@@ -58,3 +59,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { K40, K41, K42, K43, K44, K45, K46, K47, K48, K49, K4A, K4B, K4C, XXX, K4E }, \
     { K50, K51, K52, XXX, XXX, K55, XXX, XXX, XXX, K59, K5A, K5B, K5C, K5D, XXX }  \
 }
+=======
+>>>>>>> upstream/master

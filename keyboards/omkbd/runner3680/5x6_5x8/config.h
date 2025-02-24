@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x3680
 #define PRODUCT_ID      0x5658
@@ -73,6 +74,8 @@
 #endif
 
 #define SOFT_SERIAL_PIN D2
+=======
+>>>>>>> upstream/master
 #define SELECT_SOFT_SERIAL_SPEED 1
 /*Sets the protocol speed when using serial communication*/
 //Speeds:

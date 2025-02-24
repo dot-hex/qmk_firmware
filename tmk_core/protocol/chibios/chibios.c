@@ -49,12 +49,20 @@
 #include "suspend.h"
 #include "wait.h"
 
+#define USB_GETSTATUS_REMOTE_WAKEUP_ENABLED (2U)
+
+#ifdef WAIT_FOR_USB
+// TODO: Remove backwards compatibility with old define
+#    define USB_WAIT_FOR_ENUMERATION
+#endif
+
 /* -------------------------
  *   TMK host driver defs
  * -------------------------
  */
 
 /* declarations */
+<<<<<<< HEAD:tmk_core/protocol/chibios/chibios.c
 uint8_t keyboard_leds(void);
 void    send_keyboard(report_keyboard_t *report);
 void    send_mouse(report_mouse_t *report);
@@ -65,20 +73,18 @@ void    send_digitizer(report_digitizer_t *report);
 
 /* host struct */
 host_driver_t chibios_driver = {keyboard_leds, send_keyboard, send_mouse, send_system, send_consumer, send_programmable_button};
+=======
+void send_keyboard(report_keyboard_t *report);
+void send_nkro(report_nkro_t *report);
+void send_mouse(report_mouse_t *report);
+void send_extra(report_extra_t *report);
+
+/* host struct */
+host_driver_t chibios_driver = {.keyboard_leds = usb_device_state_get_leds, .send_keyboard = send_keyboard, .send_nkro = send_nkro, .send_mouse = send_mouse, .send_extra = send_extra};
+>>>>>>> upstream/master:tmk_core/protocol/chibios/main.c
 
 #ifdef VIRTSER_ENABLE
 void virtser_task(void);
-#endif
-
-#ifdef RAW_ENABLE
-void raw_hid_task(void);
-#endif
-
-#ifdef CONSOLE_ENABLE
-void console_task(void);
-#endif
-#ifdef MIDI_ENABLE
-void midi_ep_task(void);
 #endif
 
 /* TESTING
@@ -154,7 +160,11 @@ void protocol_pre_init(void) {
 
     /* Wait until USB is active */
     while (true) {
+<<<<<<< HEAD:tmk_core/protocol/chibios/chibios.c
 #if defined(WAIT_FOR_USB)
+=======
+#if defined(USB_WAIT_FOR_ENUMERATION)
+>>>>>>> upstream/master:tmk_core/protocol/chibios/main.c
         if (USB_DRIVER.state == USB_ACTIVE) {
             driver = &chibios_driver;
             break;
@@ -185,11 +195,16 @@ void protocol_pre_task(void) {
 
 #if !defined(NO_USB_STARTUP_CHECK)
     if (USB_DRIVER.state == USB_SUSPENDED) {
+<<<<<<< HEAD:tmk_core/protocol/chibios/chibios.c
         print("[s]");
+=======
+        dprintln("suspending keyboard");
+>>>>>>> upstream/master:tmk_core/protocol/chibios/main.c
         while (USB_DRIVER.state == USB_SUSPENDED) {
             /* Do this in the suspended state */
             suspend_power_down(); // on AVR this deep sleeps for 15ms
             /* Remote wakeup */
+<<<<<<< HEAD:tmk_core/protocol/chibios/chibios.c
             if (suspend_wakeup_condition()) {
                 usbWakeupHost(&USB_DRIVER);
                 restart_usb_driver(&USB_DRIVER);
@@ -201,11 +216,28 @@ void protocol_pre_task(void) {
 #    ifdef MOUSEKEY_ENABLE
         mousekey_send();
 #    endif /* MOUSEKEY_ENABLE */
+=======
+            if (suspend_wakeup_condition() && (USB_DRIVER.status & USB_GETSTATUS_REMOTE_WAKEUP_ENABLED)) {
+                usbWakeupHost(&USB_DRIVER);
+#    if USB_SUSPEND_WAKEUP_DELAY > 0
+                // Some hubs, kvm switches, and monitors do
+                // weird things, with USB device state bouncing
+                // around wildly on wakeup, yielding race
+                // conditions that can corrupt the keyboard state.
+                //
+                // Pause for a while to let things settle...
+                wait_ms(USB_SUSPEND_WAKEUP_DELAY);
+#    endif
+            }
+        }
+        /* Woken up */
+>>>>>>> upstream/master:tmk_core/protocol/chibios/main.c
     }
 #endif
 }
 
 void protocol_post_task(void) {
+<<<<<<< HEAD:tmk_core/protocol/chibios/chibios.c
 #ifdef CONSOLE_ENABLE
     console_task();
 #endif
@@ -218,4 +250,10 @@ void protocol_post_task(void) {
 #ifdef RAW_ENABLE
     raw_hid_task();
 #endif
+=======
+#ifdef VIRTSER_ENABLE
+    virtser_task();
+#endif
+    usb_idle_task();
+>>>>>>> upstream/master:tmk_core/protocol/chibios/main.c
 }

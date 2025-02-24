@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 #define VENDOR_ID       0x8968
@@ -24,6 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Yiancar-Designs
 #define PRODUCT         Seigaiha
+=======
+>>>>>>> upstream/master
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -43,12 +46,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* A Custom matrix.c is used to poll the port expander D5 shows that the pins are hardwired there */
 #define MATRIX_ROW_PINS { C0, B4, B3, B2, B5 }
 #define MATRIX_COL_PINS { B0, D7, D6, D4, B1, C1, C2, D1, C3, D0, D5, D5, D5, D5, D5 }
+<<<<<<< HEAD
 #define UNUSED_PINS
+=======
+>>>>>>> upstream/master
 #define PORT_EXPANDER_ADDRESS 0x20
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+<<<<<<< HEAD
 #define USB_MAX_POWER_CONSUMPTION 100
 
 #define BOOTMAGIC_LITE_ROW 1
@@ -86,6 +93,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define FORCE_NKRO
 
 
+=======
+>>>>>>> upstream/master
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -101,5 +110,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+=======
+>>>>>>> upstream/master

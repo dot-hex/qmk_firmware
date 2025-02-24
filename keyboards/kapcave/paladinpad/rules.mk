@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,6 @@ AUDIO_ENABLE = no           # Audio output
 
 DEFAULT_FOLDER = kapcave/paladinpad/rev2
 LAYOUTS = numpad_5x4 ortho_5x4
+=======
+DEFAULT_FOLDER = kapcave/paladinpad/rev2
+>>>>>>> upstream/master

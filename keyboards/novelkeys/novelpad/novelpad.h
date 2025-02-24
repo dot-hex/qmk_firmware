@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Cole Markham
+Copyright 2021-2022 Alin M Elena <alinm.elena@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,18 +19,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
-#define LAYOUT_ortho_5x4( \
-    K00, K01, K02, K03, \
-    K10, K11, K12, K13, \
-    K20, K21, K22, K23, \
-    K30, K31, K32, K33, \
-    K40, K41, K42, K43  \
-) { \
-    { K00,   K01,   K02,   K03 }, \
-    { K10,   K11,   K12,   K13 }, \
-    { K20,   K21,   K22,   K23 }, \
-    { K30,   K31,   K32,   K33 }, \
-    { K40,   K41,   K42,   K43 } \
+static inline void led_lwr(const bool on) {
+#ifdef LED_NUM_LOCK_PIN
+    gpio_write_pin(LED_NUM_LOCK_PIN, on);
+#endif
 }
 
-#define LAYOUT LAYOUT_ortho_5x4
+static inline void led_rse(const bool on) {
+#ifdef LED_SCROLL_LOCK_PIN
+    gpio_write_pin(LED_SCROLL_LOCK_PIN, on);
+#endif
+}
+static inline void led_caps(const bool on) {
+#ifdef LED_CAPS_LOCK_PIN
+    gpio_write_pin(LED_CAPS_LOCK_PIN, !on);
+#endif
+}
+

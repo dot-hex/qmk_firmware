@@ -8,7 +8,10 @@ BALLSTEP = 20  			# Multiple in px to move, multiplied by layer number
 SCROLLSTEP = 1 			# Lines to scroll with ball
 MOUSEKEY_ENABLE = yes  		# Mouse keys, needed for baller
 OLED_ENABLE = yes
+<<<<<<< HEAD:keyboards/gboards/gergo/keymaps/oled/rules.mk
 OLED_DRIVER = SSD1306
+=======
+>>>>>>> upstream/master:keyboards/gergo/keymaps/oled/rules.mk
 LOCAL_GLCDFONT = yes
 
 #Debug options

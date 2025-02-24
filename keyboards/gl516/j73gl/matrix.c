@@ -15,44 +15,73 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "matrix.h"
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+>>>>>>> upstream/master
 
 static const pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 static const pin_t col_pins[MATRIX_COLS] = MATRIX_COL_PINS;
 
 static void select_row(uint8_t row)
 {
+<<<<<<< HEAD
     setPinOutput(row_pins[row]);
     writePinLow(row_pins[row]);
+=======
+    gpio_set_pin_output(row_pins[row]);
+    gpio_write_pin_low(row_pins[row]);
+>>>>>>> upstream/master
 }
 
 static void unselect_row(uint8_t row)
 {
+<<<<<<< HEAD
     setPinInputHigh(row_pins[row]);
+=======
+    gpio_set_pin_input_high(row_pins[row]);
+>>>>>>> upstream/master
 }
 
 static void unselect_rows(void)
 {
     for(uint8_t x = 0; x < MATRIX_ROWS; x++) {
+<<<<<<< HEAD
         setPinInputHigh(row_pins[x]);
+=======
+        gpio_set_pin_input_high(row_pins[x]);
+>>>>>>> upstream/master
     }
 }
 
 static void select_col(uint8_t col)
 {
+<<<<<<< HEAD
     setPinOutput(col_pins[col]);
     writePinLow(col_pins[col]);
+=======
+    gpio_set_pin_output(col_pins[col]);
+    gpio_write_pin_low(col_pins[col]);
+>>>>>>> upstream/master
 }
 
 static void unselect_col(uint8_t col)
 {
+<<<<<<< HEAD
     setPinInputHigh(col_pins[col]);
+=======
+    gpio_set_pin_input_high(col_pins[col]);
+>>>>>>> upstream/master
 }
 
 static void unselect_cols(void)
 {
     for(uint8_t x = 0; x < MATRIX_COLS; x++) {
+<<<<<<< HEAD
         setPinInputHigh(col_pins[x]);
+=======
+        gpio_set_pin_input_high(col_pins[x]);
+>>>>>>> upstream/master
     }
 }
 
@@ -60,10 +89,17 @@ static void init_pins(void) {
   unselect_rows();
   unselect_cols();
   for (uint8_t x = 0; x < MATRIX_COLS; x++) {
+<<<<<<< HEAD
     setPinInputHigh(col_pins[x]);
   }
   for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
     setPinInputHigh(row_pins[x]);
+=======
+    gpio_set_pin_input_high(col_pins[x]);
+  }
+  for (uint8_t x = 0; x < MATRIX_ROWS; x++) {
+    gpio_set_pin_input_high(row_pins[x]);
+>>>>>>> upstream/master
   }
 }
 
@@ -83,7 +119,11 @@ static bool read_cols_on_row(matrix_row_t current_matrix[], uint8_t current_row)
     for(uint8_t col_index = 0; col_index < MATRIX_COLS; col_index++) {
 
         // Select the col pin to read (active low)
+<<<<<<< HEAD
         uint8_t pin_state = readPin(col_pins[col_index]);
+=======
+        uint8_t pin_state = gpio_read_pin(col_pins[col_index]);
+>>>>>>> upstream/master
 
         // Populate the matrix row with the state of the col pin
         current_matrix[current_row] |=  pin_state ? 0 : (MATRIX_ROW_SHIFTER << col_index);
@@ -111,7 +151,11 @@ static bool read_rows_on_col(matrix_row_t current_matrix[], uint8_t current_col)
         matrix_row_t last_row_value = current_matrix[tmp];
 
         // Check row pin state
+<<<<<<< HEAD
         if (readPin(row_pins[row_index]) == 0)
+=======
+        if (gpio_read_pin(row_pins[row_index]) == 0)
+>>>>>>> upstream/master
         {
             // Pin LO, set col bit
             current_matrix[tmp] |= (MATRIX_ROW_SHIFTER << current_col);

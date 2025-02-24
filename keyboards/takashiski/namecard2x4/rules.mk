@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -18,4 +19,6 @@ AUDIO_ENABLE = no           # Audio output
 
 #RGBLIGHT_ENABLE = yes # uncomment if you want addressable led strips
 
+=======
+>>>>>>> upstream/master
 DEFAULT_FOLDER = takashiski/namecard2x4/rev2

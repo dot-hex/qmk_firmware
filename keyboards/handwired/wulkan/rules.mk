@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = STM32F303
 BOARD = QMK_PROTON_C
@@ -18,4 +19,6 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 LAYOUTS = ortho_4x12
+=======
+>>>>>>> upstream/master
 NO_SUSPEND_POWER_DOWN = yes

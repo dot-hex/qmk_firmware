@@ -1,6 +1,6 @@
-# MCU name
-MCU = atmega32u4
+CUSTOM_MATRIX = yes
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
@@ -21,3 +21,10 @@ SRC = matrix.c adb.c led.c
 
 # ADB_MOUSE_ENABLE
 # OPT_DEFS += -DADB_MOUSE_ENABLE -DMOUSE_ENABLE
+=======
+SRC += matrix.c adb.c led.c
+
+# OPT_DEFS += -DADB_MOUSE_ENABLE -DMOUSE_ENABLE
+
+DEFAULT_FOLDER = converter/adb_usb/rev1
+>>>>>>> upstream/master

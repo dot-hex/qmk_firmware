@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -23,3 +24,7 @@ RGB_MATRIX_DRIVER = WS2812
 AUDIO_SUPPORTED = no
 RGBLIGHT_SUPPORTED = no
 RGB_MATRIX_SUPPORTED = yes
+=======
+AUDIO_SUPPORTED = no
+RGBLIGHT_SUPPORTED = no
+>>>>>>> upstream/master

@@ -13,6 +13,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 #pragma once
 
+<<<<<<< HEAD:keyboards/xelus/dharma/keymaps/default/config.h
 #define QMK_KEYS_PER_SCAN 4
+=======
+#define HAL_USE_PWM TRUE
+
+#include_next <halconf.h>
+>>>>>>> upstream/master:keyboards/xelus/ninjin/halconf.h

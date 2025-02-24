@@ -14,7 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "pteron36.h"
+=======
+#include "quantum.h"
+>>>>>>> upstream/master
 
 //common encoder setup
 
@@ -22,9 +26,15 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) { /* First encoder */
         if (clockwise) {
+<<<<<<< HEAD
             tap_code(KC__VOLUP);
         } else {
             tap_code(KC__VOLDOWN);
+=======
+            tap_code(KC_VOLU);
+        } else {
+            tap_code(KC_VOLD);
+>>>>>>> upstream/master
         }
     } else if (index == 1) { /* Second encoder */
         if (clockwise) {

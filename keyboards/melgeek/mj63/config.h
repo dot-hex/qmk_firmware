@@ -16,6 +16,7 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -93,3 +94,7 @@
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_ALL
 #define DRIVER_ADDR_1 0b0110000
 #define DRIVER_COUNT 1
+=======
+#define IS31FL3741_I2C_ADDRESS_1 IS31FL3741_I2C_ADDRESS_GND
+#define IS31FL3741_SDB_PIN A2
+>>>>>>> upstream/master

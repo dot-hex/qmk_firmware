@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -26,3 +27,6 @@ RGB_MATRIX_CUSTOM_KB = yes
 SRC += encoder_actions.c
 
 LAYOUTS = numpad_6x5
+=======
+RGB_MATRIX_CUSTOM_KB = yes
+>>>>>>> upstream/master

@@ -17,7 +17,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #include "4x6.h"
+=======
+#include "charybdis.h"
+>>>>>>> upstream/master
 
 // clang-format off
 #ifdef RGB_MATRIX_ENABLE
@@ -36,6 +40,13 @@
  *                       26  27  28     53  54  XX
  *                           25  24     55  XX
  *                     ╰────────────╯ ╰────────────╯
+<<<<<<< HEAD
+=======
+ *
+ * Note: the LED config simulates 58 LEDs instead of the actual 56 to prevent
+ * confusion when testing LEDs during assembly when handedness is not set
+ * correctly.  Those fake LEDs are bound to the physical bottom-left corner.
+>>>>>>> upstream/master
  */
 led_config_t g_led_config = { {
     /* Key Matrix to LED index. */
@@ -70,6 +81,10 @@ led_config_t g_led_config = { {
     /* index=45 */ { 160,   0 }, { 160,  12 }, { 160,  24 }, { 160,  36 },
     /* index=49 */ { 144,   0 }, { 144,  12 }, { 144,  24 }, { 144,  36 },
     /* index=53 */ { 112,  52 }, { 128,  64 }, { 112,  64 },
+<<<<<<< HEAD
+=======
+    /* index=56 */ {   0,   0 }, {   0,   0 },
+>>>>>>> upstream/master
 }, {
     /* LED index to flag. */
     // Left split.
@@ -89,6 +104,10 @@ led_config_t g_led_config = { {
     /* index=45 */ LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     /* index=49 */ LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT,
     /* index=53 */ LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, LED_FLAG_KEYLIGHT, // Thumb cluster
+<<<<<<< HEAD
+=======
+    /* index=55 */ LED_FLAG_MODIFIER, LED_FLAG_MODIFIER,                    // Thumb cluster fakes
+>>>>>>> upstream/master
 } };
 #endif
 // clang-format on

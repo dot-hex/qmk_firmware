@@ -17,6 +17,7 @@
 
 #pragma once
 
+<<<<<<< HEAD:keyboards/durgod/k3x0/k320/k320.h
 #define XXX KC_NO
 
 // This a shortcut to help you visually see your layout.
@@ -90,3 +91,10 @@
     { K50,  K51,  K52,  XXX,  XXX,  XXX,  K56,  XXX,  XXX,  XXX,  K5A,  K5B,  K5C,  K5D,  K5E,  K5F },  \
     { XXX,  XXX,  XXX,  XXX,  XXX,  XXX,  XXX,  K67,  K68,  K69,  K6A,  K6B,  K6C,  K6D,  K6E,  K6F }   \
 }
+=======
+#include "quantum.h"
+
+/* Function Prototype */
+void off_all_leds(void);
+void on_all_leds(void);
+>>>>>>> upstream/master:keyboards/durgod/k320/k320.h

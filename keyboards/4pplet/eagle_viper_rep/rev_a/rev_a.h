@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 
 void setLayerLed(layer_state_t state);
+<<<<<<< HEAD
 
 #define LAYOUT_all( \
     k00, k10, k01, k11, k02, k12, k03, k13, k04, k14, k05, k15, k06, k16, k36, \
@@ -39,3 +40,5 @@ void setLayerLed(layer_state_t state);
     {k80, KC_NO, KC_NO, KC_NO, KC_NO, k85, k86}, \
     {k90, k91, KC_NO, k93, k94, k95, k96}  \
 }
+=======
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -19,3 +20,7 @@ NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = yes      # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable RGB underglow
 AUDIO_ENABLE = no           # Audio output
+=======
+# This board uses the older unsafe 6k version of lufa-ms
+BOOTLOADER_SIZE = 6144
+>>>>>>> upstream/master

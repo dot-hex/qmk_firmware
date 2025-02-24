@@ -15,8 +15,10 @@
  */
 #pragma once
 
-#define BOARD_OTG_NOVBUSSENS 1
+<<<<<<< HEAD
+#include_next <mcuconf.h>
 
+<<<<<<< HEAD:platforms/chibios/boards/BLACKPILL_STM32_F401/configs/config.h
 #ifndef STM32_LSECLK
 #    define STM32_LSECLK 32768U
 #endif  // STM32_LSECLK
@@ -24,7 +26,38 @@
 #ifndef STM32_HSECLK
 #    define STM32_HSECLK 25000000U
 #endif  // STM32_HSECLK
+=======
+#undef STM32_PWM_USE_TIM2
+#define STM32_PWM_USE_TIM2 TRUE
+>>>>>>> upstream/master:keyboards/handwired/macroboard/mcuconf.h
+
+#undef STM32_PWM_USE_TIM4
+#define STM32_PWM_USE_TIM4 TRUE
+
+#undef STM32_ST_USE_TIMER
+#define STM32_ST_USE_TIMER 5
+=======
+#define BOARD_OTG_NOVBUSSENS 1
+
+#ifndef STM32_LSECLK
+#    define STM32_LSECLK 32768U
+#endif // STM32_LSECLK
+
+#ifndef STM32_HSECLK
+#    define STM32_HSECLK 25000000U
+#endif // STM32_HSECLK
 
 #ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
 #    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
 #endif
+
+#ifdef WEAR_LEVELING_EMBEDDED_FLASH
+#    ifndef WEAR_LEVELING_EFL_FIRST_SECTOR
+#        ifdef BOOTLOADER_TINYUF2
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 3
+#        else
+#            define WEAR_LEVELING_EFL_FIRST_SECTOR 1
+#        endif
+#    endif
+#endif
+>>>>>>> upstream/master

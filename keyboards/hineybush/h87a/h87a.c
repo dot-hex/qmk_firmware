@@ -25,8 +25,8 @@ void matrix_init_kb(void) {
 
 bool led_update_kb(led_t led_state) {
     if(led_update_user(led_state)) {
-        writePin(D5, !led_state.caps_lock);
-        writePin(E6, !led_state.scroll_lock);
+        writePin(D5, led_state.caps_lock);
+        writePin(E6, !IS_LAYER_ON(3));
     }
     return true;
 }
@@ -35,7 +35,7 @@ void eeconfig_init_kb(void) {  // EEPROM is getting reset!
   rgblight_enable(); // Enable RGB by default
   rgblight_sethsv(0, 255, 128);  // Set default HSV - red hue, full saturation, medium brightness
   rgblight_mode(RGBLIGHT_MODE_RAINBOW_SWIRL + 2); // set to RGB_RAINBOW_SWIRL by default
-  
+
   eeconfig_update_kb(0);
   eeconfig_init_user();
 }
